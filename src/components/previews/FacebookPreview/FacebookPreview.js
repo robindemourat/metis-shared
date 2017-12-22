@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Profile from './assets/facebook-profile-placeholder.jpg';
-
 import './FacebookPreview.scss';
 
 export default ({
@@ -16,13 +14,14 @@ export default ({
         title,
         abstract_original: abstractOriginal
       }
-    }
+    },
+  profileImageUri
 }) => {
   return (
     <div className="plurishing-backoffice-FacebookPreview">
       <div className="header">
         <div className="left">
-          <img className="profile-image" src={Profile} />
+          <img className="profile-image" src={profileImageUri} />
         </div>
         <div className="right">
           <div className="row">

@@ -56,6 +56,7 @@ storiesOf('Facebook preview', module)
                 abstract_original: 'This is an abstract'
               }
             }}
+          profileImageUri='profile-image.jpg'
         />
       </TranslationsProvider>
     )
@@ -81,6 +82,7 @@ storiesOf('Twitter preview', module)
           assets={{
             abstractImageUri: 'abstract-example.jpeg'
           }}
+          profileImageUri='profile-image.jpg'
         />
       </TranslationsProvider>
     )

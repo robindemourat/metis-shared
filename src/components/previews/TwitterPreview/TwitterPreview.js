@@ -3,9 +3,6 @@ import Tweet from 'react-tweet';
 
 import './TwitterPreview.scss';
 
-import Profile from './assets/facebook-profile-placeholder.jpg';
-
-
 const TEXT_LIMIT = 280;
 
 const makeText = (title, link, creators) => {
@@ -42,7 +39,8 @@ export default ({
   },
   assets: {
     abstractImageUri
-  }
+  },
+  profileImageUri
 }) => {
   const text = makeText(title, link, creators);
   const registeredMedia = abstractImageUri ? [
@@ -90,7 +88,7 @@ export default ({
     user: {
       name: 'Plurishing',
       screen_name: 'plurishing',
-      profile_image_url: Profile
+      profile_image_url: profileImageUri
     },
     text,
     created_at: new Date().getTime(),
