@@ -14,7 +14,7 @@ const Nav = ({
           const composition = compositions[id];
           return (
             <li key={index}>
-              <Link to={{view: 'compositions', index, parameters}}>
+              <Link to={{view: 'composition', index, parameters}}>
                 {composition.metadata.title}
               </Link>
             </li>

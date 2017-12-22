@@ -32,7 +32,7 @@ var Nav = function Nav(_ref, _ref2) {
           { key: index },
           _react2.default.createElement(
             Link,
-            { to: { view: 'compositions', index: index, parameters: parameters } },
+            { to: { view: 'composition', index: index, parameters: parameters } },
             composition.metadata.title
           )
         );

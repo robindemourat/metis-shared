@@ -65,7 +65,7 @@ export default class PreviewContainer extends Component {
             compositions={compositions}
             montage={montage} />
         );
-      case 'compositions':
+      case 'composition':
         const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
         return (
           <Composition
@@ -74,8 +74,7 @@ export default class PreviewContainer extends Component {
             montage={montage}
             composition={composition}
             resources={resources}
-            assets={assets} 
-          />
+            assets={assets} />
         );
 
       default:

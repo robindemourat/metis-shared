@@ -90,7 +90,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           return _react2.default.createElement(_Home2.default, {
             compositions: compositions,
             montage: montage });
-        case 'compositions':
+        case 'composition':
           var composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
           return _react2.default.createElement(_Composition2.default, {
             parameters: locationParameters,
