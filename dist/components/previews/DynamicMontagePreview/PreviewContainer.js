@@ -7,9 +7,19 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _class, _temp; /**
+                    * A simple preview container simulating dynamic app routing with a state machine
+                    */
+
+/* eslint react/no-set-state : 0 */
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _Home = require('../../views/dynamic/Home');
 
@@ -25,13 +35,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * A simple preview container simulating dynamic app routing with a state machine
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-/* eslint react/no-set-state : 0 */
-
-var PreviewContainer = function (_Component) {
+var PreviewContainer = (_temp = _class = function (_Component) {
   _inherits(PreviewContainer, _Component);
 
   function PreviewContainer(props) {
@@ -39,28 +45,59 @@ var PreviewContainer = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (PreviewContainer.__proto__ || Object.getPrototypeOf(PreviewContainer)).call(this, props));
 
+    _this.getChildContext = function () {
+      return {
+        Link: _this.Link
+      };
+    };
+
+    _this.Link = function (_ref) {
+      var to = _ref.to,
+          children = _ref.children;
+
+      var onClick = function onClick() {
+        var id = to.id,
+            view = to.view,
+            parameters = to.parameters;
+
+        _this.setLocation(view, id, parameters);
+      };
+      return _react2.default.createElement(
+        'button',
+        { onClick: onClick },
+        children
+      );
+    };
+
     _this.setLocation = function (location, locationId, locationParameters) {
       _this.setState({ location: location, locationId: locationId, locationParameters: locationParameters });
     };
 
     _this.renderView = function () {
+      var _this$props = _this.props,
+          resources = _this$props.resources,
+          assets = _this$props.assets,
+          montage = _this$props.montage,
+          compositions = _this$props.compositions;
+      var _this$state = _this.state,
+          locationId = _this$state.locationId,
+          locationParameters = _this$state.locationParameters;
+
+
       switch (_this.state.location) {
         case 'home':
-          return _react2.default.createElement(_Home2.default, null);
-        case 'composition':
-          var _this$state = _this.state,
-              locationId = _this$state.locationId,
-              locationParameters = _this$state.locationParameters;
-          var _this$props = _this.props,
-              resources = _this$props.resources,
-              assets = _this$props.assets,
-              compositions = _this$props.compositions;
-          // const parameters = montage.data.compositions.find(parameter => parameter.target_composition_id === locationId);
 
+          return _react2.default.createElement(_Home2.default, {
+            compositions: compositions,
+            montage: montage });
+        case 'compositions':
+          // const parameters = montage.data.compositions.find(parameter => parameter.target_composition_id === locationId);
           var composition = compositions[locationId];
 
           return _react2.default.createElement(_Composition2.default, {
             parameters: locationParameters,
+            compositions: compositions,
+            montage: montage,
             composition: composition,
             resources: resources,
             assets: assets });
@@ -79,53 +116,12 @@ var PreviewContainer = function (_Component) {
   _createClass(PreviewContainer, [{
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          montage = _props.montage,
-          compositions = _props.compositions,
-          setLocation = this.setLocation,
+      var montage = this.props.montage,
           renderView = this.renderView;
 
       return _react2.default.createElement(
         'section',
         null,
-        _react2.default.createElement(
-          'nav',
-          null,
-          _react2.default.createElement(
-            'ul',
-            null,
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'span',
-                { onClick: function onClick() {
-                    return setLocation('home');
-                  } },
-                montage.metadata.title
-              )
-            ),
-            montage.data.compositions.map(function (parameters, index) {
-              var id = parameters.target_composition_id;
-              var composition = compositions[id];
-              if (!composition) {
-                return null;
-              }
-              var onClick = function onClick() {
-                setLocation('composition', id, parameters);
-              };
-              return _react2.default.createElement(
-                'li',
-                { key: index },
-                _react2.default.createElement(
-                  'span',
-                  { onClick: onClick },
-                  composition.metadata.title
-                )
-              );
-            })
-          )
-        ),
         _react2.default.createElement(
           'section',
           null,
@@ -141,6 +137,7 @@ var PreviewContainer = function (_Component) {
   }]);
 
   return PreviewContainer;
-}(_react.Component);
-
+}(_react.Component), _class.childContextTypes = {
+  Link: _propTypes2.default.func
+}, _temp);
 exports.default = PreviewContainer;

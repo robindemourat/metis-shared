@@ -8,12 +8,19 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Nav = require('./Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
+exports.default = function (_ref) {
+  var montage = _ref.montage,
+      compositions = _ref.compositions;
   return _react2.default.createElement(
     'section',
     null,
+    _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions }),
     _react2.default.createElement(
       'h2',
       null,

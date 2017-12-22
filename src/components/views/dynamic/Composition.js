@@ -2,10 +2,13 @@ import React from 'react';
 
 import ArticleTemplate from './ArticleTemplate';
 import FullScreenTemplate from './FullscreenTemplate';
+import Nav from './Nav';
 
 export default ({
   parameters,
   composition,
+  compositions,
+  montage,
   assets,
   resources
 }) => {
@@ -23,6 +26,7 @@ export default ({
 
   return (
     <div>
+      <Nav montage={montage} compositions={compositions} />
       <Component
         parameters={parameters}
         composition={composition}
