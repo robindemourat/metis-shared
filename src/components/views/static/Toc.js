@@ -20,7 +20,7 @@ const Toc = ({
 
               return (
                 <li key={index}>
-                  <a href={'#{composition._id}'}>
+                  <a href={`#{composition._id}`}>
                     {composition.metadata.title}
                   </a>
                 </li>
