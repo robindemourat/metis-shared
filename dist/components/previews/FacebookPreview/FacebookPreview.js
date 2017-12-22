@@ -8,10 +8,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _facebookProfilePlaceholder = require('./assets/facebook-profile-placeholder.jpg');
-
-var _facebookProfilePlaceholder2 = _interopRequireDefault(_facebookProfilePlaceholder);
-
 require('./FacebookPreview.scss');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -22,7 +18,8 @@ exports.default = function (_ref) {
       montageUrl = _ref$montage$data.montage_url,
       _ref$composition$meta = _ref.composition.metadata,
       title = _ref$composition$meta.title,
-      abstractOriginal = _ref$composition$meta.abstract_original;
+      abstractOriginal = _ref$composition$meta.abstract_original,
+      profileImageUri = _ref.profileImageUri;
 
   return _react2.default.createElement(
     'div',
@@ -33,7 +30,7 @@ exports.default = function (_ref) {
       _react2.default.createElement(
         'div',
         { className: 'left' },
-        _react2.default.createElement('img', { className: 'profile-image', src: _facebookProfilePlaceholder2.default })
+        _react2.default.createElement('img', { className: 'profile-image', src: profileImageUri })
       ),
       _react2.default.createElement(
         'div',

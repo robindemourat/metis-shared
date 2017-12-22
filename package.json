@@ -9,13 +9,15 @@
     "comb": "csscomb src",
     "test": "mocha --compilers js:babel-core/register -R spec --recursive $(find src -name '*.spec.js')",
     "storybook": "start-storybook -s ./assets_examples -p 9001",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "add:dist": "git add dist"
   },
   "pre-commit": [
     "lint",
     "build",
     "comb",
-    "test"
+    "test",
+    "add:dist"
   ],
   "author": "Robin de Mourat <robin.demourat@gmail.com> (https://github.com/robindemourat)",
   "engines": {

@@ -14,10 +14,6 @@ var _reactTweet2 = _interopRequireDefault(_reactTweet);
 
 require('./TwitterPreview.scss');
 
-var _facebookProfilePlaceholder = require('./assets/facebook-profile-placeholder.jpg');
-
-var _facebookProfilePlaceholder2 = _interopRequireDefault(_facebookProfilePlaceholder);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TEXT_LIMIT = 280;
@@ -42,7 +38,8 @@ exports.default = function (_ref) {
       _ref$composition$meta = _ref.composition.metadata,
       title = _ref$composition$meta.title,
       creators = _ref$composition$meta.creators,
-      abstractImageUri = _ref.assets.abstractImageUri;
+      abstractImageUri = _ref.assets.abstractImageUri,
+      profileImageUri = _ref.profileImageUri;
 
   var text = makeText(title, link, creators);
   var registeredMedia = abstractImageUri ? [{
@@ -83,7 +80,7 @@ exports.default = function (_ref) {
     user: {
       name: 'Plurishing',
       screen_name: 'plurishing',
-      profile_image_url: _facebookProfilePlaceholder2.default
+      profile_image_url: profileImageUri
     },
     text: text,
     created_at: new Date().getTime(),
