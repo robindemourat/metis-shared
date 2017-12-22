@@ -19,8 +19,7 @@ export default ({
     <section>
       <Cover
         background={montage.data.cover_color}
-        title={montage.metadata.title}
-      />
+        title={montage.metadata.title} />
       <Toc montage={montage} compositions={compositions} />
       {
           montage.data.compositions.map((parameters, index) => {

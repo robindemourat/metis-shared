@@ -5,10 +5,10 @@ export default ({
   background = '#FFFFFF'
 }) => (
   <section
-  className="cover break-before"
-  style={{
+    className="cover break-before"
+    style={{
       background
     }}>
-  {title}
-</section>
+    {title}
+  </section>
 );

@@ -10,15 +10,8 @@ const MailingPreview = ({
   composition
 }, {t}) => {
   const {
-    data: {
-      include_abstract: includeAbstract,
-      montage_url: montageUrl
-    },
-  } = montage;
-  const {
     metadata: {
-      title,
-      abstract_original: abstractOriginal
+      title
     }
   } = composition;
   return (
@@ -40,8 +33,7 @@ const MailingPreview = ({
       <div className="body">
         <Mail
           montage={montage}
-          composition={composition}
-        />
+          composition={composition} />
       </div>
     </div>
   );

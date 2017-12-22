@@ -34,6 +34,6 @@ const Toc = ({
 
 Toc.contextTypes = {
   t: PropTypes.func.isRequired,
-}
+};
 
 export default Toc;

@@ -37,7 +37,7 @@ export default class PreviewContainer extends Component {
         const {
           resources,
           assets,
-          montage,
+          // montage,
           compositions,
         } = this.props;
         // const parameters = montage.data.compositions.find(parameter => parameter.target_composition_id === locationId);
