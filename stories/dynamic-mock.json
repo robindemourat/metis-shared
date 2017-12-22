@@ -1,0 +1,208 @@
+{
+  "montage": {
+    "_id": "548c5b794d8e3df5f6ddd36b08024f61",
+    "_rev": "17-52883d898943a8a83b6b3b014bebb17f",
+    "type": "montage",
+    "metadata": {
+      "title": "Mon montage dynamique de test",
+      "creators": [],
+      "montage_type": "dynamic",
+      "description": "test"
+    },
+    "data": {
+      "css_code": "",
+      "compositions": [
+        {
+          "template": "article",
+          "css_code": "*{\n  color: red;\n}",
+          "target_composition_id": "548c5b794d8e3df5f6ddd36b080189d7"
+        },
+        {
+          "template": "fullscreen",
+          "css_code": "",
+          "target_composition_id": "548c5b794d8e3df5f6ddd36b08025f06"
+        },
+        {
+          "template": "article",
+          "css_code": "",
+          "target_composition_id": "548c5b794d8e3df5f6ddd36b08025f06"
+        }
+      ]
+    }
+  },
+  "compositions": {
+    "548c5b794d8e3df5f6ddd36b080189d7": {
+      "_id": "548c5b794d8e3df5f6ddd36b080189d7",
+      "_rev": "48-23001e3ccb9636cb8af1bbcad026e172",
+      "type": "composition",
+      "metadata": {
+        "title": "Publier la recherche en design",
+        "subtitle": "Déformer",
+        "creators": [
+          {
+            "given": "martine",
+            "family": "",
+            "role": ""
+          },
+          {
+            "given": "martine",
+            "family": "",
+            "role": ""
+          }
+        ],
+        "abstract_original": "mon bel abstract",
+        "abstract_english": ""
+      },
+      "contents": {
+        "entityMap": {},
+        "blocks": [
+          {
+            "key": "83l39",
+            "text": "test",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "54ugg",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "ucp3",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "75k6m",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "eoc1q",
+            "text": "Comment ça va ?",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "eo69g",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "54htq",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "4kllb",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "ca442",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "5v1n7",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "7ap2m",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "2h6j1",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "8ol6i",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          }
+        ]
+      },
+      "notes_order": [],
+      "notes": {},
+      "resources": [],
+      "contextualizers": {},
+      "contextualizations": {}
+    },
+    "548c5b794d8e3df5f6ddd36b08025f06": {
+      "_id": "548c5b794d8e3df5f6ddd36b08025f06",
+      "_rev": "1-4e8eb8cec02d831bf94f47d77f816734",
+      "type": "composition",
+      "metadata": {
+        "title": "Plurishing",
+        "subtitle": "",
+        "creators": [],
+        "abstract_original": "",
+        "abstract_english": ""
+      },
+      "contents": {
+        "entityMap": {},
+        "blocks": []
+      },
+      "notes_order": [],
+      "notes": {},
+      "resources": [],
+      "contextualizers": {},
+      "contextualizations": {}
+    }
+  },
+  "resources": {},
+  "assets": {}
+}

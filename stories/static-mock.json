@@ -1,0 +1,202 @@
+{
+  "montage": {
+    "_id": "548c5b794d8e3df5f6ddd36b080252f9",
+    "_rev": "12-b753be7a6232c76b5e249fb084f9333b",
+    "type": "montage",
+    "metadata": {
+      "title": "montage statique",
+      "creators": [],
+      "montage_type": "static",
+      "description": ""
+    },
+    "data": {
+      "cover_color": "#c47e48",
+      "compositions": [
+        {
+          "template": "article",
+          "target_composition_id": "548c5b794d8e3df5f6ddd36b080189d7"
+        },
+        {
+          "template": "article",
+          "target_composition_id": "548c5b794d8e3df5f6ddd36b08025f06"
+        }
+      ],
+      "colophon": "Coucou colophon"
+    }
+  },
+  "compositions": {
+    "548c5b794d8e3df5f6ddd36b080189d7": {
+      "_id": "548c5b794d8e3df5f6ddd36b080189d7",
+      "_rev": "48-23001e3ccb9636cb8af1bbcad026e172",
+      "type": "composition",
+      "metadata": {
+        "title": "Publier la recherche en design",
+        "subtitle": "Déformer",
+        "creators": [
+          {
+            "given": "martine",
+            "family": "",
+            "role": ""
+          },
+          {
+            "given": "martine",
+            "family": "",
+            "role": ""
+          }
+        ],
+        "abstract_original": "mon bel abstract",
+        "abstract_english": ""
+      },
+      "contents": {
+        "entityMap": {},
+        "blocks": [
+          {
+            "key": "83l39",
+            "text": "test",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "54ugg",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "ucp3",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "75k6m",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "eoc1q",
+            "text": "Comment ça va ?",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "eo69g",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "54htq",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "4kllb",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "ca442",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "5v1n7",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "7ap2m",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "2h6j1",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          },
+          {
+            "key": "8ol6i",
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "inlineStyleRanges": [],
+            "entityRanges": [],
+            "data": {}
+          }
+        ]
+      },
+      "notes_order": [],
+      "notes": {},
+      "resources": [],
+      "contextualizers": {},
+      "contextualizations": {}
+    },
+    "548c5b794d8e3df5f6ddd36b08025f06": {
+      "_id": "548c5b794d8e3df5f6ddd36b08025f06",
+      "_rev": "1-4e8eb8cec02d831bf94f47d77f816734",
+      "type": "composition",
+      "metadata": {
+        "title": "Plurishing",
+        "subtitle": "",
+        "creators": [],
+        "abstract_original": "",
+        "abstract_english": ""
+      },
+      "contents": {
+        "entityMap": {},
+        "blocks": []
+      },
+      "notes_order": [],
+      "notes": {},
+      "resources": [],
+      "contextualizers": {},
+      "contextualizations": {}
+    }
+  },
+  "resources": {},
+  "assets": {}
+}
