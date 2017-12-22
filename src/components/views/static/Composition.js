@@ -6,7 +6,8 @@ export default ({
   parameters,
   composition,
   assets,
-  resources
+  resources,
+  index
 }) => {
   let Component = null;
   switch (parameters.template) {
@@ -18,7 +19,7 @@ export default ({
   }
   if (Component) {
     return (
-      <div>
+      <div className={`composition-${index}`}>
         <Component
           parameters={parameters}
           composition={composition}

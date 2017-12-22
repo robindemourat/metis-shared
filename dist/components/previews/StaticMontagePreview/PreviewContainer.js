@@ -49,7 +49,8 @@ exports.default = function (_ref) {
         parameters: parameters,
         composition: composition,
         resources: resources,
-        assets: assets });
+        assets: assets,
+        locationIndex: index });
     }),
     _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
     _react2.default.createElement(

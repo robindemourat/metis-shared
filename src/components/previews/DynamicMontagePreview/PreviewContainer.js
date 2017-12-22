@@ -30,8 +30,8 @@ export default class PreviewContainer extends Component {
 
   Link = ({to, children}) => {
     const onClick = () => {
-      const {id, view, parameters} = to;
-      this.setLocation(view, id, parameters);
+      const {index, view, parameters} = to;
+      this.setLocation(view, index, parameters);
     };
     return (
       <button onClick={onClick}>
@@ -40,8 +40,8 @@ export default class PreviewContainer extends Component {
     );
   }
 
-  setLocation = (location, locationId, locationParameters) => {
-    this.setState({location, locationId, locationParameters});
+  setLocation = (location, locationIndex, locationParameters) => {
+    this.setState({location, locationIndex, locationParameters});
   }
 
   renderView = () => {
@@ -53,7 +53,7 @@ export default class PreviewContainer extends Component {
     } = this.props;
 
     const {
-      locationId,
+      locationIndex,
       locationParameters
     } = this.state;
 
@@ -66,9 +66,7 @@ export default class PreviewContainer extends Component {
             montage={montage} />
         );
       case 'compositions':
-        // const parameters = montage.data.compositions.find(parameter => parameter.target_composition_id === locationId);
-        const composition = compositions[locationId];
-
+        const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
         return (
           <Composition
             parameters={locationParameters}
@@ -76,7 +74,8 @@ export default class PreviewContainer extends Component {
             montage={montage}
             composition={composition}
             resources={resources}
-            assets={assets} />
+            assets={assets} 
+          />
         );
 
       default:

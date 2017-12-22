@@ -18,7 +18,8 @@ exports.default = function (_ref) {
   var parameters = _ref.parameters,
       composition = _ref.composition,
       assets = _ref.assets,
-      resources = _ref.resources;
+      resources = _ref.resources,
+      index = _ref.index;
 
   var Component = null;
   switch (parameters.template) {
@@ -31,7 +32,7 @@ exports.default = function (_ref) {
   if (Component) {
     return _react2.default.createElement(
       'div',
-      null,
+      { className: 'composition-' + index },
       _react2.default.createElement(Component, {
         parameters: parameters,
         composition: composition,

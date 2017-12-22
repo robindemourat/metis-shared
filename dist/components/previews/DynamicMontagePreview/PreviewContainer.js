@@ -56,11 +56,11 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           children = _ref.children;
 
       var onClick = function onClick() {
-        var id = to.id,
+        var index = to.index,
             view = to.view,
             parameters = to.parameters;
 
-        _this.setLocation(view, id, parameters);
+        _this.setLocation(view, index, parameters);
       };
       return _react2.default.createElement(
         'button',
@@ -69,8 +69,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
       );
     };
 
-    _this.setLocation = function (location, locationId, locationParameters) {
-      _this.setState({ location: location, locationId: locationId, locationParameters: locationParameters });
+    _this.setLocation = function (location, locationIndex, locationParameters) {
+      _this.setState({ location: location, locationIndex: locationIndex, locationParameters: locationParameters });
     };
 
     _this.renderView = function () {
@@ -80,7 +80,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           montage = _this$props.montage,
           compositions = _this$props.compositions;
       var _this$state = _this.state,
-          locationId = _this$state.locationId,
+          locationIndex = _this$state.locationIndex,
           locationParameters = _this$state.locationParameters;
 
 
@@ -91,9 +91,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             compositions: compositions,
             montage: montage });
         case 'compositions':
-          // const parameters = montage.data.compositions.find(parameter => parameter.target_composition_id === locationId);
-          var composition = compositions[locationId];
-
+          var composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
           return _react2.default.createElement(_Composition2.default, {
             parameters: locationParameters,
             compositions: compositions,

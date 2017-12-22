@@ -32,7 +32,9 @@ export default ({
               parameters={parameters}
               composition={composition}
               resources={resources}
-              assets={assets} />);
+              assets={assets} 
+              locationIndex={index}
+            />);
           })
         }
       <Colophon contents={montage.data.colophon} />
