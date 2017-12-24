@@ -128,7 +128,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         _react2.default.createElement(
           'style',
           null,
-          montage.data.css_code
+          montage.data.css.shared_css_code
         )
       );
     }

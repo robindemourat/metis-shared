@@ -95,7 +95,7 @@ export default class PreviewContainer extends Component {
           {renderView()}
         </section>
         <style>
-          {montage.data.css_code}
+          {montage.data.css.shared_css_code}
         </style>
       </section>
     );

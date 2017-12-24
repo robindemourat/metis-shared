@@ -33,7 +33,7 @@ export default ({
         assets={assets}
         resources={resources} />
       <style>
-        {parameters.css_code}
+        {montage.data.css.shared_css_code}
       </style>
     </div>
   );

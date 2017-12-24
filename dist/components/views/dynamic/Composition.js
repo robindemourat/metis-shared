@@ -54,7 +54,7 @@ exports.default = function (_ref) {
     _react2.default.createElement(
       'style',
       null,
-      parameters.css_code
+      montage.data.css.shared_css_code
     )
   );
 };
