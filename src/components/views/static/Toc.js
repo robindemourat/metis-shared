@@ -11,7 +11,9 @@ const Toc = ({
     <nav>
       <ul>
         {
-            montage.data.compositions.map((ref, index) => {
+            montage.data.compositions
+            .filter(parameters => parameters.target_composition_id)
+            .map((ref, index) => {
               const id = ref.target_composition_id;
               const composition = compositions[id];
               if (!composition) {

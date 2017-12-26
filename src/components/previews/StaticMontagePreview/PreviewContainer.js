@@ -39,6 +39,11 @@ export default ({
       <Colophon contents={montage.data.colophon} />
       <style>
         {montage.data.css.shared_css_code}
+        {
+          /*
+           * @todo implement renderingMode-specific css call
+           */
+        }
       </style>
     </section>
     );

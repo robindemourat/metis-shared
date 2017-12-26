@@ -9,6 +9,7 @@ const Nav = ({
     <ul>
       {
         montage.data.compositions
+        .filter(parameters => parameters.target_composition_id)
         .map((parameters, index) => {
           const id = parameters.target_composition_id;
           const composition = compositions[id];

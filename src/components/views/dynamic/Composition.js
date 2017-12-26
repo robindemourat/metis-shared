@@ -34,6 +34,11 @@ export default ({
         resources={resources} />
       <style>
         {montage.data.css.shared_css_code}
+        {
+          /*
+           * @todo implement renderingMode-specific css call
+           */
+        }
       </style>
     </div>
   );

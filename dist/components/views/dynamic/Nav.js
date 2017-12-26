@@ -24,7 +24,9 @@ var Nav = function Nav(_ref, _ref2) {
     _react2.default.createElement(
       'ul',
       null,
-      montage.data.compositions.map(function (parameters, index) {
+      montage.data.compositions.filter(function (parameters) {
+        return parameters.target_composition_id;
+      }).map(function (parameters, index) {
         var id = parameters.target_composition_id;
         var composition = compositions[id];
         return _react2.default.createElement(
