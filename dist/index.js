@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   components: {
     contextualizers: {
-      Image: require('./components/contextualizers/Image')
+      image: require('./components/contextualizers/Image')
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,
