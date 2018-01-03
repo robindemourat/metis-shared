@@ -1,26 +1,42 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+import meta from './meta';
+import {pickAsset} from '../utils';
+import DynamicBlock from './DynamicImageBlock';
 
 const Block = ({
-  // resource,
+  resource,
   // contextualizer,
   // contextualization,
   renderingMode
-}) => {
+}, {assets, getAssetUri}) => {
 
-  switch (renderingMode) {
-    case 'web':
-      return (<div>Block web</div>);
-    case 'pdf':
-      return (<div>Block pdf</div>);
-    case 'epub-reflowable':
-      return (<div>Block epub reflowable</div>);
-    case 'epub-fixed':
-      return (<div>Block epub fixed</div>);
-    case 'micro':
-      return (<div>Block micro</div>);
-    default:
-      return null;
+  const appropriateAsset = pickAsset(resource, meta.assetPickingRules.image[renderingMode], assets);
+  const imageAssetUri = getAssetUri(appropriateAsset.asset);
+  if (imageAssetUri) {
+    switch (renderingMode) {
+      case 'web':
+        return (
+          <DynamicBlock assetUri={imageAssetUri} resource={resource} />
+        );
+      case 'pdf':
+      case 'epub-reflowable':
+      case 'epub-fixed':
+      case 'micro':
+        return (
+          <img src={imageAssetUri} />
+        );
+      default:
+        return null;
+    }
   }
+  return null;
+};
+
+Block.contextTypes = {
+  assets: PropTypes.object,
+  getAssetUri: PropTypes.func,
 };
 
 export default Block;
