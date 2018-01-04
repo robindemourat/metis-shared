@@ -32,8 +32,8 @@ var Block = function Block(_ref, _ref2) {
 
 
   var appropriateAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.image[renderingMode], assets);
-  var imageAssetUri = getAssetUri(appropriateAsset.asset);
-  if (imageAssetUri) {
+  if (appropriateAsset) {
+    var imageAssetUri = getAssetUri(appropriateAsset.asset);
     switch (renderingMode) {
       case 'web':
         return _react2.default.createElement(_DynamicImageBlock2.default, { assetUri: imageAssetUri, resource: resource });

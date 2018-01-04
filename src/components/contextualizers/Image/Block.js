@@ -13,8 +13,8 @@ const Block = ({
 }, {assets, getAssetUri}) => {
 
   const appropriateAsset = pickAsset(resource, meta.assetPickingRules.image[renderingMode], assets);
-  const imageAssetUri = getAssetUri(appropriateAsset.asset);
-  if (imageAssetUri) {
+  if (appropriateAsset) {
+    const imageAssetUri = getAssetUri(appropriateAsset.asset);
     switch (renderingMode) {
       case 'web':
         return (
