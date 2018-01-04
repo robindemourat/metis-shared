@@ -10,9 +10,9 @@ const Block = ({
   // contextualizer,
   // contextualization,
   renderingMode
-}, {assets, getAssetUri}) => {
+}, {assetsData, getAssetUri}) => {
 
-  const appropriateAsset = pickAsset(resource, meta.assetPickingRules.image[renderingMode], assets);
+  const appropriateAsset = pickAsset(resource, meta.assetPickingRules.image[renderingMode], assetsData);
   if (appropriateAsset) {
     const imageAssetUri = getAssetUri(appropriateAsset.asset);
     switch (renderingMode) {
@@ -35,7 +35,7 @@ const Block = ({
 };
 
 Block.contextTypes = {
-  assets: PropTypes.object,
+  assetsData: PropTypes.object,
   getAssetUri: PropTypes.func,
 };
 

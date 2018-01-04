@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default class ContextualizerContainer extends Component {
   static childContextTypes = {
-    assets: PropTypes.object,
+    assetsData: PropTypes.object,
     getAssetUri: PropTypes.func,
   }
 
@@ -15,7 +15,7 @@ export default class ContextualizerContainer extends Component {
   getAssetUri = asset => `/${asset.filename}`
 
   getChildContext = () => ({
-    assets: this.props.assets,
+    assetsData: this.props.assets,
     getAssetUri: this.getAssetUri
   })
 

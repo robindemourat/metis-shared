@@ -27,11 +27,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Block = function Block(_ref, _ref2) {
   var resource = _ref.resource,
       renderingMode = _ref.renderingMode;
-  var assets = _ref2.assets,
+  var assetsData = _ref2.assetsData,
       getAssetUri = _ref2.getAssetUri;
 
 
-  var appropriateAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.image[renderingMode], assets);
+  var appropriateAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.image[renderingMode], assetsData);
   if (appropriateAsset) {
     var imageAssetUri = getAssetUri(appropriateAsset.asset);
     switch (renderingMode) {
@@ -50,7 +50,7 @@ var Block = function Block(_ref, _ref2) {
 };
 
 Block.contextTypes = {
-  assets: _propTypes2.default.object,
+  assetsData: _propTypes2.default.object,
   getAssetUri: _propTypes2.default.func
 };
 
