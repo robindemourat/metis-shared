@@ -117,7 +117,7 @@ class BlockDynamic extends Component {
       resource
     } = props;
 
-    if (assetUri && resource && resource.data) {
+    if (inBrowser && assetUri && resource && resource.data) {
 
       const img = new Image();
 

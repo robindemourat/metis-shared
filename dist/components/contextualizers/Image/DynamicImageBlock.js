@@ -193,7 +193,7 @@ var BlockDynamic = (_temp = _class = function (_Component) {
     var resource = props.resource;
 
 
-    if (assetUri && resource && resource.data) {
+    if (inBrowser && assetUri && resource && resource.data) {
 
       var img = new Image();
 
