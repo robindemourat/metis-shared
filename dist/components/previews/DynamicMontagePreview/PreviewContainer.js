@@ -47,7 +47,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
     _this.getChildContext = function () {
       return {
-        Link: _this.Link
+        Link: _this.Link,
+        getAssetUri: _this.props.getAssetUri
       };
     };
 
@@ -95,9 +96,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           return _react2.default.createElement(_Composition2.default, {
             parameters: locationParameters,
             compositions: compositions,
-            montage: montage,
             composition: composition,
             resources: resources,
+            montage: montage,
             assets: assets });
 
         default:
@@ -136,6 +137,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
   return PreviewContainer;
 }(_react.Component), _class.childContextTypes = {
-  Link: _propTypes2.default.func
+  Link: _propTypes2.default.func,
+  getAssetUri: _propTypes2.default.func
 }, _temp);
 exports.default = PreviewContainer;

@@ -176,6 +176,7 @@ storiesOf('Dynamic preview', module)
           compositions={dynamicMock.compositions}
           resources={dynamicMock.resources}
           assets={dynamicMock.assets}
+          getAssetUri={asset => `/${asset.filename}`}
         />
       </TranslationsProvider>
     )
@@ -191,6 +192,7 @@ storiesOf('Static preview', module)
           compositions={staticMock.compositions}
           resources={staticMock.resources}
           assets={staticMock.assets}
+          getAssetUri={asset => `/${asset.filename}`}
         />
       </TranslationsProvider>
     )

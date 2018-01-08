@@ -5,8 +5,11 @@ import ArticleTemplate from './ArticleTemplate';
 export default ({
   parameters,
   composition,
+  // compositions,
+  // montage,
   assets,
   resources,
+  renderingMode = 'pdf',
   index
 }) => {
   let Component = null;
@@ -21,10 +24,11 @@ export default ({
     return (
       <div className={`composition-${index}`}>
         <Component
-          parameters={parameters}
+          renderingMode={renderingMode}
           composition={composition}
-          assets={assets}
-          resources={resources} />
+          parameters={parameters}
+          resources={resources}
+          assets={assets} />
       </div>
     );
   }

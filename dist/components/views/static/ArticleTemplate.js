@@ -8,10 +8,18 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Renderer = require('../../renderers/Renderer');
+
+var _Renderer2 = _interopRequireDefault(_Renderer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (_ref) {
-  var composition = _ref.composition;
+  var composition = _ref.composition,
+      renderingMode = _ref.renderingMode,
+      assets = _ref.assets,
+      resources = _ref.resources;
+
   return _react2.default.createElement(
     'div',
     null,
@@ -20,6 +28,16 @@ exports.default = function (_ref) {
       null,
       composition.metadata.title
     ),
-    'Article preview'
+    _react2.default.createElement(
+      'section',
+      null,
+      _react2.default.createElement(_Renderer2.default, {
+        raw: composition.contents,
+        renderingMode: renderingMode,
+        contextualizations: composition.contextualizations,
+        contextualizers: composition.contextualizers,
+        resources: resources,
+        assets: assets })
+    )
   );
 };

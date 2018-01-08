@@ -19,6 +19,8 @@ exports.default = function (_ref) {
       composition = _ref.composition,
       assets = _ref.assets,
       resources = _ref.resources,
+      _ref$renderingMode = _ref.renderingMode,
+      renderingMode = _ref$renderingMode === undefined ? 'pdf' : _ref$renderingMode,
       index = _ref.index;
 
   var Component = null;
@@ -34,10 +36,11 @@ exports.default = function (_ref) {
       'div',
       { className: 'composition-' + index },
       _react2.default.createElement(Component, {
-        parameters: parameters,
+        renderingMode: renderingMode,
         composition: composition,
-        assets: assets,
-        resources: resources })
+        parameters: parameters,
+        resources: resources,
+        assets: assets })
     );
   }
   return null;

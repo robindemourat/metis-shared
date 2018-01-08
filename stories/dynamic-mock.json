@@ -1,208 +1,538 @@
 {
-  "montage": {
-    "_id": "548c5b794d8e3df5f6ddd36b08024f61",
-    "_rev": "17-52883d898943a8a83b6b3b014bebb17f",
-    "type": "montage",
-    "metadata": {
-      "title": "Mon montage dynamique de test",
-      "creators": [],
-      "montage_type": "dynamic",
-      "description": "test"
-    },
-    "data": {
-      "css_code": "",
-      "compositions": [
+    "montage":
+    {
+        "_id": "7502cf081f7e7206a2e548b072001fe2",
+        "_rev": "2-77091a952a5f0d1f71a240354f5154bd",
+        "type": "montage",
+        "metadata":
         {
-          "template": "article",
-          "css_code": "*{\n  color: red;\n}",
-          "target_composition_id": "548c5b794d8e3df5f6ddd36b080189d7"
+            "title": "dynamique",
+            "creators": [],
+            "montage_type": "dynamic",
+            "description": ""
         },
+        "data":
         {
-          "template": "fullscreen",
-          "css_code": "",
-          "target_composition_id": "548c5b794d8e3df5f6ddd36b08025f06"
-        },
-        {
-          "template": "article",
-          "css_code": "",
-          "target_composition_id": "548c5b794d8e3df5f6ddd36b08025f06"
+            "compositions": [
+            {
+                "template": "article",
+                "css":
+                {
+                    "shared_css_code": "",
+                    "pdf_css_code": "",
+                    "epub_css_code": ""
+                },
+                "target_composition_id": "548c5b794d8e3df5f6ddd36b080189d7"
+            }],
+            "css":
+            {
+                "shared_css_code": "",
+                "web_css_code": "",
+                "epub_css_code": ""
+            }
         }
-      ]
-    }
-  },
-  "compositions": {
-    "548c5b794d8e3df5f6ddd36b080189d7": {
-      "_id": "548c5b794d8e3df5f6ddd36b080189d7",
-      "_rev": "48-23001e3ccb9636cb8af1bbcad026e172",
-      "type": "composition",
-      "metadata": {
-        "title": "Publier la recherche en design",
-        "subtitle": "Déformer",
-        "creators": [
-          {
-            "given": "martine",
-            "family": "",
-            "role": ""
-          },
-          {
-            "given": "martine",
-            "family": "",
-            "role": ""
-          }
-        ],
-        "abstract_original": "mon bel abstract",
-        "abstract_english": ""
-      },
-      "contents": {
-        "entityMap": {},
-        "blocks": [
-          {
-            "key": "83l39",
-            "text": "test",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "54ugg",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "ucp3",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "75k6m",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "eoc1q",
-            "text": "Comment ça va ?",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "eo69g",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "54htq",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "4kllb",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "ca442",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "5v1n7",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "7ap2m",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "2h6j1",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          },
-          {
-            "key": "8ol6i",
-            "text": "",
-            "type": "unstyled",
-            "depth": 0,
-            "inlineStyleRanges": [],
-            "entityRanges": [],
-            "data": {}
-          }
-        ]
-      },
-      "notes_order": [],
-      "notes": {},
-      "resources": [],
-      "contextualizers": {},
-      "contextualizations": {}
     },
-    "548c5b794d8e3df5f6ddd36b08025f06": {
-      "_id": "548c5b794d8e3df5f6ddd36b08025f06",
-      "_rev": "1-4e8eb8cec02d831bf94f47d77f816734",
-      "type": "composition",
-      "metadata": {
-        "title": "Plurishing",
-        "subtitle": "",
-        "creators": [],
-        "abstract_original": "",
-        "abstract_english": ""
-      },
-      "contents": {
-        "entityMap": {},
-        "blocks": []
-      },
-      "notes_order": [],
-      "notes": {},
-      "resources": [],
-      "contextualizers": {},
-      "contextualizations": {}
+    "compositions":
+    {
+        "548c5b794d8e3df5f6ddd36b080189d7":
+        {
+            "_id": "548c5b794d8e3df5f6ddd36b080189d7",
+            "_rev": "163-589c5c29451bb89b74a105774cced497",
+            "type": "composition",
+            "metadata":
+            {
+                "title": "Publier la recherche en design",
+                "subtitle": "Déformer",
+                "creators": [
+                {
+                    "given": "martine",
+                    "family": "",
+                    "role": ""
+                },
+                {
+                    "given": "martine",
+                    "family": "",
+                    "role": ""
+                }],
+                "abstract_original": "mon bel abstract",
+                "abstract_english": ""
+            },
+            "contents":
+            {
+                "entityMap":
+                {
+                    "0":
+                    {
+                        "type": "BLOCK_ASSET",
+                        "mutability": "IMMUTABLE",
+                        "data":
+                        {
+                            "insertionType": "BLOCK_ASSET",
+                            "asset":
+                            {
+                                "id": "d1de3894-6138-444c-99ac-3cfa4cf2058a"
+                            }
+                        }
+                    },
+                    "1":
+                    {
+                        "type": "BLOCK_ASSET",
+                        "mutability": "IMMUTABLE",
+                        "data":
+                        {
+                            "insertionType": "BLOCK_ASSET",
+                            "asset":
+                            {
+                                "id": "8513fb78-e002-42a8-ae1d-aed323b25f75"
+                            }
+                        }
+                    }
+                },
+                "blocks": [
+                {
+                    "key": "83l39",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "c1ufu",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "cvse9",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "ah1ve",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "bb9qn",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "emqde",
+                    "text": "test",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "54ugg",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "aapt0",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "75k6m",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "eoc1q",
+                    "text": "Comment ça va ? mlkj ml mlk jmlk jmljk ",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "c9qrk",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "b22i3",
+                    "text": "mlkj mlkj",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "2lj9d",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "7vnm",
+                    "text": "lmkjml kjlmkj mlkj m lkjmlk jmlkj mlkj mlkj lkmj ",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "a55j",
+                    "text": "mlkj mlkj mlkj mlkj mlkj lkj l ij ùou",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "censd",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "b5n0h",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "buqef",
+                    "text": "mlkj mlkj mlkj mlkj mlkj ",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "27r6b",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "76i81",
+                    "text": "mljm lkjmlk jmlkj mlj ",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "10tln",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "fv7c1",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "4j795",
+                    "text": "mlkj mlk jmljk ",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "8p060",
+                    "text": " ",
+                    "type": "atomic",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [
+                    {
+                        "offset": 0,
+                        "length": 1,
+                        "key": 0
+                    }],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "53u0l",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "b2njh",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "fqeav",
+                    "text": " ",
+                    "type": "atomic",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [
+                    {
+                        "offset": 0,
+                        "length": 1,
+                        "key": 1
+                    }],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "e62k1",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "7pjjp",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "fk12",
+                    "text": "Test qui va mieux.",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "3cked",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "cbef1",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "5v1n7",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "7ap2m",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "2h6j1",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                },
+                {
+                    "key": "8ol6i",
+                    "text": "",
+                    "type": "unstyled",
+                    "depth": 0,
+                    "inlineStyleRanges": [],
+                    "entityRanges": [],
+                    "data":
+                    {}
+                }]
+            },
+            "notes_order": [],
+            "notes":
+            {},
+            "resources": ["548c5b794d8e3df5f6ddd36b080762c3", "7502cf081f7e7206a2e548b0720003ac"],
+            "contextualizers":
+            {
+                "f56a6373-04e9-4d87-8227-ce2522898a16":
+                {
+                    "id": "f56a6373-04e9-4d87-8227-ce2522898a16",
+                    "type": "image",
+                    "insertionType": "block"
+                },
+                "3eb0814f-e0de-4a05-acd7-31a69c3dd58d":
+                {
+                    "id": "3eb0814f-e0de-4a05-acd7-31a69c3dd58d",
+                    "type": "image",
+                    "insertionType": "block"
+                }
+            },
+            "contextualizations":
+            {
+                "8513fb78-e002-42a8-ae1d-aed323b25f75":
+                {
+                    "id": "8513fb78-e002-42a8-ae1d-aed323b25f75",
+                    "resourceId": "7502cf081f7e7206a2e548b0720003ac",
+                    "contextualizerId": "3eb0814f-e0de-4a05-acd7-31a69c3dd58d"
+                }
+            },
+            "notesOrder": []
+        }
+    },
+    "resources":
+    {
+        "7502cf081f7e7206a2e548b0720003ac":
+        {
+            "_id": "7502cf081f7e7206a2e548b0720003ac",
+            "_rev": "2-1d19be39b65ede0591993338581433b9",
+            "type": "resource",
+            "metadata":
+            {
+                "name": "image test",
+                "creators": [],
+                "ressource_type": "image",
+                "description": ""
+            },
+            "data":
+            {
+                "rgb_image_asset_id": "26925b13-ef04-4e34-9598-a82ab3047ae8",
+                "cmyb_image_asset_id": "26925b13-ef04-4e34-9598-a82ab3047ae8",
+                "bw_image_asset_id": "26925b13-ef04-4e34-9598-a82ab3047ae8"
+            }
+        }
+    },
+    "assets":
+    {
+        "26925b13-ef04-4e34-9598-a82ab3047ae8":
+        {
+            "_id": "26925b13-ef04-4e34-9598-a82ab3047ae8",
+            "_rev": "2-d863186521ac3e3945c0ff0e40900c2f",
+            "filename": "flusser.png",
+            "type": "asset",
+            "mimetype": "image/png",
+            "_attachments":
+            {
+                "flusser.png":
+                {
+                    "content_type": "image/png",
+                    "revpos": 2,
+                    "digest": "md5-KzsneS3x2aOkCokPvZBuyg==",
+                    "length": 42028,
+                    "stub": true
+                }
+            }
+        }
     }
-  },
-  "resources": {},
-  "assets": {}
 }

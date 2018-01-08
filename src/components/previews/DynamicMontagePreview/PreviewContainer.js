@@ -13,7 +13,8 @@ import Composition from '../../views/dynamic/Composition';
 export default class PreviewContainer extends Component {
 
   static childContextTypes = {
-    Link: PropTypes.func
+    Link: PropTypes.func,
+    getAssetUri: PropTypes.func,
   }
 
   constructor(props) {
@@ -25,7 +26,8 @@ export default class PreviewContainer extends Component {
   }
 
   getChildContext = () => ({
-    Link: this.Link
+    Link: this.Link,
+    getAssetUri: this.props.getAssetUri
   })
 
   Link = ({to, children}) => {
@@ -71,9 +73,9 @@ export default class PreviewContainer extends Component {
           <Composition
             parameters={locationParameters}
             compositions={compositions}
-            montage={montage}
             composition={composition}
             resources={resources}
+            montage={montage}
             assets={assets} />
         );
 

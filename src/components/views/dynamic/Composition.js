@@ -10,7 +10,8 @@ export default ({
   compositions,
   montage,
   assets,
-  resources
+  resources,
+  renderingMode = 'web'
 }) => {
   let Component = null;
   switch (parameters.template) {
@@ -31,7 +32,8 @@ export default ({
         parameters={parameters}
         composition={composition}
         assets={assets}
-        resources={resources} />
+        resources={resources}
+        renderingMode={renderingMode} />
       <style>
         {montage.data.css.shared_css_code}
         {

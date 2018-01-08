@@ -28,7 +28,9 @@ exports.default = function (_ref) {
       compositions = _ref.compositions,
       montage = _ref.montage,
       assets = _ref.assets,
-      resources = _ref.resources;
+      resources = _ref.resources,
+      _ref$renderingMode = _ref.renderingMode,
+      renderingMode = _ref$renderingMode === undefined ? 'web' : _ref$renderingMode;
 
   var Component = null;
   switch (parameters.template) {
@@ -50,7 +52,8 @@ exports.default = function (_ref) {
       parameters: parameters,
       composition: composition,
       assets: assets,
-      resources: resources }),
+      resources: resources,
+      renderingMode: renderingMode }),
     _react2.default.createElement(
       'style',
       null,
