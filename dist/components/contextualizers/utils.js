@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -14,7 +14,12 @@ var pickAsset = exports.pickAsset = function pickAsset(resource, rule, assets) {
   var i = 0;
   while (i < rule.length - 1) {
     var candidate = rule[i];
-    if (resource.data[candidate] && assets[resource.data[candidate]]) {
+    if (candidate.indexOf('_asset_id') === -1) {
+      return {
+        resourceDataField: candidate,
+        asset: null
+      };
+    } else if (resource.data[candidate] && assets[resource.data[candidate]]) {
       return {
         resourceDataField: candidate,
         asset: assets[resource.data[candidate]]

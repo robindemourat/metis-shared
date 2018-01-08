@@ -4,7 +4,8 @@ export default {
   components: {
     contextualizers: {
       image: require('./components/contextualizers/Image'),
-      imagesgallery: require('./components/contextualizers/ImagesGallery')
+      imagesgallery: require('./components/contextualizers/ImagesGallery'),
+      iframe: require('./components/contextualizers/Iframe')
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,

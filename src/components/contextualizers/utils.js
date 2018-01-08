@@ -9,7 +9,13 @@ export const pickAsset = (resource, rule, assets) => {
   let i = 0;
   while (i < rule.length - 1) {
     const candidate = rule[i];
-    if (resource.data[candidate] && assets[resource.data[candidate]]) {
+    if (candidate.indexOf('_asset_id') === -1) {
+      return {
+        resourceDataField: candidate,
+        asset: null
+      };
+    }
+    else if (resource.data[candidate] && assets[resource.data[candidate]]) {
       return {
         resourceDataField: candidate,
         asset: assets[resource.data[candidate]]

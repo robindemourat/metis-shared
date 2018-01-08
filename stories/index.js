@@ -17,7 +17,8 @@ const {
       },
       contextualizers: {
         image,
-        imagesgallery
+        imagesgallery,
+        iframe
       }
   }
 } = lib;
@@ -32,8 +33,73 @@ const assets = {
     type: 'asset',
     filename: 'image-example.jpg',
     mimetype: 'image/jpg'
+  },
+  'iframe_screenshot': {
+    type: 'asset',
+    filename: 'screenshot-example.png',
+    mimetype: 'image/png'
+  },
+  'iframe_screencast': {
+    type: 'asset',
+    filename: 'screencast-example.mp4',
+    mimetype: 'video/mpeg'
   }
 };
+
+/**
+ * Iframe contextualizer
+ */
+
+const iframeResource = {
+  _id: 'iframe resource',
+  metadata: {
+    name: 'iframe resource',
+    resource_type: 'iframe',
+    description: 'an iframe resource'
+  },
+  data: {
+    url: 'http://chaire-arts-sciences.org/',
+    screencast_video_asset_id: 'iframe_screencast',
+    rgb_image_asset_id: 'iframe_screenshot',
+    cmyb_image_asset_id: 'iframe_screenshot',
+    bw_image_asset_id: 'iframe_screenshot'
+  }
+};
+
+const iframeContextualizer = {
+  id: 'iframe contextualizer',
+  type: 'iframe',
+  insertionType: 'block'
+};
+
+const iframeContextualization = {
+  id: 'iframe contextualization',
+  resourceId: 'iframe resource',
+  contextualizerId: 'iframe contxtualizer'
+};
+
+const IframeBlock = ({renderingMode}) => {
+  const Block = iframe.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+    >
+      <Block
+        resource={iframeResource}
+        contextualization={iframeContextualization}
+        contextualizer={iframeContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Iframe contextualizer', module)
+  .add('web', () => <IframeBlock renderingMode={'web'} />)
+  .add('epub reflowable', () => <IframeBlock renderingMode={'epub-reflowable'} />)
+  .add('epub fixed', () => <IframeBlock renderingMode={'epub-fixed'} />)
+  .add('pdf', () => <IframeBlock renderingMode={'pdf'} />)
+  .add('micro', () => <IframeBlock renderingMode={'micro'} />)
 
 
 /**
