@@ -1,10 +1,12 @@
 /* eslint react/no-set-state : 0 */
-
+/* eslint  no-new-func : 0 */
 import React, {Component} from 'react';
 import Modal from 'react-modal';
 import ZoomableImage from 'react-zoomable-image';
 import Dimensions from 'react-dimensions';
 
+const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
+const inBrowser = isBrowser();
 
 const computeDimensions = (imageDimensions, containerDimensions) => {
   const dimensions = {
@@ -160,13 +162,17 @@ class BlockDynamic extends Component {
               border: 'none'
             }
           }}>
-          <Zoomable
-            src={assetUri}
-            title={resource.metadata.title}
-            imageDimensions={{
-              width: imageWidth,
-              height: imageHeight,
-            }} />
+          {inBrowser ?
+            <Zoomable
+              src={assetUri}
+              title={resource.metadata.title}
+              imageDimensions={{
+                width: imageWidth,
+                height: imageHeight,
+              }} />
+              :
+            <img src={assetUri} />
+          }
         </Modal>
       </figure>
     ) : null;
