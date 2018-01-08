@@ -18,10 +18,6 @@ var _reactModal = require('react-modal');
 
 var _reactModal2 = _interopRequireDefault(_reactModal);
 
-var _reactZoomableImage = require('react-zoomable-image');
-
-var _reactZoomableImage2 = _interopRequireDefault(_reactZoomableImage);
-
 var _reactDimensions = require('react-dimensions');
 
 var _reactDimensions2 = _interopRequireDefault(_reactDimensions);
@@ -34,8 +30,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var ZoomableImage = void 0;
+
+
 var isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 var inBrowser = isBrowser();
+
+if (inBrowser) {
+  ZoomableImage = require('react-zoomable-image');
+}
 
 var computeDimensions = function computeDimensions(imageDimensions, containerDimensions) {
   var dimensions = {
@@ -72,7 +75,7 @@ var Zoomable = (0, _reactDimensions2.default)()(function (_ref) {
       ratio = _computeDimensions.ratio;
 
   if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
-    return _react2.default.createElement(_reactZoomableImage2.default, {
+    return _react2.default.createElement(ZoomableImage, {
       baseImage: {
         alt: title,
         src: src,

@@ -2,11 +2,15 @@
 /* eslint  no-new-func : 0 */
 import React, {Component} from 'react';
 import Modal from 'react-modal';
-import ZoomableImage from 'react-zoomable-image';
+let ZoomableImage;
 import Dimensions from 'react-dimensions';
 
 const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 const inBrowser = isBrowser();
+
+if (inBrowser) {
+ ZoomableImage = require('react-zoomable-image');
+}
 
 const computeDimensions = (imageDimensions, containerDimensions) => {
   const dimensions = {
