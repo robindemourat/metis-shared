@@ -30,14 +30,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ZoomableImage = void 0;
+var ZoomableImage = null;
 
 
 var isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 var inBrowser = isBrowser();
 
 if (inBrowser) {
-  ZoomableImage = require('react-zoomable-image');
+  ZoomableImage = require('react-zoomable-image').default;
 }
 
 var computeDimensions = function computeDimensions(imageDimensions, containerDimensions) {
@@ -62,7 +62,8 @@ var computeDimensions = function computeDimensions(imageDimensions, containerDim
 
 var Zoomable = (0, _reactDimensions2.default)()(function (_ref) {
   var src = _ref.src,
-      title = _ref.title,
+      _ref$title = _ref.title,
+      title = _ref$title === undefined ? '' : _ref$title,
       imageDimensions = _ref.imageDimensions,
       containerWidth = _ref.containerWidth,
       containerHeight = _ref.containerHeight;
@@ -151,7 +152,7 @@ var BlockDynamic = (_temp = _class = function (_Component) {
         _react2.default.createElement('img', {
           src: assetUri,
           onClick: toggleModal }),
-        _react2.default.createElement(
+        inBrowser ? _react2.default.createElement(
           _reactModal2.default,
           {
             isOpen: modalIsOpen,
@@ -163,14 +164,14 @@ var BlockDynamic = (_temp = _class = function (_Component) {
                 border: 'none'
               }
             } },
-          inBrowser ? _react2.default.createElement(Zoomable, {
+          _react2.default.createElement(Zoomable, {
             src: assetUri,
             title: resource.metadata.title,
             imageDimensions: {
               width: imageWidth,
               height: imageHeight
-            } }) : _react2.default.createElement('img', { src: assetUri })
-        )
+            } })
+        ) : _react2.default.createElement('img', { src: assetUri })
       ) : null;
     }
   }]);

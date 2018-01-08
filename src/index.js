@@ -3,7 +3,8 @@
 export default {
   components: {
     contextualizers: {
-      image: require('./components/contextualizers/Image')
+      image: require('./components/contextualizers/Image'),
+      imagesgallery: require('./components/contextualizers/ImagesGallery')
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,

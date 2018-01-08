@@ -61,7 +61,6 @@ export default class PreviewContainer extends Component {
 
     switch (this.state.location) {
       case 'home':
-
         return (
           <Home
             compositions={compositions}

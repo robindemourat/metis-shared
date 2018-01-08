@@ -8,6 +8,10 @@ var _Image = require('./Image');
 
 var image = _interopRequireWildcard(_Image);
 
+var _ImagesGallery = require('./ImagesGallery');
+
+var imagesgallery = _interopRequireWildcard(_ImagesGallery);
+
 var _utils = require('./utils');
 
 var utils = _interopRequireWildcard(_utils);
@@ -16,5 +20,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 exports.default = {
   image: image,
+  imagesgallery: imagesgallery,
   utils: utils
 };

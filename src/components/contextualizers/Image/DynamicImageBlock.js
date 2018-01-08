@@ -2,14 +2,14 @@
 /* eslint  no-new-func : 0 */
 import React, {Component} from 'react';
 import Modal from 'react-modal';
-let ZoomableImage;
+let ZoomableImage = null;
 import Dimensions from 'react-dimensions';
 
 const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 const inBrowser = isBrowser();
 
 if (inBrowser) {
- ZoomableImage = require('react-zoomable-image');
+ ZoomableImage = require('react-zoomable-image').default;
 }
 
 const computeDimensions = (imageDimensions, containerDimensions) => {
@@ -35,7 +35,7 @@ const computeDimensions = (imageDimensions, containerDimensions) => {
 
 const Zoomable = Dimensions()(({
   src,
-  title,
+  title = '',
   imageDimensions,
   containerWidth,
   containerHeight
@@ -156,28 +156,30 @@ class BlockDynamic extends Component {
         <img
           src={assetUri}
           onClick={toggleModal} />
-        <Modal
-          isOpen={modalIsOpen}
-          ariaHideApp={false}
-          onRequestClose={toggleModal}
-          style={{
-            content: {
-              background: 'rgba(0,0,0,0)',
-              border: 'none'
-            }
-          }}>
-          {inBrowser ?
+        {inBrowser ?
+          <Modal
+            isOpen={modalIsOpen}
+            ariaHideApp={false}
+            onRequestClose={toggleModal}
+            style={{
+              content: {
+                background: 'rgba(0,0,0,0)',
+                border: 'none'
+              }
+            }}>
+
             <Zoomable
               src={assetUri}
               title={resource.metadata.title}
               imageDimensions={{
-                width: imageWidth,
-                height: imageHeight,
-              }} />
-              :
-            <img src={assetUri} />
-          }
-        </Modal>
+                  width: imageWidth,
+                  height: imageHeight,
+                }} />
+
+          </Modal>
+        :
+          <img src={assetUri} />
+        }
       </figure>
     ) : null;
 

@@ -30,6 +30,8 @@
   "dependencies": {
     "oy-vey": "^0.11.0",
     "react-dimensions": "^1.3.1",
+    "react-image-tiler": "^1.1.5",
+    "react-images": "^0.5.14",
     "react-modal": "^3.1.10",
     "react-tweet": "git+https://github.com/robindemourat/react-tweet.git",
     "react-zoomable-image": "^1.0.5",

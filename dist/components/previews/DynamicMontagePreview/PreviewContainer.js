@@ -87,7 +87,6 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
       switch (_this.state.location) {
         case 'home':
-
           return _react2.default.createElement(_Home2.default, {
             compositions: compositions,
             montage: montage });

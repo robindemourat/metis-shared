@@ -16,7 +16,8 @@ const {
         MailingPreview,
       },
       contextualizers: {
-        image
+        image,
+        imagesgallery
       }
   }
 } = lib;
@@ -87,6 +88,64 @@ storiesOf('Image contextualizer', module)
   .add('epub fixed', () => <ImageBlock renderingMode={'epub-fixed'} />)
   .add('pdf', () => <ImageBlock renderingMode={'pdf'} />)
   .add('micro', () => <ImageBlock renderingMode={'micro'} />)
+
+/**
+ * Image gallery contextualizer
+ */
+
+const imagesGalleryResource = {
+  _id: 'images gallery resource',
+  metadata: {
+    name: 'image gallery resource',
+    resource_type: 'image',
+    description: 'an images gallery resource'
+  },
+  data: [{
+      rgb_image_asset_id: 'image',
+      cmyb_image_asset_id: 'image',
+      bw_image_asset_id: 'image'
+    },
+    {
+      rgb_image_asset_id: 'image',
+      cmyb_image_asset_id: 'image',
+      bw_image_asset_id: 'image'
+    }]
+};
+
+const imagesGalleryContextualizer = {
+  id: 'images gallery contextualizer',
+  type: 'imagesgallery',
+  insertionType: 'block'
+};
+
+const imagesGalleryContextualization = {
+  id: 'images gallery contextualization',
+  resourceId: 'images gallery resource',
+  contextualizerId: 'images gallery contxtualizer'
+};
+
+const ImagesGalleryBlock = ({renderingMode}) => {
+  const Block = imagesgallery.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+    >
+      <Block
+        resource={imagesGalleryResource}
+        contextualization={imagesGalleryContextualization}
+        contextualizer={imagesGalleryContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Images gallery contextualizer', module)
+  .add('web', () => <ImagesGalleryBlock renderingMode={'web'} />)
+  .add('epub reflowable', () => <ImagesGalleryBlock renderingMode={'epub-reflowable'} />)
+  .add('epub fixed', () => <ImagesGalleryBlock renderingMode={'epub-fixed'} />)
+  .add('pdf', () => <ImagesGalleryBlock renderingMode={'pdf'} />)
+  .add('micro', () => <ImagesGalleryBlock renderingMode={'micro'} />)
 
 
 /**
