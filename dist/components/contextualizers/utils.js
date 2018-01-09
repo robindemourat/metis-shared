@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  */
 var pickAsset = exports.pickAsset = function pickAsset(resource, rule, assets) {
   var i = 0;
-  while (i < rule.length - 1) {
+  while (i < rule.length) {
     var candidate = rule[i];
     if (candidate.indexOf('_asset_id') === -1) {
       return {

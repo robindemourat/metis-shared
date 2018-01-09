@@ -16,6 +16,14 @@ var _Iframe = require('./Iframe');
 
 var iframe = _interopRequireWildcard(_Iframe);
 
+var _Video = require('./Video');
+
+var video = _interopRequireWildcard(_Video);
+
+var _Audio = require('./Audio');
+
+var audio = _interopRequireWildcard(_Audio);
+
 var _utils = require('./utils');
 
 var utils = _interopRequireWildcard(_utils);
@@ -26,5 +34,8 @@ exports.default = {
   image: image,
   imagesgallery: imagesgallery,
   iframe: iframe,
+  video: video,
+  audio: audio,
+
   utils: utils
 };

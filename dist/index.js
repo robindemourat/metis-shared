@@ -8,7 +8,9 @@ exports.default = {
     contextualizers: {
       image: require('./components/contextualizers/Image'),
       imagesgallery: require('./components/contextualizers/ImagesGallery'),
-      iframe: require('./components/contextualizers/Iframe')
+      iframe: require('./components/contextualizers/Iframe'),
+      video: require('./components/contextualizers/Video'),
+      audio: require('./components/contextualizers/Audio')
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,

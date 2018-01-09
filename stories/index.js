@@ -18,7 +18,9 @@ const {
       contextualizers: {
         image,
         imagesgallery,
-        iframe
+        iframe,
+        video,
+        audio
       }
   }
 } = lib;
@@ -43,6 +45,31 @@ const assets = {
     type: 'asset',
     filename: 'screencast-example.mp4',
     mimetype: 'video/mpeg'
+  },
+  'video_hd': {
+    type: 'asset',
+    filename: 'makridou-bretonneau-hd.mp4',
+    mimetype: 'video/mpeg'
+  },
+  'video_sd': {
+    type: 'asset',
+    filename: 'makridou-bretonneau-sd.3gp',
+    mimetype: 'video/3gpp'
+  },
+  'video_screenshot': {
+    type: 'asset',
+    filename: 'makridou-bretonneau-screenshot.png',
+    mimetype: 'image/png'
+  },
+  'audio_track': {
+    type: 'asset',
+    filename: 'makridou-bretonneau-sound.mp3',
+    mimetype: 'audio/mp3'
+  },
+  'audio_transcription': {
+    type: 'asset',
+    filename: 'makridou-bretonneau-subtitles.srt',
+    mimetype: 'text/srt'
   }
 };
 
@@ -95,11 +122,120 @@ const IframeBlock = ({renderingMode}) => {
 }
 
 storiesOf('Iframe contextualizer', module)
-  .add('web', () => <IframeBlock renderingMode={'web'} />)
-  .add('epub reflowable', () => <IframeBlock renderingMode={'epub-reflowable'} />)
-  .add('epub fixed', () => <IframeBlock renderingMode={'epub-fixed'} />)
-  .add('pdf', () => <IframeBlock renderingMode={'pdf'} />)
-  .add('micro', () => <IframeBlock renderingMode={'micro'} />)
+  .add('web (will display an iframe)', () => <IframeBlock renderingMode={'web'} />)
+  .add('epub reflowable (will display an image)', () => <IframeBlock renderingMode={'epub-reflowable'} />)
+  .add('epub fixed (will display a screencast)', () => <IframeBlock renderingMode={'epub-fixed'} />)
+  .add('pdf (will display an image)', () => <IframeBlock renderingMode={'pdf'} />)
+  .add('micro (will display an image)', () => <IframeBlock renderingMode={'micro'} />)
+
+/**
+ * Video contextualizer
+ */
+
+const videoResource = {
+  _id: 'video resource',
+  metadata: {
+    name: 'video resource',
+    resource_type: 'video',
+    description: 'a video resource'
+  },
+  data: {
+    hd_video_asset_id: 'video_hd',
+    sd_video_asset_id: 'video_sd',
+    rgb_image_asset_id: 'video_screenshot',
+    cmyb_image_asset_id: 'video_screenshot',
+    bw_image_asset_id: 'video_screenshot'
+
+  }
+};
+
+const videoContextualizer = {
+  id: 'video contextualizer',
+  type: 'video',
+  insertionType: 'block'
+};
+
+const videoContextualization = {
+  id: 'video contextualization',
+  resourceId: 'video resource',
+  contextualizerId: 'video contxtualizer'
+};
+
+const VideoBlock = ({renderingMode}) => {
+  const Block = video.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+    >
+      <Block
+        resource={videoResource}
+        contextualization={videoContextualization}
+        contextualizer={videoContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Video contextualizer', module)
+  .add('web (will display a hd video player)', () => <VideoBlock renderingMode={'web'} />)
+  .add('epub fixed (will display a sd video player)', () => <VideoBlock renderingMode={'epub-fixed'} />)
+  .add('epub reflowable (will display an image)', () => <VideoBlock renderingMode={'epub-reflowable'} />)
+  .add('pdf (will display an image)', () => <VideoBlock renderingMode={'pdf'} />)
+  .add('micro (will display an image)', () => <VideoBlock renderingMode={'micro'} />)
+
+
+/**
+ * Audio contextualizer
+ */
+
+const audioResource = {
+  _id: 'audio resource',
+  metadata: {
+    name: 'audio resource',
+    resource_type: 'audio',
+    description: 'an audio resource'
+  },
+  data: {
+    audio_track_asset_id: 'audio_track',
+    transcription_asset_id: 'audio_transcription',
+  }
+};
+
+const audioContextualizer = {
+  id: 'audio contextualizer',
+  type: 'audio',
+  insertionType: 'block'
+};
+
+const audioContextualization = {
+  id: 'audio contextualization',
+  resourceId: 'audio resource',
+  contextualizerId: 'audio contxtualizer'
+};
+
+const AudioBlock = ({renderingMode}) => {
+  const Block = audio.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+    >
+      <Block
+        resource={audioResource}
+        contextualization={audioContextualization}
+        contextualizer={audioContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Audio contextualizer', module)
+  .add('web (will display an audio player + transcription)', () => <AudioBlock renderingMode={'web'} />)
+  .add('epub fixed (will display an audio player + transcription)', () => <AudioBlock renderingMode={'epub-fixed'} />)
+  .add('epub reflowable (will display transcription)', () => <AudioBlock renderingMode={'epub-reflowable'} />)
+  .add('pdf (will display transcription)', () => <AudioBlock renderingMode={'pdf'} />)
+  .add('micro (will display transcription)', () => <AudioBlock renderingMode={'micro'} />)
 
 
 /**

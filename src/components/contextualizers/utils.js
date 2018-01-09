@@ -7,7 +7,7 @@
  */
 export const pickAsset = (resource, rule, assets) => {
   let i = 0;
-  while (i < rule.length - 1) {
+  while (i < rule.length) {
     const candidate = rule[i];
     if (candidate.indexOf('_asset_id') === -1) {
       return {
