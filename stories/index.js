@@ -20,7 +20,8 @@ const {
         imagesgallery,
         iframe,
         video,
-        audio
+        audio,
+        table
       }
   }
 } = lib;
@@ -70,6 +71,11 @@ const assets = {
     type: 'asset',
     filename: 'makridou-bretonneau-subtitles.srt',
     mimetype: 'text/srt'
+  },
+  'table': {
+    type: 'asset',
+    filename: 'gpe_culture.csv',
+    mimetype: 'text/csv'
   }
 };
 
@@ -236,6 +242,57 @@ storiesOf('Audio contextualizer', module)
   .add('epub reflowable (will display transcription)', () => <AudioBlock renderingMode={'epub-reflowable'} />)
   .add('pdf (will display transcription)', () => <AudioBlock renderingMode={'pdf'} />)
   .add('micro (will display transcription)', () => <AudioBlock renderingMode={'micro'} />)
+
+/**
+ * Table contextualizer
+ */
+
+const tableResource = {
+  _id: 'table resource',
+  metadata: {
+    name: 'table resource',
+    resource_type: 'table',
+    description: 'a table resource'
+  },
+  data: {
+    data_asset_id: 'table'
+  }
+};
+
+const tableContextualizer = {
+  id: 'table contextualizer',
+  type: 'table',
+  insertionType: 'block'
+};
+
+const tableContextualization = {
+  id: 'table contextualization',
+  resourceId: 'table resource',
+  contextualizerId: 'table contxtualizer'
+};
+
+const TableBlock = ({renderingMode}) => {
+  const Block = table.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+    >
+      <Block
+        resource={tableResource}
+        contextualization={tableContextualization}
+        contextualizer={tableContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Table contextualizer', module)
+  .add('web', () => <TableBlock renderingMode={'web'} />)
+  .add('epub reflowable', () => <TableBlock renderingMode={'epub-reflowable'} />)
+  .add('epub fixed', () => <TableBlock renderingMode={'epub-fixed'} />)
+  .add('pdf', () => <TableBlock renderingMode={'pdf'} />)
+  .add('micro', () => <TableBlock renderingMode={'micro'} />)
 
 
 /**

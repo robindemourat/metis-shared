@@ -3,6 +3,7 @@ import * as imagesgallery from './ImagesGallery';
 import * as iframe from './Iframe';
 import * as video from './Video';
 import * as audio from './Audio';
+import * as table from './Table';
 import * as utils from './utils';
 
 export default {
@@ -11,6 +12,7 @@ export default {
   iframe,
   video,
   audio,
+  table,
 
   utils,
 };

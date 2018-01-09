@@ -28,6 +28,8 @@
     "react-dom": "^16.1.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "d3-dsv": "^1.0.8",
     "mime-types": "^2.1.17",
     "oy-vey": "^0.11.0",
     "react-dimensions": "^1.3.1",
@@ -35,6 +37,7 @@
     "react-images": "^0.5.14",
     "react-media-player": "^0.7.0",
     "react-modal": "^3.1.10",
+    "react-table": "^6.7.6",
     "react-tweet": "git+https://github.com/robindemourat/react-tweet.git",
     "react-zoomable-image": "^1.0.5",
     "redraft": "^0.9.0",

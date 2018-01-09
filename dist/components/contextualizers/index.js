@@ -24,6 +24,10 @@ var _Audio = require('./Audio');
 
 var audio = _interopRequireWildcard(_Audio);
 
+var _Table = require('./Table');
+
+var table = _interopRequireWildcard(_Table);
+
 var _utils = require('./utils');
 
 var utils = _interopRequireWildcard(_utils);
@@ -36,6 +40,7 @@ exports.default = {
   iframe: iframe,
   video: video,
   audio: audio,
+  table: table,
 
   utils: utils
 };

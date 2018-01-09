@@ -8,6 +8,7 @@ export default {
       iframe: require('./components/contextualizers/Iframe'),
       video: require('./components/contextualizers/Video'),
       audio: require('./components/contextualizers/Audio'),
+      table: require('./components/contextualizers/Table'),
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,
