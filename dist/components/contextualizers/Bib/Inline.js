@@ -21,7 +21,7 @@ var Inline = function Inline(_ref, _ref2) {
   var citations = _ref2.citations;
 
   var citation = citations[contextualization._id];
-  if (citation.html) {
+  if (citation && citation.html) {
     return _react2.default.createElement('cite', {
       dangerouslySetInnerHTML: { __html: citation.html } });
   }

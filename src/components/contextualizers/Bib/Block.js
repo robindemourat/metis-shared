@@ -14,12 +14,15 @@ const Block = ({
   citationItems
 }) => {
   const item = citationItems[resource.data.id];
-  return (
-    <Bibliography
-      style={citationStyle}
-      locale={citationLocale}
-      items={{[item.id]: item}} />
-  );
+  if (item) {
+    return (
+      <Bibliography
+        style={citationStyle}
+        locale={citationLocale}
+        items={{[item.id]: item}} />
+    );  
+  }
+  return null;
 };
 
 Block.contextTypes = {

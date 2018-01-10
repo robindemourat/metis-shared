@@ -12,7 +12,7 @@ const Inline = ({
   citations
 }) => {
   const citation = citations[contextualization._id];
-  if (citation.html) {
+  if (citation && citation.html) {
     return (<cite
       dangerouslySetInnerHTML={{__html: citation.html}} />);
   }

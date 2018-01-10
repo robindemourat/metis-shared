@@ -26,10 +26,13 @@ var Block = function Block(_ref, _ref2) {
       citationItems = _ref2.citationItems;
 
   var item = citationItems[resource.data.id];
-  return _react2.default.createElement(_reactCiteproc.Bibliography, {
-    style: citationStyle,
-    locale: citationLocale,
-    items: _defineProperty({}, item.id, item) });
+  if (item) {
+    return _react2.default.createElement(_reactCiteproc.Bibliography, {
+      style: citationStyle,
+      locale: citationLocale,
+      items: _defineProperty({}, item.id, item) });
+  }
+  return null;
 };
 
 Block.contextTypes = {
