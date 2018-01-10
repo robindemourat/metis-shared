@@ -37,7 +37,7 @@ var pickAsset = exports.pickAsset = function pickAsset(resource, rule, assets) {
  */
 var pickSubAsset = exports.pickSubAsset = function pickSubAsset(sub, rule, assets) {
   var i = 0;
-  while (i < rule.length - 1) {
+  while (i < rule.length) {
     var candidate = rule[i];
     if (sub[candidate] && assets[sub[candidate]]) {
       return {

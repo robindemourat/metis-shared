@@ -33,8 +33,11 @@ const Block = ({
           {
             resource.data.map((img, index) => {
               const appropriateAsset = pickSubAsset(img, meta.assetPickingRules.image[renderingMode], assetsData);
-              const imageAssetUri = getAssetUri(appropriateAsset.asset);
-              return <img src={imageAssetUri} key={index} />;
+              if (appropriateAsset) {
+                const imageAssetUri = getAssetUri(appropriateAsset.asset);
+                return <img src={imageAssetUri} key={index} />;
+              }
+              return null;
             })
           }
         </div>

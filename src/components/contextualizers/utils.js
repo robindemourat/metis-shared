@@ -34,7 +34,7 @@ export const pickAsset = (resource, rule, assets) => {
  */
 export const pickSubAsset = (sub, rule, assets) => {
   let i = 0;
-  while (i < rule.length - 1) {
+  while (i < rule.length) {
     const candidate = rule[i];
     if (sub[candidate] && assets[sub[candidate]]) {
       return {

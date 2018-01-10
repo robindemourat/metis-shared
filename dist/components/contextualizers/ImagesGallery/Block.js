@@ -50,8 +50,11 @@ var Block = function Block(_ref, _ref2) {
         null,
         resource.data.map(function (img, index) {
           var appropriateAsset = (0, _utils.pickSubAsset)(img, _meta2.default.assetPickingRules.image[renderingMode], assetsData);
-          var imageAssetUri = getAssetUri(appropriateAsset.asset);
-          return _react2.default.createElement('img', { src: imageAssetUri, key: index });
+          if (appropriateAsset) {
+            var imageAssetUri = getAssetUri(appropriateAsset.asset);
+            return _react2.default.createElement('img', { src: imageAssetUri, key: index });
+          }
+          return null;
         })
       );
     default:
