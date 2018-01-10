@@ -20,8 +20,20 @@ export default class TranslationProvider extends Component {
     const {
       children
     } = this.props;
+
+    const style = {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%'
+    }
+
     return (
-      <section className="translations-provider">
+      <section 
+        className="translations-provider"
+        style={style}
+      >
         {children}
       </section>
     )

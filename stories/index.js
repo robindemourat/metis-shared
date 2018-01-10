@@ -1,12 +1,26 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+
+import {ReferencesManager} from 'react-citeproc';
+
 import TranslationsProvider from './TranslationProvider';
 import ContextualizerContainer from './ContextualizerContainer';
 
+import CitationsDataProvider from './CitationsDataProvider';
+import rawBib from 'raw-loader!../assets_examples/bibliography.bib';
+import citationStyle from 'raw-loader!../assets_examples/apa.csl';
+import citationLocale from 'raw-loader!../assets_examples/english-locale.xml';
+
 import lib from '../src';
 
+import 'react-table/react-table.css';
+
+
 const {
+  utils: {
+    parseBibTeXToCSLJSON
+  },
   components: {
       previews: {
         DynamicMontagePreview,
@@ -21,7 +35,9 @@ const {
         iframe,
         video,
         audio,
-        table
+        table,
+        mobiliscene,
+        bib
       }
   }
 } = lib;
@@ -29,6 +45,7 @@ const {
 /**
  * Contextualizers stories
  */
+
 
 
 const assets = {
@@ -76,8 +93,213 @@ const assets = {
     type: 'asset',
     filename: 'gpe_culture.csv',
     mimetype: 'text/csv'
+  },
+  '360_video': {
+    type: 'asset',
+    filename: '360-video.mp4',
+    mimetype: 'video/webm'
+  },
+  '360_text': {
+    type: 'asset',
+    filename: '360-text.txt',
+    mimetype: 'text/plain'
+  },
+  '360_screenshot': {
+    type: 'asset',
+    filename: '360-screenshot.png',
+    mimetype: 'image/png'
+  },
+  '360_screencast': {
+    type: 'asset',
+    filename: '360_screencast.mp4',
+    mimetype: 'video/mp4'
+  },
+  'droid_sans_font': {
+    type: 'asset',
+    filename: 'DroidSans.json',
+    mimetype: 'application/json'
   }
 };
+
+/**
+ * Bib contextualizer
+ */
+
+const bibData = parseBibTeXToCSLJSON(rawBib);
+const bibItems = bibData.reduce((total, ref) => ({
+  ...total,
+  [ref.id]: ref
+}), {});
+
+const bibRes = bibData.reduce((total, ref) => [
+  ...total,
+  {
+    _id: ref.id,
+    metadata: {
+      name: ref.title,
+      resource_type: 'bib',
+    },
+    data: ref
+  }
+], []);
+
+const bibBlockContextualizer = {
+  _id: 'bib block contextualizer',
+  type: 'bib',
+  insertionType: 'block'
+};
+
+const bibBlockContextualization = {
+  _id: 'bib block contextualization',
+  resourceId: bibRes[0]._id,
+  contextualizerId: 'bib block contextualizer'
+};
+
+const bibInlineContextualizer = {
+  _id: 'bib inline contextualizer',
+  type: 'bib',
+  insertionType: 'inline'
+};
+
+
+const bibInlineContextualization = {
+  _id: 'bib inline contextualization',
+  resourceId: bibRes[0]._id,
+  contextualizerId: 'bib inline contextualizer'
+};
+
+
+const bibCitations = [
+  [{
+      citationID: bibInlineContextualization._id,
+      citationItems: [{
+        id: bibRes[0].data.id
+      }],
+      properties: {
+        noteIndex: 0
+      }
+    },
+    [],
+    []
+  ]
+];
+
+const BibBlock = bib.Block;
+const BibInline = bib.Inline;
+
+storiesOf('Bib contextualizer', module)
+  .add('Inline (full citation)', () => 
+    <ReferencesManager
+      style={citationStyle}
+      locale={citationLocale}
+      items={bibItems}
+      citations={bibCitations.slice(0, 1)}
+    >
+      <BibInline 
+        resource={bibRes[0]} 
+        contextualizer={bibInlineContextualizer} 
+        contextualization={bibInlineContextualization} 
+        renderingMode={'web'} 
+      />
+    </ReferencesManager>
+  )
+  .add('Block (full citation)', () => 
+    <CitationsDataProvider
+      style={citationStyle}
+      locale={citationLocale}
+      items={bibItems}
+      citations={bibCitations.slice(0, 1)}
+    >
+      <BibBlock 
+        resource={bibRes[0]} 
+        contextualizer={bibBlockContextualizer} 
+        contextualization={bibBlockContextualization} 
+        renderingMode={'web'} 
+      />
+    </CitationsDataProvider>
+  )
+
+
+
+/**
+ * Mobiliscene contextualizer
+ */
+
+const mobilisceneResource = {
+  _id: 'mobiliscene resource',
+  metadata: {
+    name: 'mobiliscene resource',
+    resource_type: 'mobiliscene',
+    description: 'a mobiliscene resource'
+  },
+  data: {
+    content_type: 'video',
+    geometry: 'sphere',
+    content_asset_id: '360_video',
+    screencast_video_asset_id: '360_screencast',
+    rgb_image_asset_id: '360_screenshot',
+    cmyb_image_asset_id: '360_screenshot',
+    bw_image_asset_id: '360_screenshot'
+  }
+};
+
+const mobilisceneResourceAlt = {
+  _id: 'mobiliscene resource',
+  metadata: {
+    name: 'mobiliscene resource',
+    resource_type: 'mobiliscene',
+    description: 'a mobiliscene resource'
+  },
+  data: {
+    content_type: 'text',
+    geometry: 'cylinder',
+    content_asset_id: '360_text',
+    font_asset_id: 'droid_sans_font',
+    screencast_video_asset_id: '360_screencast',
+    rgb_image_asset_id: '360_screenshot',
+    cmyb_image_asset_id: '360_screenshot',
+    bw_image_asset_id: '360_screenshot'
+  }
+};
+
+
+const mobilisceneContextualizer = {
+  id: 'mobiliscene contextualizer',
+  type: 'mobiliscene',
+  insertionType: 'block'
+};
+
+const mobilisceneContextualization = {
+  id: 'mobiliscene contextualization',
+  resourceId: 'mobiliscene resource',
+  contextualizerId: 'mobiliscene contxtualizer'
+};
+
+const MobilisceneBlock = ({renderingMode, resource}) => {
+  const Block = mobiliscene.Block;
+  return (
+    <ContextualizerContainer 
+      assets={assets}
+      style={{width: '100%', height: '100%', position: 'absolute'}}
+    >
+      <Block
+        resource={resource}
+        contextualization={mobilisceneContextualization}
+        contextualizer={mobilisceneContextualizer}
+        renderingMode={renderingMode}
+      />
+    </ContextualizerContainer>
+  );
+}
+
+storiesOf('Mobiliscene contextualizer', module)
+  .add('web (video - will display a player)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'web'} />)
+  .add('web (text - will display a player)', () => <MobilisceneBlock resource={mobilisceneResourceAlt} renderingMode={'web'} />)
+  .add('epub fixed (will display a screencast)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'epub-fixed'} />)
+  .add('epub reflowable (will display an image)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'epub-reflowable'} />)
+  .add('pdf (will display an image)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'pdf'} />)
+  .add('micro (will display an image)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'micro'} />)
+
 
 /**
  * Iframe contextualizer

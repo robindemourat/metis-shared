@@ -28,6 +28,14 @@ var _Table = require('./Table');
 
 var table = _interopRequireWildcard(_Table);
 
+var _Mobiliscene = require('./Mobiliscene');
+
+var mobiliscene = _interopRequireWildcard(_Mobiliscene);
+
+var _Bib = require('./Bib');
+
+var bib = _interopRequireWildcard(_Bib);
+
 var _utils = require('./utils');
 
 var utils = _interopRequireWildcard(_utils);
@@ -41,6 +49,8 @@ exports.default = {
   video: video,
   audio: audio,
   table: table,
+  mobiliscene: mobiliscene,
+  bib: bib,
 
   utils: utils
 };

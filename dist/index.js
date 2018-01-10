@@ -3,7 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _assetsUtils = require('./utils/assetsUtils');
+
 exports.default = {
+  utils: {
+    parseBibTeXToCSLJSON: _assetsUtils.parseBibTeXToCSLJSON
+  },
   components: {
     contextualizers: {
       image: require('./components/contextualizers/Image'),
@@ -11,7 +17,9 @@ exports.default = {
       iframe: require('./components/contextualizers/Iframe'),
       video: require('./components/contextualizers/Video'),
       audio: require('./components/contextualizers/Audio'),
-      table: require('./components/contextualizers/Table')
+      table: require('./components/contextualizers/Table'),
+      mobiliscene: require('./components/contextualizers/Mobiliscene'),
+      bib: require('./components/contextualizers/Bib')
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,

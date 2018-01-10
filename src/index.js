@@ -1,6 +1,9 @@
-
+import {parseBibTeXToCSLJSON} from './utils/assetsUtils';
 
 export default {
+  utils: {
+    parseBibTeXToCSLJSON
+  },
   components: {
     contextualizers: {
       image: require('./components/contextualizers/Image'),
@@ -9,6 +12,8 @@ export default {
       video: require('./components/contextualizers/Video'),
       audio: require('./components/contextualizers/Audio'),
       table: require('./components/contextualizers/Table'),
+      mobiliscene: require('./components/contextualizers/Mobiliscene'),
+      bib: require('./components/contextualizers/Bib'),
     },
     previews: {
       DynamicMontagePreview: require('./components/previews/DynamicMontagePreview/PreviewContainer').default,

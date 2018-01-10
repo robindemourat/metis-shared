@@ -5,7 +5,7 @@ import ReactTable from 'react-table';
 import {get} from 'axios';
 import {computeColumns, formatData} from './utils';
 
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 
 
 export default class DynamicTable extends Component {

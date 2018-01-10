@@ -21,10 +21,11 @@ export default class ContextualizerContainer extends Component {
 
   render() {
     const {
-      children
+      children,
+      style
     } = this.props;
     return (
-      <section className="contextualizer-container">
+      <section className="contextualizer-container" style={style}>
         <TranslationProvider>
           {children}
         </TranslationProvider>
