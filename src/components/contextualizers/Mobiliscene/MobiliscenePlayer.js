@@ -5,7 +5,8 @@ import {get} from 'axios';
 
 global.THREE = require('three');
 global.opentype = require('opentype.js');
-global.Mobilizing = require('./vendor/mobilizing.js').Mobilizing;
+const MobilizingLib = require('./vendor/mobilizing.js');
+global.Mobilizing = MobilizingLib.Mobilizing ? MobilizingLib.Mobilizing : MobilizingLib;
 const mobiliscene = require('./mobiliscene');
 
 class MobiliscenePlayer extends Component {

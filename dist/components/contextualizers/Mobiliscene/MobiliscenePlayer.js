@@ -28,7 +28,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 global.THREE = require('three');
 global.opentype = require('opentype.js');
-global.Mobilizing = require('./vendor/mobilizing.js').Mobilizing;
+var MobilizingLib = require('./vendor/mobilizing.js');
+global.Mobilizing = MobilizingLib.Mobilizing ? MobilizingLib.Mobilizing : MobilizingLib;
 var mobiliscene = require('./mobiliscene');
 
 var MobiliscenePlayer = function (_Component) {
