@@ -106,7 +106,7 @@ var Block = function (_Component) {
           onClick: onOpenLightBox },
         _react2.default.createElement(_reactImageTiler2.default, { images: images.map(function (image) {
             return image.src;
-          }), minWidth: '200' }),
+          }), minWidth: 200 }),
         _react2.default.createElement(_reactImages2.default, {
           images: images,
           isOpen: lightBoxOpen,

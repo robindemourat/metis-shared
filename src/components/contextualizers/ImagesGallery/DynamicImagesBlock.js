@@ -71,7 +71,7 @@ class Block extends Component {
       <figure
         className="peritext-contextualization peritext-contextualization-block peritext-contextualization-web peritext-contextualizer-image"
         onClick={onOpenLightBox}>
-        <Tiler images={images.map(image => image.src)} minWidth="200" />
+        <Tiler images={images.map(image => image.src)} minWidth={200} />
 
         <Lightbox
           images={images}
