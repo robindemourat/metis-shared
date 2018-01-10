@@ -12491,6 +12491,7 @@
               const request = new LoadRequest({
                   consume: function consume(req) {
                       video.src = url;
+                      video.setAttribute('crossorigin', 'anonymous');
                       video.load();
                       req.events.trigger(EVT_REQUEST_START);
                   },
