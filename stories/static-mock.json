@@ -502,7 +502,7 @@
             {
                 "name": "image test",
                 "creators": [],
-                "ressource_type": "image",
+                "resource_type": "image",
                 "description": ""
             },
             "data":
