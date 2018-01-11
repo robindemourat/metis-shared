@@ -20,7 +20,7 @@ const Block = ({
         style={citationStyle}
         locale={citationLocale}
         items={{[item.id]: item}} />
-    );  
+    );
   }
   return null;
 };

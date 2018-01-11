@@ -20,7 +20,7 @@ var Inline = function Inline(_ref, _ref2) {
   var contextualization = _ref.contextualization;
   var citations = _ref2.citations;
 
-  var citation = citations[contextualization._id];
+  var citation = citations[contextualization.id];
   if (citation && citation.html) {
     return _react2.default.createElement('cite', {
       dangerouslySetInnerHTML: { __html: citation.html } });
