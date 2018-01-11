@@ -12,9 +12,9 @@ var _ImagesGallery = require('./ImagesGallery');
 
 var imagesgallery = _interopRequireWildcard(_ImagesGallery);
 
-var _Iframe = require('./Iframe');
+var _Webpage = require('./Webpage');
 
-var iframe = _interopRequireWildcard(_Iframe);
+var webpage = _interopRequireWildcard(_Webpage);
 
 var _Video = require('./Video');
 
@@ -45,7 +45,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 exports.default = {
   image: image,
   imagesgallery: imagesgallery,
-  iframe: iframe,
+  webpage: webpage,
   video: video,
   audio: audio,
   table: table,

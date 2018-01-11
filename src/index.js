@@ -8,7 +8,7 @@ export default {
     contextualizers: {
       image: require('./components/contextualizers/Image'),
       imagesgallery: require('./components/contextualizers/ImagesGallery'),
-      iframe: require('./components/contextualizers/Iframe'),
+      webpage: require('./components/contextualizers/Webpage'),
       video: require('./components/contextualizers/Video'),
       audio: require('./components/contextualizers/Audio'),
       table: require('./components/contextualizers/Table'),

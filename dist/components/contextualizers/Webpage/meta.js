@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  id: 'iframe',
-  accepts: ['iframe'],
+  id: 'webpage',
+  accepts: ['webpage'],
   assetPickingRules: {
     element: {
       'web': ['url', 'backup_asset_id', 'screencast_video_asset_id', 'rgb_image_asset_id', 'bw_image_asset_id'],

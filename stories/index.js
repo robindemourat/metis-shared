@@ -32,7 +32,7 @@ const {
       contextualizers: {
         image,
         imagesgallery,
-        iframe,
+        webpage,
         video,
         audio,
         table,
@@ -150,20 +150,20 @@ const bibBlockContextualizer = {
 };
 
 const bibBlockContextualization = {
-  _id: 'bib block contextualization',
+  id: 'bib block contextualization',
   resourceId: bibRes[0]._id,
   contextualizerId: 'bib block contextualizer'
 };
 
 const bibInlineContextualizer = {
-  _id: 'bib inline contextualizer',
+  id: 'bib inline contextualizer',
   type: 'bib',
   insertionType: 'inline'
 };
 
 
 const bibInlineContextualization = {
-  _id: 'bib inline contextualization',
+  id: 'bib inline contextualization',
   resourceId: bibRes[0]._id,
   contextualizerId: 'bib inline contextualizer'
 };
@@ -171,7 +171,7 @@ const bibInlineContextualization = {
 
 const bibCitations = [
   [{
-      citationID: bibInlineContextualization._id,
+      citationID: bibInlineContextualization.id,
       citationItems: [{
         id: bibRes[0].data.id
       }],
@@ -302,15 +302,15 @@ storiesOf('Mobiliscene contextualizer', module)
 
 
 /**
- * Iframe contextualizer
+ * Webpage contextualizer
  */
 
-const iframeResource = {
-  _id: 'iframe resource',
+const webpageResource = {
+  _id: 'webpage resource',
   metadata: {
-    name: 'iframe resource',
+    name: 'webpage resource',
     resource_type: 'iframe',
-    description: 'an iframe resource'
+    description: 'a webpage resource'
   },
   data: {
     url: 'http://chaire-arts-sciences.org/',
@@ -321,40 +321,40 @@ const iframeResource = {
   }
 };
 
-const iframeContextualizer = {
-  id: 'iframe contextualizer',
-  type: 'iframe',
+const webpageContextualizer = {
+  id: 'webpage contextualizer',
+  type: 'webpage',
   insertionType: 'block'
 };
 
-const iframeContextualization = {
-  id: 'iframe contextualization',
-  resourceId: 'iframe resource',
-  contextualizerId: 'iframe contxtualizer'
+const webpageContextualization = {
+  id: 'webpage contextualization',
+  resourceId: 'webpage resource',
+  contextualizerId: 'webpage contxtualizer'
 };
 
-const IframeBlock = ({renderingMode}) => {
-  const Block = iframe.Block;
+const WebpageBlock = ({renderingMode}) => {
+  const Block = webpage.Block;
   return (
     <ContextualizerContainer 
       assets={assets}
     >
       <Block
-        resource={iframeResource}
-        contextualization={iframeContextualization}
-        contextualizer={iframeContextualizer}
+        resource={webpageResource}
+        contextualization={webpageContextualization}
+        contextualizer={webpageContextualizer}
         renderingMode={renderingMode}
       />
     </ContextualizerContainer>
   );
 }
 
-storiesOf('Iframe contextualizer', module)
-  .add('web (will display an iframe)', () => <IframeBlock renderingMode={'web'} />)
-  .add('epub reflowable (will display an image)', () => <IframeBlock renderingMode={'epub-reflowable'} />)
-  .add('epub fixed (will display a screencast)', () => <IframeBlock renderingMode={'epub-fixed'} />)
-  .add('pdf (will display an image)', () => <IframeBlock renderingMode={'pdf'} />)
-  .add('micro (will display an image)', () => <IframeBlock renderingMode={'micro'} />)
+storiesOf('Webpage contextualizer', module)
+  .add('web (will display an iframe)', () => <WebpageBlock renderingMode={'web'} />)
+  .add('epub reflowable (will display an image)', () => <WebpageBlock renderingMode={'epub-reflowable'} />)
+  .add('epub fixed (will display a screencast)', () => <WebpageBlock renderingMode={'epub-fixed'} />)
+  .add('pdf (will display an image)', () => <WebpageBlock renderingMode={'pdf'} />)
+  .add('micro (will display an image)', () => <WebpageBlock renderingMode={'micro'} />)
 
 /**
  * Video contextualizer
