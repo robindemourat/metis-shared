@@ -28,16 +28,24 @@ var Nav = function Nav(_ref, _ref2) {
         return parameters.target_composition_id;
       }).map(function (parameters, index) {
         var id = parameters.target_composition_id;
-        var composition = compositions[id];
-        return _react2.default.createElement(
-          'li',
-          { key: index },
-          _react2.default.createElement(
-            Link,
-            { to: { view: 'composition', index: index, parameters: parameters } },
-            composition.metadata.title
-          )
-        );
+        var composition = compositions.find(function (comp) {
+          return comp._id === id;
+        });
+        if (composition) {
+          return _react2.default.createElement(
+            'li',
+            { key: index },
+            _react2.default.createElement(
+              Link,
+              { to: { view: 'composition', index: index, parameters: parameters } },
+              composition.metadata.title,
+              ' (',
+              parameters.template,
+              ')'
+            )
+          );
+        }
+        return null;
       })
     )
   );

@@ -12,6 +12,8 @@ var _Renderer = require('../../renderers/Renderer');
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
 
+require('./ArticleTemplate.scss');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (_ref) {
@@ -22,7 +24,7 @@ exports.default = function (_ref) {
 
   return _react2.default.createElement(
     'div',
-    null,
+    { className: 'plurishing-ArticleTemplate' },
     _react2.default.createElement(
       'h2',
       null,

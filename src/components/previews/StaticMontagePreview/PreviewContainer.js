@@ -29,7 +29,8 @@ export default class PreviewContainer extends Component {
       montage,
       compositions,
       resources,
-      assets
+      assets,
+      renderingMode
     } = this.props;
 
     return (
@@ -56,11 +57,7 @@ export default class PreviewContainer extends Component {
         <Colophon contents={montage.data.colophon} />
         <style>
           {montage.data.css.shared_css_code}
-          {
-          /*
-           * @todo implement renderingMode-specific css call
-           */
-        }
+          {montage.data.css[`${renderingMode}_css_code`]}
         </style>
       </section>
     );

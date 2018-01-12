@@ -29,6 +29,14 @@ var _Composition = require('../../views/dynamic/Composition');
 
 var _Composition2 = _interopRequireDefault(_Composition);
 
+var _apa = require('raw-loader!./assets/apa.csl');
+
+var _apa2 = _interopRequireDefault(_apa);
+
+var _englishLocale = require('raw-loader!./assets/english-locale.xml');
+
+var _englishLocale2 = _interopRequireDefault(_englishLocale);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,7 +56,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
     _this.getChildContext = function () {
       return {
         Link: _this.Link,
-        getAssetUri: _this.props.getAssetUri
+        getAssetUri: _this.props.getAssetUri,
+        citationStyle: _apa2.default,
+        citationLocale: _englishLocale2.default
       };
     };
 
@@ -91,11 +101,14 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             compositions: compositions,
             montage: montage });
         case 'composition':
-          var composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
+          // const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
+          var thatComposition = compositions.find(function (composition) {
+            return composition._id === montage.data.compositions[+locationIndex].target_composition_id;
+          });
           return _react2.default.createElement(_Composition2.default, {
             parameters: locationParameters,
             compositions: compositions,
-            composition: composition,
+            composition: thatComposition,
             resources: resources,
             montage: montage,
             assets: assets });
@@ -137,6 +150,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   return PreviewContainer;
 }(_react.Component), _class.childContextTypes = {
   Link: _propTypes2.default.func,
-  getAssetUri: _propTypes2.default.func
+  getAssetUri: _propTypes2.default.func,
+  citationStyle: _propTypes2.default.string,
+  citationLocale: _propTypes2.default.string
 }, _temp);
 exports.default = PreviewContainer;

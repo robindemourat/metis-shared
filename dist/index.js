@@ -8,7 +8,8 @@ var _assetsUtils = require('./utils/assetsUtils');
 
 exports.default = {
   utils: {
-    parseBibTeXToCSLJSON: _assetsUtils.parseBibTeXToCSLJSON
+    parseBibTeXToCSLJSON: _assetsUtils.parseBibTeXToCSLJSON,
+    resourceToCslJSON: _assetsUtils.resourceToCslJSON
   },
   components: {
     contextualizers: {

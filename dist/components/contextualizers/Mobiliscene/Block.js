@@ -45,6 +45,9 @@ var Block = function Block(_ref2, _ref3) {
 
 
   var appropriateAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.element[renderingMode], assetsData);
+  if (!appropriateAsset) {
+    return null;
+  }
   var field = appropriateAsset.resourceDataField;
 
   var assetUri = void 0;

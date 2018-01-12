@@ -67,7 +67,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           montage = _props.montage,
           compositions = _props.compositions,
           resources = _props.resources,
-          assets = _props.assets;
+          assets = _props.assets,
+          renderingMode = _props.renderingMode;
 
 
       return _react2.default.createElement(
@@ -94,7 +95,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         _react2.default.createElement(
           'style',
           null,
-          montage.data.css.shared_css_code
+          montage.data.css.shared_css_code,
+          montage.data.css[renderingMode + '_css_code']
         )
       );
     }
