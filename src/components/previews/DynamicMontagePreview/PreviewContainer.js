@@ -10,11 +10,16 @@ import PropTypes from 'prop-types';
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
 
+import defaultStyle from 'raw-loader!./assets/apa.csl';
+import defaultLocale from 'raw-loader!./assets/english-locale.xml';
+
 export default class PreviewContainer extends Component {
 
   static childContextTypes = {
     Link: PropTypes.func,
     getAssetUri: PropTypes.func,
+    citationStyle: PropTypes.string,
+    citationLocale: PropTypes.string,
   }
 
   constructor(props) {
@@ -27,7 +32,9 @@ export default class PreviewContainer extends Component {
 
   getChildContext = () => ({
     Link: this.Link,
-    getAssetUri: this.props.getAssetUri
+    getAssetUri: this.props.getAssetUri,
+    citationStyle: defaultStyle,
+    citationLocale: defaultLocale,
   })
 
   Link = ({to, children}) => {
@@ -67,12 +74,13 @@ export default class PreviewContainer extends Component {
             montage={montage} />
         );
       case 'composition':
-        const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
+        // const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
+        const thatComposition = compositions.find(composition => composition._id === montage.data.compositions[+locationIndex].target_composition_id);
         return (
           <Composition
             parameters={locationParameters}
             compositions={compositions}
-            composition={composition}
+            composition={thatComposition}
             resources={resources}
             montage={montage}
             assets={assets} />

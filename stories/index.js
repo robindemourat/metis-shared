@@ -12,6 +12,8 @@ import rawBib from 'raw-loader!../assets_examples/bibliography.bib';
 import citationStyle from 'raw-loader!../assets_examples/apa.csl';
 import citationLocale from 'raw-loader!../assets_examples/english-locale.xml';
 
+import data from './data';
+
 import lib from '../src';
 
 import 'react-table/react-table.css';
@@ -45,8 +47,6 @@ const {
 /**
  * Contextualizers stories
  */
-
-
 
 const assets = {
   'image': {
@@ -707,15 +707,18 @@ storiesOf('Twitter preview', module)
 
 
 import dynamicMock from './dynamic-mock.json';
+
+const dynamicMontage = data.montages.find(montage => montage.metadata.montage_type === 'dynamic')
+
 storiesOf('Dynamic preview', module)
   .add('default', () => {
     return (
       <TranslationsProvider>
         <DynamicMontagePreview
-          montage={dynamicMock.montage}
-          compositions={dynamicMock.compositions}
-          resources={dynamicMock.resources}
-          assets={dynamicMock.assets}
+          montage={dynamicMontage}
+          compositions={data.compositions}
+          resources={data.resources}
+          assets={data.assets}
           getAssetUri={asset => `/${asset.filename}`}
         />
       </TranslationsProvider>

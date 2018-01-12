@@ -12,14 +12,17 @@ const Nav = ({
         .filter(parameters => parameters.target_composition_id)
         .map((parameters, index) => {
           const id = parameters.target_composition_id;
-          const composition = compositions[id];
-          return (
-            <li key={index}>
-              <Link to={{view: 'composition', index, parameters}}>
-                {composition.metadata.title}
-              </Link>
-            </li>
-          );
+          const composition = compositions.find(comp => comp._id === id);
+          if (composition) {
+            return (
+              <li key={index}>
+                <Link to={{view: 'composition', index, parameters}}>
+                  {composition.metadata.title} ({parameters.template})
+                </Link>
+              </li>
+            );
+          }
+          return null;
         })
       }
     </ul>

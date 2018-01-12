@@ -1,8 +1,12 @@
-import {parseBibTeXToCSLJSON} from './utils/assetsUtils';
+import {
+  parseBibTeXToCSLJSON,
+  resourceToCslJSON
+} from './utils/assetsUtils';
 
 export default {
   utils: {
-    parseBibTeXToCSLJSON
+    parseBibTeXToCSLJSON,
+    resourceToCslJSON
   },
   components: {
     contextualizers: {
