@@ -11,10 +11,6 @@ import Composition from '../../views/static/Composition';
 import Toc from '../../views/static/Toc';
 
 
-import defaultStyle from 'raw-loader!./assets/apa.csl';
-import defaultLocale from 'raw-loader!./assets/english-locale.xml';
-
-
 export default class PreviewContainer extends Component {
 
   static childContextTypes = {
@@ -30,8 +26,8 @@ export default class PreviewContainer extends Component {
 
   getChildContext = () => ({
     getAssetUri: this.props.getAssetUri,
-    citationStyle: defaultStyle,
-    citationLocale: defaultLocale,
+    citationStyle: this.props.citationStyle,
+    citationLocale: this.props.citationLocale,
     renderingMode: this.props.renderingMode,
   })
 

@@ -21,6 +21,10 @@ exports.default = function (_ref) {
       style: {
         background: background
       } },
-    title
+    _react2.default.createElement(
+      'h1',
+      null,
+      title
+    )
   );
 };

@@ -10,8 +10,6 @@ import PropTypes from 'prop-types';
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
 
-import defaultStyle from 'raw-loader!./assets/apa.csl';
-import defaultLocale from 'raw-loader!./assets/english-locale.xml';
 
 export default class PreviewContainer extends Component {
 
@@ -20,6 +18,7 @@ export default class PreviewContainer extends Component {
     getAssetUri: PropTypes.func,
     citationStyle: PropTypes.string,
     citationLocale: PropTypes.string,
+    renderingMode: PropTypes.string,
   }
 
   constructor(props) {
@@ -33,8 +32,9 @@ export default class PreviewContainer extends Component {
   getChildContext = () => ({
     Link: this.Link,
     getAssetUri: this.props.getAssetUri,
-    citationStyle: defaultStyle,
-    citationLocale: defaultLocale,
+    citationStyle: this.props.citationStyle,
+    citationLocale: this.props.citationLocale,
+    renderingMode: this.props.renderingMode,
   })
 
   Link = ({to, children}) => {

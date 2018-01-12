@@ -9,6 +9,6 @@ export default ({
     style={{
       background
     }}>
-    {title}
+    <h1>{title}</h1>
   </section>
 );

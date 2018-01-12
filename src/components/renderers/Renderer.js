@@ -87,7 +87,6 @@ class Renderer extends Component {
   }
 
   getChildContext = () => ({
-    renderingMode: this.props.renderingMode,
     contextualizations: this.props.contextualizations,
     contextualizers: this.props.contextualizers,
     resources: this.props.resources,
@@ -137,8 +136,6 @@ class Renderer extends Component {
 }
 
 Renderer.childContextTypes = {
-  renderingMode: PropTypes.string,
-
   contextualizations: PropTypes.object,
   contextualizers: PropTypes.object,
   resources: PropTypes.object,

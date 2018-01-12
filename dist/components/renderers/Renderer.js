@@ -276,7 +276,6 @@ var Renderer = function (_Component) {
 
     _this.getChildContext = function () {
       return {
-        renderingMode: _this.props.renderingMode,
         contextualizations: _this.props.contextualizations,
         contextualizers: _this.props.contextualizers,
         resources: _this.props.resources,
@@ -350,8 +349,6 @@ var Renderer = function (_Component) {
 }(_react.Component);
 
 Renderer.childContextTypes = {
-  renderingMode: _propTypes2.default.string,
-
   contextualizations: _propTypes2.default.object,
   contextualizers: _propTypes2.default.object,
   resources: _propTypes2.default.object,

@@ -720,6 +720,9 @@ storiesOf('Dynamic preview', module)
           resources={data.resources}
           assets={data.assets}
           getAssetUri={asset => `/${asset.filename}`}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
+          renderingMode="web"
         />
       </TranslationsProvider>
     )
@@ -739,6 +742,8 @@ storiesOf('Static preview', module)
           resources={data.resources}
           assets={data.assets}
           getAssetUri={asset => `/${asset.filename}`}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
           renderingMode="pdf"
         />
       </TranslationsProvider>

@@ -35,14 +35,6 @@ var _Toc = require('../../views/static/Toc');
 
 var _Toc2 = _interopRequireDefault(_Toc);
 
-var _apa = require('raw-loader!./assets/apa.csl');
-
-var _apa2 = _interopRequireDefault(_apa);
-
-var _englishLocale = require('raw-loader!./assets/english-locale.xml');
-
-var _englishLocale2 = _interopRequireDefault(_englishLocale);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62,8 +54,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
     _this.getChildContext = function () {
       return {
         getAssetUri: _this.props.getAssetUri,
-        citationStyle: _apa2.default,
-        citationLocale: _englishLocale2.default,
+        citationStyle: _this.props.citationStyle,
+        citationLocale: _this.props.citationLocale,
         renderingMode: _this.props.renderingMode
       };
     };
