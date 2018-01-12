@@ -10,10 +10,18 @@ import Colophon from '../../views/static/Colophon';
 import Composition from '../../views/static/Composition';
 import Toc from '../../views/static/Toc';
 
+
+import defaultStyle from 'raw-loader!./assets/apa.csl';
+import defaultLocale from 'raw-loader!./assets/english-locale.xml';
+
+
 export default class PreviewContainer extends Component {
 
   static childContextTypes = {
     getAssetUri: PropTypes.func,
+    citationStyle: PropTypes.string,
+    citationLocale: PropTypes.string,
+    renderingMode: PropTypes.string
   }
 
   constructor(props) {
@@ -21,17 +29,23 @@ export default class PreviewContainer extends Component {
   }
 
   getChildContext = () => ({
-    getAssetUri: this.props.getAssetUri
+    getAssetUri: this.props.getAssetUri,
+    citationStyle: defaultStyle,
+    citationLocale: defaultLocale,
+    renderingMode: this.props.renderingMode,
   })
 
   render() {
     const {
-      montage,
-      compositions,
-      resources,
-      assets,
-      renderingMode
-    } = this.props;
+      props: {
+        montage,
+        compositions,
+        resources,
+        assets,
+        renderingMode
+      },
+    } = this;
+
 
     return (
       <section>
@@ -41,7 +55,7 @@ export default class PreviewContainer extends Component {
         <Toc montage={montage} compositions={compositions} />
         {
           montage.data.compositions.map((parameters, index) => {
-            const composition = compositions[parameters.target_composition_id];
+            const composition = compositions.find(c => c._id === parameters.target_composition_id);
             if (!composition) {
               return null;
             }

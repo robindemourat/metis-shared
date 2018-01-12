@@ -706,7 +706,7 @@ storiesOf('Twitter preview', module)
   })
 
 
-import dynamicMock from './dynamic-mock.json';
+// import dynamicMock from './dynamic-mock.json';
 
 const dynamicMontage = data.montages.find(montage => montage.metadata.montage_type === 'dynamic')
 
@@ -725,17 +725,21 @@ storiesOf('Dynamic preview', module)
     )
   })
 
-import staticMock from './static-mock.json';
+// import staticMock from './static-mock.json';
+
+const staticMontage = data.montages.find(montage => montage.metadata.montage_type === 'static')
+
 storiesOf('Static preview', module)
   .add('default', () => {
     return (
       <TranslationsProvider>
         <StaticMontagePreview
-          montage={staticMock.montage}
-          compositions={staticMock.compositions}
-          resources={staticMock.resources}
-          assets={staticMock.assets}
+          montage={staticMontage}
+          compositions={data.compositions}
+          resources={data.resources}
+          assets={data.assets}
           getAssetUri={asset => `/${asset.filename}`}
+          renderingMode="pdf"
         />
       </TranslationsProvider>
     )

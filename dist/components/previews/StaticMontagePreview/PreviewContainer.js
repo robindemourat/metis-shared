@@ -35,6 +35,14 @@ var _Toc = require('../../views/static/Toc');
 
 var _Toc2 = _interopRequireDefault(_Toc);
 
+var _apa = require('raw-loader!./assets/apa.csl');
+
+var _apa2 = _interopRequireDefault(_apa);
+
+var _englishLocale = require('raw-loader!./assets/english-locale.xml');
+
+var _englishLocale2 = _interopRequireDefault(_englishLocale);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53,7 +61,10 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
     _this.getChildContext = function () {
       return {
-        getAssetUri: _this.props.getAssetUri
+        getAssetUri: _this.props.getAssetUri,
+        citationStyle: _apa2.default,
+        citationLocale: _englishLocale2.default,
+        renderingMode: _this.props.renderingMode
       };
     };
 
@@ -79,7 +90,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           title: montage.metadata.title }),
         _react2.default.createElement(_Toc2.default, { montage: montage, compositions: compositions }),
         montage.data.compositions.map(function (parameters, index) {
-          var composition = compositions[parameters.target_composition_id];
+          var composition = compositions.find(function (c) {
+            return c._id === parameters.target_composition_id;
+          });
           if (!composition) {
             return null;
           }
@@ -104,6 +117,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
   return PreviewContainer;
 }(_react.Component), _class.childContextTypes = {
-  getAssetUri: _propTypes2.default.func
+  getAssetUri: _propTypes2.default.func,
+  citationStyle: _propTypes2.default.string,
+  citationLocale: _propTypes2.default.string,
+  renderingMode: _propTypes2.default.string
 }, _temp);
 exports.default = PreviewContainer;
