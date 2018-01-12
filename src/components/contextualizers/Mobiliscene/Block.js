@@ -27,6 +27,9 @@ const Block = ({
 }, {assetsData, getAssetUri}) => {
 
   const appropriateAsset = pickAsset(resource, meta.assetPickingRules.element[renderingMode], assetsData);
+  if (!appropriateAsset) {
+    return null;
+  }
   const field = appropriateAsset.resourceDataField;
 
   let assetUri;
