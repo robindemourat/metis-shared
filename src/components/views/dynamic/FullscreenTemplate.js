@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Renderer from '../../renderers/Renderer';
 import Dimensions from 'react-dimensions';
 
-import './FullscreenTemplate.scss';
+// import './FullscreenTemplate.scss';
 
 // component must be statefull to be enhanced with Dimensions HOC because it gives it refs
 class FigureWrapper extends Component {/* eslint react/prefer-stateless-function : 0 */
