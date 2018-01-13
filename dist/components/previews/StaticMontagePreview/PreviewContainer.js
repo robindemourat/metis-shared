@@ -74,36 +74,39 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           renderingMode = _props.renderingMode;
 
 
-      return _react2.default.createElement(
-        'section',
-        null,
-        _react2.default.createElement(_Cover2.default, {
-          background: montage.data.cover_color,
-          title: montage.metadata.title }),
-        _react2.default.createElement(_Toc2.default, { montage: montage, compositions: compositions }),
-        montage.data.compositions.map(function (parameters, index) {
-          var composition = compositions.find(function (c) {
-            return c._id === parameters.target_composition_id;
-          });
-          if (!composition) {
-            return null;
-          }
-          return _react2.default.createElement(_Composition2.default, {
-            key: index,
-            parameters: parameters,
-            composition: composition,
-            resources: resources,
-            assets: assets,
-            locationIndex: index });
-        }),
-        _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
-        _react2.default.createElement(
-          'style',
+      if (montage && compositions && resources && assets) {
+        return _react2.default.createElement(
+          'section',
           null,
-          montage.data.css.shared_css_code,
-          montage.data.css[renderingMode + '_css_code']
-        )
-      );
+          _react2.default.createElement(_Cover2.default, {
+            background: montage.data.cover_color,
+            title: montage.metadata.title }),
+          _react2.default.createElement(_Toc2.default, { montage: montage, compositions: compositions }),
+          montage.data.compositions.map(function (parameters, index) {
+            var composition = compositions.find(function (c) {
+              return c._id === parameters.target_composition_id;
+            });
+            if (!composition) {
+              return null;
+            }
+            return _react2.default.createElement(_Composition2.default, {
+              key: index,
+              parameters: parameters,
+              composition: composition,
+              resources: resources,
+              assets: assets,
+              locationIndex: index });
+          }),
+          _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
+          _react2.default.createElement(
+            'style',
+            null,
+            montage.data.css.shared_css_code,
+            montage.data.css[renderingMode + '_css_code']
+          )
+        );
+      }
+      return null;
     }
   }]);
 

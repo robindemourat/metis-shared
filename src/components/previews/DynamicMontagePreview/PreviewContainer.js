@@ -94,19 +94,26 @@ export default class PreviewContainer extends Component {
   render() {
     const {
       props: {
+        assets,
+        compositions,
+        resources,
         montage,
       },
       renderView,
     } = this;
-    return (
-      <section>
+    if (assets && compositions && resources && montage) {
+      return (
         <section>
-          {renderView()}
+          <section>
+            {renderView()}
+          </section>
+          <style>
+            {montage.data.css.shared_css_code}
+          </style>
         </section>
-        <style>
-          {montage.data.css.shared_css_code}
-        </style>
-      </section>
-    );
+      );
+    }
+    return null;
+
   }
 }

@@ -727,6 +727,22 @@ storiesOf('Dynamic preview', module)
       </TranslationsProvider>
     )
   })
+  .add('with undefined dependent data', () => {
+    return (
+      <TranslationsProvider>
+        <DynamicMontagePreview
+          montage={dynamicMontage}
+          compositions={undefined}
+          resources={undefined}
+          assets={undefined}
+          getAssetUri={asset => `/${asset.filename}`}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
+          renderingMode="web"
+        />
+      </TranslationsProvider>
+    )
+  })
 
 // import staticMock from './static-mock.json';
 
@@ -741,6 +757,22 @@ storiesOf('Static preview', module)
           compositions={data.compositions}
           resources={data.resources}
           assets={data.assets}
+          getAssetUri={asset => `/${asset.filename}`}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
+          renderingMode="pdf"
+        />
+      </TranslationsProvider>
+    )
+  })
+  .add('with undefined data', () => {
+    return (
+      <TranslationsProvider>
+        <StaticMontagePreview
+          montage={staticMontage}
+          compositions={undefined}
+          resources={undefined}
+          assets={undefined}
           getAssetUri={asset => `/${asset.filename}`}
           citationStyle={citationStyle}
           citationLocale={citationLocale}

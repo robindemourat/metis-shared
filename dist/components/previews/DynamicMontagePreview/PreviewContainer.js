@@ -120,23 +120,30 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   _createClass(PreviewContainer, [{
     key: 'render',
     value: function render() {
-      var montage = this.props.montage,
+      var _props = this.props,
+          assets = _props.assets,
+          compositions = _props.compositions,
+          resources = _props.resources,
+          montage = _props.montage,
           renderView = this.renderView;
 
-      return _react2.default.createElement(
-        'section',
-        null,
-        _react2.default.createElement(
+      if (assets && compositions && resources && montage) {
+        return _react2.default.createElement(
           'section',
           null,
-          renderView()
-        ),
-        _react2.default.createElement(
-          'style',
-          null,
-          montage.data.css.shared_css_code
-        )
-      );
+          _react2.default.createElement(
+            'section',
+            null,
+            renderView()
+          ),
+          _react2.default.createElement(
+            'style',
+            null,
+            montage.data.css.shared_css_code
+          )
+        );
+      }
+      return null;
     }
   }]);
 

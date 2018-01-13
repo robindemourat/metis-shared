@@ -42,35 +42,37 @@ export default class PreviewContainer extends Component {
       },
     } = this;
 
-
-    return (
-      <section>
-        <Cover
-          background={montage.data.cover_color}
-          title={montage.metadata.title} />
-        <Toc montage={montage} compositions={compositions} />
-        {
-          montage.data.compositions.map((parameters, index) => {
-            const composition = compositions.find(c => c._id === parameters.target_composition_id);
-            if (!composition) {
-              return null;
-            }
-            return (<Composition
-              key={index}
-              parameters={parameters}
-              composition={composition}
-              resources={resources}
-              assets={assets}
-              locationIndex={index} />);
-          })
-        }
-        <Colophon contents={montage.data.colophon} />
-        <style>
-          {montage.data.css.shared_css_code}
-          {montage.data.css[`${renderingMode}_css_code`]}
-        </style>
-      </section>
-    );
+    if (montage && compositions && resources && assets) {
+      return (
+        <section>
+          <Cover
+            background={montage.data.cover_color}
+            title={montage.metadata.title} />
+          <Toc montage={montage} compositions={compositions} />
+          {
+            montage.data.compositions.map((parameters, index) => {
+              const composition = compositions.find(c => c._id === parameters.target_composition_id);
+              if (!composition) {
+                return null;
+              }
+              return (<Composition
+                key={index}
+                parameters={parameters}
+                composition={composition}
+                resources={resources}
+                assets={assets}
+                locationIndex={index} />);
+            })
+          }
+          <Colophon contents={montage.data.colophon} />
+          <style>
+            {montage.data.css.shared_css_code}
+            {montage.data.css[`${renderingMode}_css_code`]}
+          </style>
+        </section>
+      );
+    }
+    return null;
 
   }
 }
