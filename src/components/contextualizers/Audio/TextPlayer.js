@@ -79,8 +79,8 @@ export default class TextPlayer extends Component {
               // turn to array
               contents = Object.keys(contents).map(id => contents[id]);
             }
- else {
-              contents = srt;
+            else {
+              contents = str;
             }
             break;
 
