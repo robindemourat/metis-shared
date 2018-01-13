@@ -12,9 +12,9 @@ var _Renderer = require('../../renderers/Renderer');
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
 
-require('./ArticleTemplate.scss');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import './ArticleTemplate.scss';
 
 exports.default = function (_ref) {
   var composition = _ref.composition,
