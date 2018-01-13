@@ -1,0 +1,31 @@
+
+
+
+
+.plurishing-FullscreenTemplate{
+
+
+  
+  .figure-container,
+  .figure-wrapper,
+  .figure-wrapper > div{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .BlockAssetWrapper{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  figure{
+    margin : 0;
+    padding: 0;
+  }
+}

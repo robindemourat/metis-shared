@@ -10,7 +10,17 @@ gulp.task('clean', () => {
 });
 
 gulp.task('copy-scss', () => {
-  console.log('coucou');
+  return gulp
+          .src([
+            'src/**/*.scss',
+            'src/**/**/*.scss',
+            'src/**/**/**/*.scss',
+            'src/**/**/**/**/*.scss'
+            ])
+          .pipe(gulp.dest('dist'))
+});
+
+gulp.task('transpile-scss', () => {
   return gulp
           .src([
             'src/**/*.scss',
@@ -21,10 +31,9 @@ gulp.task('copy-scss', () => {
           .pipe(sass().on('error', sass.logError))
           .pipe(concat('style.css'))
           .pipe(gulp.dest('dist'))
-          // .pipe(gulp.dest('dist'))
 });
 
-gulp.task('transpile', () => {
+gulp.task('transpile-js', () => {
   return gulp
         .src([
         'src/*.js', 'src/**/*.js', 'src/**/**/*.js',
@@ -51,4 +60,4 @@ gulp.task('transpile', () => {
         .pipe(gulp.dest('dist'))
 })
 
-gulp.task('default', gulp.series('clean', 'copy-scss', 'transpile'));
+gulp.task('default', gulp.series('clean', 'copy-scss', 'transpile-scss', 'transpile-js'));
