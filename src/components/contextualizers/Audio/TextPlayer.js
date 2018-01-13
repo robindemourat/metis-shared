@@ -4,15 +4,7 @@
 import React, {Component} from 'react';
 import mime from 'mime';
 
-const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');/* eslint no-new-func : 0 */
-
-const inBrowser = isBrowser();
-
-let srt;
-
-if (!inBrowser) {
-  srt = require('srt');
-}
+// import srt from 'srt';
 
 export default class TextPlayer extends Component {
 
@@ -74,14 +66,14 @@ export default class TextPlayer extends Component {
         switch (type) {
           case 'application/x-subrip':
           case 'text/srt':
-            if (srt) {
-              contents = srt.fromString(str);
-              // turn to array
-              contents = Object.keys(contents).map(id => contents[id]);
-            }
-            else {
+            // if (srt) {
+            //   contents = srt.fromString(str);
+            //   // turn to array
+            //   contents = Object.keys(contents).map(id => contents[id]);
+            // }
+            // else {
               contents = str;
-            }
+            // }
             break;
 
           default:

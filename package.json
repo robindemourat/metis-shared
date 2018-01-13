@@ -33,8 +33,8 @@
     "d3-dsv": "^1.0.8",
     "mime-types": "^2.1.17",
     "opentype.js": "^0.7.3",
-    "react-citeproc": "^0.1.7",
     "oy-vey": "^0.11.0",
+    "react-citeproc": "^0.1.7",
     "react-dimensions": "^1.3.1",
     "react-image-tiler": "git+https://github.com/robindemourat/react-image-tiler.git",
     "react-images": "^0.5.14",
@@ -44,7 +44,6 @@
     "react-tweet": "git+https://github.com/robindemourat/react-tweet.git",
     "react-zoomable-image": "^1.0.5",
     "redraft": "^0.9.0",
-    "srt": "0.0.3",
     "three": "^0.89.0"
   },
   "devDependencies": {

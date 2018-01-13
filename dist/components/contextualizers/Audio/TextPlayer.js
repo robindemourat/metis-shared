@@ -24,15 +24,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-set-state : 0 */
 /* eslint react/no-danger : 0 */
 
-var isBrowser = new Function('try {return this===window;}catch(e){ return false;}'); /* eslint no-new-func : 0 */
-
-var inBrowser = isBrowser();
-
-var srt = void 0;
-
-if (!inBrowser) {
-  srt = require('srt');
-}
+// import srt from 'srt';
 
 var TextPlayer = function (_Component) {
   _inherits(TextPlayer, _Component);
@@ -92,15 +84,14 @@ var TextPlayer = function (_Component) {
         switch (type) {
           case 'application/x-subrip':
           case 'text/srt':
-            if (srt) {
-              contents = srt.fromString(str);
-              // turn to array
-              contents = Object.keys(contents).map(function (id) {
-                return contents[id];
-              });
-            } else {
-              contents = str;
-            }
+            // if (srt) {
+            //   contents = srt.fromString(str);
+            //   // turn to array
+            //   contents = Object.keys(contents).map(id => contents[id]);
+            // }
+            // else {
+            contents = str;
+            // }
             break;
 
           default:
