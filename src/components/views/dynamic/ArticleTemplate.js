@@ -1,7 +1,7 @@
 import React from 'react';
 import Renderer from '../../renderers/Renderer';
 
-// import './ArticleTemplate.scss';
+import './ArticleTemplate.scss';
 
 export default ({
   composition,
