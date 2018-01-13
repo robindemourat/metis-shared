@@ -99,7 +99,7 @@ var TextPlayer = function (_Component) {
                 return contents[id];
               });
             } else {
-              contents = srt;
+              contents = str;
             }
             break;
 
