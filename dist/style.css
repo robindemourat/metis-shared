@@ -54,25 +54,25 @@
   border-radius: 4px;
   padding: 12px 12px 0; }
 
-.plurishing-ArticleTemplate .BlockAssetWrapper.mobiliscene {
+.plurishing-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene {
   height: 500px; }
 
-.plurishing-FullscreenTemplate .figure-container,
-.plurishing-FullscreenTemplate .figure-wrapper,
-.plurishing-FullscreenTemplate .figure-wrapper > div {
+.plurishing-DynamicFullscreenTemplate .figure-container,
+.plurishing-DynamicFullscreenTemplate .figure-wrapper,
+.plurishing-DynamicFullscreenTemplate .figure-wrapper > div {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%; }
 
-.plurishing-FullscreenTemplate .BlockAssetWrapper {
+.plurishing-DynamicFullscreenTemplate .BlockAssetWrapper {
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%; }
 
-.plurishing-FullscreenTemplate figure {
+.plurishing-DynamicFullscreenTemplate figure {
   margin: 0;
   padding: 0; }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Renderer from '../../renderers/Renderer';
 import Dimensions from 'react-dimensions';
 
-import './FullscreenTemplate.scss';
+// import './FullscreenTemplate.scss';
 
 // component must be statefull to be enhanced with Dimensions HOC because it gives it refs
 class FigureWrapper extends Component {/* eslint react/prefer-stateless-function : 0 */
@@ -44,7 +44,7 @@ const FullscreenTemplate = ({
     blocks: [composition.contents.blocks.find(block => block.type === 'atomic')]
   };
   return (
-    <div className="plurishing-FullscreenTemplate">
+    <div className="plurishing-DynamicFullscreenTemplate">
       <h2>{composition.metadata.title}</h2>
       {/* main content */}
       <section className="figure-container">
