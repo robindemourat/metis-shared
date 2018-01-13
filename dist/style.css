@@ -1,0 +1,78 @@
+.plurishing-backoffice-FacebookPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
+  .plurishing-backoffice-FacebookPreview .fb-important {
+    color: #3b599d;
+    cursor: pointer; }
+    .plurishing-backoffice-FacebookPreview .fb-important:hover {
+      text-decoration: underline; }
+  .plurishing-backoffice-FacebookPreview .profile-image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px; }
+  .plurishing-backoffice-FacebookPreview .header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch; }
+    .plurishing-backoffice-FacebookPreview .header .right {
+      margin-left: 1rem;
+      flex: 1; }
+      .plurishing-backoffice-FacebookPreview .header .right h3 {
+        margin: 0;
+        padding-top: 0;
+        font-weight: 900;
+        font-size: 1.5em; }
+      .plurishing-backoffice-FacebookPreview .header .right .post-info {
+        color: #90949c; }
+
+.plurishing-backoffice-MailingPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
+  .plurishing-backoffice-MailingPreview .header {
+    border-bottom: 1px solid #dddfe2; }
+    .plurishing-backoffice-MailingPreview .header .row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+      margin-bottom: 1rem; }
+      .plurishing-backoffice-MailingPreview .header .row .label {
+        color: #90949c;
+        text-align: right;
+        min-width: 3rem; }
+      .plurishing-backoffice-MailingPreview .header .row .label::after {
+        content: ':'; }
+      .plurishing-backoffice-MailingPreview .header .row .value {
+        flex: 1;
+        padding-left: 1rem; }
+  .plurishing-backoffice-MailingPreview .body {
+    margin-top: 1rem; }
+
+.plurishing-backoffice-TwitterPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
+
+.plurishing-ArticleTemplate .BlockAssetWrapper.mobiliscene {
+  height: 500px; }
+
+.plurishing-FullscreenTemplate .figure-container,
+.plurishing-FullscreenTemplate .figure-wrapper,
+.plurishing-FullscreenTemplate .figure-wrapper > div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.plurishing-FullscreenTemplate .BlockAssetWrapper {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+
+.plurishing-FullscreenTemplate figure {
+  margin: 0;
+  padding: 0; }

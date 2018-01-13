@@ -2,12 +2,15 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const del = require('del');
 const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat')
 
 gulp.task('clean', () => {
   return del(['dist']);
 });
 
 gulp.task('copy-scss', () => {
+  console.log('coucou');
   return gulp
           .src([
             'src/**/*.scss',
@@ -15,7 +18,10 @@ gulp.task('copy-scss', () => {
             'src/**/**/**/*.scss',
             'src/**/**/**/**/*.scss'
             ])
+          .pipe(sass().on('error', sass.logError))
+          .pipe(concat('style.css'))
           .pipe(gulp.dest('dist'))
+          // .pipe(gulp.dest('dist'))
 });
 
 gulp.task('transpile', () => {
