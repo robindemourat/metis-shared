@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class, _temp2;
@@ -22,6 +24,8 @@ var _Composition = require('./Composition');
 var _Composition2 = _interopRequireDefault(_Composition);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -48,7 +52,10 @@ var DecoratedComposition = (_temp2 = _class = function (_Component) {
         getAssetUri: _this.props.getAssetUri,
         renderingMode: _this.props.renderingMode,
         citationStyle: _this.props.citationStyle,
-        citationLocale: _this.props.citationLocale
+        citationLocale: _this.props.citationLocale,
+        assetsData: _this.props.assets.reduce(function (total, asset) {
+          return _extends({}, total, _defineProperty({}, asset._id, asset));
+        }, {})
       };
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -65,6 +72,7 @@ var DecoratedComposition = (_temp2 = _class = function (_Component) {
   getAssetUri: _propTypes2.default.func,
   renderingMode: _propTypes2.default.string,
   citationStyle: _propTypes2.default.string,
-  citationLocale: _propTypes2.default.string
+  citationLocale: _propTypes2.default.string,
+  assetsData: _propTypes2.default.string
 }, _temp2);
 exports.default = DecoratedComposition;

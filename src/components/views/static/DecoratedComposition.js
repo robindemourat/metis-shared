@@ -7,14 +7,19 @@ export default class DecoratedComposition extends Component {
     getAssetUri: PropTypes.func,
     renderingMode: PropTypes.string,
     citationStyle: PropTypes.string,
-    citationLocale: PropTypes.string
+    citationLocale: PropTypes.string,
+    assetsData: PropTypes.string,
   }
 
   getChildContext = () => ({
     getAssetUri: this.props.getAssetUri,
     renderingMode: this.props.renderingMode,
     citationStyle: this.props.citationStyle,
-    citationLocale: this.props.citationLocale
+    citationLocale: this.props.citationLocale,
+    assetsData: this.props.assets.reduce((total, asset) => ({
+      ...total,
+      [asset._id]: asset
+    }), {})
   })
 
   render() {
