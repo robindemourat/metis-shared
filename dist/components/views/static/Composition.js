@@ -150,42 +150,4 @@ var DynamicComposition = (_temp = _class = function (_Component) {
 }, _class.childContextTypes = {
   citationItems: _propTypes2.default.object
 }, _temp);
-
-// import React from 'react';
-
-// import ArticleTemplate from './ArticleTemplate';
-
-// export default ({
-//   parameters,
-//   composition,
-//   // compositions,
-//   // montage,
-//   assets,
-//   resources,
-//   renderingMode = 'pdf',
-//   index
-// }) => {
-//   let Component = null;
-//   switch (parameters.template) {
-//     case 'article':
-//       Component = ArticleTemplate;
-//       break;
-//     default:
-//       break;
-//   }
-//   if (Component) {
-//     return (
-//       <div className={`composition-${index}`}>
-//         <Component
-//           renderingMode={renderingMode}
-//           composition={composition}
-//           parameters={parameters}
-//           resources={resources}
-//           assets={assets} />
-//       </div>
-//     );
-//   }
-//   return null;
-// };
-
 exports.default = DynamicComposition;

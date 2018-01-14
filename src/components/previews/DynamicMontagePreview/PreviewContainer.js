@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
 
-
 export default class PreviewContainer extends Component {
 
   static childContextTypes = {

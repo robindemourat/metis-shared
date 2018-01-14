@@ -32,6 +32,7 @@ exports.default = {
     views: {
       static: {
         Composition: require('./components/views/static/Composition').default,
+        DecoratedComposition: require('./components/views/static/DecoratedComposition').default,
         ArticleTemplate: require('./components/views/static/ArticleTemplate').default,
         Colophon: require('./components/views/static/Colophon').default,
         Cover: require('./components/views/static/Cover').default,

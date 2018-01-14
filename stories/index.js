@@ -33,6 +33,11 @@ const {
         TwitterPreview,
         MailingPreview,
       },
+      views: {
+        static: {
+          DecoratedComposition
+        }
+      },
       contextualizers: {
         image,
         imagesgallery,
@@ -775,6 +780,24 @@ storiesOf('Static preview', module)
           compositions={undefined}
           resources={undefined}
           assets={undefined}
+          getAssetUri={asset => `/${asset.filename}`}
+          citationStyle={citationStyle}
+          citationLocale={citationLocale}
+          renderingMode="pdf"
+        />
+      </TranslationsProvider>
+    )
+  })
+  .add('Decorated composition (autonomously displayed', () => {
+    const parameters = staticMontage.data.compositions[0];
+    const composition = data.compositions.find(comp => comp._id === parameters.target_composition_id);
+    return (
+      <TranslationsProvider>
+        <DecoratedComposition
+          composition={composition}
+          parameters={parameters}
+          resources={data.resources}
+          assets={data.assets}
           getAssetUri={asset => `/${asset.filename}`}
           citationStyle={citationStyle}
           citationLocale={citationLocale}
