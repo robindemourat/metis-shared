@@ -96,7 +96,7 @@ export default class TextPlayer extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div className="transcription-container">
         {contents.map((paragraph, index) => {
           return <p key={index} dangerouslySetInnerHTML={{__html: paragraph.text}} />;
         })}
