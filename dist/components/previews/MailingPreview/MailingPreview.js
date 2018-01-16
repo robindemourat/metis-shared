@@ -22,7 +22,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var MailingPreview = function MailingPreview(_ref, _ref2) {
   var montage = _ref.montage,
-      composition = _ref.composition;
+      composition = _ref.composition,
+      assets = _ref.assets;
   var t = _ref2.t;
   var title = composition.metadata.title;
 
@@ -81,7 +82,8 @@ var MailingPreview = function MailingPreview(_ref, _ref2) {
       { className: 'body' },
       _react2.default.createElement(_MicropublicationMail2.default, {
         montage: montage,
-        composition: composition })
+        composition: composition,
+        assets: assets })
     )
   );
 };

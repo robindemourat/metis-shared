@@ -3,10 +3,12 @@ import React from 'react';
 import './FacebookPreview.scss';
 
 export default ({
+  assets,
   montage: {
     data: {
       include_abstract: includeAbstract,
-      montage_url: montageUrl
+      montage_url: montageUrl,
+      attached_assets: attachedAssets = []
     },
   },
   composition: {
@@ -39,6 +41,18 @@ export default ({
         <p>
           {montageUrl}
         </p>
+      </div>
+      <div className="footer">
+        {
+          attachedAssets.map(citation => {
+            const {image_asset_id: imageAssetId} = citation;
+             return assets[imageAssetId];
+          })
+          .filter(a => a)
+          .map((base64, index) => (
+            <img key={index} src={base64} />
+          ))
+        }
       </div>
     </div>
   );

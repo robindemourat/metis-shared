@@ -10,10 +10,12 @@ const {
 
 
 export default ({
+  assets,
   montage: {
     data: {
       include_abstract: includeAbstract,
-      montage_url: montageUrl
+      montage_url: montageUrl,
+      attached_assets: attachedAssets = []
     },
   },
   composition: {
@@ -32,6 +34,20 @@ export default ({
           {includeAbstract && <p>
               {abstractOriginal}
             </p>}
+
+          {attachedAssets &&
+          <div>{
+            attachedAssets.map(citation => {
+              const {image_asset_id: imageAssetId} = citation;
+               return assets[imageAssetId];
+            })
+            .filter(a => a)
+            .map((base64, index) => (
+              <img key={index} src={base64} />
+            ))
+          }
+          </div>
+        }
         </Td>
       </Tr>
     </TBody>

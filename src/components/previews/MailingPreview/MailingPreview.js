@@ -7,7 +7,8 @@ import Mail from '../../views/micro/MicropublicationMail';
 
 const MailingPreview = ({
   montage,
-  composition
+  composition,
+  assets,
 }, {t}) => {
   const {
     metadata: {
@@ -33,7 +34,8 @@ const MailingPreview = ({
       <div className="body">
         <Mail
           montage={montage}
-          composition={composition} />
+          composition={composition}
+          assets={assets} />
       </div>
     </div>
   );
