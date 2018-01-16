@@ -15,6 +15,10 @@ var _mime = require('mime');
 
 var _mime2 = _interopRequireDefault(_mime);
 
+var _parseSrt = require('parse-srt');
+
+var _parseSrt2 = _interopRequireDefault(_parseSrt);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,8 +27,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-set-state : 0 */
 /* eslint react/no-danger : 0 */
-
-// import srt from 'srt';
 
 var TextPlayer = function (_Component) {
   _inherits(TextPlayer, _Component);
@@ -84,14 +86,19 @@ var TextPlayer = function (_Component) {
         switch (type) {
           case 'application/x-subrip':
           case 'text/srt':
-            // if (srt) {
-            //   contents = srt.fromString(str);
-            //   // turn to array
-            //   contents = Object.keys(contents).map(id => contents[id]);
-            // }
-            // else {
-            contents = str;
-            // }
+            if (_parseSrt2.default) {
+              contents = (0, _parseSrt2.default)(str);
+              // turn to array
+              contents = Object.keys(contents).map(function (id) {
+                return contents[id];
+              });
+            } else {
+              contents = str.split('\n').filter(function (s) {
+                return s.trim().length;
+              }).map(function (text) {
+                return { text: text };
+              });
+            }
             break;
 
           default:

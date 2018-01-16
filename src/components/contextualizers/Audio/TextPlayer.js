@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import mime from 'mime';
 
-// import srt from 'srt';
+import srt from 'parse-srt';
 
 export default class TextPlayer extends Component {
 
@@ -66,14 +66,16 @@ export default class TextPlayer extends Component {
         switch (type) {
           case 'application/x-subrip':
           case 'text/srt':
-            // if (srt) {
-            //   contents = srt.fromString(str);
-            //   // turn to array
-            //   contents = Object.keys(contents).map(id => contents[id]);
-            // }
-            // else {
-              contents = str;
-            // }
+            if (srt) {
+              contents = srt(str);
+              // turn to array
+              contents = Object.keys(contents).map(id => contents[id]);
+            }
+            else {
+              contents = str.split('\n')
+                          .filter(s => s.trim().length)
+                          .map(text => ({text}));
+            }
             break;
 
           default:
