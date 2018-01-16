@@ -36,12 +36,12 @@ const Block = ({
               <Player src={assetUri} />
               <div className="media-controls">
                 <PlayPause className="button play-pause" />
-                    <CurrentTime className="current-time" />
-                    <SeekBar className="seek-bar" />
-                    <Duration className="tag duration" />
-                    <MuteUnmute className="button mute" />
-                    <Volume className="volume" />
-                    <Fullscreen className="fullscreen" />
+                <CurrentTime className="current-time" />
+                <SeekBar className="seek-bar" />
+                <Duration className="tag duration" />
+                <MuteUnmute className="button mute" />
+                <Volume className="volume" />
+                <Fullscreen className="fullscreen" />
               </div>
             </div>
           </Media>
