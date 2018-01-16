@@ -28,6 +28,7 @@ export default ({
   montage: {
     data: {
       link,
+      attached_assets: attachedAssets = []
       // include-abstract
     }
   },
@@ -37,52 +38,98 @@ export default ({
       creators
     }
   },
-  assets: {
-    abstractImageUri
-  },
+  assets,
   profileImageUri
 }) => {
+  const {
+    abstractImageUri
+  } = assets;
   const text = makeText(title, link, creators);
-  const registeredMedia = abstractImageUri ? [
-    {
-      id: 'xxx',
-      id_str: 'xxxx',
-      indices: [240, 280],
-      media_url: abstractImageUri,
-      media_url_https: '',
-      url: '',
-      display_url: '',
-      expanded_url: '',
-      type: 'photo',
-      sizes:
-      {
-          medium:
+  let registeredMedia = attachedAssets.map(citation => {
+    const {image_asset_id: imageAssetId} = citation;
+    if (assets[imageAssetId]) {
+      const base64 = assets[imageAssetId];
+      return {
+          id: 'xxx',
+          id_str: 'xxxx',
+          indices: [240, 280],
+          media_url: base64,
+          media_url_https: '',
+          url: '',
+          display_url: '',
+          expanded_url: '',
+          type: 'photo',
+          sizes:
           {
-              w: 600,
-              h: 426,
-              resize: 'fit'
-          },
-          large:
-          {
-              w: 1024,
-              h: 727,
-              resize: 'fit'
-          },
-          thumb:
-          {
-              w: 150,
-              h: 150,
-              resize: 'crop'
-          },
-          small:
-          {
-              w: 340,
-              h: 241,
-              resize: 'fit'
+              medium:
+              {
+                  w: 600,
+                  h: 426,
+                  resize: 'fit'
+              },
+              large:
+              {
+                  w: 1024,
+                  h: 727,
+                  resize: 'fit'
+              },
+              thumb:
+              {
+                  w: 150,
+                  h: 150,
+                  resize: 'crop'
+              },
+              small:
+              {
+                  w: 340,
+                  h: 241,
+                  resize: 'fit'
+              }
           }
-      }
+      };
+    }
+  })
+  .filter(a => a);
+  if (abstractImageUri) {
+    registeredMedia = [{
+        id: 'xxx',
+        id_str: 'xxxx',
+        indices: [240, 280],
+        media_url: abstractImageUri,
+        media_url_https: '',
+        url: '',
+        display_url: '',
+        expanded_url: '',
+        type: 'photo',
+        sizes:
+        {
+            medium:
+            {
+                w: 600,
+                h: 426,
+                resize: 'fit'
+            },
+            large:
+            {
+                w: 1024,
+                h: 727,
+                resize: 'fit'
+            },
+            thumb:
+            {
+                w: 150,
+                h: 150,
+                resize: 'crop'
+            },
+            small:
+            {
+                w: 340,
+                h: 241,
+                resize: 'fit'
+            }
+        }
+    }, ...registeredMedia];
   }
-  ] : [];
   const tweetData = {
     // id_str: 'xxxxx',
     user: {
