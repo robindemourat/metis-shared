@@ -50,32 +50,34 @@ var TextPlayer = function (_Component) {
 
     _this.getText = function (src) {
       return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        var fileReader = new FileReader();
+        if (XMLHttpRequest) {
+          var xhr = new XMLHttpRequest();
+          var fileReader = new FileReader();
 
-        xhr.open('GET', src, true);
-        // Set the responseType to blob
-        xhr.responseType = 'blob';
+          xhr.open('GET', src, true);
+          // Set the responseType to blob
+          xhr.responseType = 'blob';
 
-        xhr.addEventListener('load', function () {
-          if (xhr.status === 200) {
-            // onload needed since Google Chrome doesn't support addEventListener for FileReader
-            fileReader.onload = function (evt) {
-              // Read out file contents as a Data URL
-              resolve(evt.target.result);
-            };
-            // Load blob as Data URL
-            fileReader.readAsText(xhr.response);
-          } else {
-            // handle error
-            xhr.addEventListener('error', function (e) {
-              return reject(e);
-            });
-          }
-        }, false);
+          xhr.addEventListener('load', function () {
+            if (xhr.status === 200) {
+              // onload needed since Google Chrome doesn't support addEventListener for FileReader
+              fileReader.onload = function (evt) {
+                // Read out file contents as a Data URL
+                resolve(evt.target.result);
+              };
+              // Load blob as Data URL
+              fileReader.readAsText(xhr.response);
+            } else {
+              // handle error
+              xhr.addEventListener('error', function (e) {
+                return reject(e);
+              });
+            }
+          }, false);
 
-        // Send XHR
-        xhr.send();
+          // Send XHR
+          xhr.send();
+        } else resolve('');
       });
     };
 

@@ -67,7 +67,7 @@ var Block = function Block(_ref2, _ref3) {
               'div',
               { className: 'media-controls' },
               _react2.default.createElement(PlayPause, { className: 'button play-pause' }),
-              _react2.default.createElement(CurrentTime, { className: 'current-time' }),
+              _react2.default.createElement(CurrentTime, { className: 'current-time tag' }),
               _react2.default.createElement(SeekBar, { className: 'seek-bar' }),
               _react2.default.createElement(Duration, { className: 'tag duration' }),
               _react2.default.createElement(MuteUnmute, { className: 'button mute' }),
