@@ -30,31 +30,33 @@ export default class TextPlayer extends Component {
 
   getText = src => {
     return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      const fileReader = new FileReader();
+      if (XMLHttpRequest) {
+        const xhr = new XMLHttpRequest();
+        const fileReader = new FileReader();
 
-      xhr.open('GET', src, true);
-      // Set the responseType to blob
-      xhr.responseType = 'blob';
+        xhr.open('GET', src, true);
+        // Set the responseType to blob
+        xhr.responseType = 'blob';
 
-      xhr.addEventListener('load', () => {
-          if (xhr.status === 200) {
-              // onload needed since Google Chrome doesn't support addEventListener for FileReader
-              fileReader.onload = (evt) => {
-                  // Read out file contents as a Data URL
-                  resolve(evt.target.result);
-              };
-              // Load blob as Data URL
-              fileReader.readAsText(xhr.response);
-          }
-          else {
-            // handle error
-            xhr.addEventListener('error', e => reject(e));
-          }
-      }, false);
+        xhr.addEventListener('load', () => {
+            if (xhr.status === 200) {
+                // onload needed since Google Chrome doesn't support addEventListener for FileReader
+                fileReader.onload = (evt) => {
+                    // Read out file contents as a Data URL
+                    resolve(evt.target.result);
+                };
+                // Load blob as Data URL
+                fileReader.readAsText(xhr.response);
+            }
+            else {
+              // handle error
+              xhr.addEventListener('error', e => reject(e));
+            }
+        }, false);
 
-      // Send XHR
-      xhr.send();
+        // Send XHR
+        xhr.send();
+      } else resolve('');
     });
   }
 
