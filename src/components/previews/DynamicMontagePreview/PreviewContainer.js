@@ -6,11 +6,12 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Dimensions from 'react-dimensions';
 
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
 
-export default class PreviewContainer extends Component {
+class PreviewContainer extends Component {
 
   static childContextTypes = {
     Link: PropTypes.func,
@@ -90,6 +91,21 @@ export default class PreviewContainer extends Component {
     }
   }
 
+  computeClass = (width, height) => {
+    if (width <= 768) {
+      return 'mobile';
+    }
+ else if (width <= 1024) {
+      return 'tablet';
+    }
+ else if (width <= 1216) {
+      return 'widescreen';
+    }
+ else {
+      return 'fullhd';
+    }
+  }
+
   render() {
     const {
       props: {
@@ -97,12 +113,16 @@ export default class PreviewContainer extends Component {
         compositions,
         resources,
         montage,
+        containerHeight,
+        containerWidth,
       },
       renderView,
+      computeClass,
     } = this;
+    const className = computeClass(containerWidth, containerHeight);
     if (assets && compositions && resources && montage) {
       return (
-        <section>
+        <section className={className}>
           <section>
             {renderView()}
           </section>
@@ -116,3 +136,5 @@ export default class PreviewContainer extends Component {
 
   }
 }
+
+export default Dimensions()(PreviewContainer);

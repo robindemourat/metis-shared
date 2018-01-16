@@ -59,7 +59,7 @@ export const resourceToCslJSON = resource => {
   }
   return {
     type: cslType,
-    title: resource.metadata.title,
+    title: resource.metadata.title || resource.metadata.name,
     id: resource._id,
     abstract: resource.metadata.description,
     issued: resource.metadata.date && {raw: resource.metadata.date},
