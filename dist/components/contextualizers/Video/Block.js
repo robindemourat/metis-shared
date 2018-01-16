@@ -66,13 +66,13 @@ var Block = function Block(_ref2, _ref3) {
             _react2.default.createElement(
               'div',
               { className: 'media-controls' },
-              _react2.default.createElement(PlayPause, null),
-              _react2.default.createElement(CurrentTime, null),
-              _react2.default.createElement(SeekBar, null),
-              _react2.default.createElement(Duration, null),
-              _react2.default.createElement(MuteUnmute, null),
-              _react2.default.createElement(Volume, null),
-              _react2.default.createElement(Fullscreen, null)
+              _react2.default.createElement(PlayPause, { className: 'button play-pause' }),
+              _react2.default.createElement(CurrentTime, { className: 'current-time' }),
+              _react2.default.createElement(SeekBar, { className: 'seek-bar' }),
+              _react2.default.createElement(Duration, { className: 'tag duration' }),
+              _react2.default.createElement(MuteUnmute, { className: 'button mute' }),
+              _react2.default.createElement(Volume, { className: 'volume' }),
+              _react2.default.createElement(Fullscreen, { className: 'fullscreen' })
             )
           )
         );
