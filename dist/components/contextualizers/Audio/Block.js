@@ -48,7 +48,13 @@ var Block = function Block(_ref2, _ref3) {
     case 'epub-fixed':
       if (inBrowser && appropriateTrackAsset) {
         var PlayPause = controls.PlayPause,
-            MuteUnmute = controls.MuteUnmute;
+            CurrentTime = controls.CurrentTime,
+            Progress = controls.Progress,
+            SeekBar = controls.SeekBar,
+            Duration = controls.Duration,
+            MuteUnmute = controls.MuteUnmute,
+            Volume = controls.Volume,
+            Fullscreen = controls.Fullscreen;
 
         return _react2.default.createElement(
           'div',
@@ -64,7 +70,13 @@ var Block = function Block(_ref2, _ref3) {
                 'div',
                 { className: 'media-controls' },
                 _react2.default.createElement(PlayPause, null),
-                _react2.default.createElement(MuteUnmute, null)
+                _react2.default.createElement(CurrentTime, null),
+                _react2.default.createElement(Progress, null),
+                _react2.default.createElement(SeekBar, null),
+                _react2.default.createElement(Duration, null),
+                _react2.default.createElement(MuteUnmute, null),
+                _react2.default.createElement(Volume, null),
+                _react2.default.createElement(Fullscreen, null)
               )
             )
           ),

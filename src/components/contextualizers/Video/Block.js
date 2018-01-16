@@ -29,14 +29,20 @@ const Block = ({
     case 'sd_video_asset_id':
       if (inBrowser) {
         assetUri = getAssetUri(appropriateAsset.asset);
-        const {PlayPause, MuteUnmute} = controls;
+        const {PlayPause, CurrentTime, Progress, SeekBar, Duration, MuteUnmute, Volume, Fullscreen} = controls;
         return (
           <Media>
             <div className="media">
               <Player src={assetUri} />
               <div className="media-controls">
-                <PlayPause />
-                <MuteUnmute />
+                <PlayPause/>
+                <CurrentTime/>
+                <Progress/>
+                <SeekBar/>
+                <Duration/>
+                <MuteUnmute/>
+                <Volume/>
+                <Fullscreen/>
               </div>
             </div>
           </Media>

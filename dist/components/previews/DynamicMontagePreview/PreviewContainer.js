@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20,6 +19,10 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactDimensions = require('react-dimensions');
+
+var _reactDimensions2 = _interopRequireDefault(_reactDimensions);
 
 var _Home = require('../../views/dynamic/Home');
 
@@ -111,6 +114,18 @@ var PreviewContainer = (_temp = _class = function (_Component) {
       }
     };
 
+    _this.computeClass = function (width) {
+      if (width <= 768) {
+        return 'mobile';
+      } else if (width <= 1024) {
+        return 'tablet';
+      } else if (width <= 1216) {
+        return 'widescreen';
+      } else {
+        return 'fullhd';
+      }
+    };
+
     _this.state = {
       location: 'home'
     };
@@ -125,12 +140,16 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           compositions = _props.compositions,
           resources = _props.resources,
           montage = _props.montage,
-          renderView = this.renderView;
+          containerHeight = _props.containerHeight,
+          containerWidth = _props.containerWidth,
+          renderView = this.renderView,
+          computeClass = this.computeClass;
 
+      var className = computeClass(containerWidth, containerHeight);
       if (assets && compositions && resources && montage) {
         return _react2.default.createElement(
           'section',
-          null,
+          { className: className },
           _react2.default.createElement(
             'section',
             null,
@@ -155,4 +174,4 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   citationLocale: _propTypes2.default.string,
   renderingMode: _propTypes2.default.string
 }, _temp);
-exports.default = PreviewContainer;
+exports.default = (0, _reactDimensions2.default)()(PreviewContainer);
