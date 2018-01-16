@@ -91,7 +91,7 @@ class PreviewContainer extends Component {
     }
   }
 
-  computeClass = (width, height) => {
+  computeClass = (width) => {
     if (width <= 768) {
       return 'mobile';
     }

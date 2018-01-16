@@ -27,21 +27,19 @@ const Block = ({
       case 'web':
       case 'epub-fixed':
         if (inBrowser && appropriateTrackAsset) {
-          const {PlayPause, CurrentTime, Progress, SeekBar, Duration, MuteUnmute, Volume, Fullscreen} = controls;
+          const {PlayPause, CurrentTime, SeekBar, Duration, MuteUnmute, Volume} = controls;
           return (
             <div>
               <Media>
                 <div className="media">
                   <Player src={getAssetUri(appropriateTrackAsset.asset)} />
                   <div className="media-controls">
-                    <PlayPause/>
-                    <CurrentTime/>
-                    <Progress/>
-                    <SeekBar/>
-                    <Duration/>
-                    <MuteUnmute/>
-                    <Volume/>
-                    <Fullscreen/>
+                    <PlayPause />
+                    <CurrentTime />
+                    <SeekBar />
+                    <Duration />
+                    <MuteUnmute />
+                    <Volume />
                   </div>
                 </div>
               </Media>
