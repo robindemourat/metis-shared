@@ -33,7 +33,6 @@ export default class TextPlayer extends Component {
     return new Promise((resolve, reject) => {
       get(src)
         .then(resp => {
-          console.log(resp);
           resolve(resp.data);
         })
         .catch(reject);

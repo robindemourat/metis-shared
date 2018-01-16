@@ -53,7 +53,6 @@ var TextPlayer = function (_Component) {
     _this.getText = function (src) {
       return new Promise(function (resolve, reject) {
         (0, _axios.get)(src).then(function (resp) {
-          console.log(resp);
           resolve(resp.data);
         }).catch(reject);
       });
