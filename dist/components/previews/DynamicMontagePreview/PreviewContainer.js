@@ -32,6 +32,10 @@ var _Composition = require('../../views/dynamic/Composition');
 
 var _Composition2 = _interopRequireDefault(_Composition);
 
+var _WebNotePointer = require('../../views/dynamic/WebNotePointer');
+
+var _WebNotePointer2 = _interopRequireDefault(_WebNotePointer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,11 +54,12 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
     _this.getChildContext = function () {
       return {
-        Link: _this.Link,
+        Link: _this.props.Link || _this.Link,
         getAssetUri: _this.props.getAssetUri,
         citationStyle: _this.props.citationStyle,
         citationLocale: _this.props.citationLocale,
-        renderingMode: _this.props.renderingMode
+        renderingMode: _this.props.renderingMode,
+        NotePointer: _this.props.NotePointer || _WebNotePointer2.default
       };
     };
 
@@ -158,7 +163,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           _react2.default.createElement(
             'style',
             null,
-            montage.data.css.shared_css_code
+            montage.data.css.shared_css_code,
+            montage.data.css.web_css_code
           )
         );
       }
@@ -172,6 +178,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   getAssetUri: _propTypes2.default.func,
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
-  renderingMode: _propTypes2.default.string
+  renderingMode: _propTypes2.default.string,
+  NotePointer: _propTypes2.default.func
 }, _temp);
 exports.default = (0, _reactDimensions2.default)()(PreviewContainer);

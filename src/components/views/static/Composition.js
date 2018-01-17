@@ -71,6 +71,7 @@ export default class DynamicComposition extends Component {
         // montage,
         assets,
         resources,
+        index,
       },
       state: {
         citationData,
@@ -94,7 +95,7 @@ export default class DynamicComposition extends Component {
     const resourcesMap = resources.reduce((t, r) => ({...t, [r._id]: r}), {});
     const assetsMap = assets.reduce((t, a) => ({...t, [a._id]: a}), {});
     return (
-      <div>
+      <div className="static-composition" id={`composition-${index}`}>
         <ReferencesManager
           style={citationStyle}
           locale={citationLocale}

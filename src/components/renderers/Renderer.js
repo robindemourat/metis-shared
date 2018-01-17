@@ -6,7 +6,7 @@ import constants from '../../constants';
 
 import BlockAssetWrapper from './BlockAssetWrapper';
 import InlineAssetWrapper from './InlineAssetWrapper';
-import NotePointer from './NotePointer';
+import NotePointerContainer from './NotePointerContainer';
 
 const {
   LINK,
@@ -69,7 +69,7 @@ const renderers = {
       return <InlineAssetWrapper data={data} key={key} />;
     },
     [NOTE_POINTER]: (children, data, {key}) => {
-      return <NotePointer key={key} children={children} noteId={data.noteId} />;
+      return <NotePointerContainer key={key} children={children} noteId={data.noteId} />;
     },
   },
 };
@@ -91,6 +91,8 @@ class Renderer extends Component {
     contextualizers: this.props.contextualizers,
     resources: this.props.resources,
     assetsData: this.props.assets,
+    NotePointer: this.props.NotePointer,
+    notes: this.props.notes,
   })
 
   /**
@@ -140,6 +142,8 @@ Renderer.childContextTypes = {
   contextualizers: PropTypes.object,
   resources: PropTypes.object,
   assetsData: PropTypes.object,
+  NotePointer: PropTypes.func,
+  notes: PropTypes.object,
 };
 
 /**

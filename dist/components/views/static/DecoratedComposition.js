@@ -73,6 +73,6 @@ var DecoratedComposition = (_temp2 = _class = function (_Component) {
   renderingMode: _propTypes2.default.string,
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
-  assetsData: _propTypes2.default.string
+  assetsData: _propTypes2.default.object
 }, _temp2);
 exports.default = DecoratedComposition;

@@ -20,11 +20,40 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     null,
-    _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions }),
+    _react2.default.createElement(
+      'aside',
+      null,
+      _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
+    ),
     _react2.default.createElement(
       'h2',
       null,
-      'Home'
+      montage.metadata.title || 'Montage sans titre'
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'p',
+        null,
+        montage.metadata.description
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Table des mati\xE8res'
+      ),
+      _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
+    ),
+    _react2.default.createElement(
+      'style',
+      null,
+      montage.data.css.shared_css_code,
+      montage.data.css.web_css_code
     )
   );
 };

@@ -36,9 +36,9 @@ var _InlineAssetWrapper = require('./InlineAssetWrapper');
 
 var _InlineAssetWrapper2 = _interopRequireDefault(_InlineAssetWrapper);
 
-var _NotePointer = require('./NotePointer');
+var _NotePointerContainer = require('./NotePointerContainer');
 
-var _NotePointer2 = _interopRequireDefault(_NotePointer);
+var _NotePointerContainer2 = _interopRequireDefault(_NotePointerContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -254,7 +254,7 @@ var renderers = {
   }), _defineProperty(_entities, NOTE_POINTER, function (children, data, _ref19) {
     var key = _ref19.key;
 
-    return _react2.default.createElement(_NotePointer2.default, { key: key, children: children, noteId: data.noteId });
+    return _react2.default.createElement(_NotePointerContainer2.default, { key: key, children: children, noteId: data.noteId });
   }), _entities)
 };
 
@@ -279,7 +279,9 @@ var Renderer = function (_Component) {
         contextualizations: _this.props.contextualizations,
         contextualizers: _this.props.contextualizers,
         resources: _this.props.resources,
-        assetsData: _this.props.assets
+        assetsData: _this.props.assets,
+        NotePointer: _this.props.NotePointer,
+        notes: _this.props.notes
       };
     };
 
@@ -352,7 +354,9 @@ Renderer.childContextTypes = {
   contextualizations: _propTypes2.default.object,
   contextualizers: _propTypes2.default.object,
   resources: _propTypes2.default.object,
-  assetsData: _propTypes2.default.object
+  assetsData: _propTypes2.default.object,
+  NotePointer: _propTypes2.default.func,
+  notes: _propTypes2.default.object
 };
 
 /**

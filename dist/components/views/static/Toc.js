@@ -17,7 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Toc = function Toc(_ref, _ref2) {
   var montage = _ref.montage,
       compositions = _ref.compositions;
-  var t = _ref2.t;
+  var t = _ref2.t,
+      Link = _ref2.Link;
   return _react2.default.createElement(
     'section',
     {
@@ -37,7 +38,9 @@ var Toc = function Toc(_ref, _ref2) {
           return parameters.target_composition_id;
         }).map(function (ref, index) {
           var id = ref.target_composition_id;
-          var composition = compositions[id];
+          var composition = compositions.find(function (comp) {
+            return comp._id === id;
+          });
           if (!composition) {
             return null;
           }
@@ -46,8 +49,8 @@ var Toc = function Toc(_ref, _ref2) {
             'li',
             { key: index },
             _react2.default.createElement(
-              'a',
-              { href: '#{composition._id}' },
+              Link,
+              { to: { view: 'composition', index: index } },
               composition.metadata.title
             )
           );
@@ -58,7 +61,8 @@ var Toc = function Toc(_ref, _ref2) {
 };
 
 Toc.contextTypes = {
-  t: _propTypes2.default.func.isRequired
+  t: _propTypes2.default.func.isRequired,
+  Link: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
 };
 
 exports.default = Toc;

@@ -10,6 +10,7 @@ import Dimensions from 'react-dimensions';
 
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
+import WebNotePointer from '../../views/dynamic/WebNotePointer';
 
 class PreviewContainer extends Component {
 
@@ -19,6 +20,7 @@ class PreviewContainer extends Component {
     citationStyle: PropTypes.string,
     citationLocale: PropTypes.string,
     renderingMode: PropTypes.string,
+    NotePointer: PropTypes.func,
   }
 
   constructor(props) {
@@ -30,11 +32,12 @@ class PreviewContainer extends Component {
   }
 
   getChildContext = () => ({
-    Link: this.Link,
+    Link: this.props.Link || this.Link,
     getAssetUri: this.props.getAssetUri,
     citationStyle: this.props.citationStyle,
     citationLocale: this.props.citationLocale,
     renderingMode: this.props.renderingMode,
+    NotePointer: this.props.NotePointer || WebNotePointer
   })
 
   Link = ({to, children}) => {
@@ -128,6 +131,7 @@ class PreviewContainer extends Component {
           </section>
           <style>
             {montage.data.css.shared_css_code}
+            {montage.data.css.web_css_code}
           </style>
         </section>
       );

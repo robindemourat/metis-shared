@@ -8,7 +8,7 @@ export default class DecoratedComposition extends Component {
     renderingMode: PropTypes.string,
     citationStyle: PropTypes.string,
     citationLocale: PropTypes.string,
-    assetsData: PropTypes.string,
+    assetsData: PropTypes.object,
   }
 
   getChildContext = () => ({

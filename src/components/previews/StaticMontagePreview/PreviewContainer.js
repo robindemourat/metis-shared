@@ -9,6 +9,8 @@ import Cover from '../../views/static/Cover';
 import Colophon from '../../views/static/Colophon';
 import Composition from '../../views/static/Composition';
 import Toc from '../../views/static/Toc';
+import PdfLink from '../../views/static/PdfLink';
+import PdfNotePointer from '../../views/static/PdfNotePointer';
 
 
 export default class PreviewContainer extends Component {
@@ -17,7 +19,9 @@ export default class PreviewContainer extends Component {
     getAssetUri: PropTypes.func,
     citationStyle: PropTypes.string,
     citationLocale: PropTypes.string,
-    renderingMode: PropTypes.string
+    renderingMode: PropTypes.string,
+    Link: PropTypes.func,
+    NotePointer: PropTypes.func,
   }
 
   constructor(props) {
@@ -29,6 +33,8 @@ export default class PreviewContainer extends Component {
     citationStyle: this.props.citationStyle,
     citationLocale: this.props.citationLocale,
     renderingMode: this.props.renderingMode,
+    Link: this.props.Link || PdfLink,
+    NotePointer: this.props.NotePointer || PdfNotePointer
   })
 
   render() {
@@ -57,6 +63,7 @@ export default class PreviewContainer extends Component {
               }
               return (<Composition
                 key={index}
+                index={index}
                 parameters={parameters}
                 composition={composition}
                 resources={resources}

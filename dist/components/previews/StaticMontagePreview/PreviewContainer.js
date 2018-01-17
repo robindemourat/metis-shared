@@ -35,6 +35,14 @@ var _Toc = require('../../views/static/Toc');
 
 var _Toc2 = _interopRequireDefault(_Toc);
 
+var _PdfLink = require('../../views/static/PdfLink');
+
+var _PdfLink2 = _interopRequireDefault(_PdfLink);
+
+var _PdfNotePointer = require('../../views/static/PdfNotePointer');
+
+var _PdfNotePointer2 = _interopRequireDefault(_PdfNotePointer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56,7 +64,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         getAssetUri: _this.props.getAssetUri,
         citationStyle: _this.props.citationStyle,
         citationLocale: _this.props.citationLocale,
-        renderingMode: _this.props.renderingMode
+        renderingMode: _this.props.renderingMode,
+        Link: _this.props.Link || _PdfLink2.default,
+        NotePointer: _this.props.NotePointer || _PdfNotePointer2.default
       };
     };
 
@@ -91,6 +101,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             }
             return _react2.default.createElement(_Composition2.default, {
               key: index,
+              index: index,
               parameters: parameters,
               composition: composition,
               resources: resources,
@@ -115,6 +126,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   getAssetUri: _propTypes2.default.func,
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
-  renderingMode: _propTypes2.default.string
+  renderingMode: _propTypes2.default.string,
+  Link: _propTypes2.default.func,
+  NotePointer: _propTypes2.default.func
 }, _temp);
 exports.default = PreviewContainer;

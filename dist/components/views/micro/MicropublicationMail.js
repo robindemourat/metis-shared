@@ -68,8 +68,8 @@ exports.default = function (_ref) {
               return assets[imageAssetId];
             }).filter(function (a) {
               return a;
-            }).map(function (base64, index) {
-              return _react2.default.createElement(Img, { key: index, src: 'data:image/jpg;base64,' + base64 });
+            }).map(function (url, index) {
+              return _react2.default.createElement(Img, { key: index, src: url });
             })
           )
         )

@@ -136,8 +136,12 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions }),
+        { className: 'dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
+        _react2.default.createElement(
+          'aside',
+          { className: 'aside-menu' },
+          _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
+        ),
         _react2.default.createElement(
           _reactCiteproc.ReferencesManager,
           {

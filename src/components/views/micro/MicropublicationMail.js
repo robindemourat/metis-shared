@@ -47,8 +47,8 @@ export default ({
                return assets[imageAssetId];
             })
             .filter(a => a)
-            .map((base64, index) => (
-              <Img key={index} src={`data:image/jpg;base64,${base64}`} />
+            .map((url, index) => (
+              <Img key={index} src={url} />
             ))
           }
           </div>

@@ -98,6 +98,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
           composition = _props.composition,
           assets = _props.assets,
           resources = _props.resources,
+          index = _props.index,
           _state = this.state,
           citationData = _state.citationData,
           citationItems = _state.citationItems,
@@ -123,7 +124,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'static-composition', id: 'composition-' + index },
         _react2.default.createElement(
           _reactCiteproc.ReferencesManager,
           {
