@@ -20,7 +20,9 @@ exports.default = function (_ref) {
       title = _ref$montage$data.title,
       css = _ref$montage$data.css,
       _ref$renderingMode = _ref.renderingMode,
-      renderingMode = _ref$renderingMode === undefined ? 'epub-fixed' : _ref$renderingMode;
+      renderingMode = _ref$renderingMode === undefined ? 'epub-fixed' : _ref$renderingMode,
+      _ref$styles = _ref.styles,
+      styles = _ref$styles === undefined ? '' : _ref$styles;
   return _react2.default.createElement(
     'div',
     { className: 'StandaloneCover' },
@@ -28,6 +30,7 @@ exports.default = function (_ref) {
     _react2.default.createElement(
       'style',
       null,
+      styles,
       css.shared_css_code,
       css[renderingMode + '_css_code']
     )

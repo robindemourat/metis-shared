@@ -10,11 +10,13 @@ export default ({
       css
     }
   },
-  renderingMode = 'epub-fixed'
+  renderingMode = 'epub-fixed',
+  styles = '',
 }) => (
   <div className="StandaloneCover">
     <Cover title={title} background={coverColor} />
     <style>
+      {styles}
       {css.shared_css_code}
       {css[`${renderingMode}_css_code`]}
     </style>
