@@ -17,7 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Table = _oyVey2.default.Table,
     TBody = _oyVey2.default.TBody,
     Tr = _oyVey2.default.TR,
-    Td = _oyVey2.default.TD;
+    Td = _oyVey2.default.TD,
+    Img = _oyVey2.default.Img;
 
 exports.default = function (_ref) {
   var assets = _ref.assets,
@@ -68,7 +69,7 @@ exports.default = function (_ref) {
             }).filter(function (a) {
               return a;
             }).map(function (base64, index) {
-              return _react2.default.createElement('img', { key: index, src: base64 });
+              return _react2.default.createElement(Img, { key: index, src: 'data:image/jpg;base64,' + base64 });
             })
           )
         )

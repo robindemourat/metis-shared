@@ -5,7 +5,8 @@ const {
   Table,
   TBody,
   TR: Tr,
-  TD: Td
+  TD: Td,
+  Img
 } = Oy;
 
 
@@ -47,7 +48,7 @@ export default ({
             })
             .filter(a => a)
             .map((base64, index) => (
-              <img key={index} src={base64} />
+              <Img key={index} src={`data:image/jpg;base64,${base64}`} />
             ))
           }
           </div>
