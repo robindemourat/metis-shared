@@ -86,8 +86,7 @@ export default class PreviewContainer extends Component {
           <BackCover
             background={montage.data.backcover_color}
             title={montage.metadata.title}
-            text={montage.metadata.description}
-          />
+            text={montage.metadata.description} />
         </section>
       );
     }
