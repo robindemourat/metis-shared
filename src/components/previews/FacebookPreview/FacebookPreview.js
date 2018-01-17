@@ -42,7 +42,7 @@ export default ({
           {montageUrl}
         </p>
       </div>
-      <div className="footer">
+      <div className="images">
         {
           attachedAssets.map(citation => {
             const {image_asset_id: imageAssetId} = citation;
