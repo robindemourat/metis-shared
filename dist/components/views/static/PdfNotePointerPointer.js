@@ -18,7 +18,7 @@ exports.default = function (_ref) {
     { id: 'note-pointer-pointer-' + noteId },
     _react2.default.createElement(
       'a',
-      { href: '#note-pointer-' + noteId },
+      { href: '#note-content-pointer-' + noteId },
       note.order
     )
   );
