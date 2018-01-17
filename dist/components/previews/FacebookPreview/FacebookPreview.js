@@ -76,7 +76,7 @@ exports.default = function (_ref) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'footer' },
+      { className: 'images' },
       attachedAssets.map(function (citation) {
         var imageAssetId = citation.image_asset_id;
 

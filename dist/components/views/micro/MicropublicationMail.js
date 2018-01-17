@@ -59,6 +59,8 @@ exports.default = function (_ref) {
           attachedAssets && _react2.default.createElement(
             'div',
             null,
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null),
             attachedAssets.map(function (citation) {
               var imageAssetId = citation.image_asset_id;
 

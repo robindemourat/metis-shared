@@ -36,7 +36,11 @@ export default ({
             </p>}
 
           {attachedAssets &&
-          <div>{
+          <div>
+          <br />
+          <br />
+            
+          {
             attachedAssets.map(citation => {
               const {image_asset_id: imageAssetId} = citation;
                return assets[imageAssetId];
