@@ -23,6 +23,10 @@ var _Cover = require('../../views/static/Cover');
 
 var _Cover2 = _interopRequireDefault(_Cover);
 
+var _BackCover = require('../../views/static/BackCover');
+
+var _BackCover2 = _interopRequireDefault(_BackCover);
+
 var _Colophon = require('../../views/static/Colophon');
 
 var _Colophon2 = _interopRequireDefault(_Colophon);
@@ -120,7 +124,11 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             null,
             montage.data.css.shared_css_code,
             montage.data.css[renderingMode + '_css_code']
-          )
+          ),
+          _react2.default.createElement(_BackCover2.default, {
+            background: montage.data.backcover_color,
+            title: montage.metadata.title,
+            text: montage.metadata.description })
         );
       }
       return null;

@@ -6,6 +6,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import Cover from '../../views/static/Cover';
+import BackCover from '../../views/static/BackCover';
 import Colophon from '../../views/static/Colophon';
 import Composition from '../../views/static/Composition';
 import Toc from '../../views/static/Toc';
@@ -82,6 +83,11 @@ export default class PreviewContainer extends Component {
             {montage.data.css.shared_css_code}
             {montage.data.css[`${renderingMode}_css_code`]}
           </style>
+          <BackCover
+            background={montage.data.backcover_color}
+            title={montage.metadata.title}
+            text={montage.metadata.description}
+          />
         </section>
       );
     }

@@ -16,7 +16,7 @@ export default ({
   styles = '',
 }) => (
   <html className="StandaloneCover">
-    <head></head>
+    <head />
     <body>
       <Cover title={title} background={coverColor} />
       <style>
