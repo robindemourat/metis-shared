@@ -34,6 +34,7 @@ export default {
         Colophon: require('./components/views/static/Colophon').default,
         Cover: require('./components/views/static/Cover').default,
         Toc: require('./components/views/static/Toc').default,
+        StandaloneCover: require('./components/views/static/StandaloneCover').default,
       },
       dynamic: {
         ArticleTemplate: require('./components/views/dynamic/ArticleTemplate').default,
