@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Renderer from '../../renderers/Renderer';
-import PdfNotePointer from './PdfNotePointer';
 import NoteContent from './NoteContent';
 
 
@@ -11,7 +10,10 @@ const ArticleTemplate = ({
   // parameters,
   assets,
   resources
-}, {NotePointer}) => {
+}, {
+  NoteContentPointer,
+  Link
+}) => {
   return (
     <div>
       <h2>{composition.metadata.title}</h2>
@@ -25,7 +27,8 @@ const ArticleTemplate = ({
           resources={resources}
           assets={assets}
           notes={composition.notes}
-          NotePointer={NotePointer || PdfNotePointer} />
+          NoteContentPointer={NoteContentPointer}
+          Link={Link} />
       </section>
       {/* notes */}
       <section className="notes-container">
@@ -43,7 +46,8 @@ const ArticleTemplate = ({
                     composition={composition}
                     resources={resources}
                     renderingMode={renderingMode}
-                    assets={assets} />
+                    assets={assets}
+                    Link={Link} />
                 </li>
               );
             })
@@ -59,7 +63,11 @@ const ArticleTemplate = ({
 export default ArticleTemplate;
 
 ArticleTemplate.contextTypes = {
-  NotePointer: PropTypes.oneOfType([
+  NoteContentPointer: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.element,
+    ]),
+  Link: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.element,
     ])

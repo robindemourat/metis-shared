@@ -29,7 +29,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       renderingMode = _ref.renderingMode,
       assets = _ref.assets,
       resources = _ref.resources;
-  var NotePointer = _ref2.NotePointer;
+  var NoteContentPointer = _ref2.NoteContentPointer;
 
   return _react2.default.createElement(
     'div',
@@ -50,7 +50,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         resources: resources,
         assets: assets,
         notes: composition.notes,
-        NotePointer: NotePointer })
+        NoteContentPointer: NoteContentPointer })
     ),
     _react2.default.createElement(
       'section',
@@ -90,5 +90,5 @@ exports.default = ArticleTemplate;
 
 
 ArticleTemplate.contextTypes = {
-  NotePointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
+  NoteContentPointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
 };

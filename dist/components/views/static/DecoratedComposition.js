@@ -23,6 +23,18 @@ var _Composition = require('./Composition');
 
 var _Composition2 = _interopRequireDefault(_Composition);
 
+var _PdfLink = require('../../views/static/PdfLink');
+
+var _PdfLink2 = _interopRequireDefault(_PdfLink);
+
+var _PdfNotePointerPointer = require('../../views/static/PdfNotePointerPointer');
+
+var _PdfNotePointerPointer2 = _interopRequireDefault(_PdfNotePointerPointer);
+
+var _PdfNoteContentPointer = require('../../views/static/PdfNoteContentPointer');
+
+var _PdfNoteContentPointer2 = _interopRequireDefault(_PdfNoteContentPointer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -55,7 +67,11 @@ var DecoratedComposition = (_temp2 = _class = function (_Component) {
         citationLocale: _this.props.citationLocale,
         assetsData: _this.props.assets.reduce(function (total, asset) {
           return _extends({}, total, _defineProperty({}, asset._id, asset));
-        }, {})
+        }, {}),
+
+        NotePointerPointer: _this.props.NotePointerPointer || _PdfNotePointerPointer2.default,
+        NoteContentPointer: _this.props.NoteContentPointer || _PdfNoteContentPointer2.default,
+        Link: _this.props.Link || _PdfLink2.default
       };
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -73,6 +89,10 @@ var DecoratedComposition = (_temp2 = _class = function (_Component) {
   renderingMode: _propTypes2.default.string,
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
-  assetsData: _propTypes2.default.object
+  assetsData: _propTypes2.default.object,
+
+  NotePointerPointer: _propTypes2.default.func,
+  NoteContentPointer: _propTypes2.default.func,
+  Link: _propTypes2.default.func
 }, _temp2);
 exports.default = DecoratedComposition;

@@ -32,9 +32,13 @@ var _Composition = require('../../views/dynamic/Composition');
 
 var _Composition2 = _interopRequireDefault(_Composition);
 
-var _WebNotePointer = require('../../views/dynamic/WebNotePointer');
+var _WebNotePointerPointer = require('../../views/dynamic/WebNotePointerPointer');
 
-var _WebNotePointer2 = _interopRequireDefault(_WebNotePointer);
+var _WebNotePointerPointer2 = _interopRequireDefault(_WebNotePointerPointer);
+
+var _WebNoteContentPointer = require('../../views/dynamic/WebNoteContentPointer');
+
+var _WebNoteContentPointer2 = _interopRequireDefault(_WebNoteContentPointer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54,12 +58,13 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
     _this.getChildContext = function () {
       return {
-        Link: _this.props.Link || _this.Link,
         getAssetUri: _this.props.getAssetUri,
         citationStyle: _this.props.citationStyle,
         citationLocale: _this.props.citationLocale,
         renderingMode: _this.props.renderingMode,
-        NotePointer: _this.props.NotePointer || _WebNotePointer2.default
+        NotePointerPointer: _this.props.NotePointerPointer || _WebNotePointerPointer2.default,
+        NoteContentPointer: _this.props.NoteContentPointer || _WebNoteContentPointer2.default,
+        Link: _this.props.Link || _this.Link
       };
     };
 
@@ -174,11 +179,13 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
   return PreviewContainer;
 }(_react.Component), _class.childContextTypes = {
-  Link: _propTypes2.default.func,
   getAssetUri: _propTypes2.default.func,
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
   renderingMode: _propTypes2.default.string,
-  NotePointer: _propTypes2.default.func
+
+  NotePointerPointer: _propTypes2.default.func,
+  NoteContentPointer: _propTypes2.default.func,
+  Link: _propTypes2.default.func
 }, _temp);
 exports.default = (0, _reactDimensions2.default)()(PreviewContainer);

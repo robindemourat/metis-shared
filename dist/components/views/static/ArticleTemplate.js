@@ -16,10 +16,6 @@ var _Renderer = require('../../renderers/Renderer');
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
 
-var _PdfNotePointer = require('./PdfNotePointer');
-
-var _PdfNotePointer2 = _interopRequireDefault(_PdfNotePointer);
-
 var _NoteContent = require('./NoteContent');
 
 var _NoteContent2 = _interopRequireDefault(_NoteContent);
@@ -31,7 +27,8 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       renderingMode = _ref.renderingMode,
       assets = _ref.assets,
       resources = _ref.resources;
-  var NotePointer = _ref2.NotePointer;
+  var NoteContentPointer = _ref2.NoteContentPointer,
+      Link = _ref2.Link;
 
   return _react2.default.createElement(
     'div',
@@ -52,7 +49,8 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         resources: resources,
         assets: assets,
         notes: composition.notes,
-        NotePointer: NotePointer || _PdfNotePointer2.default })
+        NoteContentPointer: NoteContentPointer,
+        Link: Link })
     ),
     _react2.default.createElement(
       'section',
@@ -79,7 +77,8 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
                 composition: composition,
                 resources: resources,
                 renderingMode: renderingMode,
-                assets: assets })
+                assets: assets,
+                Link: Link })
             );
           })
         )
@@ -92,5 +91,6 @@ exports.default = ArticleTemplate;
 
 
 ArticleTemplate.contextTypes = {
-  NotePointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
+  NoteContentPointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element]),
+  Link: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
 };

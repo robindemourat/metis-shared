@@ -6,25 +6,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NotePointerContainer = ({
+const NoteContentPointerContainer = ({
   noteId
 }, {
   notes,
-  NotePointer
+  NoteContentPointer
 }) => {
   const note = notes && notes[noteId];
-  if (note && NotePointer) {
+  if (note && NoteContentPointer) {
     return (
-      <NotePointer note={note} noteId={noteId} />
+      <NoteContentPointer note={note} noteId={noteId} />
     );
   }
   return null;
 };
 
-NotePointerContainer.contextTypes = {
+NoteContentPointerContainer.contextTypes = {
   notes: PropTypes.object,
-  NotePointer: PropTypes.func,
+  NoteContentPointer: PropTypes.func,
 };
 
 
-export default NotePointerContainer;
+export default NoteContentPointerContainer;

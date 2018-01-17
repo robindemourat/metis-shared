@@ -39,9 +39,13 @@ var _PdfLink = require('../../views/static/PdfLink');
 
 var _PdfLink2 = _interopRequireDefault(_PdfLink);
 
-var _PdfNotePointer = require('../../views/static/PdfNotePointer');
+var _PdfNotePointerPointer = require('../../views/static/PdfNotePointerPointer');
 
-var _PdfNotePointer2 = _interopRequireDefault(_PdfNotePointer);
+var _PdfNotePointerPointer2 = _interopRequireDefault(_PdfNotePointerPointer);
+
+var _PdfNoteContentPointer = require('../../views/static/PdfNoteContentPointer');
+
+var _PdfNoteContentPointer2 = _interopRequireDefault(_PdfNoteContentPointer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -65,8 +69,10 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         citationStyle: _this.props.citationStyle,
         citationLocale: _this.props.citationLocale,
         renderingMode: _this.props.renderingMode,
-        Link: _this.props.Link || _PdfLink2.default,
-        NotePointer: _this.props.NotePointer || _PdfNotePointer2.default
+
+        NotePointerPointer: _this.props.NotePointerPointer || _PdfNotePointerPointer2.default,
+        NoteContentPointer: _this.props.NoteContentPointer || _PdfNoteContentPointer2.default,
+        Link: _this.props.Link || _PdfLink2.default
       };
     };
 
@@ -127,7 +133,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
   renderingMode: _propTypes2.default.string,
-  Link: _propTypes2.default.func,
-  NotePointer: _propTypes2.default.func
+
+  NotePointerPointer: _propTypes2.default.func,
+  NoteContentPointer: _propTypes2.default.func,
+  Link: _propTypes2.default.func
 }, _temp);
 exports.default = PreviewContainer;

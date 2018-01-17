@@ -12,7 +12,7 @@ const ArticleTemplate = ({
   assets,
   resources,
 }, {
-  NotePointer
+  NoteContentPointer
 }) => {
   return (
     <div className="plurishing-DynamicArticleTemplate">
@@ -27,7 +27,7 @@ const ArticleTemplate = ({
           resources={resources}
           assets={assets}
           notes={composition.notes}
-          NotePointer={NotePointer} />
+          NoteContentPointer={NoteContentPointer} />
       </section>
 
       {/* notes */}
@@ -61,7 +61,7 @@ const ArticleTemplate = ({
 export default ArticleTemplate;
 
 ArticleTemplate.contextTypes = {
-  NotePointer: PropTypes.oneOfType([
+  NoteContentPointer: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.element,
     ])

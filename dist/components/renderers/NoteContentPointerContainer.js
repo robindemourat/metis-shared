@@ -19,21 +19,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * ============
  * @module plurishing-shared/components/renderers/NotePointer
  */
-var NotePointerContainer = function NotePointerContainer(_ref, _ref2) {
+var NoteContentPointerContainer = function NoteContentPointerContainer(_ref, _ref2) {
   var noteId = _ref.noteId;
   var notes = _ref2.notes,
-      NotePointer = _ref2.NotePointer;
+      NoteContentPointer = _ref2.NoteContentPointer;
 
   var note = notes && notes[noteId];
-  if (note && NotePointer) {
-    return _react2.default.createElement(NotePointer, { note: note, noteId: noteId });
+  if (note && NoteContentPointer) {
+    return _react2.default.createElement(NoteContentPointer, { note: note, noteId: noteId });
   }
   return null;
 };
 
-NotePointerContainer.contextTypes = {
+NoteContentPointerContainer.contextTypes = {
   notes: _propTypes2.default.object,
-  NotePointer: _propTypes2.default.func
+  NoteContentPointer: _propTypes2.default.func
 };
 
-exports.default = NotePointerContainer;
+exports.default = NoteContentPointerContainer;

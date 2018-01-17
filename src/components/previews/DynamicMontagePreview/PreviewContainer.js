@@ -10,17 +10,20 @@ import Dimensions from 'react-dimensions';
 
 import Home from '../../views/dynamic/Home';
 import Composition from '../../views/dynamic/Composition';
-import WebNotePointer from '../../views/dynamic/WebNotePointer';
+import WebNotePointerPointer from '../../views/dynamic/WebNotePointerPointer';
+import WebNoteContentPointer from '../../views/dynamic/WebNoteContentPointer';
 
 class PreviewContainer extends Component {
 
   static childContextTypes = {
-    Link: PropTypes.func,
     getAssetUri: PropTypes.func,
     citationStyle: PropTypes.string,
     citationLocale: PropTypes.string,
     renderingMode: PropTypes.string,
-    NotePointer: PropTypes.func,
+
+    NotePointerPointer: PropTypes.func,
+    NoteContentPointer: PropTypes.func,
+    Link: PropTypes.func,
   }
 
   constructor(props) {
@@ -32,12 +35,13 @@ class PreviewContainer extends Component {
   }
 
   getChildContext = () => ({
-    Link: this.props.Link || this.Link,
     getAssetUri: this.props.getAssetUri,
     citationStyle: this.props.citationStyle,
     citationLocale: this.props.citationLocale,
     renderingMode: this.props.renderingMode,
-    NotePointer: this.props.NotePointer || WebNotePointer
+    NotePointerPointer: this.props.NotePointerPointer || WebNotePointerPointer,
+    NoteContentPointer: this.props.NoteContentPointer || WebNoteContentPointer,
+    Link: this.props.Link || this.Link,
   })
 
   Link = ({to, children}) => {
