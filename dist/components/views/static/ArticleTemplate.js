@@ -20,6 +20,8 @@ var _NoteContent = require('./NoteContent');
 
 var _NoteContent2 = _interopRequireDefault(_NoteContent);
 
+var _reactCiteproc = require('react-citeproc');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
@@ -28,7 +30,11 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       assets = _ref.assets,
       resources = _ref.resources;
   var NoteContentPointer = _ref2.NoteContentPointer,
-      Link = _ref2.Link;
+      Link = _ref2.Link,
+      citationItems = _ref2.citationItems,
+      citationLocale = _ref2.citationLocale,
+      citationStyle = _ref2.citationStyle,
+      t = _ref2.t;
 
   return _react2.default.createElement(
     'div',
@@ -52,13 +58,13 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         NoteContentPointer: NoteContentPointer,
         Link: Link })
     ),
-    _react2.default.createElement(
+    composition.notesOrder.length ? _react2.default.createElement(
       'section',
       { className: 'notes-container' },
       _react2.default.createElement(
         'h3',
         null,
-        'Notes'
+        t('Notes')
       ),
       _react2.default.createElement(
         'section',
@@ -83,7 +89,20 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
           })
         )
       )
-    )
+    ) : null,
+    Object.keys(citationItems).length ? _react2.default.createElement(
+      'section',
+      { className: 'bibliography-container' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        t('Bibliographie')
+      ),
+      _react2.default.createElement(_reactCiteproc.Bibliography, {
+        style: citationStyle,
+        locale: citationLocale,
+        items: citationItems })
+    ) : null
   );
 };
 
@@ -92,5 +111,9 @@ exports.default = ArticleTemplate;
 
 ArticleTemplate.contextTypes = {
   NoteContentPointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element]),
-  Link: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
+  Link: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element]),
+  citationItems: _propTypes2.default.object,
+  citationLocale: _propTypes2.default.string,
+  citationStyle: _propTypes2.default.string,
+  t: _propTypes2.default.func
 };

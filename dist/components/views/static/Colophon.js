@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -13,15 +13,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (_ref) {
   var contents = _ref.contents;
   return _react2.default.createElement(
-    'section',
-    null,
+    "section",
+    { className: "colophon" },
     _react2.default.createElement(
-      'h2',
-      null,
-      'Colophon'
-    ),
-    _react2.default.createElement(
-      'div',
+      "div",
       null,
       contents
     )

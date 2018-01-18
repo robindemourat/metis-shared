@@ -20,6 +20,8 @@ var _NoteContent = require('./NoteContent');
 
 var _NoteContent2 = _interopRequireDefault(_NoteContent);
 
+var _reactCiteproc = require('react-citeproc');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import './ArticleTemplate.scss';
@@ -29,7 +31,11 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       renderingMode = _ref.renderingMode,
       assets = _ref.assets,
       resources = _ref.resources;
-  var NoteContentPointer = _ref2.NoteContentPointer;
+  var NoteContentPointer = _ref2.NoteContentPointer,
+      citationStyle = _ref2.citationStyle,
+      citationLocale = _ref2.citationLocale,
+      citationItems = _ref2.citationItems,
+      t = _ref2.t;
 
   return _react2.default.createElement(
     'div',
@@ -52,13 +58,13 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         notes: composition.notes,
         NoteContentPointer: NoteContentPointer })
     ),
-    _react2.default.createElement(
+    composition.notesOrder ? _react2.default.createElement(
       'section',
       { className: 'notes-container' },
       _react2.default.createElement(
         'h3',
         null,
-        'Notes'
+        t('Notes')
       ),
       _react2.default.createElement(
         'section',
@@ -82,7 +88,20 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
           })
         )
       )
-    )
+    ) : null,
+    Object.keys(citationItems).length ? _react2.default.createElement(
+      'section',
+      { className: 'bibliography-container' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        t('Bibliographie')
+      ),
+      _react2.default.createElement(_reactCiteproc.Bibliography, {
+        style: citationStyle,
+        locale: citationLocale,
+        items: citationItems })
+    ) : null
   );
 };
 
@@ -90,5 +109,9 @@ exports.default = ArticleTemplate;
 
 
 ArticleTemplate.contextTypes = {
-  NoteContentPointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element])
+  NoteContentPointer: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.element]),
+  citationStyle: _propTypes2.default.string,
+  citationLocale: _propTypes2.default.string,
+  citationItems: _propTypes2.default.object,
+  t: _propTypes2.default.string
 };

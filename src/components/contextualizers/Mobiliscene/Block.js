@@ -54,10 +54,11 @@ const Block = ({
     case 'screencast_video_asset_id':
       assetUri = getAssetUri(appropriateAsset.asset);
       if (renderingMode === 'epub-fixed') {
-        return <video controls>
-                  <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
-                </video>
-      } else {
+        return (<video controls>
+          <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
+        </video>);
+      }
+ else {
         const {PlayPause, MuteUnmute} = controls;
         return (
           <Media>

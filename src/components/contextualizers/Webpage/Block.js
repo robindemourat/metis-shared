@@ -39,9 +39,9 @@ const Block = ({
           </Media>
         );
       }
-      return <video controls>
-                  <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
-                </video>
+      return (<video controls>
+        <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
+      </video>);
 
     default:
       assetUri = getAssetUri(appropriateAsset.asset);

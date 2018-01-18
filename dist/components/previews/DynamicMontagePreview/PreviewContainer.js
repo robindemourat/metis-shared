@@ -64,7 +64,11 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         renderingMode: _this.props.renderingMode,
         NotePointerPointer: _this.props.NotePointerPointer || _WebNotePointerPointer2.default,
         NoteContentPointer: _this.props.NoteContentPointer || _WebNoteContentPointer2.default,
-        Link: _this.props.Link || _this.Link
+        Link: _this.props.Link || _this.Link,
+
+        t: function t(_t) {
+          return _t;
+        }
       };
     };
 
@@ -186,6 +190,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
 
   NotePointerPointer: _propTypes2.default.func,
   NoteContentPointer: _propTypes2.default.func,
-  Link: _propTypes2.default.func
+  Link: _propTypes2.default.func,
+  t: _propTypes2.default.func
 }, _temp);
 exports.default = (0, _reactDimensions2.default)()(PreviewContainer);
