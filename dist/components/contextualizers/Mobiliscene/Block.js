@@ -69,24 +69,32 @@ var Block = function Block(_ref2, _ref3) {
 
     case 'screencast_video_asset_id':
       assetUri = getAssetUri(appropriateAsset.asset);
-      var PlayPause = controls.PlayPause,
-          MuteUnmute = controls.MuteUnmute;
+      if (renderingMode === 'epub-fixed') {
+        return _react2.default.createElement(
+          'video',
+          { controls: true },
+          _react2.default.createElement('source', { src: assetUri, type: 'video/' + assetUri.split('.').pop() })
+        );
+      } else {
+        var PlayPause = controls.PlayPause,
+            MuteUnmute = controls.MuteUnmute;
 
-      return _react2.default.createElement(
-        Media,
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'media' },
-          _react2.default.createElement(Player, { src: assetUri }),
+        return _react2.default.createElement(
+          Media,
+          null,
           _react2.default.createElement(
             'div',
-            { className: 'media-controls' },
-            _react2.default.createElement(PlayPause, null),
-            _react2.default.createElement(MuteUnmute, null)
+            { className: 'media' },
+            _react2.default.createElement(Player, { src: assetUri }),
+            _react2.default.createElement(
+              'div',
+              { className: 'media-controls' },
+              _react2.default.createElement(PlayPause, null),
+              _react2.default.createElement(MuteUnmute, null)
+            )
           )
-        )
-      );
+        );
+      }
 
     default:
       assetUri = getAssetUri(appropriateAsset.asset);

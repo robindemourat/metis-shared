@@ -65,7 +65,11 @@ var Block = function Block(_ref2, _ref3) {
           )
         );
       }
-      return null;
+      return _react2.default.createElement(
+        'video',
+        { controls: true },
+        _react2.default.createElement('source', { src: assetUri, type: 'video/' + assetUri.split('.').pop() })
+      );
 
     default:
       assetUri = getAssetUri(appropriateAsset.asset);
