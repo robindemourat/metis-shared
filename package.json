@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Collection of plurishing elements being used accross apps",
   "main": "dist/index.js",
+  "license": "LGPL-3.0",
   "scripts": {
     "build": "gulp",
     "lint": "eslint --fix src",
