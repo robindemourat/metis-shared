@@ -24,6 +24,7 @@ module.exports = function script(canvas, data, contentUri, fontUri) {
   let videoFile;
   let videoTexture;
 
+  let typeface;
   let typefaceRequest;
 
   let pointer;

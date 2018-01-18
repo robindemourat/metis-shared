@@ -299,7 +299,7 @@ const MobilisceneBlock = ({renderingMode, resource}) => {
   );
 }
 
-storiesOf('Mobiliscene contextualizer', module)
+storiesOf('Mobiliscene contextualizer (video)', module)
   .add('web (video - will display a player)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'web'} />)
   .add('web (text - will display a player)', () => <MobilisceneBlock resource={mobilisceneResourceAlt} renderingMode={'web'} />)
   .add('epub fixed (will display a screencast)', () => <MobilisceneBlock resource={mobilisceneResource} renderingMode={'epub-fixed'} />)

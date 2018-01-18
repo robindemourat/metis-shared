@@ -26,6 +26,7 @@ module.exports = function script(canvas, data, contentUri, fontUri) {
     var videoFile = void 0;
     var videoTexture = void 0;
 
+    var typeface = void 0;
     var typefaceRequest = void 0;
 
     var pointer = void 0;
