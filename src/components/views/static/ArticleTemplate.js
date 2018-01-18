@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Renderer from '../../renderers/Renderer';
 import NoteContent from './NoteContent';
+import {Bibliography} from 'react-citeproc';
 
 
 const ArticleTemplate = ({
@@ -12,7 +13,11 @@ const ArticleTemplate = ({
   resources
 }, {
   NoteContentPointer,
-  Link
+  Link,
+  citationItems,
+  citationLocale,
+  citationStyle,
+  t,
 }) => {
   return (
     <div>
@@ -31,8 +36,8 @@ const ArticleTemplate = ({
           Link={Link} />
       </section>
       {/* notes */}
-      <section className="notes-container">
-        <h3>Notes</h3>
+      {composition.notesOrder.length ? <section className="notes-container">
+        <h3>{t('Notes')}</h3>
         <section>
           <ul>
             {
@@ -54,7 +59,14 @@ const ArticleTemplate = ({
           }
           </ul>
         </section>
-      </section>
+      </section> : null}
+      {Object.keys(citationItems).length ? <section className="bibliography-container">
+        <h3>{t('Bibliographie')}</h3>
+        <Bibliography
+          style={citationStyle}
+          locale={citationLocale}
+          items={citationItems} />
+      </section> : null}
 
     </div>
   );
@@ -70,5 +82,9 @@ ArticleTemplate.contextTypes = {
   Link: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.element,
-    ])
+    ]),
+  citationItems: PropTypes.object,
+  citationLocale: PropTypes.string,
+  citationStyle: PropTypes.string,
+  t: PropTypes.func
 };

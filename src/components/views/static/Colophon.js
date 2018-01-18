@@ -3,8 +3,7 @@ import React from 'react';
 export default ({
   contents
 }) => (
-  <section>
-    <h2>Colophon</h2>
+  <section className="colophon">
     <div>
       {contents}
     </div>

@@ -13,6 +13,7 @@ import Composition from '../../views/dynamic/Composition';
 import WebNotePointerPointer from '../../views/dynamic/WebNotePointerPointer';
 import WebNoteContentPointer from '../../views/dynamic/WebNoteContentPointer';
 
+
 class PreviewContainer extends Component {
 
   static childContextTypes = {
@@ -24,6 +25,7 @@ class PreviewContainer extends Component {
     NotePointerPointer: PropTypes.func,
     NoteContentPointer: PropTypes.func,
     Link: PropTypes.func,
+    t: PropTypes.func,
   }
 
   constructor(props) {
@@ -42,6 +44,8 @@ class PreviewContainer extends Component {
     NotePointerPointer: this.props.NotePointerPointer || WebNotePointerPointer,
     NoteContentPointer: this.props.NoteContentPointer || WebNoteContentPointer,
     Link: this.props.Link || this.Link,
+
+    t: t => t,
   })
 
   Link = ({to, children}) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Renderer from '../../renderers/Renderer';
 import NoteContent from './NoteContent';
+import {Bibliography} from 'react-citeproc';
 
 // import './ArticleTemplate.scss';
 
@@ -12,7 +13,11 @@ const ArticleTemplate = ({
   assets,
   resources,
 }, {
-  NoteContentPointer
+  NoteContentPointer,
+  citationStyle,
+  citationLocale,
+  citationItems,
+  t
 }) => {
   return (
     <div className="plurishing-DynamicArticleTemplate">
@@ -31,8 +36,8 @@ const ArticleTemplate = ({
       </section>
 
       {/* notes */}
-      <section className="notes-container">
-        <h3>Notes</h3>
+      {composition.notesOrder ? <section className="notes-container">
+        <h3>{t('Notes')}</h3>
         <section>
           <ul>
             {
@@ -53,7 +58,15 @@ const ArticleTemplate = ({
           }
           </ul>
         </section>
-      </section>
+      </section> : null}
+      {Object.keys(citationItems).length ?
+        <section className="bibliography-container">
+          <h3>{t('Bibliographie')}</h3>
+          <Bibliography
+            style={citationStyle}
+            locale={citationLocale}
+            items={citationItems} />
+        </section> : null}
     </div>
   );
 };
@@ -64,5 +77,9 @@ ArticleTemplate.contextTypes = {
   NoteContentPointer: PropTypes.oneOfType([
       PropTypes.func,
       PropTypes.element,
-    ])
+    ]),
+  citationStyle: PropTypes.string,
+  citationLocale: PropTypes.string,
+  citationItems: PropTypes.object,
+  t: PropTypes.string
 };
