@@ -71,12 +71,12 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         null,
         _react2.default.createElement(
           'ul',
-          null,
+          { className: 'notes-wrapper' },
           composition.notesOrder.map(function (noteId) {
             var note = composition.notes[noteId];
             return _react2.default.createElement(
               'li',
-              { key: noteId },
+              { key: noteId, className: 'note-wrapper' },
               _react2.default.createElement(_NoteContent2.default, {
                 note: note,
                 noteId: noteId,

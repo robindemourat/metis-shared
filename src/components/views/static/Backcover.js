@@ -1,5 +1,10 @@
 import React from 'react';
 
+const getColorByBgColor = (bgColor) => {
+    if (!bgColor) { return ''; }
+    return (parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+}
+
 export default ({
   title,
   background = '#FFFFFF',
@@ -8,7 +13,8 @@ export default ({
   <section
     className="back-cover break-before"
     style={{
-      background
+      background,
+      color: getColorByBgColor(background)
     }}>
     <h1>{title}</h1>
     <p>

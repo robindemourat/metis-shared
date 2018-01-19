@@ -10,6 +10,13 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var getColorByBgColor = function getColorByBgColor(bgColor) {
+  if (!bgColor) {
+    return '';
+  }
+  return parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2 ? '#000' : '#fff';
+};
+
 exports.default = function (_ref) {
   var title = _ref.title,
       _ref$background = _ref.background,
@@ -20,7 +27,8 @@ exports.default = function (_ref) {
     {
       className: 'back-cover break-before',
       style: {
-        background: background
+        background: background,
+        color: getColorByBgColor(background)
       } },
     _react2.default.createElement(
       'h1',

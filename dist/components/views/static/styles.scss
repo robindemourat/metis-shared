@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+$dimension-navwidth-default: 20%;
+$gutter-small: 1rem;
+$font-size-1: 1rem;
+$font-size-2: $font-size-1 * 1.6;
+$gutter-medium: $gutter-small * 1.6;
+
+
+*
+{
+    font-family: Merriweather, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: Oswald, sans-serif;
+}
+
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+figure
+{
+    margin: 0;
+    padding: $gutter-small;
+
+    background: rgba(0,0,0,.05);
+
+    table
+    {
+        background: white;
+        tr:nth-child(even)
+        {
+            background-color: #f2f2f2;
+        }
+        tr
+        {
+            text-align: left;
+        }
+    }
+}
+
+.plurishing-PdfNotePointerPointer,
+.plurishing-EpubNotePointerPointer,
+.plurishing-PdfNoteContentPointer,
+.plurishing-EpubNoteContentPointer,
+.plurishing-PdfNotePointerPointer a,
+.plurishing-EpubNotePointerPointer a,
+.plurishing-PdfNoteContentPointer a,
+.plurishing-EpubNoteContentPointer a
+{
+  color: inherit;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.plurishing-PdfNotePointerPointer,
+.plurishing-EpubNotePointerPointer
+{
+  padding-top: $gutter-small;
+  padding-right: $gutter-small;
+}
+
+
+.notes-container
+{
+    .notes-wrapper
+    {
+        padding: 0;
+        .note-wrapper
+        {
+            margin: 0;
+            margin-bottom: $gutter-medium;
+            padding: 0;
+
+            list-style: none;
+            .note-content
+            {
+                display: flex;
+
+                justify-content: stretch;
+                flex-flow: row nowrap;
+                .note-content-container
+                {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+.bibliography-container
+{
+    .csl-entry
+    {
+        margin-bottom: $gutter-medium;
+    }
+}
+
+
+.cover,
+.back-cover
+{
+    font-family: Oswald, sans-serif;
+
+    display: flex;
+
+    min-height: 20rem;
+
+    page: cover;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}

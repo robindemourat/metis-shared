@@ -16,7 +16,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (_ref) {
   var _ref$montage = _ref.montage,
-      title = _ref$montage.metadata.title,
+      _ref$montage$metadata = _ref$montage.metadata,
+      title = _ref$montage$metadata.title,
+      subtitle = _ref$montage$metadata.subtitle,
+      creators = _ref$montage$metadata.creators,
       _ref$montage$data = _ref$montage.data,
       coverColor = _ref$montage$data.cover_color,
       css = _ref$montage$data.css,
@@ -31,7 +34,11 @@ exports.default = function (_ref) {
     _react2.default.createElement(
       'body',
       null,
-      _react2.default.createElement(_Cover2.default, { title: title, background: coverColor }),
+      _react2.default.createElement(_Cover2.default, {
+        title: title,
+        background: coverColor,
+        subtitle: subtitle,
+        creators: creators }),
       _react2.default.createElement(
         'style',
         null,

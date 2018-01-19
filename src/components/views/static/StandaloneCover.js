@@ -6,6 +6,8 @@ export default ({
   montage: {
     metadata: {
       title,
+      subtitle,
+      creators,
     },
     data: {
       cover_color: coverColor,
@@ -18,7 +20,12 @@ export default ({
   <html className="StandaloneCover">
     <head />
     <body>
-      <Cover title={title} background={coverColor} />
+      <Cover 
+        title={title}
+         background={coverColor} 
+         subtitle={subtitle}
+         creators={creators}
+        />
       <style>
         {styles}
         {css.shared_css_code}

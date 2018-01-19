@@ -100,7 +100,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
           null,
           _react2.default.createElement(_Cover2.default, {
             background: montage.data.cover_color,
-            title: montage.metadata.title }),
+            title: montage.metadata.title,
+            subtitle: montage.metadata.subtitle,
+            creators: montage.metadata.creators }),
           _react2.default.createElement(_Toc2.default, { montage: montage, compositions: compositions }),
           montage.data.compositions.map(function (parameters, index) {
             var composition = compositions.find(function (c) {

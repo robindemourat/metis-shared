@@ -39,12 +39,12 @@ const ArticleTemplate = ({
       {composition.notesOrder.length ? <section className="notes-container">
         <h3>{t('Notes')}</h3>
         <section>
-          <ul>
+          <ul className="notes-wrapper">
             {
             composition.notesOrder.map(noteId => {
               const note = composition.notes[noteId];
               return (
-                <li key={noteId}>
+                <li key={noteId} className="note-wrapper">
                   <NoteContent
                     note={note}
                     noteId={noteId}

@@ -12,6 +12,7 @@ import rawBib from 'raw-loader!../assets_examples/bibliography.bib';
 import citationStyle from 'raw-loader!../assets_examples/apa.csl';
 import citationLocale from 'raw-loader!../assets_examples/english-locale.xml';
 
+import staticStyles from '../src/components/views/static/styles.scss';
 import dynamicStyles from '../src/components/views/dynamic/styles.scss';
 
 import data from './data';

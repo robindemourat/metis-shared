@@ -118,5 +118,5 @@ ArticleTemplate.contextTypes = {
   citationStyle: _propTypes2.default.string,
   citationLocale: _propTypes2.default.string,
   citationItems: _propTypes2.default.object,
-  t: _propTypes2.default.string
+  t: _propTypes2.default.func
 };

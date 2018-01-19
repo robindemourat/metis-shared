@@ -82,5 +82,5 @@ ArticleTemplate.contextTypes = {
   citationStyle: PropTypes.string,
   citationLocale: PropTypes.string,
   citationItems: PropTypes.object,
-  t: PropTypes.string
+  t: PropTypes.func
 };
