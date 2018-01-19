@@ -19,35 +19,39 @@ exports.default = function (_ref) {
       compositions = _ref.compositions;
   return _react2.default.createElement(
     'section',
-    null,
+    { className: 'plurishing-MontageSection' },
     _react2.default.createElement(
       'aside',
-      null,
+      { className: 'aside-menu' },
       _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
     ),
     _react2.default.createElement(
-      'h2',
-      null,
-      montage.metadata.title || 'Montage sans titre'
-    ),
-    _react2.default.createElement(
-      'div',
-      null,
+      'section',
+      { className: 'main-content-container' },
       _react2.default.createElement(
-        'p',
+        'h2',
         null,
-        montage.metadata.description
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Table des mati\xE8res'
+        montage.metadata.title || 'Montage sans titre'
       ),
-      _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          null,
+          montage.metadata.description
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Table des mati\xE8res'
+        ),
+        _react2.default.createElement(_Nav2.default, { toggable: false, montage: montage, compositions: compositions })
+      )
     ),
     _react2.default.createElement(
       'style',

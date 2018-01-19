@@ -1,59 +1,498 @@
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+$dimension-navwidth-default: 20%;
+$gutter-small: 1rem;
+
+$font-size-1: 1rem;
+$font-size-2: $font-size-1 * 1.6;
 
 
-.plurishing-DynamicArticleTemplate{
+$gutter-medium: $gutter-small * 1.6;
+$color-background: white;
 
 
-  .BlockAssetWrapper.mobiliscene{
-    height : 500px;
-  }
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+@mixin sm
+{
+    @media (min-width: #{$screen-sm-min})
+    {
+        @content;
+    }
 }
 
-
-.dynamic-composition {
-
-  &.fullscreen{
-    .aside-menu{
-        z-index: 3;
-        position: fixed;
-        top: 0;
-        left: 0;
+// Medium devices
+@mixin md
+{
+    @media (min-width: #{$screen-md-min})
+    {
+        @content;
     }
-
-    figcaption{
-      z-index: 3;
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      background: rgba(255,255,255,0.7);
-    }
-  }
 }
 
-.plurishing-DynamicFullscreenTemplate{
+// Large devices
+@mixin lg
+{
+    @media (min-width: #{$screen-lg-min})
+    {
+        @content;
+    }
+}
 
+// Extra large devices
+@mixin xl
+{
+    @media (min-width: #{$screen-xl-min})
+    {
+        @content;
+    }
+}
 
-  
-  .figure-container,
-  .figure-wrapper,
-  .figure-wrapper > div{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
+.plurishing-MontageSection
+{
+    font-family: Merriweather, serif;
 
-  .BlockAssetWrapper{
-    height: 100%;
     position: absolute;
-    left: 0;
     top: 0;
-    width: 100%;
-  }
+    left: 0;
 
-  figure{
-    margin : 0;
-    padding: 0;
-  }
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+
+    *
+    {
+        box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+    {
+        font-family: Oswald, sans-serif;
+    }
+
+
+    .aside-menu,
+    .main-content-container
+    {
+        width: 100%;
+    }
+
+    .main-content-container
+    {
+        overflow: auto;
+
+        padding: $gutter-small;
+
+        flex: 1;
+    }
+
+    .aside-menu
+    {
+        z-index: 3;
+
+        background: rgba(255,255,255,.8);
+        size: $font-size-2;
+        h2
+        {
+            margin: 0;
+        }
+        .header
+        {
+            display: flex;
+
+            flex-flow: row nowrap;
+            align-items: stretch;
+            height: $font-size-2;
+            .link
+            {
+                flex: 1;
+            }
+        }
+    }
+
+    .plurishing-DynamicNav
+    {
+        .menu-items{
+          padding: 0;
+          li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+        }
+        @include md
+        {
+            .header
+            {
+                display: flex;
+
+                flex-flow: row nowrap;
+                align-items: stretch;
+                .link
+                {
+                    flex: 1;
+                }
+            }
+        }
+
+        .menu-container
+        {
+            overflow: hidden;
+
+            max-height: .0001px;
+
+            transition: all 2s ease;
+
+            @include md
+            {
+                max-height: 1000px;
+            }
+            &.active
+            {
+                max-height: 1000px;
+            }
+        }
+
+        .open-menu
+        {
+            @include md
+            {
+                display: none;
+            }
+
+            background: inherit;
+            outline: none;
+            border: none;
+
+            .wrap
+            {
+                width: $font-size-1;
+                // margin: $font-size-1 * 1.3 auto;
+                margin: 0;
+            }
+
+
+
+            .artclose
+            {
+                width: $font-size-1;
+                height: $font-size-1;
+
+                cursor: pointer;
+            }
+
+            .burgx,
+            .burgx2,
+            .burgx3
+            {
+                position: absolute;
+
+                width: $font-size-1;
+                height: $font-size-1/7;
+                margin-top: $font-size-1/7;
+
+                transition: all .5s ease;
+                -webkit-transform: rotate(-180deg);
+                   -moz-transform: rotate(-180deg);
+                     -o-transform: rotate(-180deg);
+                        transform: rotate(-180deg);
+
+                background: #201610;
+            }
+
+            .burgx2
+            {
+                margin-top: $font-size-1*.45;
+            }
+            .burgx3
+            {
+                margin-top: $font-size-1*.7;
+
+                -webkit-transform: rotate(180deg);
+                   -moz-transform: rotate(180deg);
+                     -o-transform: rotate(180deg);
+                        transform: rotate(180deg);
+            }
+
+            &.active
+            {
+                .burgx
+                {
+                    margin-top: $font-size-1*.5;
+
+                    -webkit-transform: rotate(-45deg);
+                       -moz-transform: rotate(-45deg);
+                         -o-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                }
+                .burgx2
+                {
+                    opacity: 0;
+                }
+                .burgx3
+                {
+                    margin-top: $font-size-1*.5;
+
+                    -webkit-transform: rotate(45deg);
+                       -moz-transform: rotate(45deg);
+                         -o-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    .plurishing-DynamicArticleTemplate
+    {
+      @include md
+      {
+
+      padding-right: $dimension-navwidth-default * .8;
+      padding-left: $dimension-navwidth-default * 1;
+      }
+
+      p{
+        line-height: $font-size-1 * 1.4;
+        font-size: $font-size-1;
+      }
+
+      .plurishing-WebNoteContentPointer,
+      .plurishing-WebNotePointerPointer {
+        a{
+          color: inherit;
+          text-decoration: none;
+          text-width: 900;
+        }
+      }
+
+
+      .BlockAssetWrapper{
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        figcaption{
+          margin: $gutter-medium;
+          color: darkgrey;
+        }
+        &.mobiliscene
+        {
+          height: 500px;
+          position: relative;
+          figcaption{
+            position: absolute;
+            bottom: $gutter-small;
+            right: $gutter-small;
+            width: 30%;
+            background: rgba(255,255,255,.8);
+            padding: $gutter-small;
+            font-size: $font-size-1;
+          }
+        }
+        &.audio,
+        &.video{
+          .media-controls{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: stretch;
+            justify-content: stretch;
+            margin-bottom: $gutter-small;
+            .seek-bar{
+              flex: 1;
+            }
+          }
+          .transcription-container{
+            background: darkgrey;
+            color: white;
+            padding: $gutter-small;
+            max-height: 20rem;
+            overflow: auto;
+          }
+          video{
+            width: 100%;
+            max-height: 30rem;
+          }
+        }
+        iframe{
+          width: 100%;
+          height: 20rem;
+          border: none;
+        }
+
+        img,
+        video{
+          max-width: 100%;
+        }
+      }
+
+      .notes-container{
+        .notes-wrapper{
+          padding: 0;
+          .note-wrapper{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: $gutter-medium;
+            .note-content{
+              display: flex;
+              justify-content: stretch;
+              flex-flow: row nowrap;
+              .note-content-container{
+                flex: 1;
+              }
+              .plurishing-WebNotePointerPointer{
+                padding-top: $gutter-small;
+                padding-right: $gutter-small;
+              }
+            }
+          }
+        }
+      }
+
+      .bibliography-container{
+        .csl-entry{
+          margin-bottom: $gutter-medium;
+        }
+      }
+    }
+
+
+    &.dynamic-composition
+    {
+        &.fullscreen
+        {
+            figcaption
+            {
+                position: fixed;
+                z-index: 3;
+                right: 0;
+                bottom: 0;
+
+                margin: $gutter-small;
+                padding: $gutter-small;
+
+                background: rgba(255,255,255,.7);
+                font-size: $font-size-1 * .6;
+            }
+        }
+    }
+
+    .plurishing-DynamicFullscreenTemplate
+    {
+        .figure-container,
+        .figure-wrapper,
+        .figure-wrapper > div
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .BlockAssetWrapper
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        figure
+        {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    /**
+     * Responsive
+     */
+
+    @include md
+    {
+        .aside-menu
+        {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+
+            width: $dimension-navwidth-default;
+            height: 100%;
+
+            background: rgba(255,255,255,.8);
+
+            pointer-events: none;
+            .plurishing-DynamicNav{
+              pointer-events: all;
+            }
+        }
+
+        .main-content-container
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            padding-left: $dimension-navwidth-default;
+            height: 100%;
+
+            background: $color-background;
+
+            overflow: auto;
+        }
+    }
+
+    /**
+     * Components
+     */
+    .link,
+    .link:visited,
+    .link:active{
+      text-align: left;
+      background: inherit;
+      border: none;
+      text-decoration: none;
+      outline:none;
+      cursor: pointer;
+      font-weight: 800;
+      transition: all .5s ease;
+      &:hover{
+        font-weight: 900;
+        background: rgba(0,0,0,0.05);
+      }
+    }
+}
+
+
+.ReactModalPortal{
+  z-index: 3;
+    position: fixed;
 }

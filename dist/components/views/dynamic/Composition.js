@@ -136,31 +136,35 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        { className: 'dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
+        { className: 'plurishing-MontageSection dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
         _react2.default.createElement(
           'aside',
           { className: 'aside-menu' },
           _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
         ),
         _react2.default.createElement(
-          _reactCiteproc.ReferencesManager,
-          {
-            style: citationStyle,
-            locale: citationLocale,
-            items: citationItems,
-            citations: citationData },
-          _react2.default.createElement(TemplateComponent, {
-            parameters: parameters,
-            composition: composition,
-            assets: assetsMap,
-            resources: resourcesMap }),
+          'section',
+          { className: 'main-content-container' },
           _react2.default.createElement(
-            'style',
-            null,
-            montage.data.css.shared_css_code,
-            montage.data.css[renderingMode + '_css_code'],
-            parameters.css.shared_css_code,
-            parameters.css[renderingMode + '_css_code']
+            _reactCiteproc.ReferencesManager,
+            {
+              style: citationStyle,
+              locale: citationLocale,
+              items: citationItems,
+              citations: citationData },
+            _react2.default.createElement(TemplateComponent, {
+              parameters: parameters,
+              composition: composition,
+              assets: assetsMap,
+              resources: resourcesMap }),
+            _react2.default.createElement(
+              'style',
+              null,
+              montage.data.css.shared_css_code,
+              montage.data.css[renderingMode + '_css_code'],
+              parameters.css.shared_css_code,
+              parameters.css[renderingMode + '_css_code']
+            )
           )
         )
       );

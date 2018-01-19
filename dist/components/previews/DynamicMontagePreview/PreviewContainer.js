@@ -85,7 +85,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
       };
       return _react2.default.createElement(
         'button',
-        { onClick: onClick },
+        { className: 'link', onClick: onClick },
         children
       );
     };

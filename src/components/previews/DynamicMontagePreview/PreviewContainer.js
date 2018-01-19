@@ -54,7 +54,7 @@ class PreviewContainer extends Component {
       this.setLocation(view, index, parameters);
     };
     return (
-      <button onClick={onClick}>
+      <button className="link" onClick={onClick}>
         {children}
       </button>
     );

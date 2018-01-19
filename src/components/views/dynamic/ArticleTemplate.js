@@ -22,6 +22,7 @@ const ArticleTemplate = ({
   return (
     <div className="plurishing-DynamicArticleTemplate">
       <h2>{composition.metadata.title}</h2>
+      {composition.metadata.subtitle && <h3>{composition.metadata.subtitle}</h3>}
       {/* main content */}
       <section>
         <Renderer
@@ -36,15 +37,15 @@ const ArticleTemplate = ({
       </section>
 
       {/* notes */}
-      {composition.notesOrder ? <section className="notes-container">
+      {composition.notesOrder.length ? <section className="notes-container">
         <h3>{t('Notes')}</h3>
         <section>
-          <ul>
+          <ul className="notes-wrapper">
             {
             composition.notesOrder.map(noteId => {
               const note = composition.notes[noteId];
               return (
-                <li key={noteId}>
+                <li key={noteId} className="note-wrapper">
                   <NoteContent
                     note={note}
                     noteId={noteId}

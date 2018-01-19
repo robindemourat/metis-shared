@@ -122,16 +122,19 @@ var BlockAssetWrapper = function (_Component) {
               null,
               contextualization.legend || resource.metadata.description
             ),
-            resource.metadata.source && _react2.default.createElement(
+            resource.metadata.creators && resource.metadata.creators.length ? _react2.default.createElement(
               'p',
               null,
-              'Source: ',
-              _react2.default.createElement(
-                'i',
-                null,
-                resource.metadata.source
-              )
-            )
+              resource.metadata.creators.map(function (creator, index) {
+                return _react2.default.createElement(
+                  'i',
+                  { key: index, className: 'creator' },
+                  creator.given,
+                  ' ',
+                  creator.family
+                );
+              })
+            ) : null
           )
         );
       } else {

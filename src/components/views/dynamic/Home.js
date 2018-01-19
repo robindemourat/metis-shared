@@ -6,23 +6,25 @@ export default ({
   montage,
   compositions,
 }) => (
-  <section>
-    <aside>
+  <section className="plurishing-MontageSection">
+    <aside className="aside-menu">
       <Nav montage={montage} compositions={compositions} />
     </aside>
 
-    <h2>{montage.metadata.title || 'Montage sans titre'}</h2>
+    <section className="main-content-container">
+      <h2>{montage.metadata.title || 'Montage sans titre'}</h2>
 
-    <div>
-      <p>
-        {montage.metadata.description}
-      </p>
-    </div>
+      <div>
+        <p>
+          {montage.metadata.description}
+        </p>
+      </div>
 
-    <div>
-      <h3>Table des matières</h3>
-      <Nav montage={montage} compositions={compositions} />
-    </div>
+      <div>
+        <h3>Table des matières</h3>
+        <Nav toggable={false} montage={montage} compositions={compositions} />
+      </div>
+    </section>
 
     <style>
       {montage.data.css.shared_css_code}

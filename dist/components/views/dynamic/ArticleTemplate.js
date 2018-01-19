@@ -45,6 +45,11 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       null,
       composition.metadata.title
     ),
+    composition.metadata.subtitle && _react2.default.createElement(
+      'h3',
+      null,
+      composition.metadata.subtitle
+    ),
     _react2.default.createElement(
       'section',
       null,
@@ -58,7 +63,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         notes: composition.notes,
         NoteContentPointer: NoteContentPointer })
     ),
-    composition.notesOrder ? _react2.default.createElement(
+    composition.notesOrder.length ? _react2.default.createElement(
       'section',
       { className: 'notes-container' },
       _react2.default.createElement(
@@ -71,12 +76,12 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         null,
         _react2.default.createElement(
           'ul',
-          null,
+          { className: 'notes-wrapper' },
           composition.notesOrder.map(function (noteId) {
             var note = composition.notes[noteId];
             return _react2.default.createElement(
               'li',
-              { key: noteId },
+              { key: noteId, className: 'note-wrapper' },
               _react2.default.createElement(_NoteContent2.default, {
                 note: note,
                 noteId: noteId,

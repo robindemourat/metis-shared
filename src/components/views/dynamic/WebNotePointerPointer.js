@@ -5,9 +5,9 @@ export default ({
   note,
   noteId,
 }) => (
-  <sup id={`note-pointer-pointer-${noteId}`}>
+  <span className="plurishing-WebNotePointerPointer" id={`note-pointer-pointer-${noteId}`}>
     <a href={`#note-content-pointer-${noteId}`}>
-      {note.order}
+      {note.order}.
     </a>
-  </sup>
+  </span>
 );

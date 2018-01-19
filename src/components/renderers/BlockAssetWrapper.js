@@ -91,10 +91,21 @@ class BlockAssetWrapper extends Component {
             </h4>}
             {<p>
               {contextualization.legend || resource.metadata.description}
-            </p>}
-            {resource.metadata.source && <p>
-              Source: <i>{resource.metadata.source}</i>
-            </p>}
+            </p>
+            }
+            {
+              resource.metadata.creators && resource.metadata.creators.length ?
+                <p>
+                  {
+                  resource.metadata.creators.map((creator, index) => (
+                    <i key={index} className="creator">
+                      {creator.given} {creator.family}
+                    </i>
+                  ))
+                }
+                </p>
+              : null
+            }
           </figcaption>
         </figure>
       );

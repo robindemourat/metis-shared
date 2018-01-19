@@ -99,27 +99,29 @@ export default class DynamicComposition extends Component {
     const resourcesMap = resources.reduce((t, r) => ({...t, [r._id]: r}), {});
     const assetsMap = assets.reduce((t, a) => ({...t, [a._id]: a}), {});
     return (
-      <div className={`dynamic-composition ${parameters.template}`} id={`composition-${composition._id}`}>
+      <div className={`plurishing-MontageSection dynamic-composition ${parameters.template}`} id={`composition-${composition._id}`}>
         <aside className="aside-menu">
           <Nav montage={montage} compositions={compositions} />
         </aside>
-        <ReferencesManager
-          style={citationStyle}
-          locale={citationLocale}
-          items={citationItems}
-          citations={citationData}>
-          <TemplateComponent
-            parameters={parameters}
-            composition={composition}
-            assets={assetsMap}
-            resources={resourcesMap} />
-          <style>
-            {montage.data.css.shared_css_code}
-            {montage.data.css[`${renderingMode}_css_code`]}
-            {parameters.css.shared_css_code}
-            {parameters.css[`${renderingMode}_css_code`]}
-          </style>
-        </ReferencesManager>
+        <section className="main-content-container">
+          <ReferencesManager
+            style={citationStyle}
+            locale={citationLocale}
+            items={citationItems}
+            citations={citationData}>
+            <TemplateComponent
+              parameters={parameters}
+              composition={composition}
+              assets={assetsMap}
+              resources={resourcesMap} />
+            <style>
+              {montage.data.css.shared_css_code}
+              {montage.data.css[`${renderingMode}_css_code`]}
+              {parameters.css.shared_css_code}
+              {parameters.css[`${renderingMode}_css_code`]}
+            </style>
+          </ReferencesManager>
+        </section>
       </div>
     );
   }
