@@ -434,7 +434,7 @@
   .plurishing-MontageSection .plurishing-DynamicFullscreenTemplate .figure-container,
   .plurishing-MontageSection .plurishing-DynamicFullscreenTemplate .figure-wrapper,
   .plurishing-MontageSection .plurishing-DynamicFullscreenTemplate .figure-wrapper > div {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -668,105 +668,113 @@
   src: local("Merriweather Bold"), local("Merriweather-Bold"), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215; }
 
-* {
+.static-section * {
   font-family: Merriweather, serif; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Oswald, sans-serif; }
+.static-section h1,
+.static-section h2,
+.static-section h3,
+.static-section h4,
+.static-section h5,
+.static-section h6 {
+  font-family: Oswald, sans-serif;
+  page-break-inside: avoid; }
 
-img {
+.static-section img {
   max-width: 100%;
   max-height: 100%; }
 
-figure {
+.static-section figure {
   margin: 0;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.05); }
-  figure table {
+  background: rgba(0, 0, 0, 0.05);
+  page-break-inside: avoid; }
+  .static-section figure table {
     background: white; }
-    figure table tr:nth-child(even) {
+    .static-section figure table tr:nth-child(even) {
       background-color: #f2f2f2; }
-    figure table tr {
+    .static-section figure table tr {
       text-align: left; }
 
-.break-before {
+.static-section .break-before {
   page-break-before: always; }
 
-.break-after {
+.static-section .break-after {
   page-break-after: always; }
 
-.plurishing-PdfNotePointerPointer,
-.plurishing-EpubNotePointerPointer,
-.plurishing-PdfNoteContentPointer,
-.plurishing-EpubNoteContentPointer,
-.plurishing-PdfNotePointerPointer a,
-.plurishing-EpubNotePointerPointer a,
-.plurishing-PdfNoteContentPointer a,
-.plurishing-EpubNoteContentPointer a {
+.static-section .plurishing-PdfNotePointerPointer,
+.static-section .plurishing-EpubNotePointerPointer,
+.static-section .plurishing-PdfNoteContentPointer,
+.static-section .plurishing-EpubNoteContentPointer,
+.static-section .plurishing-PdfNotePointerPointer a,
+.static-section .plurishing-EpubNotePointerPointer a,
+.static-section .plurishing-PdfNoteContentPointer a,
+.static-section .plurishing-EpubNoteContentPointer a {
   color: inherit;
   font-weight: 800;
   text-decoration: none; }
 
-.plurishing-PdfNotePointerPointer,
-.plurishing-EpubNotePointerPointer {
+.static-section .plurishing-PdfNotePointerPointer,
+.static-section .plurishing-EpubNotePointerPointer {
   padding-top: 1rem;
   padding-right: 1rem; }
 
-.index-wrapper .index-container {
+.static-section .index-wrapper .index-container {
   padding: 0;
   margin: 0; }
-  .index-wrapper .index-container .index-item {
+  .static-section .index-wrapper .index-container .index-item {
     margin: 0;
     list-style: none;
     margin-bottom: 1.6rem; }
-    .index-wrapper .index-container .index-item a, .index-wrapper .index-container .index-item a:visited, .index-wrapper .index-container .index-item a:active {
+    .static-section .index-wrapper .index-container .index-item a, .static-section .index-wrapper .index-container .index-item a:visited, .static-section .index-wrapper .index-container .index-item a:active {
       font-weight: 800;
       text-decoration: none;
       color: inherit; }
-    .index-wrapper .index-container .index-item a::after {
+    .static-section .index-wrapper .index-container .index-item a::after {
       content: leader(".") target-counter(attr(href), page); }
 
-.empty-page {
+.static-section .empty-page {
   page-break-after: always;
   page: empty-page;
   min-height: 10rem; }
 
-.notes-container .notes-wrapper {
+.static-section .notes-container .notes-wrapper {
   padding: 0; }
-  .notes-container .notes-wrapper .note-wrapper {
+  .static-section .notes-container .notes-wrapper .note-wrapper {
     margin: 0;
     margin-bottom: 1.6rem;
     padding: 0;
     list-style: none; }
-    .notes-container .notes-wrapper .note-wrapper .note-content {
+    .static-section .notes-container .notes-wrapper .note-wrapper .note-content {
       display: flex;
       justify-content: stretch;
       flex-flow: row nowrap; }
-      .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
+      .static-section .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
         flex: 1; }
 
-.bibliography-container .csl-entry {
+.static-section .bibliography-container .csl-entry {
   margin-bottom: 1.6rem; }
 
-.cover,
-.back-cover {
-  font-family: Oswald, sans-serif;
-  display: flex;
-  min-height: 20rem;
+.static-section.cover, .static-section.back-cover {
   page: cover;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap; }
+  font-family: Oswald, sans-serif;
+  min-height: 40rem;
+  position: relative; }
+  .static-section.cover .content, .static-section.back-cover .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    display: flex; }
 
-.cover {
+.static-section.cover {
   page: cover; }
 
-.back-cover {
+.static-section.back-cover {
   page: back-cover; }
 
 @page {
@@ -777,14 +785,16 @@ figure {
   @bottom {
     content: counter(page); } }
 
-@page cover {
+@page cover,
+@page:first {
   margin: 0;
   page-break-after: always;
   padding: 0;
   @bottom {
     content: none; } }
 
-@page back-cover {
+@page back-cover,
+@page:last {
   margin: 0;
   page-break-before: always;
   padding: 5cm;

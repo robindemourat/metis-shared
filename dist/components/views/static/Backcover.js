@@ -25,20 +25,25 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'back-cover break-before',
-      style: {
-        background: background,
-        color: getColorByBgColor(background)
-      } },
+      className: 'back-cover break-before static-section' },
     _react2.default.createElement(
-      'h1',
-      null,
-      title
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      text
+      'div',
+      {
+        className: 'content',
+        style: {
+          background: background,
+          color: getColorByBgColor(background)
+        } },
+      _react2.default.createElement(
+        'h1',
+        null,
+        title
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        text
+      )
     )
   );
 };

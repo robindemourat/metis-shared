@@ -14,7 +14,7 @@ exports.default = function (_ref) {
   var contents = _ref.contents;
   return _react2.default.createElement(
     "section",
-    { className: "colophon break-before break-after" },
+    { className: "colophon break-before break-after static-section" },
     _react2.default.createElement(
       "div",
       null,

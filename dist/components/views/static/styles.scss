@@ -176,173 +176,189 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
-$dimension-navwidth-default: 20%;
-$gutter-small: 1rem;
-$font-size-1: 1rem;
-$font-size-2: $font-size-1 * 1.6;
-$gutter-medium: $gutter-small * 1.6;
+.static-section{
+  $dimension-navwidth-default: 20%;
+  $gutter-small: 1rem;
+  $font-size-1: 1rem;
+  $font-size-2: $font-size-1 * 1.6;
+  $gutter-medium: $gutter-small * 1.6;
 
 
-*
-{
-    font-family: Merriweather, serif;
-}
+  *
+  {
+      font-family: Merriweather, serif;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-    font-family: Oswald, sans-serif;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+  {
+      font-family: Oswald, sans-serif;
+      page-break-inside: avoid;
+  }
 
-img
-{
-    max-width: 100%;
-    max-height: 100%;
-}
+  img
+  {
+      max-width: 100%;
+      max-height: 100%;
+  }
 
-figure
-{
-    margin: 0;
-    padding: $gutter-small;
-
-    background: rgba(0,0,0,.05);
-
-    table
-    {
-        background: white;
-        tr:nth-child(even)
-        {
-            background-color: #f2f2f2;
-        }
-        tr
-        {
-            text-align: left;
-        }
-    }
-}
-
-.break-before{
-  page-break-before: always;
-}
-
-.break-after{
-  page-break-after: always;
-}
-
-.plurishing-PdfNotePointerPointer,
-.plurishing-EpubNotePointerPointer,
-.plurishing-PdfNoteContentPointer,
-.plurishing-EpubNoteContentPointer,
-.plurishing-PdfNotePointerPointer a,
-.plurishing-EpubNotePointerPointer a,
-.plurishing-PdfNoteContentPointer a,
-.plurishing-EpubNoteContentPointer a
-{
-  color: inherit;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.plurishing-PdfNotePointerPointer,
-.plurishing-EpubNotePointerPointer
-{
-  padding-top: $gutter-small;
-  padding-right: $gutter-small;
-}
-
-.index-wrapper{
-  .index-container{
-    padding: 0;
-    margin: 0;
-    .index-item{
+  figure
+  {
       margin: 0;
-      list-style: none;
-      margin-bottom: $gutter-medium;
-      a, a:visited, a:active{
-        font-weight: 800;
-        text-decoration: none;
-        color: inherit;
-      }
+      padding: $gutter-small;
 
-      a::after{
-        content: leader('.') target-counter(attr(href), page);
+      background: rgba(0,0,0,.05);
+
+      page-break-inside: avoid;
+      table
+      {
+          background: white;
+          tr:nth-child(even)
+          {
+              background-color: #f2f2f2;
+          }
+          tr
+          {
+              text-align: left;
+          }
+      }
+  }
+
+  .break-before{
+    page-break-before: always;
+  }
+
+  .break-after{
+    page-break-after: always;
+  }
+
+  .plurishing-PdfNotePointerPointer,
+  .plurishing-EpubNotePointerPointer,
+  .plurishing-PdfNoteContentPointer,
+  .plurishing-EpubNoteContentPointer,
+  .plurishing-PdfNotePointerPointer a,
+  .plurishing-EpubNotePointerPointer a,
+  .plurishing-PdfNoteContentPointer a,
+  .plurishing-EpubNoteContentPointer a
+  {
+    color: inherit;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .plurishing-PdfNotePointerPointer,
+  .plurishing-EpubNotePointerPointer
+  {
+    padding-top: $gutter-small;
+    padding-right: $gutter-small;
+  }
+
+  .index-wrapper{
+    .index-container{
+      padding: 0;
+      margin: 0;
+      .index-item{
+        margin: 0;
+        list-style: none;
+        margin-bottom: $gutter-medium;
+        a, a:visited, a:active{
+          font-weight: 800;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        a::after{
+          content: leader('.') target-counter(attr(href), page);
+        }
       }
     }
   }
-}
 
-.empty-page
-{
-    page-break-after: always;
-    page: empty-page;
-    min-height: 10rem;
-}
-
-
-.notes-container
-{
-    .notes-wrapper
-    {
-        padding: 0;
-        .note-wrapper
-        {
-            margin: 0;
-            margin-bottom: $gutter-medium;
-            padding: 0;
-
-            list-style: none;
-            .note-content
-            {
-                display: flex;
-
-                justify-content: stretch;
-                flex-flow: row nowrap;
-                .note-content-container
-                {
-                    flex: 1;
-                }
-            }
-        }
-    }
-}
-
-.bibliography-container
-{
-    .csl-entry
-    {
-        margin-bottom: $gutter-medium;
-    }
-}
+  .empty-page
+  {
+      page-break-after: always;
+      page: empty-page;
+      min-height: 10rem;
+  }
 
 
+  .notes-container
+  {
+      .notes-wrapper
+      {
+          padding: 0;
+          .note-wrapper
+          {
+              margin: 0;
+              margin-bottom: $gutter-medium;
+              padding: 0;
 
-.cover,
-.back-cover
-{
-    font-family: Oswald, sans-serif;
+              list-style: none;
+              .note-content
+              {
+                  display: flex;
 
-    display: flex;
+                  justify-content: stretch;
+                  flex-flow: row nowrap;
+                  .note-content-container
+                  {
+                      flex: 1;
+                  }
+              }
+          }
+      }
+  }
 
-    min-height: 20rem;
+  .bibliography-container
+  {
+      .csl-entry
+      {
+          margin-bottom: $gutter-medium;
+      }
+  }
 
+
+
+  &.cover,
+  &.back-cover
+  {
+      page: cover;
+
+      font-family: Oswald, sans-serif;
+
+
+      min-height: 40rem;
+
+      position: relative;
+
+      .content{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+      justify-content: center;
+      align-items: center;
+      flex-flow: column nowrap;        
+      display: flex;
+      }
+
+
+  }
+
+  &.cover{
     page: cover;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-}
+  }
 
-.cover{
-  page: cover;
+  &.back-cover{
+    page: back-cover;
+  }
 }
-
-.back-cover{
-  page: back-cover;
-}
-
 
 @page
 {
@@ -350,7 +366,7 @@ figure
     padding-top: 1cm;
     @footnotes {
         // border-top: solid $color-secondary thin;
-        padding-top: $gutter-small;
+        padding-top: 1rem;
     }
 
     @bottom
@@ -359,7 +375,8 @@ figure
     }
 }
 
-@page cover
+@page cover,
+@page:first
 {
   margin : 0;
   page-break-after: always;
@@ -370,7 +387,8 @@ figure
   }
 }
 
-@page back-cover
+@page back-cover,
+@page:last
 {
   margin : 0;
   page-break-before: always;

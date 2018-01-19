@@ -28,6 +28,7 @@ const Block = ({
     case 'epub-reflowable':
     case 'epub-fixed':
     case 'micro':
+    default:
       return (
         <div>
           {
@@ -42,8 +43,6 @@ const Block = ({
           }
         </div>
       );
-    default:
-      return null;
   }
 };
 

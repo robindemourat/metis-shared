@@ -45,6 +45,7 @@ var Block = function Block(_ref, _ref2) {
     case 'epub-reflowable':
     case 'epub-fixed':
     case 'micro':
+    default:
       return _react2.default.createElement(
         'div',
         null,
@@ -57,8 +58,6 @@ var Block = function Block(_ref, _ref2) {
           return null;
         })
       );
-    default:
-      return null;
   }
 };
 

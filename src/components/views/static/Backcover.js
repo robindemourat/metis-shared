@@ -13,7 +13,9 @@ export default ({
   text
 }) => (
   <section
-    className="back-cover break-before"
+    className="back-cover break-before static-section"
+    >
+    <div className="content"
     style={{
       background,
       color: getColorByBgColor(background)
@@ -22,5 +24,6 @@ export default ({
     <p>
       {text}
     </p>
+    </div>
   </section>
 );

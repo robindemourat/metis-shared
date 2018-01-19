@@ -27,33 +27,38 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'cover break-after',
-      style: {
-        background: background,
-        color: getColorByBgColor(background)
-      } },
+      className: 'cover break-after static-section' },
     _react2.default.createElement(
-      'h1',
-      null,
-      title
-    ),
-    subtitle && _react2.default.createElement(
-      'h2',
-      null,
-      subtitle
-    ),
-    creators.length ? _react2.default.createElement(
       'div',
-      { className: 'creators' },
-      creators.map(function (creator, index) {
-        return _react2.default.createElement(
-          'span',
-          { className: 'creator', key: index },
-          creator.given,
-          ' ',
-          creator.family
-        );
-      })
-    ) : null
+      {
+        className: 'content',
+        style: {
+          background: background,
+          color: getColorByBgColor(background)
+        } },
+      _react2.default.createElement(
+        'h1',
+        null,
+        title
+      ),
+      subtitle && _react2.default.createElement(
+        'h2',
+        null,
+        subtitle
+      ),
+      creators.length ? _react2.default.createElement(
+        'div',
+        { className: 'creators' },
+        creators.map(function (creator, index) {
+          return _react2.default.createElement(
+            'span',
+            { className: 'creator', key: index },
+            creator.given,
+            ' ',
+            creator.family
+          );
+        })
+      ) : null
+    )
   );
 };
