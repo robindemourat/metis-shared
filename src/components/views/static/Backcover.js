@@ -1,9 +1,11 @@
 import React from 'react';
 
 const getColorByBgColor = (bgColor) => {
-    if (!bgColor) { return ''; }
-    return (parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+    if (!bgColor) {
+ return '';
 }
+    return (parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+};
 
 export default ({
   title,

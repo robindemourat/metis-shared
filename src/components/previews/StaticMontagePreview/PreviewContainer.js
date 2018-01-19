@@ -60,10 +60,9 @@ export default class PreviewContainer extends Component {
         <section>
           <Cover
             background={montage.data.cover_color}
-            title={montage.metadata.title} 
-            subtitle={montage.metadata.subtitle} 
-            creators={montage.metadata.creators} 
-          />
+            title={montage.metadata.title}
+            subtitle={montage.metadata.subtitle}
+            creators={montage.metadata.creators} />
           <Toc montage={montage} compositions={compositions} />
           {
             montage.data.compositions.map((parameters, index) => {

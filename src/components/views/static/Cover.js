@@ -1,9 +1,11 @@
 import React from 'react';
 
 const getColorByBgColor = (bgColor) => {
-    if (!bgColor) { return ''; }
-    return (parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+    if (!bgColor) {
+ return '';
 }
+    return (parseInt(bgColor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+};
 
 export default ({
   title,
@@ -22,15 +24,15 @@ export default ({
 
     {
       creators.length ?
-      <div className="creators">
-        {
+        <div className="creators">
+          {
           creators.map((creator, index) => (
-            <span className="creator" key={index}> 
+            <span className="creator" key={index}>
               {creator.given} {creator.family}
             </span>
           ))
         }
-      </div>
+        </div>
       : null
     }
   </section>

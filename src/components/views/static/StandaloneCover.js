@@ -20,12 +20,11 @@ export default ({
   <html className="StandaloneCover">
     <head />
     <body>
-      <Cover 
+      <Cover
         title={title}
-         background={coverColor} 
-         subtitle={subtitle}
-         creators={creators}
-        />
+        background={coverColor}
+        subtitle={subtitle}
+        creators={creators} />
       <style>
         {styles}
         {css.shared_css_code}
