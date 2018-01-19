@@ -13,17 +13,17 @@ export default ({
   text
 }) => (
   <section
-    className="back-cover break-before static-section"
-    >
-    <div className="content"
-    style={{
+    className="back-cover break-before static-section">
+    <div
+      className="content"
+      style={{
       background,
       color: getColorByBgColor(background)
     }}>
-    <h1>{title}</h1>
-    <p>
-      {text}
-    </p>
+      <h1>{title}</h1>
+      <p>
+        {text}
+      </p>
     </div>
   </section>
 );

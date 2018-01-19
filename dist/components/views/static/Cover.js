@@ -53,6 +53,7 @@ exports.default = function (_ref) {
           return _react2.default.createElement(
             'span',
             { className: 'creator', key: index },
+            !!index && ', ',
             creator.given,
             ' ',
             creator.family

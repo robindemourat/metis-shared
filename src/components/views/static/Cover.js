@@ -15,21 +15,22 @@ export default ({
 }) => (
   <section
     className="cover break-after static-section">
-    <div className="content"
-    style={{
+    <div
+      className="content"
+      style={{
       background,
       color: getColorByBgColor(background)
-    }}
-    >
-    <h1>{title}</h1>
-    {subtitle && <h2>{subtitle}</h2>}
+    }}>
+      <h1>{title}</h1>
+      {subtitle && <h2>{subtitle}</h2>}
 
-    {
+      {
       creators.length ?
         <div className="creators">
           {
           creators.map((creator, index) => (
             <span className="creator" key={index}>
+              {!!index && ", "}
               {creator.given} {creator.family}
             </span>
           ))

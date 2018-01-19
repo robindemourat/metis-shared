@@ -44,6 +44,25 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       null,
       composition.metadata.title
     ),
+    composition.metadata.subtitle && _react2.default.createElement(
+      'h3',
+      null,
+      composition.metadata.subtitle
+    ),
+    composition.metadata.creators.length ? _react2.default.createElement(
+      'div',
+      { className: 'creators' },
+      composition.metadata.creators.map(function (creator, index) {
+        return _react2.default.createElement(
+          'span',
+          { className: 'creator', key: index },
+          !!index && ', ',
+          creator.given,
+          ' ',
+          creator.family
+        );
+      })
+    ) : null,
     _react2.default.createElement(
       'section',
       null,
@@ -102,6 +121,38 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
         style: citationStyle,
         locale: citationLocale,
         items: citationItems })
+    ) : null,
+    composition.metadata.creators.length ? _react2.default.createElement(
+      'div',
+      { className: 'creators-info-container' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        composition.metadata.creators.length > 1 ? t('Auteur.e.s') : t('Auteur.e')
+      ),
+      composition.metadata.creators.map(function (creator, index) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'creator-info', key: index },
+          _react2.default.createElement(
+            'h4',
+            null,
+            creator.given,
+            ' ',
+            creator.family
+          ),
+          creator.role && _react2.default.createElement(
+            'h5',
+            null,
+            creator.role
+          ),
+          creator.presentation && _react2.default.createElement(
+            'p',
+            null,
+            creator.presentation
+          )
+        );
+      })
     ) : null
   );
 };

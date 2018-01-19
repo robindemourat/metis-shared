@@ -678,7 +678,8 @@
 .static-section h5,
 .static-section h6 {
   font-family: Oswald, sans-serif;
-  page-break-inside: avoid; }
+  page-break-inside: avoid;
+  color: inherit; }
 
 .static-section img {
   max-width: 100%;

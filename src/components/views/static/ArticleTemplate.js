@@ -22,6 +22,22 @@ const ArticleTemplate = ({
   return (
     <div>
       <h2>{composition.metadata.title}</h2>
+      {composition.metadata.subtitle && <h3>{composition.metadata.subtitle}</h3>}
+
+      {
+      composition.metadata.creators.length ?
+        <div className="creators">
+          {
+          composition.metadata.creators.map((creator, index) => (
+            <span className="creator" key={index}>
+              {!!index && ", "}
+              {creator.given} {creator.family}
+            </span>
+          ))
+        }
+        </div>
+      : null
+    }
       {/* main content */}
       <section>
         <Renderer
@@ -67,6 +83,28 @@ const ArticleTemplate = ({
           locale={citationLocale}
           items={citationItems} />
       </section> : null}
+
+       {
+      composition.metadata.creators.length ?
+        <div className="creators-info-container">
+          <h3>{composition.metadata.creators.length > 1 ? t('Auteur.e.s') : t('Auteur.e')}</h3>
+          {
+          composition.metadata.creators.map((creator, index) => (
+            <div className="creator-info" key={index}>
+              <h4>{creator.given} {creator.family}</h4>
+              {creator.role && <h5>{creator.role}</h5>}
+              {
+                creator.presentation &&
+                <p>
+                  {creator.presentation}
+                </p>
+              }
+            </div>
+          ))
+        }
+        </div>
+      : null
+    }
 
     </div>
   );
