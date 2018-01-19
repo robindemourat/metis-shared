@@ -30,7 +30,7 @@ const ArticleTemplate = ({
           {
           composition.metadata.creators.map((creator, index) => (
             <span className="creator" key={index}>
-              {!!index && ", "}
+              {!!index && ', '}
               {creator.given} {creator.family}
             </span>
           ))
@@ -84,7 +84,7 @@ const ArticleTemplate = ({
           items={citationItems} />
       </section> : null}
 
-       {
+      {
       composition.metadata.creators.length ?
         <div className="creators-info-container">
           <h3>{composition.metadata.creators.length > 1 ? t('Auteur.e.s') : t('Auteur.e')}</h3>

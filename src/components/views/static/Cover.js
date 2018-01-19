@@ -30,7 +30,7 @@ export default ({
           {
           creators.map((creator, index) => (
             <span className="creator" key={index}>
-              {!!index && ", "}
+              {!!index && ', '}
               {creator.given} {creator.family}
             </span>
           ))

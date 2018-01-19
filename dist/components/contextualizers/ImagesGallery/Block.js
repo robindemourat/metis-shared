@@ -35,8 +35,10 @@ var Block = function Block(_ref, _ref2) {
     case 'web':
       var getAppropriateAssetUri = function getAppropriateAssetUri(img) {
         var appropriateAsset = (0, _utils.pickSubAsset)(img, _meta2.default.assetPickingRules.image[renderingMode], assetsData);
-        var imageAssetUri = getAssetUri(appropriateAsset.asset);
-        return imageAssetUri;
+        if (appropriateAsset) {
+          var imageAssetUri = getAssetUri(appropriateAsset.asset);
+          return imageAssetUri;
+        }
       };
       return _react2.default.createElement(_DynamicImagesBlock2.default, {
         getAppropriateAssetUri: getAppropriateAssetUri,

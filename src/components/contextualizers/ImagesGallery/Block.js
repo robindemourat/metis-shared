@@ -16,8 +16,10 @@ const Block = ({
     case 'web':
       const getAppropriateAssetUri = img => {
         const appropriateAsset = pickSubAsset(img, meta.assetPickingRules.image[renderingMode], assetsData);
-        const imageAssetUri = getAssetUri(appropriateAsset.asset);
-        return imageAssetUri;
+        if (appropriateAsset) {
+          const imageAssetUri = getAssetUri(appropriateAsset.asset);
+          return imageAssetUri;
+        }
       };
       return (
         <DynamicBlock
