@@ -63,7 +63,11 @@ export default class PreviewContainer extends Component {
             title={montage.metadata.title}
             subtitle={montage.metadata.subtitle}
             creators={montage.metadata.creators} />
+          <section className="empty-page" />
+          <section className="empty-page" />
+          <section className="empty-page" />
           <Toc montage={montage} compositions={compositions} />
+          <section className="empty-page" />
           {
             montage.data.compositions.map((parameters, index) => {
               const composition = compositions.find(c => c._id === parameters.target_composition_id);
@@ -80,7 +84,9 @@ export default class PreviewContainer extends Component {
                 locationIndex={index} />);
             })
           }
+          <section className="empty-page" />
           <Colophon contents={montage.data.colophon} />
+          <section className="empty-page" />
           <style>
             {montage.data.css.shared_css_code}
             {montage.data.css[`${renderingMode}_css_code`]}

@@ -103,7 +103,11 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             title: montage.metadata.title,
             subtitle: montage.metadata.subtitle,
             creators: montage.metadata.creators }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
           _react2.default.createElement(_Toc2.default, { montage: montage, compositions: compositions }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
           montage.data.compositions.map(function (parameters, index) {
             var composition = compositions.find(function (c) {
               return c._id === parameters.target_composition_id;
@@ -120,7 +124,9 @@ var PreviewContainer = (_temp = _class = function (_Component) {
               assets: assets,
               locationIndex: index });
           }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
           _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
+          _react2.default.createElement('section', { className: 'empty-page' }),
           _react2.default.createElement(
             'style',
             null,

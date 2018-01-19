@@ -6,10 +6,10 @@ const Toc = ({
   compositions,
 }, {t, Link}) => (
   <section
-    className="index">
-    <h2>{t('index')}</h2>
-    <nav>
-      <ul>
+    className="index break-before break-after">
+    <h2>{t('Table des matières')}</h2>
+    <nav className="index-wrapper">
+      <ul className="index-container">
         {
             montage.data.compositions
             .filter(parameters => parameters.target_composition_id)
@@ -21,7 +21,7 @@ const Toc = ({
               }
 
               return (
-                <li key={index}>
+                <li className="index-item" key={index}>
                   <Link to={{view: 'composition', index}}>
                     {composition.metadata.title}
                   </Link>

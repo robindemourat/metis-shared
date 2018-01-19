@@ -108,7 +108,7 @@ var TextPlayer = function (_Component) {
 
 
       return _react2.default.createElement(
-        'div',
+        'blockquote',
         { className: 'transcription-container' },
         contents.map(function (paragraph, index) {
           return _react2.default.createElement('p', { key: index, dangerouslySetInnerHTML: { __html: paragraph.text } });

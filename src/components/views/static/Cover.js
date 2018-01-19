@@ -14,7 +14,7 @@ export default ({
   creators = []
 }) => (
   <section
-    className="cover break-before"
+    className="cover break-after"
     style={{
       background,
       color: getColorByBgColor(background)

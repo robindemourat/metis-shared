@@ -22,18 +22,18 @@ var Toc = function Toc(_ref, _ref2) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'index' },
+      className: 'index break-before break-after' },
     _react2.default.createElement(
       'h2',
       null,
-      t('index')
+      t('Table des matières')
     ),
     _react2.default.createElement(
       'nav',
-      null,
+      { className: 'index-wrapper' },
       _react2.default.createElement(
         'ul',
-        null,
+        { className: 'index-container' },
         montage.data.compositions.filter(function (parameters) {
           return parameters.target_composition_id;
         }).map(function (ref, index) {
@@ -47,7 +47,7 @@ var Toc = function Toc(_ref, _ref2) {
 
           return _react2.default.createElement(
             'li',
-            { key: index },
+            { className: 'index-item', key: index },
             _react2.default.createElement(
               Link,
               { to: { view: 'composition', index: index } },

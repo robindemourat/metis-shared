@@ -27,7 +27,7 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'cover break-before',
+      className: 'cover break-after',
       style: {
         background: background,
         color: getColorByBgColor(background)
