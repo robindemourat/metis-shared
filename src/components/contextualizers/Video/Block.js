@@ -46,10 +46,12 @@ const Block = ({
             </div>
           </Media>
         );
+      } else if (assetUri) {
+        return (<video controls>
+          <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
+        </video>);
       }
-      return (<video controls>
-        <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
-      </video>);
+      else return null;
 
     default:
       assetUri = getAssetUri(appropriateAsset.asset);

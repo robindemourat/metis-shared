@@ -64,12 +64,13 @@ var Block = function Block(_ref2, _ref3) {
             )
           )
         );
-      }
-      return _react2.default.createElement(
-        'video',
-        { controls: true },
-        _react2.default.createElement('source', { src: assetUri, type: 'video/' + assetUri.split('.').pop() })
-      );
+      } else if (assetUri) {
+        return _react2.default.createElement(
+          'video',
+          { controls: true },
+          _react2.default.createElement('source', { src: assetUri, type: 'video/' + assetUri.split('.').pop() })
+        );
+      } else return null;
 
     default:
       assetUri = getAssetUri(appropriateAsset.asset);
