@@ -45,7 +45,8 @@ class ZoomableComponent extends Component {
       title = '',
       imageDimensions,
       containerWidth,
-      containerHeight
+      containerHeight,
+      className
     } = this.props;
     const {dimensions, ratio} = computeDimensions(imageDimensions, {
         width: containerWidth,
@@ -54,6 +55,7 @@ class ZoomableComponent extends Component {
     if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
       return (
         <ZoomableImage
+          className={className}
           baseImage={{
               alt: title,
               src,
@@ -171,6 +173,7 @@ class BlockDynamic extends Component {
             isOpen={modalIsOpen}
             ariaHideApp={false}
             onRequestClose={toggleModal}
+            className="zoomable-image-container"
             style={{
               content: {
                 background: 'rgba(0,0,0,0)',
@@ -181,6 +184,7 @@ class BlockDynamic extends Component {
             <Zoomable
               src={assetUri}
               title={resource.metadata.title}
+              className="image-detail"
               imageDimensions={{
                   width: imageWidth,
                   height: imageHeight,

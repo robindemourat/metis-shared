@@ -84,7 +84,8 @@ var ZoomableComponent = function (_Component) {
           title = _props$title === undefined ? '' : _props$title,
           imageDimensions = _props.imageDimensions,
           containerWidth = _props.containerWidth,
-          containerHeight = _props.containerHeight;
+          containerHeight = _props.containerHeight,
+          className = _props.className;
 
       var _computeDimensions = computeDimensions(imageDimensions, {
         width: containerWidth,
@@ -95,6 +96,7 @@ var ZoomableComponent = function (_Component) {
 
       if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
         return _react2.default.createElement(ZoomableImage, {
+          className: className,
           baseImage: {
             alt: title,
             src: src,
@@ -182,6 +184,7 @@ var BlockDynamic = (_temp = _class = function (_Component2) {
             isOpen: modalIsOpen,
             ariaHideApp: false,
             onRequestClose: toggleModal,
+            className: 'zoomable-image-container',
             style: {
               content: {
                 background: 'rgba(0,0,0,0)',
@@ -191,6 +194,7 @@ var BlockDynamic = (_temp = _class = function (_Component2) {
           _react2.default.createElement(Zoomable, {
             src: assetUri,
             title: resource.metadata.title,
+            className: 'image-detail',
             imageDimensions: {
               width: imageWidth,
               height: imageHeight

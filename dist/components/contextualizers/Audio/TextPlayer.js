@@ -29,6 +29,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-set-state : 0 */
 /* eslint react/no-danger : 0 */
+/* eslint no-new-func : 0 */
+
+var isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
+var inBrowser = isBrowser();
+
+var fs = void 0;
+if (!inBrowser) {
+  fs = require('fs');
+}
 
 var TextPlayer = function (_Component) {
   _inherits(TextPlayer, _Component);
@@ -52,9 +61,19 @@ var TextPlayer = function (_Component) {
 
     _this.getText = function (src) {
       return new Promise(function (resolve, reject) {
-        (0, _axios.get)(src).then(function (resp) {
-          resolve(resp.data);
-        }).catch(reject);
+        var protocol = src.split(':')[0];
+        if (protocol.indexOf('http') === 0) {
+          (0, _axios.get)(src).then(function (resp) {
+            resolve(resp.data);
+          }).catch(reject);
+        } else if (protocol.indexOf('file') === 0 && fs) {
+          var path = src.split('file://')[1];
+          fs.readFile(path, 'utf8', function (err, str) {
+            if (err) {
+              return reject(err);
+            } else return resolve(str);
+          });
+        } else reject();
       });
     };
 
@@ -90,6 +109,11 @@ var TextPlayer = function (_Component) {
         }
         _this.setState({
           contents: contents
+        });
+      }).catch(function () {
+        // what to do there ?
+        _this.setState({
+          content: { text: 'Not available' }
         });
       });
     };

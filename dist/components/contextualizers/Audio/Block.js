@@ -18,13 +18,16 @@ var _meta2 = _interopRequireDefault(_meta);
 
 var _utils = require('../utils');
 
-var _TextPlayer = require('./TextPlayer');
-
-var _TextPlayer2 = _interopRequireDefault(_TextPlayer);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var isBrowser = new Function('try {return this===window;}catch(e){ return false;}'); /* eslint no-new-func : 0 */
+// text player is deprecated for now as the fact of
+// fetching transcription as a file causes problems
+// when rendering serverside
+// import TextPlayer from './TextPlayer';
+
+/* eslint no-new-func : 0 */
+
+var isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 
 var inBrowser = isBrowser();
 
@@ -41,7 +44,7 @@ var Block = function Block(_ref2, _ref3) {
 
 
   var appropriateTrackAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.track[renderingMode], assetsData);
-  var appropriateTranscriptionAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.transcription[renderingMode], assetsData);
+  // const appropriateTranscriptionAsset = pickAsset(resource, meta.assetPickingRules.transcription[renderingMode], assetsData);
 
   switch (renderingMode) {
     case 'web':
@@ -76,20 +79,30 @@ var Block = function Block(_ref2, _ref3) {
               )
             )
           ),
-          _react2.default.createElement(_TextPlayer2.default, { src: getAssetUri(appropriateTranscriptionAsset.asset) })
+          resource.data.transcription && _react2.default.createElement(
+            'blockquote',
+            { className: 'transcription' },
+            resource.data.transcription
+          )
         );
       }
     // other than dynamic + serverside rendering
     case 'pdf': /* eslint no-fallthrough : 0 */
     case 'epub-reflowable':
     case 'micro':
-      if (appropriateTranscriptionAsset) {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_TextPlayer2.default, { src: getAssetUri(appropriateTranscriptionAsset.asset) })
-        );
-      }
+      return resource.data.transcription ? _react2.default.createElement(
+        'blockquote',
+        { className: 'transcription' },
+        resource.data.transcription
+      ) : null;
+    // if (appropriateTranscriptionAsset) {
+    //   return (
+    //     <div>
+
+    //       {/*<TextPlayer src={getAssetUri(appropriateTranscriptionAsset.asset)} />*/}
+    //     </div>
+    //   );
+    // }
     default:
       /* eslint no-fallthrough : 0 */
       return null;
