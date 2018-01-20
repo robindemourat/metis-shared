@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 
 import meta from './meta';
 import {pickAsset} from '../utils';
-import TextPlayer from './TextPlayer';
+// text player is deprecated for now as the fact of
+// fetching transcription as a file causes problems
+// when rendering serverside
+// import TextPlayer from './TextPlayer';
 
 const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 
@@ -21,7 +24,7 @@ const Block = ({
 }, {assetsData, getAssetUri}) => {
 
   const appropriateTrackAsset = pickAsset(resource, meta.assetPickingRules.track[renderingMode], assetsData);
-  const appropriateTranscriptionAsset = pickAsset(resource, meta.assetPickingRules.transcription[renderingMode], assetsData);
+  // const appropriateTranscriptionAsset = pickAsset(resource, meta.assetPickingRules.transcription[renderingMode], assetsData);
 
   switch (renderingMode) {
       case 'web':
@@ -43,7 +46,10 @@ const Block = ({
                   </div>
                 </div>
               </Media>
-              <TextPlayer src={getAssetUri(appropriateTranscriptionAsset.asset)} />
+              {/*<TextPlayer src={getAssetUri(appropriateTranscriptionAsset.asset)} />*/}
+              {resource.data.transcription && <blockquote className="transcription">
+                {resource.data.transcription}
+              </blockquote>}
             </div>
           );
         }
@@ -51,13 +57,17 @@ const Block = ({
       case 'pdf':/* eslint no-fallthrough : 0 */
       case 'epub-reflowable':
       case 'micro':
-        if (appropriateTranscriptionAsset) {
-          return (
-            <div>
-              <TextPlayer src={getAssetUri(appropriateTranscriptionAsset.asset)} />
-            </div>
-          );
-        }
+        return resource.data.transcription ? <blockquote className="transcription">
+          {resource.data.transcription}
+        </blockquote> : null;
+        // if (appropriateTranscriptionAsset) {
+        //   return (
+        //     <div>
+
+        //       {/*<TextPlayer src={getAssetUri(appropriateTranscriptionAsset.asset)} />*/}
+        //     </div>
+        //   );
+        // }
       default:/* eslint no-fallthrough : 0 */
         return null;
   }

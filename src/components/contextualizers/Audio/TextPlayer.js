@@ -1,11 +1,21 @@
 /* eslint react/no-set-state : 0 */
 /* eslint react/no-danger : 0 */
+/* eslint no-new-func : 0 */
 
 import React, {Component} from 'react';
 import mime from 'mime';
 import {get} from 'axios';
 
 import srt from 'parse-srt';
+
+
+const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
+const inBrowser = isBrowser();
+
+let fs;
+if (!inBrowser) {
+  fs = require('fs');
+}
 
 export default class TextPlayer extends Component {
 
@@ -31,11 +41,24 @@ export default class TextPlayer extends Component {
 
   getText = src => {
     return new Promise((resolve, reject) => {
-      get(src)
-        .then(resp => {
-          resolve(resp.data);
-        })
-        .catch(reject);
+      const protocol = src.split(':')[0];
+      if (protocol.indexOf('http') === 0) {
+        get(src)
+          .then(resp => {
+            resolve(resp.data);
+          })
+          .catch(reject);
+      }
+ else if (protocol.indexOf('file') === 0 && fs) {
+        const path = src.split('file://')[1];
+        fs.readFile(path, 'utf8', (err, str) => {
+          if (err) {
+            return reject(err);
+          }
+ else return resolve(str);
+        });
+      }
+ else reject();
     });
   }
 
@@ -67,6 +90,12 @@ export default class TextPlayer extends Component {
         }
         this.setState({
           contents
+        });
+      })
+      .catch(() => {
+        // what to do there ?
+        this.setState({
+          content: {text: 'Not available'}
         });
       });
   }
