@@ -4,11 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _class, _temp, _initialiseProps;
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _class, _temp, _initialiseProps; /* eslint react/no-set-state : 0 */
-/* eslint  no-new-func : 0 */
-
 
 var _react = require('react');
 
@@ -28,7 +26,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-set-state : 0 */
+/* eslint  no-new-func : 0 */
+/* eslint react/prefer-stateless-function : 0 */
+
 
 var ZoomableImage = null;
 
@@ -60,64 +61,87 @@ var computeDimensions = function computeDimensions(imageDimensions, containerDim
   };
 };
 
-var Zoomable = (0, _reactDimensions2.default)()(function (_ref) {
-  var src = _ref.src,
-      _ref$title = _ref.title,
-      title = _ref$title === undefined ? '' : _ref$title,
-      imageDimensions = _ref.imageDimensions,
-      containerWidth = _ref.containerWidth,
-      containerHeight = _ref.containerHeight;
+var ZoomableComponent = function (_Component) {
+  _inherits(ZoomableComponent, _Component);
 
-  var _computeDimensions = computeDimensions(imageDimensions, {
-    width: containerWidth,
-    height: containerHeight
-  }),
-      dimensions = _computeDimensions.dimensions,
-      ratio = _computeDimensions.ratio;
+  function ZoomableComponent() {
+    _classCallCheck(this, ZoomableComponent);
 
-  if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
-    return _react2.default.createElement(ZoomableImage, {
-      baseImage: {
-        alt: title,
-        src: src,
-        width: dimensions.width,
-        height: dimensions.height
-      },
-      largeImage: {
-        alt: title,
-        src: src,
-        width: dimensions.width * ratio,
-        height: dimensions.height * ratio
-      },
-      thumbnailImage: {
-        alt: title,
-        src: src
-      } });
-  } else {
-    return _react2.default.createElement('img', {
-      src: src,
-      alt: title,
-      style: {
-        width: dimensions.width,
-        height: dimensions.height
-      } });
+    return _possibleConstructorReturn(this, (ZoomableComponent.__proto__ || Object.getPrototypeOf(ZoomableComponent)).apply(this, arguments));
   }
-});
 
-var BlockDynamic = (_temp = _class = function (_Component) {
-  _inherits(BlockDynamic, _Component);
+  _createClass(ZoomableComponent, [{
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate() {
+      return true;
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          src = _props.src,
+          _props$title = _props.title,
+          title = _props$title === undefined ? '' : _props$title,
+          imageDimensions = _props.imageDimensions,
+          containerWidth = _props.containerWidth,
+          containerHeight = _props.containerHeight;
+
+      var _computeDimensions = computeDimensions(imageDimensions, {
+        width: containerWidth,
+        height: containerHeight
+      }),
+          dimensions = _computeDimensions.dimensions,
+          ratio = _computeDimensions.ratio;
+
+      if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
+        return _react2.default.createElement(ZoomableImage, {
+          baseImage: {
+            alt: title,
+            src: src,
+            width: dimensions.width,
+            height: dimensions.height
+          },
+          largeImage: {
+            alt: title,
+            src: src,
+            width: dimensions.width * ratio,
+            height: dimensions.height * ratio
+          },
+          thumbnailImage: {
+            alt: title,
+            src: src
+          } });
+      } else {
+        return _react2.default.createElement('img', {
+          src: src,
+          alt: title,
+          style: {
+            width: dimensions.width,
+            height: dimensions.height
+          } });
+      }
+    }
+  }]);
+
+  return ZoomableComponent;
+}(_react.Component);
+
+var Zoomable = (0, _reactDimensions2.default)()(ZoomableComponent);
+
+var BlockDynamic = (_temp = _class = function (_Component2) {
+  _inherits(BlockDynamic, _Component2);
 
   function BlockDynamic(props) {
     _classCallCheck(this, BlockDynamic);
 
-    var _this = _possibleConstructorReturn(this, (BlockDynamic.__proto__ || Object.getPrototypeOf(BlockDynamic)).call(this, props));
+    var _this2 = _possibleConstructorReturn(this, (BlockDynamic.__proto__ || Object.getPrototypeOf(BlockDynamic)).call(this, props));
 
-    _initialiseProps.call(_this);
+    _initialiseProps.call(_this2);
 
-    _this.state = {
+    _this2.state = {
       modalIsOpen: false
     };
-    return _this;
+    return _this2;
   }
 
   _createClass(BlockDynamic, [{
@@ -135,9 +159,9 @@ var BlockDynamic = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          assetUri = _props.assetUri,
-          resource = _props.resource,
+      var _props2 = this.props,
+          assetUri = _props2.assetUri,
+          resource = _props2.resource,
           _state = this.state,
           modalIsOpen = _state.modalIsOpen,
           imageHeight = _state.imageHeight,
@@ -178,19 +202,19 @@ var BlockDynamic = (_temp = _class = function (_Component) {
 
   return BlockDynamic;
 }(_react.Component), _initialiseProps = function _initialiseProps() {
-  var _this2 = this;
+  var _this3 = this;
 
   this.toggleModal = function (e) {
     if (e && typeof e.stopPropagation === 'function') {
       e.stopPropagation();
     }
-    _this2.setState({
-      modalIsOpen: !_this2.state.modalIsOpen
+    _this3.setState({
+      modalIsOpen: !_this3.state.modalIsOpen
     });
   };
 
   this.updateImageDimensions = function (props) {
-    var assetUri = _this2.props.assetUri;
+    var assetUri = _this3.props.assetUri;
     var resource = props.resource;
 
 
@@ -202,7 +226,7 @@ var BlockDynamic = (_temp = _class = function (_Component) {
         var imageHeight = img.height;
         var imageWidth = img.width;
 
-        _this2.setState({
+        _this3.setState({
           imageHeight: imageHeight,
           imageWidth: imageWidth
         });

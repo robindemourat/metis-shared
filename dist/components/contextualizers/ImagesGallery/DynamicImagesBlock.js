@@ -14,10 +14,6 @@ var _reactImages = require('react-images');
 
 var _reactImages2 = _interopRequireDefault(_reactImages);
 
-var _reactImageTiler = require('react-image-tiler');
-
-var _reactImageTiler2 = _interopRequireDefault(_reactImageTiler);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38,6 +34,12 @@ var Block = function (_Component) {
     _classCallCheck(this, Block);
 
     var _this = _possibleConstructorReturn(this, (Block.__proto__ || Object.getPrototypeOf(Block)).call(this, props));
+
+    _this.setCurrentImage = function (currentImage) {
+      _this.setState({
+        currentImage: currentImage
+      });
+    };
 
     _this.nextImage = function () {
       var currentImage = _this.state.currentImage;
@@ -90,7 +92,8 @@ var Block = function (_Component) {
           nextImage = this.nextImage,
           previousImage = this.previousImage,
           onOpenLightBox = this.onOpenLightBox,
-          onCloseLightBox = this.onCloseLightBox;
+          onCloseLightBox = this.onCloseLightBox,
+          setCurrentImage = this.setCurrentImage;
 
 
       var images = resource.data && resource.data.map(function (image) {
@@ -101,12 +104,29 @@ var Block = function (_Component) {
 
       return inBrowser ? _react2.default.createElement(
         'figure',
-        {
-          className: 'peritext-contextualization peritext-contextualization-block peritext-contextualization-web peritext-contextualizer-image',
-          onClick: onOpenLightBox },
-        _react2.default.createElement(_reactImageTiler2.default, { images: images.map(function (image) {
-            return image.src;
-          }), minWidth: 200 }),
+        null,
+        _react2.default.createElement('img', {
+          src: images[currentImage].src,
+          onClick: onOpenLightBox }),
+        _react2.default.createElement(
+          'ul',
+          null,
+          images.map(function (image, index) {
+            var active = index === currentImage;
+            var onThisClick = function onThisClick() {
+              return setCurrentImage(index);
+            };
+            return _react2.default.createElement(
+              'li',
+              { key: index },
+              _react2.default.createElement(
+                'button',
+                { onClick: onThisClick, className: 'imageButton ' + (active ? 'active' : '') },
+                index + 1
+              )
+            );
+          })
+        ),
         _react2.default.createElement(_reactImages2.default, {
           images: images,
           isOpen: lightBoxOpen,
@@ -117,9 +137,7 @@ var Block = function (_Component) {
       ) : _react2.default.createElement(
         'div',
         null,
-        images.map(function (img, index) {
-          return _react2.default.createElement('img', { src: img, key: index });
-        })
+        _react2.default.createElement('img', { src: images[currentImage].src })
       );
     }
   }]);

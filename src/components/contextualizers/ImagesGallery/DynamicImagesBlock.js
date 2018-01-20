@@ -2,7 +2,6 @@
 /* eslint  no-new-func : 0 */
 import React, {Component} from 'react';
 import Lightbox from 'react-images';
-import Tiler from 'react-image-tiler';
 
 const isBrowser = new Function('try {return this===window;}catch(e){ return false;}');
 const inBrowser = isBrowser();

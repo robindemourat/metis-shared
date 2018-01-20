@@ -1,5 +1,6 @@
 /* eslint react/no-set-state : 0 */
 /* eslint  no-new-func : 0 */
+/* eslint react/prefer-stateless-function : 0 */
 import React, {Component} from 'react';
 import Modal from 'react-modal';
 let ZoomableImage = null;
@@ -34,6 +35,10 @@ const computeDimensions = (imageDimensions, containerDimensions) => {
 };
 
 class ZoomableComponent extends Component {
+
+  shouldComponentUpdate() {
+    return true;
+  }
   render() {
     const {
       src,

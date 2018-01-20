@@ -38,7 +38,6 @@
     "parse-srt": "^1.0.0-alpha",
     "react-citeproc": "^0.1.9",
     "react-dimensions": "^1.3.1",
-    "react-image-tiler": "git+https://github.com/robindemourat/react-image-tiler.git",
     "react-images": "^0.5.14",
     "react-media-player": "^0.7.0",
     "react-modal": "^3.1.10",
