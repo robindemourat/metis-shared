@@ -17,6 +17,12 @@ class Block extends Component {
     };
   }
 
+  setCurrentImage = currentImage => {
+    this.setState({
+      currentImage
+    });
+  }
+
   nextImage = () => {
     const {currentImage} = this.state;
     const newImage = currentImage + 1 > this.props.resource.data.length - 1 ? 0 : currentImage + 1;
@@ -59,7 +65,8 @@ class Block extends Component {
       nextImage,
       previousImage,
       onOpenLightBox,
-      onCloseLightBox
+      onCloseLightBox,
+      setCurrentImage
     } = this;
 
     const images = resource.data
@@ -68,10 +75,23 @@ class Block extends Component {
                   }));
 
     return inBrowser ? (
-      <figure
-        className="peritext-contextualization peritext-contextualization-block peritext-contextualization-web peritext-contextualizer-image"
-        onClick={onOpenLightBox}>
-        <Tiler images={images.map(image => image.src)} minWidth={200} />
+      <figure>
+        <img
+          src={images[currentImage].src}
+          onClick={onOpenLightBox} />
+        <ul>
+          {
+            images.map((image, index) => {
+              const active = index === currentImage;
+              const onThisClick = () => setCurrentImage(index);
+              return (
+                <li key={index}>
+                  <button onClick={onThisClick} className={`imageButton ${active ? 'active' : ''}`}>{index + 1}</button>
+                </li>
+              );
+            })
+          }
+        </ul>
 
         <Lightbox
           images={images}
@@ -84,9 +104,7 @@ class Block extends Component {
     ) :
     (
       <div>
-        {
-          images.map((img, index) => <img src={img} key={index} />)
-        }
+        <img src={images[currentImage].src} />
       </div>
     )
     ;

@@ -33,50 +33,55 @@ const computeDimensions = (imageDimensions, containerDimensions) => {
   };
 };
 
-const Zoomable = Dimensions()(({
-  src,
-  title = '',
-  imageDimensions,
-  containerWidth,
-  containerHeight
-}) => {
-  const {dimensions, ratio} = computeDimensions(imageDimensions, {
-      width: containerWidth,
-      height: containerHeight
-    });
-  if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
-    return (
-      <ZoomableImage
-        baseImage={{
-            alt: title,
-            src,
+class ZoomableComponent extends Component {
+  render() {
+    const {
+      src,
+      title = '',
+      imageDimensions,
+      containerWidth,
+      containerHeight
+    } = this.props;
+    const {dimensions, ratio} = computeDimensions(imageDimensions, {
+        width: containerWidth,
+        height: containerHeight
+      });
+    if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
+      return (
+        <ZoomableImage
+          baseImage={{
+              alt: title,
+              src,
+              width: dimensions.width,
+              height: dimensions.height
+            }}
+          largeImage={{
+              alt: title,
+              src,
+              width: dimensions.width * ratio,
+              height: dimensions.height * ratio
+            }}
+          thumbnailImage={{
+              alt: title,
+              src
+            }} />
+      );
+    }
+    else {
+      return (
+        <img
+          src={src}
+          alt={title}
+          style={{
             width: dimensions.width,
             height: dimensions.height
-          }}
-        largeImage={{
-            alt: title,
-            src,
-            width: dimensions.width * ratio,
-            height: dimensions.height * ratio
-          }}
-        thumbnailImage={{
-            alt: title,
-            src
           }} />
-    );
+      );
+    }
   }
- else {
-    return (
-      <img
-        src={src}
-        alt={title}
-        style={{
-          width: dimensions.width,
-          height: dimensions.height
-        }} />
-    );
-  }
-});
+}
+
+const Zoomable = Dimensions()(ZoomableComponent);
 
 class BlockDynamic extends Component {
   constructor(props) {
