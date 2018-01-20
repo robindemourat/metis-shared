@@ -650,8 +650,14 @@ storiesOf('Mailing preview', module)
           montage={{
             data: {
               include_abstract: true,
-              montage_url: 'http://www.example.com'
+              montage_url: 'http://www.example.com',
+              attached_assets: [{
+                image_asset_id: 'iframe_screenshot'
+              }]
             },
+          }}
+          assets={{
+            'iframe_screenshot': 'screenshot-example.png'
           }}
           composition={{
               metadata: {
