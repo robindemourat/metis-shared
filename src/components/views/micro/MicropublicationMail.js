@@ -48,7 +48,7 @@ export default ({
             })
             .filter(a => a)
             .map((url, index) => (
-              <Img key={index} src={url} />
+              <Img key={index} src={url} alt={title} />
             ))
           }
           </div>

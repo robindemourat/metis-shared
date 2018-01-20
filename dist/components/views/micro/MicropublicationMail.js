@@ -69,7 +69,7 @@ exports.default = function (_ref) {
             }).filter(function (a) {
               return a;
             }).map(function (url, index) {
-              return _react2.default.createElement(Img, { key: index, src: url });
+              return _react2.default.createElement(Img, { key: index, src: url, alt: title });
             })
           )
         )
