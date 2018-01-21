@@ -21,8 +21,8 @@ const ArticleTemplate = ({
 }) => {
   return (
     <div>
-      <h2>{composition.metadata.title}</h2>
-      {composition.metadata.subtitle && <h3>{composition.metadata.subtitle}</h3>}
+      <h2 className="composition-title">{composition.metadata.title}</h2>
+      {composition.metadata.subtitle && <h3 className="composition-subtitle">{composition.metadata.subtitle}</h3>}
 
       {
       composition.metadata.creators.length ?
@@ -76,7 +76,7 @@ const ArticleTemplate = ({
           </ul>
         </section>
       </section> : null}
-      {Object.keys(citationItems).length ? <section className="bibliography-container">
+      {Object.keys(citationItems).length ? <section className="bibliography-container no-break-inside">
         <h3>{t('Bibliographie')}</h3>
         <Bibliography
           style={citationStyle}
@@ -86,7 +86,7 @@ const ArticleTemplate = ({
 
       {
       composition.metadata.creators.length ?
-        <div className="creators-info-container">
+        <div className="creators-info-container no-break-inside">
           <h3>{composition.metadata.creators.length > 1 ? t('Auteur.e.s') : t('Auteur.e')}</h3>
           {
           composition.metadata.creators.map((creator, index) => (

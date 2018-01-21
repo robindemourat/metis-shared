@@ -99,7 +99,7 @@ export default class DynamicComposition extends Component {
     const resourcesMap = resources.reduce((t, r) => ({...t, [r._id]: r}), {});
     const assetsMap = assets.reduce((t, a) => ({...t, [a._id]: a}), {});
     return (
-      <div className={`plurishing-MontageSection dynamic-composition ${parameters.template}`} id={`composition-${composition._id}`}>
+      <div className={`plurishing-DynamicMontageSection dynamic-composition ${parameters.template}`} id={`composition-${composition._id}`}>
         <aside className="aside-menu">
           <Nav montage={montage} compositions={compositions} />
         </aside>

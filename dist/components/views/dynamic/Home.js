@@ -19,7 +19,7 @@ exports.default = function (_ref) {
       compositions = _ref.compositions;
   return _react2.default.createElement(
     'section',
-    { className: 'plurishing-MontageSection' },
+    { className: 'plurishing-DynamicMontageSection' },
     _react2.default.createElement(
       'aside',
       { className: 'aside-menu' },

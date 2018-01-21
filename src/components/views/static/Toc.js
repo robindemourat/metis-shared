@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+const buildAuthors = creators =>
+  creators.map(creator => `${creator.given} ${creator.family}`)
+    .join(', ');
+
 const Toc = ({
   montage,
   compositions,
 }, {t, Link}) => (
   <section
-    className="index break-before break-after">
+    className="table-of-contents break-after break-before plurishing-StaticMontageSection">
     <h2>{t('Table des matières')}</h2>
     <nav className="index-wrapper">
       <ul className="index-container">
@@ -22,8 +27,8 @@ const Toc = ({
 
               return (
                 <li className="index-item" key={index}>
-                  <Link to={{view: 'composition', index}}>
-                    {composition.metadata.title}
+                  <Link className="index-link" to={{view: 'composition', index}}>
+                    {composition.metadata.title} - {buildAuthors(composition.metadata.creators)}
                   </Link>
                 </li>
               );

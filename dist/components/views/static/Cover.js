@@ -27,7 +27,7 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'cover break-after static-section' },
+      className: 'cover break-after plurishing-StaticMontageSection' },
     _react2.default.createElement(
       'div',
       {
@@ -38,12 +38,12 @@ exports.default = function (_ref) {
         } },
       _react2.default.createElement(
         'h1',
-        null,
+        { className: 'montage-title' },
         title
       ),
       subtitle && _react2.default.createElement(
         'h2',
-        null,
+        { className: 'montage-subtitle' },
         subtitle
       ),
       creators.length ? _react2.default.createElement(

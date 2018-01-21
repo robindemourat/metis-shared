@@ -25,7 +25,7 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'back-cover break-before static-section' },
+      className: 'back-cover break-before plurishing-StaticMontageSection' },
     _react2.default.createElement(
       'div',
       {
@@ -36,12 +36,12 @@ exports.default = function (_ref) {
         } },
       _react2.default.createElement(
         'h1',
-        null,
+        { className: 'backcover-title' },
         title
       ),
       _react2.default.createElement(
         'p',
-        null,
+        { className: 'backcover-abstract' },
         text
       )
     )

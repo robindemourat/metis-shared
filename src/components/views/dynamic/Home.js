@@ -6,7 +6,7 @@ export default ({
   montage,
   compositions,
 }) => (
-  <section className="plurishing-MontageSection">
+  <section className="plurishing-DynamicMontageSection">
     <aside className="aside-menu">
       <Nav montage={montage} compositions={compositions} />
     </aside>

@@ -15,11 +15,12 @@ exports.default = function (_ref) {
       noteId = _ref.noteId;
   return _react2.default.createElement(
     "sup",
-    { className: "plurishing-EpubNotePointerPointer", id: "note-pointer-pointer-" + noteId },
+    { className: "plurishing-NotePointerPointer plurishing-EpubNotePointerPointer", id: "note-pointer-pointer-" + noteId },
     _react2.default.createElement(
       "a",
       { href: "#note-content-pointer-" + noteId },
       note.order
-    )
+    ),
+    "."
   );
 };

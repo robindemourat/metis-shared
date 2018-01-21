@@ -15,7 +15,7 @@ exports.default = function (_ref) {
       noteId = _ref.noteId;
   return _react2.default.createElement(
     "sup",
-    { className: "plurishing-PdfNoteContentPointer", id: "note-content-pointer-" + noteId },
+    { className: "plurishing-NoteContentPointer plurishing-PdfNoteContentPointer", id: "note-content-pointer-" + noteId },
     _react2.default.createElement(
       "a",
       { href: "#note-content-" + noteId },

@@ -41,12 +41,12 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
     null,
     _react2.default.createElement(
       'h2',
-      null,
+      { className: 'composition-title' },
       composition.metadata.title
     ),
     composition.metadata.subtitle && _react2.default.createElement(
       'h3',
-      null,
+      { className: 'composition-subtitle' },
       composition.metadata.subtitle
     ),
     composition.metadata.creators.length ? _react2.default.createElement(
@@ -111,7 +111,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
     ) : null,
     Object.keys(citationItems).length ? _react2.default.createElement(
       'section',
-      { className: 'bibliography-container' },
+      { className: 'bibliography-container no-break-inside' },
       _react2.default.createElement(
         'h3',
         null,
@@ -124,7 +124,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
     ) : null,
     composition.metadata.creators.length ? _react2.default.createElement(
       'div',
-      { className: 'creators-info-container' },
+      { className: 'creators-info-container no-break-inside' },
       _react2.default.createElement(
         'h3',
         null,

@@ -95,7 +95,7 @@ export default class DynamicComposition extends Component {
     const resourcesMap = resources.reduce((t, r) => ({...t, [r._id]: r}), {});
     const assetsMap = assets.reduce((t, a) => ({...t, [a._id]: a}), {});
     return (
-      <div className="static-section static-composition break-after" id={`composition-${index}`}>
+      <div className="static-section plurishing-StaticMontageSection break-after" id={`composition-${index}`}>
         <ReferencesManager
           style={citationStyle}
           locale={citationLocale}

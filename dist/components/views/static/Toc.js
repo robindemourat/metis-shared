@@ -14,6 +14,12 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var buildAuthors = function buildAuthors(creators) {
+  return creators.map(function (creator) {
+    return creator.given + ' ' + creator.family;
+  }).join(', ');
+};
+
 var Toc = function Toc(_ref, _ref2) {
   var montage = _ref.montage,
       compositions = _ref.compositions;
@@ -22,7 +28,7 @@ var Toc = function Toc(_ref, _ref2) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'index break-before break-after' },
+      className: 'table-of-contents break-after break-before plurishing-StaticMontageSection' },
     _react2.default.createElement(
       'h2',
       null,
@@ -50,8 +56,10 @@ var Toc = function Toc(_ref, _ref2) {
             { className: 'index-item', key: index },
             _react2.default.createElement(
               Link,
-              { to: { view: 'composition', index: index } },
-              composition.metadata.title
+              { className: 'index-link', to: { view: 'composition', index: index } },
+              composition.metadata.title,
+              ' - ',
+              buildAuthors(composition.metadata.creators)
             )
           );
         })

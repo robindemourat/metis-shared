@@ -2,6 +2,7 @@ import React from 'react';
 
 export default ({
   children,
+  className,
   to: {
     view,
     index,
@@ -19,7 +20,7 @@ export default ({
   }
   if (finalHref) {
     return (
-      <a href={finalHref}>
+      <a className={className} href={finalHref}>
         {children}
       </a>
     );

@@ -17,7 +17,7 @@ export default ({
   renderingMode = 'epub-fixed',
   styles = '',
 }) => (
-  <html className="StandaloneCover">
+  <html className="plurishing-StandaloneCover">
     <head />
     <body>
       <Cover

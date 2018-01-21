@@ -124,7 +124,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        { className: 'static-section static-composition break-after', id: 'composition-' + index },
+        { className: 'static-section plurishing-StaticMontageSection break-after', id: 'composition-' + index },
         _react2.default.createElement(
           _reactCiteproc.ReferencesManager,
           {

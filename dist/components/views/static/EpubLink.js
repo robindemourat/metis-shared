@@ -12,6 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (_ref) {
   var children = _ref.children,
+      className = _ref.className,
       _ref$to = _ref.to,
       view = _ref$to.view,
       index = _ref$to.index;
@@ -27,7 +28,7 @@ exports.default = function (_ref) {
   if (finalHref) {
     return _react2.default.createElement(
       'a',
-      { href: finalHref },
+      { className: className, href: finalHref },
       children
     );
   }

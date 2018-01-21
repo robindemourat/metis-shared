@@ -14,15 +14,15 @@ export default ({
   creators = []
 }) => (
   <section
-    className="cover break-after static-section">
+    className="cover break-after plurishing-StaticMontageSection">
     <div
       className="content"
       style={{
       background,
       color: getColorByBgColor(background)
     }}>
-      <h1>{title}</h1>
-      {subtitle && <h2>{subtitle}</h2>}
+      <h1 className="montage-title">{title}</h1>
+      {subtitle && <h2 className="montage-subtitle">{subtitle}</h2>}
 
       {
       creators.length ?

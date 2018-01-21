@@ -13,15 +13,15 @@ export default ({
   text
 }) => (
   <section
-    className="back-cover break-before static-section">
+    className="back-cover break-before plurishing-StaticMontageSection">
     <div
       className="content"
       style={{
       background,
       color: getColorByBgColor(background)
     }}>
-      <h1>{title}</h1>
-      <p>
+      <h1 className="backcover-title">{title}</h1>
+      <p className="backcover-abstract">
         {text}
       </p>
     </div>
