@@ -51,7 +51,8 @@ var Block = function Block(_ref, _ref2) {
       case 'micro':
         return _react2.default.createElement(_StaticTable2.default, {
           src: tableAssetUri,
-          contextualizer: contextualizer });
+          contextualizer: contextualizer,
+          asset: appropriateAsset });
       default:
         return null;
     }

@@ -32,7 +32,8 @@ const Block = ({
         return (
           <StaticTable
             src={tableAssetUri}
-            contextualizer={contextualizer} />
+            contextualizer={contextualizer}
+            asset={appropriateAsset} />
         );
       default:
         return null;
