@@ -23,13 +23,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint react/no-set-state : 0 */
 
-var DynamicTable = function (_Component) {
-  _inherits(DynamicTable, _Component);
+var StaticTable = function (_Component) {
+  _inherits(StaticTable, _Component);
 
-  function DynamicTable(props) {
-    _classCallCheck(this, DynamicTable);
+  function StaticTable(props) {
+    _classCallCheck(this, StaticTable);
 
-    var _this = _possibleConstructorReturn(this, (DynamicTable.__proto__ || Object.getPrototypeOf(DynamicTable)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (StaticTable.__proto__ || Object.getPrototypeOf(StaticTable)).call(this, props));
 
     _this.updateData = function (src) {
       _this.setState({
@@ -57,7 +57,7 @@ var DynamicTable = function (_Component) {
     return _this;
   }
 
-  _createClass(DynamicTable, [{
+  _createClass(StaticTable, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.updateData(this.props.src);
@@ -123,7 +123,7 @@ var DynamicTable = function (_Component) {
     }
   }]);
 
-  return DynamicTable;
+  return StaticTable;
 }(_react.Component);
 
-exports.default = DynamicTable;
+exports.default = StaticTable;

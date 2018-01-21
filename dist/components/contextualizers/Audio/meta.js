@@ -13,13 +13,13 @@ exports.default = {
       'epub-fixed': ['audio_track_asset_id'],
       'pdf': [],
       'epub-reflowable': []
-    },
-    transcription: {
-      'web': ['transcription_asset_id'],
-      'micro': ['transcription_asset_id'],
-      'epub-fixed': ['transcription_asset_id'],
-      'pdf': ['transcription_asset_id'],
-      'epub-reflowable': ['transcription_asset_id']
     }
+    // transcription: {
+    //   'web': ['transcription_asset_id'],
+    //   'micro': ['transcription_asset_id'],
+    //   'epub-fixed': ['transcription_asset_id'],
+    //   'pdf': ['transcription_asset_id'],
+    //   'epub-reflowable': ['transcription_asset_id']
+    // }
   }
 };
