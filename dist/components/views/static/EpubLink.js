@@ -19,7 +19,7 @@ exports.default = function (_ref) {
   var finalHref = void 0;
   switch (view) {
     case 'composition':
-      finalHref = index + '.xhtml';
+      finalHref = 'composition-' + index + '.xhtml';
       break;
     default:
       break;

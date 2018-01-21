@@ -12,7 +12,7 @@ export default ({
   let finalHref;
   switch (view) {
     case 'composition':
-      finalHref = `${index}.xhtml`;
+      finalHref = `composition-${index}.xhtml`;
       break;
     default:
       break;
