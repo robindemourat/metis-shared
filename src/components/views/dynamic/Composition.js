@@ -109,11 +109,11 @@ export default class DynamicComposition extends Component {
             locale={citationLocale}
             items={citationItems}
             citations={citationData}>
-            <TemplateComponent
+            {TemplateComponent && <TemplateComponent
               parameters={parameters}
               composition={composition}
               assets={assetsMap}
-              resources={resourcesMap} />
+              resources={resourcesMap} />}
             <style>
               {montage.data.css.shared_css_code}
               {montage.data.css[`${renderingMode}_css_code`]}

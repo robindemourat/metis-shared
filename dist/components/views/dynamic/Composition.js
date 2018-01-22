@@ -152,7 +152,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
               locale: citationLocale,
               items: citationItems,
               citations: citationData },
-            _react2.default.createElement(TemplateComponent, {
+            TemplateComponent && _react2.default.createElement(TemplateComponent, {
               parameters: parameters,
               composition: composition,
               assets: assetsMap,
