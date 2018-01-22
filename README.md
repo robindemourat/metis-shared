@@ -16,6 +16,91 @@ npm install
 npm test
 ```
 
+## Usage
+
+The lib provides the following modules :
+
+```js
+{
+  utils: { // utilitary pure functions
+    parseBibTeXToCSLJSON, // transform bibtex data into a csl-json representation
+    resourceToCslJSON // tranform metis-schema compliant resource into a csl-json representation
+  },
+  components: { // react components
+    contextualizers: { // all the contextualizers modules
+      image,
+      imagesgallery,
+      webpage,
+      video,
+      audio,
+      table,
+      mobiliscene,
+      bib,
+    },
+    previews: {
+      DynamicMontagePreview, // dynamic preview component (simulates the routes logic with its inner state)
+      StaticMontagePreview, // static montage assemblage
+      FacebookPreview, // facebook post simulation
+      TwitterPreview, // tweet simumation
+      MailingPreview, // mail preview wrapper
+    },
+    views: {
+      static: {
+        Composition, // composition component
+        DecoratedComposition, // standalone comosition component to display in its own (e.g. in epub composition)
+        ArticleTemplate, // static article template
+        Colophon, // colophon component
+        Cover, // cover component
+        Toc, // table of content component
+        StandaloneCover, // static cover to be displayed in its own (i.e. for epub cover generation)
+      },
+      dynamic: {
+        ArticleTemplate, // dynamic article template
+        FullscreenTemplate, // dynamic full screen template
+        Composition, // dynamic composition
+        Home, // dynamic main page
+      },
+      micro: {
+        MicropublicationMail // micropublication mail component
+      }
+    }
+    renderer // enhanced redraft renderer for draft-based content rendering
+  },
+  constants // various constants names (i.e. draft entities names)
+}
+```
+
+
+### Note on contextualizers modules
+
+Each contextualizer module :
+
+* *must* expose a `meta` submodule, which is a json object describing parameters and properties of the contextualizer
+* *must* expose a `Block` submodue, which is a react component handling block contextualizations
+* *may* expose an `Inline` submodue, which is a react component handling inline contextualizations
+
+The `meta` submodule *must* be structured as follows :
+
+```js
+{
+  id: 'audio', // id of the contextualizer module
+  accepts: ['audio'],// accepted ressources types
+  assetPickingRules: { // rules for finding the right field to display one of the contextualizer's properties
+    track: {// each key correspond to a specific contexualizer property
+        // each key is an array of resources' data properties keys
+        // the order of ids in the array defines a cascade to look into
+        // for selecting the best available resource property to use for contextualization
+      'web': ['audio_track_asset_id'],// rules for web rendering
+      'micro': [], // rules for micropublication rendering
+      'epub-fixed': ['audio_track_asset_id'], // rules for epub (fixed) rendering
+      'pdf': [], // rules for pdf rendering
+      'epub-reflowable': [] // rules for epub (reflowable) rendering
+    }
+  }
+};
+
+```
+
 ## Dependencies
 
 - [axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
@@ -84,4 +169,5 @@ npm test
 ## License
 
 LGPL-3.0
+
 CECCIL-C
