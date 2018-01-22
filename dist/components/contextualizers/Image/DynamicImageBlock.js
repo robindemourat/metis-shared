@@ -85,7 +85,8 @@ var ZoomableComponent = function (_Component) {
           imageDimensions = _props.imageDimensions,
           containerWidth = _props.containerWidth,
           containerHeight = _props.containerHeight,
-          className = _props.className;
+          className = _props.className,
+          onClose = _props.onClose;
 
       var _computeDimensions = computeDimensions(imageDimensions, {
         width: containerWidth,
@@ -95,24 +96,33 @@ var ZoomableComponent = function (_Component) {
           ratio = _computeDimensions.ratio;
 
       if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
-        return _react2.default.createElement(ZoomableImage, {
-          className: className,
-          baseImage: {
-            alt: title,
-            src: src,
-            width: dimensions.width,
-            height: dimensions.height
-          },
-          largeImage: {
-            alt: title,
-            src: src,
-            width: dimensions.width * ratio,
-            height: dimensions.height * ratio
-          },
-          thumbnailImage: {
-            alt: title,
-            src: src
-          } });
+        return _react2.default.createElement(
+          'div',
+          { className: 'zoomable-wrapper' },
+          _react2.default.createElement(ZoomableImage, {
+            className: className,
+            baseImage: {
+              alt: title,
+              src: src,
+              width: dimensions.width,
+              height: dimensions.height
+            },
+            largeImage: {
+              alt: title,
+              src: src,
+              width: dimensions.width * ratio,
+              height: dimensions.height * ratio
+            },
+            thumbnailImage: {
+              alt: title,
+              src: src
+            } }),
+          _react2.default.createElement(
+            'button',
+            { onClick: onClose, className: 'button close-zoomable' },
+            '\u2715'
+          )
+        );
       } else {
         return _react2.default.createElement('img', {
           src: src,
@@ -195,6 +205,7 @@ var BlockDynamic = (_temp = _class = function (_Component2) {
             src: assetUri,
             title: resource.metadata.title,
             className: 'image-detail',
+            onClose: toggleModal,
             imageDimensions: {
               width: imageWidth,
               height: imageHeight

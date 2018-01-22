@@ -43,7 +43,7 @@
     "react-modal": "^3.1.10",
     "react-table": "^6.7.6",
     "react-tweet": "git+https://github.com/robindemourat/react-tweet.git",
-    "react-zoomable-image": "^1.0.5",
+    "react-zoomable-image": "git+https://github.com/robindemourat/react-zoomable-image.git",
     "redraft": "^0.9.0",
     "three": "^0.89.0"
   },

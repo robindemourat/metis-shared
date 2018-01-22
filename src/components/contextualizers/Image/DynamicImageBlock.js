@@ -46,7 +46,8 @@ class ZoomableComponent extends Component {
       imageDimensions,
       containerWidth,
       containerHeight,
-      className
+      className,
+      onClose,
     } = this.props;
     const {dimensions, ratio} = computeDimensions(imageDimensions, {
         width: containerWidth,
@@ -54,24 +55,29 @@ class ZoomableComponent extends Component {
       });
     if (imageDimensions.width * imageDimensions.height > containerWidth * containerHeight) {
       return (
-        <ZoomableImage
-          className={className}
-          baseImage={{
-              alt: title,
-              src,
-              width: dimensions.width,
-              height: dimensions.height
-            }}
-          largeImage={{
-              alt: title,
-              src,
-              width: dimensions.width * ratio,
-              height: dimensions.height * ratio
-            }}
-          thumbnailImage={{
-              alt: title,
-              src
-            }} />
+        <div className="zoomable-wrapper">
+          <ZoomableImage
+            className={className}
+            baseImage={{
+                alt: title,
+                src,
+                width: dimensions.width,
+                height: dimensions.height
+              }}
+            largeImage={{
+                alt: title,
+                src,
+                width: dimensions.width * ratio,
+                height: dimensions.height * ratio
+              }}
+            thumbnailImage={{
+                alt: title,
+                src
+              }} />
+          <button onClick={onClose} className="button close-zoomable">
+            ✕
+          </button>
+        </div>
       );
     }
     else {
@@ -185,6 +191,7 @@ class BlockDynamic extends Component {
               src={assetUri}
               title={resource.metadata.title}
               className="image-detail"
+              onClose={toggleModal}
               imageDimensions={{
                   width: imageWidth,
                   height: imageHeight,

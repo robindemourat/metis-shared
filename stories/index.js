@@ -22,6 +22,7 @@ import data from './data';
 import lib from '../src';
 
 import 'react-table/react-table.css';
+import './stories-styles.css';
 
 
 const {
@@ -61,7 +62,7 @@ const {
 const assets = {
   'image': {
     type: 'asset',
-    filename: 'image-example.jpg',
+    filename: '6_azimuts.jpg',
     mimetype: 'image/jpg'
   },
   'iframe_screenshot': {
