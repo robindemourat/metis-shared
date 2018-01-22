@@ -1,55 +1,55 @@
-.plurishing-backoffice-FacebookPreview {
+.metis-backoffice-FacebookPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
   padding: 12px 12px 0; }
-  .plurishing-backoffice-FacebookPreview .fb-important {
+  .metis-backoffice-FacebookPreview .fb-important {
     color: #3b599d;
     cursor: pointer; }
-    .plurishing-backoffice-FacebookPreview .fb-important:hover {
+    .metis-backoffice-FacebookPreview .fb-important:hover {
       text-decoration: underline; }
-  .plurishing-backoffice-FacebookPreview .profile-image {
+  .metis-backoffice-FacebookPreview .profile-image {
     border-radius: 50%;
     height: 40px;
     width: 40px; }
-  .plurishing-backoffice-FacebookPreview .header {
+  .metis-backoffice-FacebookPreview .header {
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch; }
-    .plurishing-backoffice-FacebookPreview .header .right {
+    .metis-backoffice-FacebookPreview .header .right {
       margin-left: 1rem;
       flex: 1; }
-      .plurishing-backoffice-FacebookPreview .header .right h3 {
+      .metis-backoffice-FacebookPreview .header .right h3 {
         margin: 0;
         padding-top: 0;
         font-weight: 900;
         font-size: 1.5em; }
-      .plurishing-backoffice-FacebookPreview .header .right .post-info {
+      .metis-backoffice-FacebookPreview .header .right .post-info {
         color: #90949c; }
 
-.plurishing-backoffice-MailingPreview {
+.metis-backoffice-MailingPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
   padding: 12px 12px 0; }
-  .plurishing-backoffice-MailingPreview .header {
+  .metis-backoffice-MailingPreview .header {
     border-bottom: 1px solid #dddfe2; }
-    .plurishing-backoffice-MailingPreview .header .row {
+    .metis-backoffice-MailingPreview .header .row {
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch;
       margin-bottom: 1rem; }
-      .plurishing-backoffice-MailingPreview .header .row .label {
+      .metis-backoffice-MailingPreview .header .row .label {
         color: #90949c;
         text-align: right;
         min-width: 3rem; }
-      .plurishing-backoffice-MailingPreview .header .row .label::after {
+      .metis-backoffice-MailingPreview .header .row .label::after {
         content: ':'; }
-      .plurishing-backoffice-MailingPreview .header .row .value {
+      .metis-backoffice-MailingPreview .header .row .value {
         flex: 1;
         padding-left: 1rem; }
-  .plurishing-backoffice-MailingPreview .body {
+  .metis-backoffice-MailingPreview .body {
     margin-top: 1rem; }
 
-.plurishing-backoffice-TwitterPreview {
+.metis-backoffice-TwitterPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
   padding: 12px 12px 0; }
@@ -230,7 +230,7 @@
   src: local("Merriweather Bold"), local("Merriweather-Bold"), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215; }
 
-.plurishing-DynamicMontageSection {
+.metis-DynamicMontageSection {
   font-family: Merriweather, serif;
   position: absolute;
   top: 0;
@@ -248,76 +248,76 @@
   /**
      * Components
      */ }
-  .plurishing-DynamicMontageSection * {
+  .metis-DynamicMontageSection * {
     box-sizing: border-box; }
-  .plurishing-DynamicMontageSection h1,
-  .plurishing-DynamicMontageSection h2,
-  .plurishing-DynamicMontageSection h3,
-  .plurishing-DynamicMontageSection h4,
-  .plurishing-DynamicMontageSection h5,
-  .plurishing-DynamicMontageSection h6 {
+  .metis-DynamicMontageSection h1,
+  .metis-DynamicMontageSection h2,
+  .metis-DynamicMontageSection h3,
+  .metis-DynamicMontageSection h4,
+  .metis-DynamicMontageSection h5,
+  .metis-DynamicMontageSection h6 {
     font-family: Oswald, sans-serif; }
-  .plurishing-DynamicMontageSection .aside-menu,
-  .plurishing-DynamicMontageSection .main-content-container {
+  .metis-DynamicMontageSection .aside-menu,
+  .metis-DynamicMontageSection .main-content-container {
     width: 100%; }
-  .plurishing-DynamicMontageSection .main-content-container {
+  .metis-DynamicMontageSection .main-content-container {
     overflow: auto;
     padding: 1rem;
     flex: 1; }
-  .plurishing-DynamicMontageSection .aside-menu {
+  .metis-DynamicMontageSection .aside-menu {
     z-index: 3;
     background: rgba(255, 255, 255, 0.8);
     size: 1.6rem; }
-    .plurishing-DynamicMontageSection .aside-menu h2 {
+    .metis-DynamicMontageSection .aside-menu h2 {
       margin: 0; }
-    .plurishing-DynamicMontageSection .aside-menu .header {
+    .metis-DynamicMontageSection .aside-menu .header {
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch;
       height: 1.6rem;
       padding: 1rem; }
-      .plurishing-DynamicMontageSection .aside-menu .header .link {
+      .metis-DynamicMontageSection .aside-menu .header .link {
         flex: 1; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicNav .menu-items {
+  .metis-DynamicMontageSection .metis-DynamicNav .menu-items {
     padding: 0; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .menu-items li {
+    .metis-DynamicMontageSection .metis-DynamicNav .menu-items li {
       list-style: none;
       padding: 0;
       margin: 0; }
   @media (min-width: 768px) {
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .header {
+    .metis-DynamicMontageSection .metis-DynamicNav .header {
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch; }
-      .plurishing-DynamicMontageSection .plurishing-DynamicNav .header .link {
+      .metis-DynamicMontageSection .metis-DynamicNav .header .link {
         flex: 1; } }
-  .plurishing-DynamicMontageSection .plurishing-DynamicNav .menu-container {
+  .metis-DynamicMontageSection .metis-DynamicNav .menu-container {
     overflow: hidden;
     max-height: .0001px;
     transition: all 2s ease;
     padding: 1rem; }
     @media (min-width: 768px) {
-      .plurishing-DynamicMontageSection .plurishing-DynamicNav .menu-container {
+      .metis-DynamicMontageSection .metis-DynamicNav .menu-container {
         max-height: 1000px; } }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .menu-container.active {
+    .metis-DynamicMontageSection .metis-DynamicNav .menu-container.active {
       max-height: 1000px; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu {
+  .metis-DynamicMontageSection .metis-DynamicNav .open-menu {
     background: inherit;
     outline: none;
     border: none; }
     @media (min-width: 768px) {
-      .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu {
+      .metis-DynamicMontageSection .metis-DynamicNav .open-menu {
         display: none; } }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .wrap {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .wrap {
       width: 1rem;
       margin: 0; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .artclose {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .artclose {
       width: 1rem;
       height: 1rem;
       cursor: pointer; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .burgx,
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .burgx2,
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .burgx3 {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .burgx,
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .burgx2,
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .burgx3 {
       position: absolute;
       width: 1rem;
       height: 0.14286rem;
@@ -328,51 +328,51 @@
       -o-transform: rotate(-180deg);
       transform: rotate(-180deg);
       background: #201610; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .burgx2 {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .burgx2 {
       margin-top: 0.45rem; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu .burgx3 {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu .burgx3 {
       margin-top: 0.7rem;
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -o-transform: rotate(180deg);
       transform: rotate(180deg); }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu.active .burgx {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu.active .burgx {
       margin-top: 0.5rem;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu.active .burgx2 {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu.active .burgx2 {
       opacity: 0; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicNav .open-menu.active .burgx3 {
+    .metis-DynamicMontageSection .metis-DynamicNav .open-menu.active .burgx3 {
       margin-top: 0.5rem;
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
   @media (min-width: 768px) {
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate {
       padding-right: 16%;
       padding-left: 20%; } }
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate p {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate p {
     line-height: 1.4rem;
     font-size: 1rem; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .plurishing-WebNoteContentPointer a,
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .plurishing-WebNotePointerPointer a {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .metis-WebNoteContentPointer a,
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .metis-WebNotePointerPointer a {
     color: inherit;
     text-decoration: none;
     text-width: 900; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper {
     padding: 0;
     margin: 0;
     position: relative; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper figcaption {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption {
       margin: 1.6rem;
       color: darkgrey; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene {
       height: 500px;
       position: relative; }
-      .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene figcaption {
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene figcaption {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
@@ -380,49 +380,49 @@
         background: rgba(255, 255, 255, 0.8);
         padding: 1rem;
         font-size: 1rem; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.audio .media-controls, .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.video .media-controls {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.audio .media-controls, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.video .media-controls {
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch;
       justify-content: stretch;
       margin-bottom: 1rem; }
-      .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.audio .media-controls .seek-bar, .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.video .media-controls .seek-bar {
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.audio .media-controls .seek-bar, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.video .media-controls .seek-bar {
         flex: 1; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.audio .transcription-container, .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.video .transcription-container {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.audio .transcription-container, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.video .transcription-container {
       background: darkgrey;
       color: white;
       padding: 1rem;
       max-height: 20rem;
       overflow: auto; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.audio video, .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper.video video {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.audio video, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.video video {
       width: 100%;
       max-height: 30rem; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper iframe {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper iframe {
       width: 100%;
       height: 20rem;
       border: none; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper img,
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .BlockAssetWrapper video {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper img,
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper video {
       max-width: 100%; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .notes-container .notes-wrapper {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper {
     padding: 0; }
-    .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper {
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper {
       list-style: none;
       padding: 0;
       margin: 0;
       margin-bottom: 1.6rem; }
-      .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content {
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content {
         display: flex;
         justify-content: stretch;
         flex-flow: row nowrap; }
-        .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
+        .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
           flex: 1; }
-        .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .plurishing-WebNotePointerPointer {
+        .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .metis-WebNotePointerPointer {
           padding-top: 1rem;
           padding-right: 1rem; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicArticleTemplate .bibliography-container .csl-entry {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .bibliography-container .csl-entry {
     margin-bottom: 1.6rem; }
-  .plurishing-DynamicMontageSection.dynamic-composition.fullscreen figcaption {
+  .metis-DynamicMontageSection.dynamic-composition.fullscreen figcaption {
     position: fixed;
     z-index: 3;
     right: 0;
@@ -431,25 +431,25 @@
     padding: 1rem;
     background: rgba(255, 255, 255, 0.7);
     font-size: 0.6rem; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicFullscreenTemplate .figure-container,
-  .plurishing-DynamicMontageSection .plurishing-DynamicFullscreenTemplate .figure-wrapper,
-  .plurishing-DynamicMontageSection .plurishing-DynamicFullscreenTemplate .figure-wrapper > div {
+  .metis-DynamicMontageSection .metis-DynamicFullscreenTemplate .figure-container,
+  .metis-DynamicMontageSection .metis-DynamicFullscreenTemplate .figure-wrapper,
+  .metis-DynamicMontageSection .metis-DynamicFullscreenTemplate .figure-wrapper > div {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicFullscreenTemplate .BlockAssetWrapper {
+  .metis-DynamicMontageSection .metis-DynamicFullscreenTemplate .BlockAssetWrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
-  .plurishing-DynamicMontageSection .plurishing-DynamicFullscreenTemplate figure {
+  .metis-DynamicMontageSection .metis-DynamicFullscreenTemplate figure {
     margin: 0;
     padding: 0; }
   @media (min-width: 768px) {
-    .plurishing-DynamicMontageSection .aside-menu {
+    .metis-DynamicMontageSection .aside-menu {
       position: absolute;
       z-index: 3;
       top: 0;
@@ -458,9 +458,9 @@
       height: 100%;
       background: rgba(255, 255, 255, 0.8);
       pointer-events: none; }
-      .plurishing-DynamicMontageSection .aside-menu .plurishing-DynamicNav {
+      .metis-DynamicMontageSection .aside-menu .metis-DynamicNav {
         pointer-events: all; }
-    .plurishing-DynamicMontageSection .main-content-container {
+    .metis-DynamicMontageSection .main-content-container {
       position: absolute;
       top: 0;
       left: 0;
@@ -469,9 +469,9 @@
       height: 100%;
       background: white;
       overflow: auto; } }
-  .plurishing-DynamicMontageSection .link,
-  .plurishing-DynamicMontageSection .link:visited,
-  .plurishing-DynamicMontageSection .link:active {
+  .metis-DynamicMontageSection .link,
+  .metis-DynamicMontageSection .link:visited,
+  .metis-DynamicMontageSection .link:active {
     font-family: Oswald, sans-serif;
     text-align: left;
     background: inherit;
@@ -482,9 +482,9 @@
     font-weight: 800;
     transition: all .5s ease;
     color: inherit; }
-    .plurishing-DynamicMontageSection .link:hover,
-    .plurishing-DynamicMontageSection .link:visited:hover,
-    .plurishing-DynamicMontageSection .link:active:hover {
+    .metis-DynamicMontageSection .link:hover,
+    .metis-DynamicMontageSection .link:visited:hover,
+    .metis-DynamicMontageSection .link:active:hover {
       font-weight: 900;
       background: rgba(0, 0, 0, 0.05); }
 
@@ -668,157 +668,157 @@
   src: local("Merriweather Bold"), local("Merriweather-Bold"), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215; }
 
-.plurishing-StaticMontageSection {
+.metis-StaticMontageSection {
   font-family: Merriweather, serif;
   hyphens: none;
   text-rendering: optimizeLegibility; }
-  .plurishing-StaticMontageSection p,
-  .plurishing-StaticMontageSection li,
-  .plurishing-StaticMontageSection blockquote {
+  .metis-StaticMontageSection p,
+  .metis-StaticMontageSection li,
+  .metis-StaticMontageSection blockquote {
     font-size: 0.77rem;
     line-height: 1.386rem;
     text-align: justify; }
-  .plurishing-StaticMontageSection blockquote {
+  .metis-StaticMontageSection blockquote {
     padding: 0.8rem;
     color: white;
     background: darkgrey;
     margin: 0; }
-  .plurishing-StaticMontageSection sup {
+  .metis-StaticMontageSection sup {
     margin: 0;
     padding: 0;
     vertical-align: super;
     line-height: 0; }
-  .plurishing-StaticMontageSection h1,
-  .plurishing-StaticMontageSection h2,
-  .plurishing-StaticMontageSection h3,
-  .plurishing-StaticMontageSection h4,
-  .plurishing-StaticMontageSection h5,
-  .plurishing-StaticMontageSection h6 {
+  .metis-StaticMontageSection h1,
+  .metis-StaticMontageSection h2,
+  .metis-StaticMontageSection h3,
+  .metis-StaticMontageSection h4,
+  .metis-StaticMontageSection h5,
+  .metis-StaticMontageSection h6 {
     color: inherit;
     page-break-inside: avoid; }
-  .plurishing-StaticMontageSection h6 {
+  .metis-StaticMontageSection h6 {
     font-size: 0.847rem; }
-  .plurishing-StaticMontageSection h5 {
+  .metis-StaticMontageSection h5 {
     font-size: 0.9317rem; }
-  .plurishing-StaticMontageSection h4 {
+  .metis-StaticMontageSection h4 {
     font-size: 1.02487rem; }
-  .plurishing-StaticMontageSection h3 {
+  .metis-StaticMontageSection h3 {
     font-size: 1.12736rem; }
-  .plurishing-StaticMontageSection h2 {
+  .metis-StaticMontageSection h2 {
     font-size: 1.24009rem; }
-  .plurishing-StaticMontageSection h1 {
+  .metis-StaticMontageSection h1 {
     font-size: 1.3641rem; }
-  .plurishing-StaticMontageSection .montage-title {
+  .metis-StaticMontageSection .montage-title {
     font-size: 2.78945rem;
     string-set: book-title content(); }
-  .plurishing-StaticMontageSection .montage-subtitle {
+  .metis-StaticMontageSection .montage-subtitle {
     font-size: 2.14573rem; }
-  .plurishing-StaticMontageSection .composition-subtitle {
+  .metis-StaticMontageSection .composition-subtitle {
     font-size: 1.50051rem; }
-  .plurishing-StaticMontageSection .composition-title {
+  .metis-StaticMontageSection .composition-title {
     string-set: section-title content();
     font-size: 1.65056rem; }
-  .plurishing-StaticMontageSection .creators {
+  .metis-StaticMontageSection .creators {
     font-size: 0.847rem;
     font-style: italic; }
-  .plurishing-StaticMontageSection a, .plurishing-StaticMontageSection a:visited, .plurishing-StaticMontageSection a:active {
+  .metis-StaticMontageSection a, .metis-StaticMontageSection a:visited, .metis-StaticMontageSection a:active {
     text-decoration: none;
     color: inherit; }
-  .plurishing-StaticMontageSection img {
+  .metis-StaticMontageSection img {
     max-width: 100%;
     max-height: 100%; }
-  .plurishing-StaticMontageSection figure {
+  .metis-StaticMontageSection figure {
     margin: 0;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.05);
     page-break-inside: avoid; }
-    .plurishing-StaticMontageSection figure table {
+    .metis-StaticMontageSection figure table {
       font-family: 'Oswald', sans-serif;
       font-size: 0.5rem;
       background: white; }
-      .plurishing-StaticMontageSection figure table tr:nth-child(even) {
+      .metis-StaticMontageSection figure table tr:nth-child(even) {
         background-color: #f2f2f2; }
-      .plurishing-StaticMontageSection figure table tr,
-      .plurishing-StaticMontageSection figure table th {
+      .metis-StaticMontageSection figure table tr,
+      .metis-StaticMontageSection figure table th {
         text-align: left; }
-      .plurishing-StaticMontageSection figure table tbody th {
+      .metis-StaticMontageSection figure table tbody th {
         font-weight: 200; }
-  .plurishing-StaticMontageSection figcaption {
+  .metis-StaticMontageSection figcaption {
     font-size: 0.7rem; }
-    .plurishing-StaticMontageSection figcaption h4 {
+    .metis-StaticMontageSection figcaption h4 {
       font-size: 0.77rem; }
-  .plurishing-StaticMontageSection .break-before, .plurishing-StaticMontageSection.break-before {
+  .metis-StaticMontageSection .break-before, .metis-StaticMontageSection.break-before {
     page-break-before: always; }
-  .plurishing-StaticMontageSection .break-after, .plurishing-StaticMontageSection.break-after {
+  .metis-StaticMontageSection .break-after, .metis-StaticMontageSection.break-after {
     page-break-after: always; }
-  .plurishing-StaticMontageSection .no-break-inside, .plurishing-StaticMontageSection.no-break-inside {
+  .metis-StaticMontageSection .no-break-inside, .metis-StaticMontageSection.no-break-inside {
     page-break-inside: avoid; }
-  .plurishing-StaticMontageSection .empty-page {
+  .metis-StaticMontageSection .empty-page {
     min-height: 10rem;
     page-break-after: always;
     page: emptypage; }
-  .plurishing-StaticMontageSection .plurishing-PdfNotePointerPointer,
-  .plurishing-StaticMontageSection .plurishing-EpubNotePointerPointer,
-  .plurishing-StaticMontageSection .plurishing-PdfNoteContentPointer,
-  .plurishing-StaticMontageSection .plurishing-EpubNoteContentPointer,
-  .plurishing-StaticMontageSection .plurishing-PdfNotePointerPointer a,
-  .plurishing-StaticMontageSection .plurishing-EpubNotePointerPointer a,
-  .plurishing-StaticMontageSection .plurishing-PdfNoteContentPointer a,
-  .plurishing-StaticMontageSection .plurishing-EpubNoteContentPointer a {
+  .metis-StaticMontageSection .metis-PdfNotePointerPointer,
+  .metis-StaticMontageSection .metis-EpubNotePointerPointer,
+  .metis-StaticMontageSection .metis-PdfNoteContentPointer,
+  .metis-StaticMontageSection .metis-EpubNoteContentPointer,
+  .metis-StaticMontageSection .metis-PdfNotePointerPointer a,
+  .metis-StaticMontageSection .metis-EpubNotePointerPointer a,
+  .metis-StaticMontageSection .metis-PdfNoteContentPointer a,
+  .metis-StaticMontageSection .metis-EpubNoteContentPointer a {
     text-decoration: none;
     color: inherit; }
-  .plurishing-StaticMontageSection .plurishing-PdfNotePointerPointer,
-  .plurishing-StaticMontageSection .plurishing-EpubNotePointerPointer {
+  .metis-StaticMontageSection .metis-PdfNotePointerPointer,
+  .metis-StaticMontageSection .metis-EpubNotePointerPointer {
     padding-top: 0.5rem;
     padding-right: 0.5rem; }
-  .plurishing-StaticMontageSection .index-container {
+  .metis-StaticMontageSection .index-container {
     margin: 0;
     padding: 0; }
-  .plurishing-StaticMontageSection .index-item {
+  .metis-StaticMontageSection .index-item {
     margin: 0;
     margin-bottom: 0.8rem;
     list-style: none; }
-  .plurishing-StaticMontageSection .index-link:after {
+  .metis-StaticMontageSection .index-link:after {
     font-weight: 200;
     text-decoration: none;
     color: inherit;
     content: leader(".") target-counter(attr(href), page); }
-  .plurishing-StaticMontageSection .notes-wrapper {
+  .metis-StaticMontageSection .notes-wrapper {
     padding: 0;
     margin: 0; }
-  .plurishing-StaticMontageSection .note-wrapper {
+  .metis-StaticMontageSection .note-wrapper {
     margin: 0;
     margin-bottom: 0.5rem;
     padding: 0;
     list-style: none; }
-    .plurishing-StaticMontageSection .note-wrapper .note-content {
+    .metis-StaticMontageSection .note-wrapper .note-content {
       display: flex;
       justify-content: stretch;
       flex-flow: row nowrap;
       margin: 0;
       font-size: 0.7rem;
       padding: 0; }
-      .plurishing-StaticMontageSection .note-wrapper .note-content .plurishing-NotePointerPointer {
-        margin-top: 0.35rem; }
-      .plurishing-StaticMontageSection .note-wrapper .note-content .note-content-container {
+      .metis-StaticMontageSection .note-wrapper .note-content .metis-NotePointerPointer {
+        margin-top: 0.23333rem; }
+      .metis-StaticMontageSection .note-wrapper .note-content .note-content-container {
         flex: 1;
         padding: 0;
         margin: 0; }
-        .plurishing-StaticMontageSection .note-wrapper .note-content .note-content-container p, .plurishing-StaticMontageSection .note-wrapper .note-content .note-content-container ul, .plurishing-StaticMontageSection .note-wrapper .note-content .note-content-container li, .plurishing-StaticMontageSection .note-wrapper .note-content .note-content-container blockquote {
+        .metis-StaticMontageSection .note-wrapper .note-content .note-content-container p, .metis-StaticMontageSection .note-wrapper .note-content .note-content-container ul, .metis-StaticMontageSection .note-wrapper .note-content .note-content-container li, .metis-StaticMontageSection .note-wrapper .note-content .note-content-container blockquote {
           margin: 0;
           padding: 0; }
-  .plurishing-StaticMontageSection .bibliography-container .csl-entry {
+  .metis-StaticMontageSection .bibliography-container .csl-entry {
     margin-bottom: 0.5rem;
     font-size: 0.7rem; }
-  .plurishing-StaticMontageSection .table-of-contents ul {
+  .metis-StaticMontageSection .table-of-contents ul {
     padding: 0; }
-    .plurishing-StaticMontageSection .table-of-contents ul li {
+    .metis-StaticMontageSection .table-of-contents ul li {
       margin: 0;
       padding: 0;
       list-style: none; }
-  .plurishing-StaticMontageSection .table-of-contents a {
+  .metis-StaticMontageSection .table-of-contents a {
     text-decoration: underline; }
-  .plurishing-StaticMontageSection.cover, .plurishing-StaticMontageSection.back-cover {
+  .metis-StaticMontageSection.cover, .metis-StaticMontageSection.back-cover {
     font-family: 'Oswald', sans-serif;
     position: absolute;
     top: 0;
@@ -827,7 +827,7 @@
     height: 100%;
     page: cover; }
     @media screen {
-      .plurishing-StaticMontageSection.cover, .plurishing-StaticMontageSection.back-cover {
+      .metis-StaticMontageSection.cover, .metis-StaticMontageSection.back-cover {
         position: relative;
         display: block;
         overflow: hidden;
@@ -835,27 +835,27 @@
         max-height: 30rem;
         min-height: 30rem;
         padding-top: 50%; } }
-    .plurishing-StaticMontageSection.cover .content, .plurishing-StaticMontageSection.back-cover .content {
+    .metis-StaticMontageSection.cover .content, .metis-StaticMontageSection.back-cover .content {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       padding: 1rem; }
-  .plurishing-StaticMontageSection.cover {
+  .metis-StaticMontageSection.cover {
     page: cover; }
-    .plurishing-StaticMontageSection.cover .content {
+    .metis-StaticMontageSection.cover .content {
       padding-top: 50%;
       text-align: center; }
-  .plurishing-StaticMontageSection.colophon {
+  .metis-StaticMontageSection.colophon {
     page: colophon; }
-  .plurishing-StaticMontageSection.back-cover {
+  .metis-StaticMontageSection.back-cover {
     page: back-cover; }
-  .plurishing-StaticMontageSection .backcover-title {
+  .metis-StaticMontageSection .backcover-title {
     font-size: 2.78945rem;
     margin-bottom: 0.8rem;
     padding: 3rem; }
-  .plurishing-StaticMontageSection .backcover-abstract {
+  .metis-StaticMontageSection .backcover-abstract {
     font-family: Merriweather, serif;
     font-size: 1.02487rem;
     width: 100%;

@@ -11,7 +11,7 @@ const Toc = ({
   compositions,
 }, {t, Link}) => (
   <section
-    className="table-of-contents break-after break-before plurishing-StaticMontageSection">
+    className="table-of-contents break-after break-before metis-StaticMontageSection">
     <h2>{t('Table des matières')}</h2>
     <nav className="index-wrapper">
       <ul className="index-container">

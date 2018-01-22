@@ -39,7 +39,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'plurishing-DynamicArticleTemplate' },
+    { className: 'metis-DynamicArticleTemplate' },
     _react2.default.createElement(
       'h2',
       null,

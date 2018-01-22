@@ -1,7 +1,7 @@
 
 /**
  * This module provides a reusable Inline contextualization for the editor component
- * @module plurishing-backoffice/components/SectionEditor
+ * @module metis-backoffice/components/SectionEditor
  */
 
 import React, {Component} from 'react';

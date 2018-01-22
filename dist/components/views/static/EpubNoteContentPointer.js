@@ -15,7 +15,7 @@ exports.default = function (_ref) {
       noteId = _ref.noteId;
   return _react2.default.createElement(
     "sup",
-    { className: "plurishing-NoteContentPointer plurishing-EpubNoteContentPointer", id: "note-content-pointer-" + noteId },
+    { className: "metis-NoteContentPointer metis-EpubNoteContentPointer", id: "note-content-pointer-" + noteId },
     _react2.default.createElement(
       "a",
       { href: "#note-content-" + noteId },

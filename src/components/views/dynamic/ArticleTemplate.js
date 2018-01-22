@@ -20,7 +20,7 @@ const ArticleTemplate = ({
   t
 }) => {
   return (
-    <div className="plurishing-DynamicArticleTemplate">
+    <div className="metis-DynamicArticleTemplate">
       <h2>{composition.metadata.title}</h2>
       {composition.metadata.subtitle && <h3>{composition.metadata.subtitle}</h3>}
       {

@@ -91,7 +91,7 @@ var FullscreenTemplate = function FullscreenTemplate(_ref2) {
   });
   return _react2.default.createElement(
     'div',
-    { className: 'plurishing-DynamicFullscreenTemplate' },
+    { className: 'metis-DynamicFullscreenTemplate' },
     _react2.default.createElement(
       'h2',
       null,

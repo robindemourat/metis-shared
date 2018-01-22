@@ -16,11 +16,11 @@ const MailingPreview = ({
     }
   } = composition;
   return (
-    <div className="plurishing-backoffice-MailingPreview">
+    <div className="metis-backoffice-MailingPreview">
       <div className="header">
         <div className="row">
           <span className="label">{t('from')}</span>
-          <span className="value">Plurishing team</span>
+          <span className="value">Metis team</span>
         </div>
         <div className="row">
           <span className="label">{t('to')}</span>
@@ -28,7 +28,7 @@ const MailingPreview = ({
         </div>
         <div className="row">
           <span className="label">{t('object')}</span>
-          <span className="value">Plurishing - {title}</span>
+          <span className="value">Metis - {title}</span>
         </div>
       </div>
       <div className="body">

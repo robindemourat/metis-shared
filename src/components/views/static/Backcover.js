@@ -13,7 +13,7 @@ export default ({
   text
 }) => (
   <section
-    className="back-cover break-before plurishing-StaticMontageSection">
+    className="back-cover break-before metis-StaticMontageSection">
     <div
       className="content"
       style={{

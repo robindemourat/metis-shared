@@ -15,7 +15,7 @@ exports.default = function (_ref) {
       noteId = _ref.noteId;
   return _react2.default.createElement(
     "span",
-    { className: "plurishing-WebNotePointerPointer", id: "note-pointer-pointer-" + noteId },
+    { className: "metis-WebNotePointerPointer", id: "note-pointer-pointer-" + noteId },
     _react2.default.createElement(
       "a",
       { href: "#note-content-pointer-" + noteId },

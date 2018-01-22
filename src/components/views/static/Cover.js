@@ -14,7 +14,7 @@ export default ({
   creators = []
 }) => (
   <section
-    className="cover break-after plurishing-StaticMontageSection">
+    className="cover break-after metis-StaticMontageSection">
     <div
       className="content"
       style={{

@@ -1,7 +1,7 @@
 /**
  * This module exports a stateless reusable note pointer component
  * ============
- * @module plurishing-shared/components/renderers/NotePointer
+ * @module metis-shared/components/renderers/NotePointer
  */
 import React from 'react';
 import PropTypes from 'prop-types';

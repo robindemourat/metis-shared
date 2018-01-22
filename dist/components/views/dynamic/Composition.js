@@ -136,7 +136,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        { className: 'plurishing-DynamicMontageSection dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
+        { className: 'metis-DynamicMontageSection dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
         _react2.default.createElement(
           'aside',
           { className: 'aside-menu' },

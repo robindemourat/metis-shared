@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * This module exports a stateless reusable note pointer component
  * ============
- * @module plurishing-shared/components/renderers/NotePointer
+ * @module metis-shared/components/renderers/NotePointer
  */
 var NoteContentPointerContainer = function NoteContentPointerContainer(_ref, _ref2) {
   var noteId = _ref.noteId;

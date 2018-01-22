@@ -20,14 +20,14 @@ export default ({
   profileImageUri
 }) => {
   return (
-    <div className="plurishing-backoffice-FacebookPreview">
+    <div className="metis-backoffice-FacebookPreview">
       <div className="header">
         <div className="left">
           <img className="profile-image" src={profileImageUri} />
         </div>
         <div className="right">
           <div className="row">
-            <h3 className="fb-important">Plurishing</h3>
+            <h3 className="fb-important">Metis</h3>
             <p className="post-info">Publié par Michel · 8 mars 2016 </p>
           </div>
         </div>

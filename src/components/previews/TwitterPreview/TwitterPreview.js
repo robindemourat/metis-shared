@@ -133,8 +133,8 @@ export default ({
   const tweetData = {
     // id_str: 'xxxxx',
     user: {
-      name: 'Plurishing',
-      screen_name: 'plurishing',
+      name: 'Metis',
+      screen_name: 'metis',
       profile_image_url: profileImageUri
     },
     text,
@@ -153,7 +153,7 @@ export default ({
 
 
   return (
-    <div className="plurishing-backoffice-TwitterPreview">
+    <div className="metis-backoffice-TwitterPreview">
       <Tweet
         data={tweetData}
         linkProps={linkProps} />

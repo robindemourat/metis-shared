@@ -128,8 +128,8 @@ exports.default = function (_ref) {
   var tweetData = {
     // id_str: 'xxxxx',
     user: {
-      name: 'Plurishing',
-      screen_name: 'plurishing',
+      name: 'Metis',
+      screen_name: 'metis',
       profile_image_url: profileImageUri
     },
     text: text,
@@ -148,7 +148,7 @@ exports.default = function (_ref) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'plurishing-backoffice-TwitterPreview' },
+    { className: 'metis-backoffice-TwitterPreview' },
     _react2.default.createElement(_reactTweet2.default, {
       data: tweetData,
       linkProps: linkProps })

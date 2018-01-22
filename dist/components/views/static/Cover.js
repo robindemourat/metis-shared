@@ -27,7 +27,7 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'cover break-after plurishing-StaticMontageSection' },
+      className: 'cover break-after metis-StaticMontageSection' },
     _react2.default.createElement(
       'div',
       {

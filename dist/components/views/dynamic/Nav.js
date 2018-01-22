@@ -59,7 +59,7 @@ var Nav = (_temp = _class = function (_Component) {
 
       return _react2.default.createElement(
         'nav',
-        { className: 'plurishing-DynamicNav' },
+        { className: 'metis-DynamicNav' },
         toggable && _react2.default.createElement(
           'h2',
           { className: 'header' },

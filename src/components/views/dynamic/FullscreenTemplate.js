@@ -44,7 +44,7 @@ const FullscreenTemplate = ({
     blocks: [composition.contents.blocks.find(block => block.type === 'atomic')]
   };
   return (
-    <div className="plurishing-DynamicFullscreenTemplate">
+    <div className="metis-DynamicFullscreenTemplate">
       <h2>{composition.metadata.title}</h2>
       {/* main content */}
       <section className="figure-container">

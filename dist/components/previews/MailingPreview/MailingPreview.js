@@ -29,7 +29,7 @@ var MailingPreview = function MailingPreview(_ref, _ref2) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'plurishing-backoffice-MailingPreview' },
+    { className: 'metis-backoffice-MailingPreview' },
     _react2.default.createElement(
       'div',
       { className: 'header' },
@@ -44,7 +44,7 @@ var MailingPreview = function MailingPreview(_ref, _ref2) {
         _react2.default.createElement(
           'span',
           { className: 'value' },
-          'Plurishing team'
+          'Metis team'
         )
       ),
       _react2.default.createElement(
@@ -72,7 +72,7 @@ var MailingPreview = function MailingPreview(_ref, _ref2) {
         _react2.default.createElement(
           'span',
           { className: 'value' },
-          'Plurishing - ',
+          'Metis - ',
           title
         )
       )

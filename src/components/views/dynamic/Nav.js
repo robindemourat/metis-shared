@@ -37,7 +37,7 @@ export default class Nav extends Component {
       toggleMenu
     } = this;
     return (
-      <nav className="plurishing-DynamicNav">
+      <nav className="metis-DynamicNav">
         {toggable && <h2 className="header">
           <Link to={{view: 'home'}}>{montage.metadata.title || 'Montage sans titre'}</Link>
 

@@ -1,11 +1,11 @@
-# plurishing-shared 
+# metis-shared 
 
-Collection of utilities and components being used accross the apps in the `plurishing` experiment.
+Collection of utilities and components being used accross the apps in the `metis` experiment.
 
 ## Installation
 
 ```sh
-npm install plurishing-shared --save
+npm install metis-shared --save
 ```
 
 

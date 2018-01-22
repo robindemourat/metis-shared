@@ -17,7 +17,7 @@ export default ({
   renderingMode = 'epub-fixed',
   styles = '',
 }) => (
-  <html className="plurishing-StandaloneCover">
+  <html className="metis-StandaloneCover">
     <head />
     <body>
       <Cover

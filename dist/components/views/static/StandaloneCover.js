@@ -29,7 +29,7 @@ exports.default = function (_ref) {
       styles = _ref$styles === undefined ? '' : _ref$styles;
   return _react2.default.createElement(
     'html',
-    { className: 'plurishing-StandaloneCover' },
+    { className: 'metis-StandaloneCover' },
     _react2.default.createElement('head', null),
     _react2.default.createElement(
       'body',

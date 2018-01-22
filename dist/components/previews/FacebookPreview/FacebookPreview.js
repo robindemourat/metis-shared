@@ -26,7 +26,7 @@ exports.default = function (_ref) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'plurishing-backoffice-FacebookPreview' },
+    { className: 'metis-backoffice-FacebookPreview' },
     _react2.default.createElement(
       'div',
       { className: 'header' },
@@ -44,7 +44,7 @@ exports.default = function (_ref) {
           _react2.default.createElement(
             'h3',
             { className: 'fb-important' },
-            'Plurishing'
+            'Metis'
           ),
           _react2.default.createElement(
             'p',

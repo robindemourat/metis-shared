@@ -28,7 +28,7 @@ var Toc = function Toc(_ref, _ref2) {
   return _react2.default.createElement(
     'section',
     {
-      className: 'table-of-contents break-after break-before plurishing-StaticMontageSection' },
+      className: 'table-of-contents break-after break-before metis-StaticMontageSection' },
     _react2.default.createElement(
       'h2',
       null,
