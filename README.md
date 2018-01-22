@@ -2,6 +2,8 @@
 
 Collection of utilities and components being used accross the apps in the `metis` experiment.
 
+![Metis shared screencast](https://github.com/robindemourat/metis-shared/blob/master/screencast.gif?raw=true)
+
 ## Installation
 
 ```sh
