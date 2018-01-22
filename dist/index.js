@@ -48,6 +48,8 @@ exports.default = {
       micro: {
         MicropublicationMail: require('./components/views/micro/MicropublicationMail').default
       }
-    }
-  }
+    },
+    renderer: require('./components/renders/Renderer.js')
+  },
+  constants: require('./constants').default
 };
