@@ -108,6 +108,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
           montage = _props.montage,
           assets = _props.assets,
           resources = _props.resources,
+          previewMode = _props.previewMode,
           _state = this.state,
           citationData = _state.citationData,
           citationItems = _state.citationItems,
@@ -136,7 +137,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
       }, {});
       return _react2.default.createElement(
         'div',
-        { className: 'metis-DynamicMontageSection dynamic-composition ' + parameters.template, id: 'composition-' + composition._id },
+        { className: 'metis-DynamicMontageSection dynamic-composition ' + parameters.template + ' ' + (previewMode ? 'preview-mode' : ''), id: 'composition-' + composition._id },
         _react2.default.createElement(
           'aside',
           { className: 'aside-menu' },

@@ -114,17 +114,17 @@ var BlockAssetWrapper = function (_Component) {
             null,
             _react2.default.createElement(
               'h4',
-              null,
+              { className: 'figure-title' },
               contextualization.title || resource.metadata.name
             ),
-            _react2.default.createElement(
+            contextualization.legend || resource.metadata.description.length ? _react2.default.createElement(
               'p',
               null,
               contextualization.legend || resource.metadata.description
-            ),
+            ) : null,
             resource.metadata.creators && resource.metadata.creators.length ? _react2.default.createElement(
               'p',
-              null,
+              { className: 'creator-container' },
               resource.metadata.creators.map(function (creator, index) {
                 return _react2.default.createElement(
                   'i',

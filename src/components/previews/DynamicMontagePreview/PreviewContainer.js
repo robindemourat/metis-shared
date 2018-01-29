@@ -82,7 +82,9 @@ class PreviewContainer extends Component {
         return (
           <Home
             compositions={compositions}
-            montage={montage} />
+            montage={montage}
+            previewMode={true}
+          />
         );
       case 'composition':
         // const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
@@ -94,7 +96,9 @@ class PreviewContainer extends Component {
             composition={thatComposition}
             resources={resources}
             montage={montage}
-            assets={assets} />
+            assets={assets}
+            previewMode={true}
+          />
         );
 
       default:

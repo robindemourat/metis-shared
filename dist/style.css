@@ -286,7 +286,7 @@
     max-height: .0001px;
     padding: 1rem;
     transition: all 2s ease;
-    opacity: 0.01; }
+    opacity: .01; }
     .metis-DynamicMontageSection .metis-DynamicNav .menu-container.active {
       max-height: 1000px;
       opacity: 1; }
@@ -336,6 +336,30 @@
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg); }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h4 {
+    font-size: 1.76rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h3 {
+    font-size: 1.92rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h2 {
+    font-size: 2.08rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h1 {
+    font-size: 2.24rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h1, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h2, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h3, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h4 {
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-subtitle {
+    margin-top: 0;
+    font-size: 2.08rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-subtitle,
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-creators {
+    margin-left: 1.6rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-title {
+    margin-bottom: 0;
+    font-size: 2.56rem; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-creators {
+    font-style: italic;
+    font-size: 1rem;
+    color: darkgrey; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate p {
     font-size: 1rem;
     line-height: 1.4rem; }
@@ -347,10 +371,22 @@
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper {
     position: relative;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    padding: .5rem;
+    transition: all 1s ease;
+    background: rgba(0, 0, 0, 0.05); }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper:hover {
+      background: rgba(0, 0, 0, 0.1); }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption {
       margin: 1.6rem;
       color: darkgrey; }
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .figure-title {
+        margin-bottom: 0;
+        font-size: 1.6rem; }
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .creator-container {
+        margin: 0; }
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .creator {
+        font-size: 0.7rem; }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.mobiliscene {
       position: relative;
       height: 500px; }
@@ -386,24 +422,56 @@
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper img,
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper video {
       max-width: 100%; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery figure {
+      margin: 1.6rem; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery ul {
+      display: flex;
+      padding: 0;
+      flex-flow: row nowrap; }
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery ul li {
+        padding: 0;
+        list-style-type: none; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper .transcription {
+      font-size: 1rem;
+      font-style: italic; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper button {
+      font-family: Oswald, sans-serif;
+      margin-right: .3rem;
+      cursor: pointer;
+      color: white;
+      border: none;
+      outline: none;
+      background: darkgrey; }
+      .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper button:hover, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper button.active {
+        background: black; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper {
       margin: 0;
-      margin-bottom: 1.6rem;
       padding: 0;
       list-style: none; }
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content {
         display: flex;
         justify-content: stretch;
-        flex-flow: row nowrap; }
+        flex-flow: row nowrap;
+        font-size: 0.6rem; }
         .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
-          flex: 1; }
+          flex: 1;
+          font-size: 0.6rem; }
+          .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container p {
+            font-size: 0.6rem;
+            margin-bottom: 0.3rem; }
         .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .metis-WebNotePointerPointer {
           padding-top: 1rem;
-          padding-right: 1rem; }
+          padding-right: 1rem;
+          cursor: pointer; }
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate .bibliography-container h3 {
+    font-size: 1.6rem; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .bibliography-container .csl-entry {
-    margin-bottom: 1.6rem; }
+    font-size: 0.7rem;
+    margin: 0;
+    margin-bottom: 0.5rem; }
   .metis-DynamicMontageSection.dynamic-composition.fullscreen figcaption {
     font-size: 0.6rem;
     position: fixed;
@@ -448,12 +516,17 @@
     .metis-DynamicMontageSection .link:active:hover {
       font-weight: 900;
       background: rgba(0, 0, 0, 0.05); }
+  .metis-DynamicMontageSection .creators-info-container,
+  .metis-DynamicMontageSection .bibliography-container {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.6rem; }
 
 /**
  * Responsive
  */
 @media (min-width: 768px) {
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .aside-menu {
+  .metis-DynamicMontageSection:not(.preview-mode) .aside-menu {
     position: absolute;
     z-index: 3;
     top: 0;
@@ -462,9 +535,9 @@
     height: 100%;
     pointer-events: none;
     background: rgba(255, 255, 255, 0.8); }
-    section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .aside-menu .metis-DynamicNav {
+    .metis-DynamicMontageSection:not(.preview-mode) .aside-menu .metis-DynamicNav {
       pointer-events: all; }
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .main-content-container {
+  .metis-DynamicMontageSection:not(.preview-mode) .main-content-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -473,21 +546,23 @@
     height: 100%;
     padding-left: 20%;
     background: white; }
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .metis-DynamicNav .header {
+  .metis-DynamicMontageSection:not(.preview-mode) .metis-DynamicNav .header {
     display: flex;
+    height: unset;
     flex-flow: row nowrap;
     align-items: stretch; }
-    section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .metis-DynamicNav .header .link {
+    .metis-DynamicMontageSection:not(.preview-mode) .metis-DynamicNav .header .link {
       flex: 1; }
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .menu-container {
-    opacity: 1;
-    max-height: 1000px; }
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .open-menu {
+  .metis-DynamicMontageSection:not(.preview-mode) .menu-container {
+    max-height: 1000px !important;
+    opacity: 1 !important; }
+  .metis-DynamicMontageSection:not(.preview-mode) .open-menu {
     display: none; }
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection .metis-DynamicArticleTemplate {
+  .metis-DynamicMontageSection:not(.preview-mode) .metis-DynamicArticleTemplate {
     padding-right: 16%;
     padding-left: 20%; } }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .aside-menu,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .aside-menu,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .aside-menu {
   position: absolute;
@@ -498,10 +573,12 @@
   height: 100%;
   pointer-events: none;
   background: rgba(255, 255, 255, 0.8); }
+  .metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .aside-menu .metis-DynamicNav,
   .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .aside-menu .metis-DynamicNav,
   .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .aside-menu .metis-DynamicNav {
     pointer-events: all; }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .main-content-container,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .main-content-container,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .main-content-container {
   position: absolute;
@@ -513,32 +590,64 @@
   padding-left: 20%;
   background: white; }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .metis-DynamicNav .header,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .metis-DynamicNav .header,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .metis-DynamicNav .header {
   display: flex;
+  height: unset;
   flex-flow: row nowrap;
   align-items: stretch; }
+  .metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .metis-DynamicNav .header .link,
   .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .metis-DynamicNav .header .link,
   .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .metis-DynamicNav .header .link {
     flex: 1; }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .menu-container,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .menu-container,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .menu-container {
-  opacity: 1;
-  max-height: 1000px; }
+  max-height: 1000px !important;
+  opacity: 1 !important; }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .open-menu,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .open-menu,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .open-menu {
   display: none; }
 
+.metis-shared-DynamicMontagePreview.tablet .metis-DynamicMontageSection .metis-DynamicArticleTemplate,
 .metis-shared-DynamicMontagePreview.widescreen .metis-DynamicMontageSection .metis-DynamicArticleTemplate,
 .metis-shared-DynamicMontagePreview.fullhd .metis-DynamicMontageSection .metis-DynamicArticleTemplate {
   padding-right: 16%;
   padding-left: 20%; }
 
+.zoomable-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.zoomable-wrapper {
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center; }
+
+.close-zoomable {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background: none; }
+
 .ReactModalPortal {
   position: fixed;
   z-index: 3; }
+  .ReactModalPortal img {
+    max-width: 100%;
+    max-height: 100%; }
 
 /* cyrillic */
 @font-face {

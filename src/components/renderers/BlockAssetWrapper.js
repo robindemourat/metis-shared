@@ -86,16 +86,16 @@ class BlockAssetWrapper extends Component {
             renderingMode={renderingMode} />
 
           <figcaption>
-            {<h4>
+            {<h4 className="figure-title">
               {contextualization.title || resource.metadata.name}
             </h4>}
-            {<p>
+            {contextualization.legend || resource.metadata.description.length ? <p>
               {contextualization.legend || resource.metadata.description}
             </p>
-            }
+            : null}
             {
               resource.metadata.creators && resource.metadata.creators.length ?
-                <p>
+                <p className="creator-container">
                   {
                   resource.metadata.creators.map((creator, index) => (
                     <i key={index} className="creator">

@@ -5,8 +5,9 @@ import Nav from './Nav';
 export default ({
   montage,
   compositions,
+  previewMode
 }) => (
-  <section className="metis-DynamicMontageSection">
+  <section className={`metis-DynamicMontageSection ${previewMode ? 'preview-mode': ''}`}>
     <aside className="aside-menu">
       <Nav montage={montage} compositions={compositions} />
     </aside>

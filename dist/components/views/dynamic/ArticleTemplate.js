@@ -42,17 +42,17 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
     { className: 'metis-DynamicArticleTemplate' },
     _react2.default.createElement(
       'h2',
-      null,
+      { className: 'composition-title' },
       composition.metadata.title
     ),
     composition.metadata.subtitle && _react2.default.createElement(
       'h3',
-      null,
+      { className: 'composition-subtitle' },
       composition.metadata.subtitle
     ),
     composition.metadata.creators.length ? _react2.default.createElement(
       'div',
-      { className: 'creators' },
+      { className: 'composition-creators' },
       composition.metadata.creators.map(function (creator, index) {
         return _react2.default.createElement(
           'span',

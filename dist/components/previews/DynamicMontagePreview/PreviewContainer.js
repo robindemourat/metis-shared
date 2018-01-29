@@ -109,7 +109,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
         case 'home':
           return _react2.default.createElement(_Home2.default, {
             compositions: compositions,
-            montage: montage });
+            montage: montage,
+            previewMode: true });
         case 'composition':
           // const composition = compositions[montage.data.compositions[+locationIndex].target_composition_id];
           var thatComposition = compositions.find(function (composition) {
@@ -121,7 +122,8 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             composition: thatComposition,
             resources: resources,
             montage: montage,
-            assets: assets });
+            assets: assets,
+            previewMode: true });
 
         default:
           return null;

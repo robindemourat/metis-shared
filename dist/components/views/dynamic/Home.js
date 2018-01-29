@@ -16,10 +16,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (_ref) {
   var montage = _ref.montage,
-      compositions = _ref.compositions;
+      compositions = _ref.compositions,
+      previewMode = _ref.previewMode;
   return _react2.default.createElement(
     'section',
-    { className: 'metis-DynamicMontageSection' },
+    { className: 'metis-DynamicMontageSection ' + (previewMode ? 'preview-mode' : '') },
     _react2.default.createElement(
       'aside',
       { className: 'aside-menu' },

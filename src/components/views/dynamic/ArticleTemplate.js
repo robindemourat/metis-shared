@@ -21,11 +21,11 @@ const ArticleTemplate = ({
 }) => {
   return (
     <div className="metis-DynamicArticleTemplate">
-      <h2>{composition.metadata.title}</h2>
-      {composition.metadata.subtitle && <h3>{composition.metadata.subtitle}</h3>}
+      <h2 className="composition-title">{composition.metadata.title}</h2>
+      {composition.metadata.subtitle && <h3 className="composition-subtitle">{composition.metadata.subtitle}</h3>}
       {
       composition.metadata.creators.length ?
-        <div className="creators">
+        <div className="composition-creators">
           {
           composition.metadata.creators.map((creator, index) => (
             <span className="creator" key={index}>

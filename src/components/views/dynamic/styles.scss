@@ -358,19 +358,6 @@ $gutter-medium: $gutter-small * 1.6;
 $color-background: white;
 
 
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
-
-// Small tablets (portrait view)
-$screen-md-min: 768px;
-
-// Tablets and small desktops
-$screen-lg-min: 992px;
-
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
-
 .metis-DynamicMontageSection
 {
     font-family: Merriweather, serif;
@@ -469,12 +456,14 @@ $screen-xl-min: 1200px;
             padding: $gutter-small;
 
             transition: all 2s ease;
-            opacity: 0.01;
+
+            opacity: .01;
 
 
             &.active
             {
                 max-height: 1000px;
+
                 opacity: 1;
             }
         }
@@ -564,6 +553,42 @@ $screen-xl-min: 1200px;
     }
     .metis-DynamicArticleTemplate
     {
+        h4{
+            font-size: $font-size-2 * 1.1;
+        }
+        h3{
+
+            font-size: $font-size-2 * 1.2;
+        }
+        h2{
+            font-size: $font-size-2 * 1.3;
+        }
+
+        h1{
+            font-size: $font-size-2 * 1.4;
+        }
+        h1,h2,h3,h4{
+            margin-top: $gutter-medium;
+            margin-bottom: $gutter-medium;
+        }
+
+        .composition-subtitle{
+            margin-top: 0;
+            font-size: $font-size-2 * 1.3;
+        }
+        .composition-subtitle,
+        .composition-creators{
+            margin-left: $gutter-medium;            
+        }
+        .composition-title{
+            margin-bottom: 0;
+            font-size: $font-size-2 * 1.6;
+        }
+        .composition-creators{
+            font-style: italic;
+            font-size: $font-size-1;
+            color: darkgrey;
+        }
         p
         {
             font-size: $font-size-1;
@@ -590,12 +615,35 @@ $screen-xl-min: 1200px;
 
             margin: 0;
             padding: 0;
+            padding: .5rem;
+
+            transition: all 1s ease;
+
+            background: rgba(0,0,0,.05);
+            &:hover
+            {
+                background: rgba(0,0,0,.1);
+            }
 
             figcaption
             {
                 margin: $gutter-medium;
 
                 color: darkgrey;
+
+                .figure-title
+                {
+                    margin-bottom: 0;
+                    font-size: $font-size-2;
+                }
+                .creator-container
+                {
+                    margin: 0;
+                }
+                .creator
+                {
+                    font-size: $font-size-1 * .7;
+                }
             }
             &.mobiliscene
             {
@@ -662,6 +710,51 @@ $screen-xl-min: 1200px;
             {
                 max-width: 100%;
             }
+            &.imagesgallery
+            {
+                figure
+                {
+                    margin: $gutter-medium;
+                }
+                ul
+                {
+                    display: flex;
+
+                    padding: 0;
+
+                    flex-flow: row nowrap;
+                    li
+                    {
+                        padding: 0;
+
+                        list-style-type: none;
+                    }
+                }
+            }
+            .transcription
+            {
+                font-size: $font-size-1;
+                font-style: italic;
+            }
+
+            button
+            {
+                font-family: Oswald, sans-serif;
+
+                margin-right: .3rem;
+
+                cursor: pointer;
+
+                color: white;
+                border: none;
+                outline: none;
+                background: darkgrey;
+                &:hover,
+                &.active
+                {
+                    background: black;
+                }
+            }
         }
 
         .notes-container
@@ -669,10 +762,10 @@ $screen-xl-min: 1200px;
             .notes-wrapper
             {
                 padding: 0;
+                margin: 0;
                 .note-wrapper
                 {
                     margin: 0;
-                    margin-bottom: $gutter-medium;
                     padding: 0;
 
                     list-style: none;
@@ -682,15 +775,24 @@ $screen-xl-min: 1200px;
 
                         justify-content: stretch;
                         flex-flow: row nowrap;
+                        font-size: $font-size-1*.6;
+
                         .note-content-container
                         {
                             flex: 1;
+                            font-size: $font-size-1*.6;
+                            p{
+                            font-size: $font-size-1*.6;
+                            margin-bottom: $gutter-small * .3;
+                            }
                         }
                         .metis-WebNotePointerPointer
                         {
                             padding-top: $gutter-small;
                             padding-right: $gutter-small;
+                            cursor: pointer;
                         }
+
                     }
                 }
             }
@@ -698,9 +800,13 @@ $screen-xl-min: 1200px;
 
         .bibliography-container
         {
-            .csl-entry
-            {
-                margin-bottom: $gutter-medium;
+            h3{
+                font-size: $font-size-2;
+            }
+            .csl-entry{
+                font-size: $font-size-1 * .7;
+                margin: 0;
+                margin-bottom: $gutter-small * .5;
             }
         }
     }
@@ -784,6 +890,15 @@ $screen-xl-min: 1200px;
             background: rgba(0,0,0,.05);
         }
     }
+
+
+
+    .creators-info-container,
+    .bibliography-container{
+        padding: $gutter-small;
+        background: rgba(0,0,0,.05);
+        margin-bottom: $gutter-medium;
+    }
 }
 
 
@@ -793,86 +908,124 @@ $screen-xl-min: 1200px;
 
 @mixin responsive
 {
+    .aside-menu
+    {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
 
-        .aside-menu
-        {
-            position: absolute;
-            z-index: 3;
-            top: 0;
-            left: 0;
+        width: $dimension-navwidth-default;
+        height: 100%;
 
-            width: $dimension-navwidth-default;
-            height: 100%;
+        pointer-events: none;
 
-            pointer-events: none;
-
-            background: rgba(255,255,255,.8);
-            .metis-DynamicNav
-            {
-                pointer-events: all;
-            }
-        }
-
-        .main-content-container
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            overflow: auto;
-
-            width: 100%;
-            height: 100%;
-            padding-left: $dimension-navwidth-default;
-
-            background: $color-background;   
-        }
-
+        background: rgba(255,255,255,.8);
         .metis-DynamicNav
         {
-            .header
-            {
-                display: flex;
+            pointer-events: all;
+        }
+    }
 
-                flex-flow: row nowrap;
-                align-items: stretch;
-                .link
-                {
-                    flex: 1;
-                }
+    .main-content-container
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+        padding-left: $dimension-navwidth-default;
+
+        background: $color-background;
+    }
+
+    .metis-DynamicNav
+    {
+        .header
+        {
+            display: flex;
+
+            height: unset;
+
+            flex-flow: row nowrap;
+            align-items: stretch;
+            .link
+            {
+                flex: 1;
             }
         }
+    }
 
-        .menu-container
-        {
-            opacity: 1;
-            max-height: 1000px;
-        }
+    .menu-container
+    {
+        max-height: 1000px!important;
 
-        .open-menu
-        {
-            display: none;
-        }
+        opacity: 1!important;
+    }
 
-        .metis-DynamicArticleTemplate
-        {
-            padding-right: $dimension-navwidth-default * .8;
-            padding-left: $dimension-navwidth-default * 1;
-        }
+    .open-menu
+    {
+        display: none;
+    }
+
+    .metis-DynamicArticleTemplate
+    {
+        padding-right: $dimension-navwidth-default * .8;
+        padding-left: $dimension-navwidth-default * 1;
+    }
 }
 
-@media (min-width: 768px){
-  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection{
-    @include responsive;
-  }
+@media (min-width: 768px)
+{
+    .metis-DynamicMontageSection:not(.preview-mode)
+    {
+        @include responsive;
+    }
 }
 
+.metis-shared-DynamicMontagePreview.tablet,
 .metis-shared-DynamicMontagePreview.widescreen,
 .metis-shared-DynamicMontagePreview.fullhd
 {
-  .metis-DynamicMontageSection{
-      @include responsive;
-  }
+    .metis-DynamicMontageSection
+    {
+        @include responsive;
+    }
+}
+
+.zoomable-image-container
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.zoomable-wrapper
+{
+    display: flex;
+
+    background: rgba(0,0,0,.8);
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.close-zoomable
+{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    cursor: pointer;
+
+    color: white;
+    border: none;
+    background: none;
 }
 
 
@@ -880,4 +1033,10 @@ $screen-xl-min: 1200px;
 {
     position: fixed;
     z-index: 3;
+
+    img
+    {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
