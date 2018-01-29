@@ -77,7 +77,7 @@ const ArticleTemplate = ({
         </section>
       </section> : null}
       {Object.keys(citationItems).length ? <section className="bibliography-container no-break-inside">
-        <h3>{t('Bibliographie')}</h3>
+        <h3>{t('Références')}</h3>
         <Bibliography
           style={citationStyle}
           locale={citationLocale}

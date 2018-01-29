@@ -722,6 +722,7 @@
     &.back-cover
     {
         page: back-cover;
+        page-break-before: left;// ensure an even pages number
     }
 
     .backcover-title{

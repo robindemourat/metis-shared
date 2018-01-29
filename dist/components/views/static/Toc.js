@@ -58,7 +58,7 @@ var Toc = function Toc(_ref, _ref2) {
               Link,
               { className: 'index-link', to: { view: 'composition', index: index } },
               composition.metadata.title,
-              composition.metadata.creators && composition.metadata.creators.length && ' — ',
+              composition.metadata.creators && composition.metadata.creators.length ? ' — ' : '',
               buildAuthors(composition.metadata.creators)
             )
           );
