@@ -26,6 +26,11 @@
       .metis-backoffice-FacebookPreview .header .right .post-info {
         color: #90949c; }
 
+.metis-backoffice-TwitterPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
+
 .metis-backoffice-MailingPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
@@ -48,11 +53,6 @@
         padding-left: 1rem; }
   .metis-backoffice-MailingPreview .body {
     margin-top: 1rem; }
-
-.metis-backoffice-TwitterPreview {
-  border: 1px solid #dddfe2;
-  border-radius: 4px;
-  padding: 12px 12px 0; }
 
 /* cyrillic */
 @font-face {
