@@ -163,7 +163,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
       if (assets && compositions && resources && montage) {
         return _react2.default.createElement(
           'section',
-          { className: className },
+          { className: 'metis-shared-DynamicMontagePreview ' + className },
           _react2.default.createElement(
             'section',
             null,

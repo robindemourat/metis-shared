@@ -133,7 +133,7 @@ class PreviewContainer extends Component {
     const className = computeClass(containerWidth, containerHeight);
     if (assets && compositions && resources && montage) {
       return (
-        <section className={className}>
+        <section className={`metis-shared-DynamicMontagePreview ${className}`}>
           <section>
             {renderView()}
           </section>

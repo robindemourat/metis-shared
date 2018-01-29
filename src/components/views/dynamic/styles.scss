@@ -1,188 +1,359 @@
 /* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/Svfm3D5QBEfoZ_ZQasqgUoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-style: normal;
+
+    src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/Svfm3D5QBEfoZ_ZQasqgUoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0400-045F,
+    U+0490-0491,
+    U+04B0-04B1,
+    U+2116;
 }
 /* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/s6Iy20priLS4loU5HhjUs4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-style: normal;
+
+    src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/s6Iy20priLS4loU5HhjUs4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0102-0103,
+    U+0110-0111,
+    U+1EA0-1EF9,
+    U+20AB;
 }
 /* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/GwZ_PiN1Aind9Eyjp868E4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-style: normal;
+
+    src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/GwZ_PiN1Aind9Eyjp868E4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0100-024F,
+    U+0259,
+    U+1E00-1EFF,
+    U+20A0-20AB,
+    U+20AD-20CF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/gov12z69psR1Uu7UJEfiUpBw1xU1rKptJj_0jans920.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-style: normal;
+
+    src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/gov12z69psR1Uu7UJEfiUpBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2122,
+    U+2212,
+    U+2215;
 }
 /* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/C6GGSmqIX4ribdvhAcF3zX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/C6GGSmqIX4ribdvhAcF3zX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+    unicode-range: U+0400-045F,
+    U+0490-0491,
+    U+04B0-04B1,
+    U+2116;
 }
 /* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/Z47oc0BtjIgiXLu7VsCGjX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/Z47oc0BtjIgiXLu7VsCGjX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+    unicode-range: U+0102-0103,
+    U+0110-0111,
+    U+1EA0-1EF9,
+    U+20AB;
 }
 /* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/Qw6_9HvXRQGg5mMbFR3Phn-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/Qw6_9HvXRQGg5mMbFR3Phn-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+    unicode-range: U+0100-024F,
+    U+0259,
+    U+1E00-1EFF,
+    U+20A0-20AB,
+    U+20AD-20CF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2122,
+    U+2212,
+    U+2215;
 }
 /* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/smkSb2csQFrK-wxLDSe5R4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/smkSb2csQFrK-wxLDSe5R4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0400-045F,
+    U+0490-0491,
+    U+04B0-04B1,
+    U+2116;
 }
 /* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/69aXBpgQONjr_rHWADjBuYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/69aXBpgQONjr_rHWADjBuYX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0102-0103,
+    U+0110-0111,
+    U+1EA0-1EF9,
+    U+20AB;
 }
 /* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/dI-qzxlKVQA6TUC5RKSb34X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/dI-qzxlKVQA6TUC5RKSb34X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+    unicode-range: U+0100-024F,
+    U+0259,
+    U+1E00-1EFF,
+    U+20A0-20AB,
+    U+20AD-20CF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2122,
+    U+2212,
+    U+2215;
 }
 
 /* cyrillic-ext */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EA7aC6SjiAOpAWOKfJDfVRY.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EA7aC6SjiAOpAWOKfJDfVRY.woff2) format('woff2');
+    unicode-range: U+0460-052F,
+    U+1C80-1C88,
+    U+20B4,
+    U+2DE0-2DFF,
+    U+A640-A69F,
+    U+FE2E-FE2F;
 }
 /* cyrillic */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EBdwxCXfZpKo5kWAx_74bHs.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EBdwxCXfZpKo5kWAx_74bHs.woff2) format('woff2');
+    unicode-range: U+0400-045F,
+    U+0490-0491,
+    U+04B0-04B1,
+    U+2116;
 }
 /* vietnamese */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EPgrLsWo7Jk1KvZser0olKY.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EPgrLsWo7Jk1KvZser0olKY.woff2) format('woff2');
+    unicode-range: U+0102-0103,
+    U+0110-0111,
+    U+1EA0-1EF9,
+    U+20AB;
 }
 /* latin-ext */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EIjoYw3YTyktCCer_ilOlhE.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EIjoYw3YTyktCCer_ilOlhE.woff2) format('woff2');
+    unicode-range: U+0100-024F,
+    U+0259,
+    U+1E00-1EFF,
+    U+20A0-20AB,
+    U+20AD-20CF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/RFda8w1V0eDZheqfcyQ4EBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2122,
+    U+2212,
+    U+2215;
 }
 /* cyrillic-ext */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nlPfeBX0b_nUXzRxYCltCF0.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nlPfeBX0b_nUXzRxYCltCF0.woff2) format('woff2');
+    unicode-range: U+0460-052F,
+    U+1C80-1C88,
+    U+20B4,
+    U+2DE0-2DFF,
+    U+A640-A69F,
+    U+FE2E-FE2F;
 }
 /* cyrillic */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6noS3435hDhFFCA6hA_HcfZQ.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6noS3435hDhFFCA6hA_HcfZQ.woff2) format('woff2');
+    unicode-range: U+0400-045F,
+    U+0490-0491,
+    U+04B0-04B1,
+    U+2116;
 }
 /* vietnamese */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nhWzg2zaPmhUBtv9M77358I.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nhWzg2zaPmhUBtv9M77358I.woff2) format('woff2');
+    unicode-range: U+0102-0103,
+    U+0110-0111,
+    U+1EA0-1EF9,
+    U+20AB;
 }
 /* latin-ext */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nkqWMeizceScn2Xpn1ZpsKI.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nkqWMeizceScn2Xpn1ZpsKI.woff2) format('woff2');
+    unicode-range: U+0100-024F,
+    U+0259,
+    U+1E00-1EFF,
+    U+20A0-20AB,
+    U+20AD-20CF,
+    U+2C60-2C7F,
+    U+A720-A7FF;
 }
 /* latin */
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nshHwsiXhsDb0smKjAA7Bek.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2122,
+    U+2212,
+    U+2215;
 }
 
 $dimension-navwidth-default: 20%;
 $gutter-small: 1rem;
-
 $font-size-1: 1rem;
 $font-size-2: $font-size-1 * 1.6;
-
-
 $gutter-medium: $gutter-small * 1.6;
 $color-background: white;
 
@@ -200,41 +371,6 @@ $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 
 
-@mixin sm
-{
-    @media (min-width: #{$screen-sm-min})
-    {
-        @content;
-    }
-}
-
-// Medium devices
-@mixin md
-{
-    @media (min-width: #{$screen-md-min})
-    {
-        @content;
-    }
-}
-
-// Large devices
-@mixin lg
-{
-    @media (min-width: #{$screen-lg-min})
-    {
-        @content;
-    }
-}
-
-// Extra large devices
-@mixin xl
-{
-    @media (min-width: #{$screen-xl-min})
-    {
-        @content;
-    }
-}
-
 .metis-DynamicMontageSection
 {
     font-family: Merriweather, serif;
@@ -244,6 +380,7 @@ $screen-xl-min: 1200px;
     left: 0;
 
     display: flex;
+    overflow: hidden;
 
     width: 100%;
     height: 100%;
@@ -251,7 +388,6 @@ $screen-xl-min: 1200px;
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: stretch;
-    overflow: hidden;
 
     *
     {
@@ -289,6 +425,7 @@ $screen-xl-min: 1200px;
         z-index: 3;
 
         background: rgba(255,255,255,.8);
+
         size: $font-size-2;
         h2
         {
@@ -298,39 +435,29 @@ $screen-xl-min: 1200px;
         {
             display: flex;
 
+            height: $font-size-2;
+            padding: $gutter-small;
+
             flex-flow: row nowrap;
             align-items: stretch;
-            height: $font-size-2;
             .link
             {
                 flex: 1;
             }
-            padding: $gutter-small;
         }
     }
 
     .metis-DynamicNav
     {
-        .menu-items{
-          padding: 0;
-          li{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-          }
-        }
-        @include md
+        .menu-items
         {
-            .header
+            padding: 0;
+            li
             {
-                display: flex;
+                margin: 0;
+                padding: 0;
 
-                flex-flow: row nowrap;
-                align-items: stretch;
-                .link
-                {
-                    flex: 1;
-                }
+                list-style: none;
             }
         }
 
@@ -339,14 +466,10 @@ $screen-xl-min: 1200px;
             overflow: hidden;
 
             max-height: .0001px;
-
-            transition: all 2s ease;
             padding: $gutter-small;
 
-            @include md
-            {
-                max-height: 1000px;
-            }
+            transition: all 2s ease;
+
             &.active
             {
                 max-height: 1000px;
@@ -355,14 +478,9 @@ $screen-xl-min: 1200px;
 
         .open-menu
         {
-            @include md
-            {
-                display: none;
-            }
-
-            background: inherit;
-            outline: none;
             border: none;
+            outline: none;
+            background: inherit;
 
             .wrap
             {
@@ -443,116 +561,145 @@ $screen-xl-min: 1200px;
     }
     .metis-DynamicArticleTemplate
     {
-      @include md
-      {
-
-      padding-right: $dimension-navwidth-default * .8;
-      padding-left: $dimension-navwidth-default * 1;
-      }
-
-      p{
-        line-height: $font-size-1 * 1.4;
-        font-size: $font-size-1;
-      }
-
-      .metis-WebNoteContentPointer,
-      .metis-WebNotePointerPointer {
-        a{
-          color: inherit;
-          text-decoration: none;
-          text-width: 900;
-        }
-      }
-
-
-      .BlockAssetWrapper{
-        padding: 0;
-        margin: 0;
-        position: relative;
-
-        figcaption{
-          margin: $gutter-medium;
-          color: darkgrey;
-        }
-        &.mobiliscene
+        p
         {
-          height: 500px;
-          position: relative;
-          figcaption{
-            position: absolute;
-            bottom: $gutter-small;
-            right: $gutter-small;
-            width: 30%;
-            background: rgba(255,255,255,.8);
-            padding: $gutter-small;
             font-size: $font-size-1;
-          }
+            line-height: $font-size-1 * 1.4;
         }
-        &.audio,
-        &.video{
-          .media-controls{
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: stretch;
-            justify-content: stretch;
-            margin-bottom: $gutter-small;
-            .seek-bar{
-              flex: 1;
+
+        .metis-WebNoteContentPointer,
+        .metis-WebNotePointerPointer
+        {
+            a
+            {
+                text-decoration: none;
+
+                color: inherit;
+
+                text-width: 900;
             }
-          }
-          .transcription-container{
-            background: darkgrey;
-            color: white;
-            padding: $gutter-small;
-            max-height: 20rem;
-            overflow: auto;
-          }
-          video{
-            width: 100%;
-            max-height: 30rem;
-          }
-        }
-        iframe{
-          width: 100%;
-          height: 20rem;
-          border: none;
         }
 
-        img,
-        video{
-          max-width: 100%;
-        }
-      }
 
-      .notes-container{
-        .notes-wrapper{
-          padding: 0;
-          .note-wrapper{
-            list-style: none;
-            padding: 0;
+        .BlockAssetWrapper
+        {
+            position: relative;
+
             margin: 0;
-            margin-bottom: $gutter-medium;
-            .note-content{
-              display: flex;
-              justify-content: stretch;
-              flex-flow: row nowrap;
-              .note-content-container{
-                flex: 1;
-              }
-              .metis-WebNotePointerPointer{
-                padding-top: $gutter-small;
-                padding-right: $gutter-small;
-              }
-            }
-          }
-        }
-      }
+            padding: 0;
 
-      .bibliography-container{
-        .csl-entry{
-          margin-bottom: $gutter-medium;
+            figcaption
+            {
+                margin: $gutter-medium;
+
+                color: darkgrey;
+            }
+            &.mobiliscene
+            {
+                position: relative;
+
+                height: 500px;
+                figcaption
+                {
+                    font-size: $font-size-1;
+
+                    position: absolute;
+                    right: $gutter-small;
+                    bottom: $gutter-small;
+
+                    width: 30%;
+                    padding: $gutter-small;
+
+                    background: rgba(255,255,255,.8);
+                }
+            }
+            &.audio,
+            &.video
+            {
+                .media-controls
+                {
+                    display: flex;
+
+                    margin-bottom: $gutter-small;
+
+                    flex-flow: row nowrap;
+                    align-items: stretch;
+                    justify-content: stretch;
+                    .seek-bar
+                    {
+                        flex: 1;
+                    }
+                }
+                .transcription-container
+                {
+                    overflow: auto;
+
+                    max-height: 20rem;
+                    padding: $gutter-small;
+
+                    color: white;
+                    background: darkgrey;
+                }
+                video
+                {
+                    width: 100%;
+                    max-height: 30rem;
+                }
+            }
+            iframe
+            {
+                width: 100%;
+                height: 20rem;
+
+                border: none;
+            }
+
+            img,
+            video
+            {
+                max-width: 100%;
+            }
         }
-      }
+
+        .notes-container
+        {
+            .notes-wrapper
+            {
+                padding: 0;
+                .note-wrapper
+                {
+                    margin: 0;
+                    margin-bottom: $gutter-medium;
+                    padding: 0;
+
+                    list-style: none;
+                    .note-content
+                    {
+                        display: flex;
+
+                        justify-content: stretch;
+                        flex-flow: row nowrap;
+                        .note-content-container
+                        {
+                            flex: 1;
+                        }
+                        .metis-WebNotePointerPointer
+                        {
+                            padding-top: $gutter-small;
+                            padding-right: $gutter-small;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bibliography-container
+        {
+            .csl-entry
+            {
+                margin-bottom: $gutter-medium;
+            }
+        }
     }
 
 
@@ -562,6 +709,8 @@ $screen-xl-min: 1200px;
         {
             figcaption
             {
+                font-size: $font-size-1 * .6;
+
                 position: fixed;
                 z-index: 3;
                 right: 0;
@@ -571,7 +720,6 @@ $screen-xl-min: 1200px;
                 padding: $gutter-small;
 
                 background: rgba(255,255,255,.7);
-                font-size: $font-size-1 * .6;
             }
         }
     }
@@ -608,11 +756,41 @@ $screen-xl-min: 1200px;
     }
 
     /**
-     * Responsive
+     * Components
      */
-
-    @include md
+    .link,
+    .link:visited,
+    .link:active
     {
+        font-family: Oswald, sans-serif;
+        font-weight: 800;
+
+        cursor: pointer;
+        transition: all .5s ease;
+        text-align: left;
+        text-decoration: none;
+
+        color: inherit;
+        border: none;
+        outline: none;
+        background: inherit;
+        &:hover
+        {
+            font-weight: 900;
+
+            background: rgba(0,0,0,.05);
+        }
+    }
+}
+
+
+/**
+ * Responsive
+ */
+
+@mixin responsive
+{
+
         .aside-menu
         {
             position: absolute;
@@ -623,11 +801,12 @@ $screen-xl-min: 1200px;
             width: $dimension-navwidth-default;
             height: 100%;
 
-            background: rgba(255,255,255,.8);
-
             pointer-events: none;
-            .metis-DynamicNav{
-              pointer-events: all;
+
+            background: rgba(255,255,255,.8);
+            .metis-DynamicNav
+            {
+                pointer-events: all;
             }
         }
 
@@ -637,42 +816,64 @@ $screen-xl-min: 1200px;
             top: 0;
             left: 0;
 
-            width: 100%;
-            padding-left: $dimension-navwidth-default;
-            height: 100%;
-
-            background: $color-background;
-
             overflow: auto;
+
+            width: 100%;
+            height: 100%;
+            padding-left: $dimension-navwidth-default;
+
+            background: $color-background;   
         }
-    }
 
-    /**
-     * Components
-     */
-    .link,
-    .link:visited,
-    .link:active{
-      font-family: Oswald, sans-serif;
+        .metis-DynamicNav
+        {
+            .header
+            {
+                display: flex;
 
-      text-align: left;
-      background: inherit;
-      border: none;
-      text-decoration: none;
-      outline:none;
-      cursor: pointer;
-      font-weight: 800;
-      transition: all .5s ease;
-      color: inherit;
-      &:hover{
-        font-weight: 900;
-        background: rgba(0,0,0,0.05);
-      }
-    }
+                flex-flow: row nowrap;
+                align-items: stretch;
+                .link
+                {
+                    flex: 1;
+                }
+            }
+        }
+
+        .menu-container
+        {
+            max-height: 1000px;
+        }
+
+        .open-menu
+        {
+            display: none;
+        }
+
+        .metis-DynamicArticleTemplate
+        {
+            padding-right: $dimension-navwidth-default * .8;
+            padding-left: $dimension-navwidth-default * 1;
+        }
+}
+
+@media (min-width: 768px){
+  section::not(.metis-shared-DynamicMontagePreview) .metis-DynamicMontageSection{
+    @include responsive;
+  }
+}
+
+.metis-shared-DynamicMontagePreview.widescreen,
+.metis-shared-DynamicMontagePreview.fullhd
+{
+  .metis-DynamicMontageSection{
+      @include responsive;
+  }
 }
 
 
-.ReactModalPortal{
-  z-index: 3;
+.ReactModalPortal
+{
     position: fixed;
+    z-index: 3;
 }

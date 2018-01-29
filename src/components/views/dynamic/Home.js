@@ -13,7 +13,7 @@ export default ({
 
     <section className="main-content-container">
       <h2>{montage.metadata.title.length ? montage.metadata.title : 'Montage sans titre'}</h2>
-      {montage.metadata.subtitle && montage.metadata.subtitle.length ?  <h3>montage.metadata.subtitle</h3> : null}
+      {montage.metadata.subtitle && montage.metadata.subtitle.length ? <h3>{montage.metadata.subtitle}</h3> : null}
 
       <div>
         <p>

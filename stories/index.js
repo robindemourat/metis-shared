@@ -10,7 +10,7 @@ import ContextualizerContainer from './ContextualizerContainer';
 import CitationsDataProvider from './CitationsDataProvider';
 import rawBib from 'raw-loader!../assets_examples/bibliography.bib';
 import citationStyle from 'raw-loader!../assets_examples/apa.csl';
-import citationLocale from 'raw-loader!../assets_examples/english-locale.xml';
+import citationLocale from 'raw-loader!../assets_examples/french-locale.xml';
 
 import rawTableData from 'raw-loader!../assets_examples/gpe_culture.csv';
 
@@ -748,6 +748,32 @@ storiesOf('Dynamic preview', module)
           renderingMode="web"
         />
       </TranslationsProvider>
+    )
+  })
+  .add('in small container', () => {
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: 400,
+          height: 600
+        }}
+      >
+        <TranslationsProvider>
+          <DynamicMontagePreview
+            montage={dynamicMontage}
+            compositions={data.compositions}
+            resources={data.resources}
+            assets={data.assets}
+            getAssetUri={asset => `/${asset.filename}`}
+            citationStyle={citationStyle}
+            citationLocale={citationLocale}
+            renderingMode="web"
+          />
+        </TranslationsProvider>
+      </div>
     )
   })
   .add('with undefined dependent data', () => {

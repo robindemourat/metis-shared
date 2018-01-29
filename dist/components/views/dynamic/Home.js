@@ -36,7 +36,7 @@ exports.default = function (_ref) {
       montage.metadata.subtitle && montage.metadata.subtitle.length ? _react2.default.createElement(
         'h3',
         null,
-        'montage.metadata.subtitle'
+        montage.metadata.subtitle
       ) : null,
       _react2.default.createElement(
         'div',
