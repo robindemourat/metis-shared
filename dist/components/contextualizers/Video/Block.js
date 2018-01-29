@@ -39,7 +39,10 @@ var Block = function Block(_ref2, _ref3) {
 
 
   var appropriateAsset = (0, _utils.pickAsset)(resource, _meta2.default.assetPickingRules.element[renderingMode], assetsData);
-  var field = appropriateAsset.resourceDataField;
+  var field = void 0;
+  if (appropriateAsset) {
+    field = appropriateAsset.resourceDataField;
+  }
 
   var assetUri = void 0;
 
@@ -85,8 +88,11 @@ var Block = function Block(_ref2, _ref3) {
       } else return null;
 
     default:
-      assetUri = getAssetUri(appropriateAsset.asset);
-      return _react2.default.createElement('img', { src: assetUri });
+      if (appropriateAsset) {
+        assetUri = getAssetUri(appropriateAsset.asset);
+        return _react2.default.createElement('img', { src: assetUri });
+      }
+      return null;
   }
 };
 

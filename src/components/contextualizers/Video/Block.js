@@ -20,7 +20,10 @@ const Block = ({
 }, {assetsData, getAssetUri}) => {
 
   const appropriateAsset = pickAsset(resource, meta.assetPickingRules.element[renderingMode], assetsData);
-  const field = appropriateAsset.resourceDataField;
+  let field;
+  if (appropriateAsset) {
+    field = appropriateAsset.resourceDataField;
+  }
 
   let assetUri;
 
@@ -47,7 +50,7 @@ const Block = ({
           </Media>
         );
       }
- else if (assetUri) {
+      else if (assetUri) {
         return (<video controls>
           <source src={assetUri} type={`video/${assetUri.split('.').pop()}`} />
         </video>);
@@ -55,8 +58,11 @@ const Block = ({
       else return null;
 
     default:
-      assetUri = getAssetUri(appropriateAsset.asset);
-      return <img src={assetUri} />;
+      if (appropriateAsset) {
+        assetUri = getAssetUri(appropriateAsset.asset);
+        return <img src={assetUri} />;
+      }
+    return null;
   }
 };
 
