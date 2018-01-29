@@ -288,7 +288,8 @@
     transition: all 2s ease;
     opacity: 0.01; }
     .metis-DynamicMontageSection .metis-DynamicNav .menu-container.active {
-      max-height: 1000px; }
+      max-height: 1000px;
+      opacity: 1; }
   .metis-DynamicMontageSection .metis-DynamicNav .open-menu {
     border: none;
     outline: none;
