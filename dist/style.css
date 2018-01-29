@@ -1,26 +1,3 @@
-.metis-backoffice-MailingPreview {
-  border: 1px solid #dddfe2;
-  border-radius: 4px;
-  padding: 12px 12px 0; }
-  .metis-backoffice-MailingPreview .header {
-    border-bottom: 1px solid #dddfe2; }
-    .metis-backoffice-MailingPreview .header .row {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: stretch;
-      margin-bottom: 1rem; }
-      .metis-backoffice-MailingPreview .header .row .label {
-        color: #90949c;
-        text-align: right;
-        min-width: 3rem; }
-      .metis-backoffice-MailingPreview .header .row .label::after {
-        content: ':'; }
-      .metis-backoffice-MailingPreview .header .row .value {
-        flex: 1;
-        padding-left: 1rem; }
-  .metis-backoffice-MailingPreview .body {
-    margin-top: 1rem; }
-
 .metis-backoffice-FacebookPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
@@ -48,6 +25,29 @@
         font-size: 1.5em; }
       .metis-backoffice-FacebookPreview .header .right .post-info {
         color: #90949c; }
+
+.metis-backoffice-MailingPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
+  .metis-backoffice-MailingPreview .header {
+    border-bottom: 1px solid #dddfe2; }
+    .metis-backoffice-MailingPreview .header .row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+      margin-bottom: 1rem; }
+      .metis-backoffice-MailingPreview .header .row .label {
+        color: #90949c;
+        text-align: right;
+        min-width: 3rem; }
+      .metis-backoffice-MailingPreview .header .row .label::after {
+        content: ':'; }
+      .metis-backoffice-MailingPreview .header .row .value {
+        flex: 1;
+        padding-left: 1rem; }
+  .metis-backoffice-MailingPreview .body {
+    margin-top: 1rem; }
 
 .metis-backoffice-TwitterPreview {
   border: 1px solid #dddfe2;
