@@ -73,7 +73,8 @@ export default class DynamicComposition extends Component {
         montage,
         assets,
         resources,
-        previewMode
+        previewMode,
+        activeIndex
       },
       state: {
         citationData,
@@ -102,7 +103,10 @@ export default class DynamicComposition extends Component {
     return (
       <div className={`metis-DynamicMontageSection dynamic-composition ${parameters.template} ${previewMode ? 'preview-mode' : ''}`} id={`composition-${composition._id}`}>
         <aside className="aside-menu">
-          <Nav montage={montage} compositions={compositions} />
+          <Nav
+            montage={montage}
+            compositions={compositions}
+            activeIndex={activeIndex} />
         </aside>
         <section className="main-content-container">
           <ReferencesManager
@@ -110,11 +114,14 @@ export default class DynamicComposition extends Component {
             locale={citationLocale}
             items={citationItems}
             citations={citationData}>
-            {TemplateComponent && <TemplateComponent
-              parameters={parameters}
-              composition={composition}
-              assets={assetsMap}
-              resources={resourcesMap} />}
+            {
+              TemplateComponent &&
+              <TemplateComponent
+                parameters={parameters}
+                composition={composition}
+                assets={assetsMap}
+                resources={resourcesMap} />
+            }
             <style>
               {montage.data.css.shared_css_code}
               {montage.data.css[`${renderingMode}_css_code`]}

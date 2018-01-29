@@ -26,7 +26,8 @@ export default class Nav extends Component {
       props: {
         compositions,
         montage,
-        toggable = true
+        toggable = true,
+        activeIndex
       },
       state: {
         menuOpen
@@ -62,9 +63,9 @@ export default class Nav extends Component {
                 const composition = compositions.find(comp => comp._id === id);
                 if (composition) {
                   return (
-                    <li key={index}>
+                    <li className={`composition-link ${activeIndex === index ? 'active' : ''}`} key={index}>
                       <Link to={{view: 'composition', index, parameters}}>
-                        {composition.metadata.title} ({parameters.template})
+                        {composition.metadata.title}
                       </Link>
                     </li>
                   );

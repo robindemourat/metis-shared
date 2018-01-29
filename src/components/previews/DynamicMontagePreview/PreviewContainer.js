@@ -96,6 +96,7 @@ class PreviewContainer extends Component {
             resources={resources}
             montage={montage}
             assets={assets}
+            activeIndex={locationIndex}
             previewMode />
         );
 
