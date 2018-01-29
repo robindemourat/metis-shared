@@ -440,9 +440,11 @@
     .montage-title{
       font-size: $font-size-12;
       string-set: book-title content();
+      margin-bottom: 0;
     }
 
     .montage-subtitle{
+    margin-top: 0;
       font-size: $font-size-11;
     }
 

@@ -710,8 +710,10 @@
     font-size: 1.3641rem; }
   .metis-StaticMontageSection .montage-title {
     font-size: 2.78945rem;
-    string-set: book-title content(); }
+    string-set: book-title content();
+    margin-bottom: 0; }
   .metis-StaticMontageSection .montage-subtitle {
+    margin-top: 0;
     font-size: 2.14573rem; }
   .metis-StaticMontageSection .composition-subtitle {
     font-size: 1.50051rem; }
