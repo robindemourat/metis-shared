@@ -85,7 +85,10 @@ export default class PreviewContainer extends Component {
             })
           }
           <section className="empty-page" />
-          <Colophon contents={montage.data.colophon} />
+          {
+            montage.data.colophon && montage.data.colophon.length &&
+            <Colophon contents={montage.data.colophon} />
+          }
           <section className="empty-page" />
           <style>
             {montage.data.css.shared_css_code}
