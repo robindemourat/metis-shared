@@ -782,7 +782,7 @@
     font-weight: 200;
     text-decoration: none;
     color: inherit; }
-  .metis-StaticMontageSection .index-item a::after {
+  .metis-StaticMontageSection .index-item a:after {
     content: leader(".") target-counter(attr(href), page); }
   .metis-StaticMontageSection .notes-wrapper {
     padding: 0;
@@ -832,9 +832,9 @@
         position: relative;
         display: block;
         overflow: hidden;
-        height: 30rem;
-        max-height: 30rem;
-        min-height: 30rem;
+        height: 50rem;
+        max-height: 50rem;
+        min-height: 50rem;
         padding-top: 50%; } }
     .metis-StaticMontageSection.cover .content, .metis-StaticMontageSection.back-cover .content {
       position: absolute;

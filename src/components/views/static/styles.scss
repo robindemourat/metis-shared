@@ -583,7 +583,7 @@
       color: inherit;
     }
 
-    .index-item a::after{
+    .index-item a:after{
       content: leader('.') target-counter(attr(href), page);
     }
 
@@ -684,9 +684,9 @@
             display: block;
             overflow: hidden;
 
-            height: 30rem;
-            max-height: 30rem;
-            min-height: 30rem;
+            height: 50rem;
+            max-height: 50rem;
+            min-height: 50rem;
             padding-top: 50%;
         }
 
