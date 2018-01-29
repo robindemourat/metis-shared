@@ -123,6 +123,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
             resources: resources,
             montage: montage,
             assets: assets,
+            activeIndex: locationIndex,
             previewMode: true });
 
         default:

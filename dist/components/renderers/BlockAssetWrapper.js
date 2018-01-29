@@ -129,11 +129,14 @@ var BlockAssetWrapper = function (_Component) {
                 return _react2.default.createElement(
                   'i',
                   { key: index, className: 'creator' },
+                  !!index && ', ',
+                  ' ',
                   creator.given,
                   ' ',
                   creator.family
                 );
-              })
+              }),
+              '.'
             ) : null
           )
         );

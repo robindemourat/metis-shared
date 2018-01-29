@@ -196,7 +196,9 @@ class BlockDynamic extends Component {
                   width: imageWidth,
                   height: imageHeight,
                 }} />
-
+            <button className="close-zoomable" onClick={toggleModal}>
+            ✕
+            </button>
           </Modal>
         :
           <img src={assetUri} />

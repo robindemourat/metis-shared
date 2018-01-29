@@ -209,7 +209,12 @@ var BlockDynamic = (_temp = _class = function (_Component2) {
             imageDimensions: {
               width: imageWidth,
               height: imageHeight
-            } })
+            } }),
+          _react2.default.createElement(
+            'button',
+            { className: 'close-zoomable', onClick: toggleModal },
+            '\u2715'
+          )
         ) : _react2.default.createElement('img', { src: assetUri })
       ) : null;
     }

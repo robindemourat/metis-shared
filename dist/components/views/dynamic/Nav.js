@@ -53,6 +53,7 @@ var Nav = (_temp = _class = function (_Component) {
           montage = _props.montage,
           _props$toggable = _props.toggable,
           toggable = _props$toggable === undefined ? true : _props$toggable,
+          activeIndex = _props.activeIndex,
           menuOpen = this.state.menuOpen,
           Link = this.context.Link,
           toggleMenu = this.toggleMenu;
@@ -100,14 +101,11 @@ var Nav = (_temp = _class = function (_Component) {
               if (composition) {
                 return _react2.default.createElement(
                   'li',
-                  { key: index },
+                  { className: 'composition-link ' + (activeIndex === index ? 'active' : ''), key: index },
                   _react2.default.createElement(
                     Link,
                     { to: { view: 'composition', index: index, parameters: parameters } },
-                    composition.metadata.title,
-                    ' (',
-                    parameters.template,
-                    ')'
+                    composition.metadata.title
                   )
                 );
               }

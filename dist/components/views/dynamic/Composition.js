@@ -109,6 +109,7 @@ var DynamicComposition = (_temp = _class = function (_Component) {
           assets = _props.assets,
           resources = _props.resources,
           previewMode = _props.previewMode,
+          activeIndex = _props.activeIndex,
           _state = this.state,
           citationData = _state.citationData,
           citationItems = _state.citationItems,
@@ -141,7 +142,10 @@ var DynamicComposition = (_temp = _class = function (_Component) {
         _react2.default.createElement(
           'aside',
           { className: 'aside-menu' },
-          _react2.default.createElement(_Nav2.default, { montage: montage, compositions: compositions })
+          _react2.default.createElement(_Nav2.default, {
+            montage: montage,
+            compositions: compositions,
+            activeIndex: activeIndex })
         ),
         _react2.default.createElement(
           'section',

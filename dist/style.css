@@ -281,6 +281,10 @@
       margin: 0;
       padding: 0;
       list-style: none; }
+    .metis-DynamicMontageSection .metis-DynamicNav .menu-items .composition-link .link {
+      font-weight: 400; }
+    .metis-DynamicMontageSection .metis-DynamicNav .menu-items .composition-link.active .link {
+      font-weight: 800; }
   .metis-DynamicMontageSection .metis-DynamicNav .menu-container {
     overflow: hidden;
     max-height: .0001px;
@@ -643,6 +647,7 @@
   background: rgba(0, 0, 0, 0.8);
   flex-flow: row nowrap;
   align-items: center;
+  height: 100%;
   justify-content: center; }
 
 .close-zoomable {
@@ -652,7 +657,8 @@
   cursor: pointer;
   color: white;
   border: none;
-  background: none; }
+  background: none;
+  z-index: 3; }
 
 .ReactModalPortal {
   position: fixed;
