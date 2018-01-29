@@ -469,6 +469,8 @@ $screen-xl-min: 1200px;
             padding: $gutter-small;
 
             transition: all 2s ease;
+            opacity: 0.01;
+
 
             &.active
             {
@@ -842,6 +844,7 @@ $screen-xl-min: 1200px;
 
         .menu-container
         {
+            opacity: 1;
             max-height: 1000px;
         }
 
