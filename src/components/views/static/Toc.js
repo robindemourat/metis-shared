@@ -28,7 +28,7 @@ const Toc = ({
               return (
                 <li className="index-item" key={index}>
                   <Link className="index-link" to={{view: 'composition', index}}>
-                    {composition.metadata.title} - {buildAuthors(composition.metadata.creators)}
+                    {composition.metadata.title}{composition.metadata.creators && composition.metadata.creators.length && ' — '}{buildAuthors(composition.metadata.creators)}
                   </Link>
                 </li>
               );

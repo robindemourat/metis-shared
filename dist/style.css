@@ -26,11 +26,6 @@
       .metis-backoffice-FacebookPreview .header .right .post-info {
         color: #90949c; }
 
-.metis-backoffice-TwitterPreview {
-  border: 1px solid #dddfe2;
-  border-radius: 4px;
-  padding: 12px 12px 0; }
-
 .metis-backoffice-MailingPreview {
   border: 1px solid #dddfe2;
   border-radius: 4px;
@@ -53,6 +48,11 @@
         padding-left: 1rem; }
   .metis-backoffice-MailingPreview .body {
     margin-top: 1rem; }
+
+.metis-backoffice-TwitterPreview {
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  padding: 12px 12px 0; }
 
 /* cyrillic */
 @font-face {
@@ -778,10 +778,11 @@
     margin: 0;
     margin-bottom: 0.8rem;
     list-style: none; }
-  .metis-StaticMontageSection .index-link:after {
+  .metis-StaticMontageSection .index-item a {
     font-weight: 200;
     text-decoration: none;
-    color: inherit;
+    color: inherit; }
+  .metis-StaticMontageSection .index-item a::after {
     content: leader(".") target-counter(attr(href), page); }
   .metis-StaticMontageSection .notes-wrapper {
     padding: 0;
@@ -846,23 +847,24 @@
     page: cover; }
     .metis-StaticMontageSection.cover .content {
       padding-top: 50%;
-      margin-left: 1rem;
-      margin-right: 1rem;
       text-align: center; }
+      .metis-StaticMontageSection.cover .content h1 {
+        margin-left: 5rem;
+        margin-right: 5rem; }
   .metis-StaticMontageSection.colophon {
     page: colophon; }
   .metis-StaticMontageSection.back-cover {
     page: back-cover; }
   .metis-StaticMontageSection .backcover-title {
     font-size: 2.78945rem;
+    margin: 0;
     margin-bottom: 0.8rem;
-    padding: 3rem; }
+    padding: 0; }
   .metis-StaticMontageSection .backcover-abstract {
     font-family: Merriweather, serif;
     font-size: 1.02487rem;
     width: 100%;
-    text-align: left;
-    padding: 3rem; }
+    text-align: left; }
 
 @page {
   padding: 1.5cm;
