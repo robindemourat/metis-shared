@@ -99,10 +99,10 @@ class BlockAssetWrapper extends Component {
                   {
                   resource.metadata.creators.map((creator, index) => (
                     <i key={index} className="creator">
-                      {creator.given} {creator.family}
+                      {!!index && ', '} {creator.given} {creator.family}
                     </i>
                   ))
-                }
+                }.
                 </p>
               : null
             }
