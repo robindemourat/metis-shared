@@ -18,6 +18,13 @@ class MobiliscenePlayer extends Component {
         this.initMobiliscene();
     }
 
+    componentWillReceiveProps(nextProps) {
+      if (this.props.resource._id !== nextProps.resource._id) {
+        this.unloadMobiliscene();
+        setTimeout(() => this.initMobiliscene(), 500);
+      }
+    }
+
     componentWillUnmount() {
       this.unloadMobiliscene();
     }

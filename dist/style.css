@@ -344,21 +344,24 @@
     font-size: 2.08rem; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate h1 {
     font-size: 2.24rem; }
-  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h1, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h2, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h3, .metis-DynamicMontageSection .metis-DynamicArticleTemplate h4 {
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h1,
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h2,
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h3,
+  .metis-DynamicMontageSection .metis-DynamicArticleTemplate h4 {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-subtitle {
-    margin-top: 0;
-    font-size: 2.08rem; }
+    font-size: 2.08rem;
+    margin-top: 0; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-subtitle,
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-creators {
     margin-left: 1.6rem; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-title {
-    margin-bottom: 0;
-    font-size: 2.56rem; }
+    font-size: 2.56rem;
+    margin-bottom: 0; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .composition-creators {
-    font-style: italic;
     font-size: 1rem;
+    font-style: italic;
     color: darkgrey; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate p {
     font-size: 1rem;
@@ -381,8 +384,8 @@
       margin: 1.6rem;
       color: darkgrey; }
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .figure-title {
-        margin-bottom: 0;
-        font-size: 1.6rem; }
+        font-size: 1.6rem;
+        margin-bottom: 0; }
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .creator-container {
         margin: 0; }
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper figcaption .creator {
@@ -422,8 +425,12 @@
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper img,
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper video {
       max-width: 100%; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.image img {
+      cursor: pointer; }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery figure {
       margin: 1.6rem; }
+    .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery img {
+      cursor: pointer; }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper.imagesgallery ul {
       display: flex;
       padding: 0;
@@ -445,20 +452,20 @@
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper button:hover, .metis-DynamicMontageSection .metis-DynamicArticleTemplate .BlockAssetWrapper button.active {
         background: black; }
   .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper {
-    padding: 0;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
     .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper {
       margin: 0;
       padding: 0;
       list-style: none; }
       .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content {
+        font-size: 0.6rem;
         display: flex;
         justify-content: stretch;
-        flex-flow: row nowrap;
-        font-size: 0.6rem; }
+        flex-flow: row nowrap; }
         .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container {
-          flex: 1;
-          font-size: 0.6rem; }
+          font-size: 0.6rem;
+          flex: 1; }
           .metis-DynamicMontageSection .metis-DynamicArticleTemplate .notes-container .notes-wrapper .note-wrapper .note-content .note-content-container p {
             font-size: 0.6rem;
             margin-bottom: 0.3rem; }
@@ -518,9 +525,9 @@
       background: rgba(0, 0, 0, 0.05); }
   .metis-DynamicMontageSection .creators-info-container,
   .metis-DynamicMontageSection .bibliography-container {
+    margin-bottom: 1.6rem;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.6rem; }
+    background: rgba(0, 0, 0, 0.05); }
 
 /**
  * Responsive
@@ -625,6 +632,11 @@
   left: 0;
   width: 100%;
   height: 100%; }
+  .zoomable-image-container > div {
+    background: rgba(0, 0, 0, 0.8);
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center; }
 
 .zoomable-wrapper {
   display: flex;

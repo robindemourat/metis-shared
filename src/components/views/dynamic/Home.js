@@ -7,7 +7,7 @@ export default ({
   compositions,
   previewMode
 }) => (
-  <section className={`metis-DynamicMontageSection ${previewMode ? 'preview-mode': ''}`}>
+  <section className={`metis-DynamicMontageSection ${previewMode ? 'preview-mode' : ''}`}>
     <aside className="aside-menu">
       <Nav montage={montage} compositions={compositions} />
     </aside>

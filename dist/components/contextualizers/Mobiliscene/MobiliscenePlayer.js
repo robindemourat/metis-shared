@@ -89,6 +89,18 @@ var MobiliscenePlayer = function (_Component) {
       this.initMobiliscene();
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var _this2 = this;
+
+      if (this.props.resource._id !== nextProps.resource._id) {
+        this.unloadMobiliscene();
+        setTimeout(function () {
+          return _this2.initMobiliscene();
+        }, 500);
+      }
+    }
+  }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       this.unloadMobiliscene();
@@ -96,14 +108,14 @@ var MobiliscenePlayer = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var _props = this.props,
           containerWidth = _props.containerWidth,
           containerHeight = _props.containerHeight;
 
       var bindCanvas = function bindCanvas(canvas) {
-        _this2.canvas = canvas;
+        _this3.canvas = canvas;
       };
       return _react2.default.createElement(
         'div',
