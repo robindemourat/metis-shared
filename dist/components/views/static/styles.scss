@@ -705,6 +705,8 @@
         page: cover;
         .content{
           padding-top: 50%;
+          margin-left: 1rem;
+          margin-right: 1rem;
           text-align: center;
         }
     }
@@ -728,6 +730,7 @@
       font-size: $font-size-5;
       width: 100%;
       text-align: left;
+      padding: 3rem;
     }
 }
 

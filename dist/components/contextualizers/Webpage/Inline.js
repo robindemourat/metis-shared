@@ -15,13 +15,14 @@ var Inline = function Inline(_ref) {
       contextualizer = _ref.contextualizer,
       renderingMode = _ref.renderingMode;
 
-  var content = contextualizer.content || '*';
+  var content = void 0;
   var url = resource.data.url;
 
   switch (renderingMode) {
     // interactive -> hyperlink
     case 'web':
     case 'epub-fixed':
+      content = contextualizer.content || '*';
       return _react2.default.createElement(
         'a',
         { target: 'blank', href: url },
@@ -30,6 +31,7 @@ var Inline = function Inline(_ref) {
 
     // not interactive -> write link in parenthesis
     case 'micro':
+      content = contextualizer.content || '';
       return _react2.default.createElement(
         'span',
         null,
@@ -42,6 +44,7 @@ var Inline = function Inline(_ref) {
     // mix -> hyperlink + written link
     case 'epub-reflowable':
     case 'pdf':
+      content = contextualizer.content || '';
       return _react2.default.createElement(
         'a',
         { target: 'blank', href: url },

@@ -125,7 +125,7 @@ var PreviewContainer = (_temp = _class = function (_Component) {
               locationIndex: index });
           }),
           _react2.default.createElement('section', { className: 'empty-page' }),
-          _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
+          montage.data.colophon && montage.data.colophon.length && _react2.default.createElement(_Colophon2.default, { contents: montage.data.colophon }),
           _react2.default.createElement('section', { className: 'empty-page' }),
           _react2.default.createElement(
             'style',

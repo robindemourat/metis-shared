@@ -114,7 +114,7 @@ var ArticleTemplate = function ArticleTemplate(_ref, _ref2) {
       _react2.default.createElement(
         'h3',
         null,
-        t('Bibliographie')
+        t('Références')
       ),
       _react2.default.createElement(_reactCiteproc.Bibliography, {
         style: citationStyle,

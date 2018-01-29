@@ -846,6 +846,8 @@
     page: cover; }
     .metis-StaticMontageSection.cover .content {
       padding-top: 50%;
+      margin-left: 1rem;
+      margin-right: 1rem;
       text-align: center; }
   .metis-StaticMontageSection.colophon {
     page: colophon; }
@@ -859,7 +861,8 @@
     font-family: Merriweather, serif;
     font-size: 1.02487rem;
     width: 100%;
-    text-align: left; }
+    text-align: left;
+    padding: 3rem; }
 
 @page {
   padding: 1.5cm;

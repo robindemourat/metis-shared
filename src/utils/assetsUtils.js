@@ -63,6 +63,7 @@ export const resourceToCslJSON = resource => {
     id: resource._id,
     abstract: resource.metadata.description,
     issued: resource.metadata.date && {raw: resource.metadata.date},
+    URL: resource.metadata.url  || resource.data.url,
     author: (
               resource.metadata.creators &&
               Array.isArray(resource.metadata.creators) &&
